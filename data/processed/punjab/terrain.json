@@ -1,0 +1,12 @@
+{
+  "site": "punjab",
+  "lat": 30.8,
+  "lon": 75.7,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 244,
+  "slope_pct_field": 0.35,
+  "slope_pct_landscape_mean": 0.11,
+  "relief_m_within_1500m": 7,
+  "erosion_risk_from_slope": "low",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

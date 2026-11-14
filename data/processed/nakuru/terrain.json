@@ -1,0 +1,12 @@
+{
+  "site": "nakuru",
+  "lat": -0.27,
+  "lon": 35.8,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 2355,
+  "slope_pct_field": 14.7,
+  "slope_pct_landscape_mean": 5.42,
+  "relief_m_within_1500m": 210,
+  "erosion_risk_from_slope": "severe",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

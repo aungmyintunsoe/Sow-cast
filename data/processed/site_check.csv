@@ -1,0 +1,5 @@
+site,pin_lat,pin_lon,pin_landcover,field_lat,field_lon,field_landcover,field_is_cropland,cropland_share_5km,suggested_lat,suggested_lon
+iowa,42.03,-93.62,urban|urban|urban|urban|urban,42.1,-93.55,cropland|cropland|cropland|cropland|cropland,yes,1,,
+punjab,30.9,75.85,urban|urban|urban|urban|urban,30.8,75.7,cropland|cropland|cropland|cropland|cropland,yes,0.98,,
+nakuru,-0.3,36.07,urban|urban|urban|urban|urban,-0.27,35.8,cropland|cropland/natural mosaic|cropland|cropland|cropland,yes,0.846,,
+darling_downs,-27.56,151.95,urban|urban|urban|urban|urban,-27.5854,151.5134,grassland|grassland|grassland|grassland|grassland,yes,0.181,-27.5854,151.5134

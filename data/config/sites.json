@@ -1,0 +1,73 @@
+{
+  "_comment": "Sowcast analysis sites. 'pin' = the map pin used by the prototype app (public/data/regions/index.json). 'field' = the point we actually sample, moved off town centres onto MODIS-classified cropland. Run `node data/scripts/00_verify_sites.mjs` to re-check / auto-correct 'field' points.",
+  "period": {
+    "start_year": 2001,
+    "end_year": 2024
+  },
+  "sites": [
+    {
+      "id": "iowa",
+      "name": "Story County",
+      "place": "Iowa, USA",
+      "pin": {
+        "lat": 42.03,
+        "lon": -93.62
+      },
+      "field": {
+        "lat": 42.1,
+        "lon": -93.55
+      },
+      "hemisphere": "N",
+      "note": "Pin is on the town of Ames (MODIS land cover = 13 urban). Field point ~9 km NE is cropland (class 12)."
+    },
+    {
+      "id": "punjab",
+      "name": "Ludhiana District",
+      "place": "Punjab, India",
+      "pin": {
+        "lat": 30.9,
+        "lon": 75.85
+      },
+      "field": {
+        "lat": 30.8,
+        "lon": 75.7
+      },
+      "hemisphere": "N",
+      "note": "Pin is on Ludhiana city (SoilGrids has no data there). Field point SW of the city is cropland (class 12)."
+    },
+    {
+      "id": "nakuru",
+      "name": "Nakuru County",
+      "place": "Rift Valley, Kenya",
+      "pin": {
+        "lat": -0.3,
+        "lon": 36.07
+      },
+      "field": {
+        "lat": -0.27,
+        "lon": 35.8
+      },
+      "hemisphere": "S",
+      "note": "Pin is on Nakuru town. Field point near Rongai is cropland / cropland mosaic (classes 12/14, 2019-2022). Equatorial: two rainy seasons, treat hemisphere loosely."
+    },
+    {
+      "id": "darling_downs",
+      "name": "Darling Downs",
+      "place": "Queensland, Australia",
+      "pin": {
+        "lat": -27.56,
+        "lon": 151.95
+      },
+      "field": {
+        "lat": -27.5854,
+        "lon": 151.5134
+      },
+      "hemisphere": "S",
+      "note": "Pin is on Toowoomba (class 13 urban). MODIS often labels dryland grain/fallow here as grassland (10); 00_verify_sites.mjs searches for the nearest class-12 pixel. [auto-moved 2.62 km to nearest MODIS cropland pixel by 00_verify_sites.mjs]",
+      "field_original": {
+        "lat": -27.6,
+        "lon": 151.55
+      }
+    }
+  ]
+}

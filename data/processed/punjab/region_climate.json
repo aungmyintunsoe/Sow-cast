@@ -1,0 +1,405 @@
+{
+  "_provenance": {
+    "generated": "2026-11-14T11:21:19.265Z",
+    "field_point": {
+      "lat": 30.8,
+      "lon": 75.7
+    },
+    "pin": {
+      "lat": 30.9,
+      "lon": 75.85
+    },
+    "available": {
+      "power": true,
+      "ndvi": false,
+      "modis_et": false,
+      "modis_lst": false,
+      "soil": true,
+      "terrain": true
+    },
+    "notes": [
+      "Real data replacing make_fake_data.ts for: monthly, annual, trends (except groundwater), soil.",
+      "insights / rotations / crop_fit are NOT generated here — they are the analysis step (see data/NEXT_STEPS.md).",
+      "soil_moisture is the POWER/MERRA-2 GWETTOP wetness index (0-1), not SMAP volumetric moisture."
+    ]
+  },
+  "region": {
+    "id": "punjab",
+    "name": "Ludhiana District",
+    "place": "Punjab, India",
+    "lat": 30.9,
+    "lon": 75.85
+  },
+  "monthly": [
+    {
+      "month": 1,
+      "tmax_c": 20.7,
+      "tmin_c": 6.5,
+      "precip_mm": 27.2,
+      "soil_moisture": 0.34,
+      "et_mm": 71.4,
+      "ndvi": null,
+      "frost_days": 0.1,
+      "heat_days": 0,
+      "heavy_rain_days": 0.2,
+      "typically_bare": null
+    },
+    {
+      "month": 2,
+      "tmax_c": 24.6,
+      "tmin_c": 9.6,
+      "precip_mm": 28.7,
+      "soil_moisture": 0.352,
+      "et_mm": 91.2,
+      "ndvi": null,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 0.2,
+      "typically_bare": null
+    },
+    {
+      "month": 3,
+      "tmax_c": 31,
+      "tmin_c": 15,
+      "precip_mm": 30.3,
+      "soil_moisture": 0.318,
+      "et_mm": 149.1,
+      "ndvi": null,
+      "frost_days": 0,
+      "heat_days": 5.6,
+      "heavy_rain_days": 0.2,
+      "typically_bare": null
+    },
+    {
+      "month": 4,
+      "tmax_c": 37.3,
+      "tmin_c": 20.8,
+      "precip_mm": 19.8,
+      "soil_moisture": 0.261,
+      "et_mm": 196.4,
+      "ndvi": null,
+      "frost_days": 0,
+      "heat_days": 22.6,
+      "heavy_rain_days": 0.1,
+      "typically_bare": null
+    },
+    {
+      "month": 5,
+      "tmax_c": 41.9,
+      "tmin_c": 26.4,
+      "precip_mm": 26.3,
+      "soil_moisture": 0.205,
+      "et_mm": 238.3,
+      "ndvi": null,
+      "frost_days": 0,
+      "heat_days": 30,
+      "heavy_rain_days": 0.2,
+      "typically_bare": null
+    },
+    {
+      "month": 6,
+      "tmax_c": 42.3,
+      "tmin_c": 29.3,
+      "precip_mm": 81.4,
+      "soil_moisture": 0.271,
+      "et_mm": 223.2,
+      "ndvi": null,
+      "frost_days": 0,
+      "heat_days": 29.1,
+      "heavy_rain_days": 0.5,
+      "typically_bare": null
+    },
+    {
+      "month": 7,
+      "tmax_c": 38.3,
+      "tmin_c": 28.4,
+      "precip_mm": 191.6,
+      "soil_moisture": 0.443,
+      "et_mm": 188.9,
+      "ndvi": null,
+      "frost_days": 0,
+      "heat_days": 24.5,
+      "heavy_rain_days": 2.8,
+      "typically_bare": null
+    },
+    {
+      "month": 8,
+      "tmax_c": 35.9,
+      "tmin_c": 26.7,
+      "precip_mm": 174.6,
+      "soil_moisture": 0.522,
+      "et_mm": 163.3,
+      "ndvi": null,
+      "frost_days": 0,
+      "heat_days": 18.2,
+      "heavy_rain_days": 1.5,
+      "typically_bare": null
+    },
+    {
+      "month": 9,
+      "tmax_c": 34.9,
+      "tmin_c": 23.9,
+      "precip_mm": 108.4,
+      "soil_moisture": 0.505,
+      "et_mm": 143.9,
+      "ndvi": null,
+      "frost_days": 0,
+      "heat_days": 13.8,
+      "heavy_rain_days": 1.3,
+      "typically_bare": null
+    },
+    {
+      "month": 10,
+      "tmax_c": 33,
+      "tmin_c": 19.1,
+      "precip_mm": 11.6,
+      "soil_moisture": 0.404,
+      "et_mm": 127.4,
+      "ndvi": null,
+      "frost_days": 0,
+      "heat_days": 7,
+      "heavy_rain_days": 0,
+      "typically_bare": null
+    },
+    {
+      "month": 11,
+      "tmax_c": 27.8,
+      "tmin_c": 13.6,
+      "precip_mm": 5.9,
+      "soil_moisture": 0.331,
+      "et_mm": 88.4,
+      "ndvi": null,
+      "frost_days": 0,
+      "heat_days": 0.1,
+      "heavy_rain_days": 0,
+      "typically_bare": null
+    },
+    {
+      "month": 12,
+      "tmax_c": 22.8,
+      "tmin_c": 8.6,
+      "precip_mm": 9.7,
+      "soil_moisture": 0.314,
+      "et_mm": 71,
+      "ndvi": null,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": null
+    }
+  ],
+  "annual": [
+    {
+      "year": 2001,
+      "heat_days": 194,
+      "precip_mm": 477,
+      "heavy_rain_days": 2,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2002,
+      "heat_days": 197,
+      "precip_mm": 376,
+      "heavy_rain_days": 5,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2003,
+      "heat_days": 170,
+      "precip_mm": 553,
+      "heavy_rain_days": 3,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2004,
+      "heat_days": 194,
+      "precip_mm": 480,
+      "heavy_rain_days": 4,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 366
+    },
+    {
+      "year": 2005,
+      "heat_days": 169,
+      "precip_mm": 578,
+      "heavy_rain_days": 6,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2006,
+      "heat_days": 157,
+      "precip_mm": 648,
+      "heavy_rain_days": 8,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2007,
+      "heat_days": 191,
+      "precip_mm": 508,
+      "heavy_rain_days": 4,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2008,
+      "heat_days": 117,
+      "precip_mm": 930,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 339
+    },
+    {
+      "year": 2009,
+      "heat_days": 170,
+      "precip_mm": 449,
+      "heavy_rain_days": 3,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2010,
+      "heat_days": 149,
+      "precip_mm": 638,
+      "heavy_rain_days": 4,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2011,
+      "heat_days": 122,
+      "precip_mm": 685,
+      "heavy_rain_days": 7,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 360
+    },
+    {
+      "year": 2012,
+      "heat_days": 163,
+      "precip_mm": 462,
+      "heavy_rain_days": 3,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 366
+    },
+    {
+      "year": 2013,
+      "heat_days": 135,
+      "precip_mm": 782,
+      "heavy_rain_days": 9,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 357
+    },
+    {
+      "year": 2014,
+      "heat_days": 138,
+      "precip_mm": 664,
+      "heavy_rain_days": 6,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2015,
+      "heat_days": 149,
+      "precip_mm": 825,
+      "heavy_rain_days": 7,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2016,
+      "heat_days": 180,
+      "precip_mm": 631,
+      "heavy_rain_days": 8,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 366
+    },
+    {
+      "year": 2017,
+      "heat_days": 177,
+      "precip_mm": 787,
+      "heavy_rain_days": 7,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2018,
+      "heat_days": 141,
+      "precip_mm": 942,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2019,
+      "heat_days": 119,
+      "precip_mm": 968,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2020,
+      "heat_days": 144,
+      "precip_mm": 818,
+      "heavy_rain_days": 6,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 366
+    },
+    {
+      "year": 2021,
+      "heat_days": 133,
+      "precip_mm": 803,
+      "heavy_rain_days": 8,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2022,
+      "heat_days": 118,
+      "precip_mm": 1000,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2023,
+      "heat_days": 63,
+      "precip_mm": 1397,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 365
+    },
+    {
+      "year": 2024,
+      "heat_days": 131,
+      "precip_mm": 764,
+      "heavy_rain_days": 5,
+      "groundwater_anomaly_cm": null,
+      "growing_season_days": 366
+    }
+  ],
+  "trends": {
+    "heat_days_per_decade": -30.77,
+    "precip_change_pct": 77.9,
+    "heavy_rain_change_pct": 96.4,
+    "groundwater": null
+  },
+  "soil": {
+    "texture": "loam",
+    "organic_matter": "low",
+    "drainage": "well",
+    "slope_pct": 0.35,
+    "erosion_risk": "low",
+    "water_holding": "moderate",
+    "source": "ISRIC SoilGrids 2.0 + NASA SRTM"
+  },
+  "sources": [
+    "NASA POWER (MERRA-2) daily 2001-2024",
+    "ISRIC SoilGrids 2.0",
+    "NASA SRTM 30 m (OpenTopoData)"
+  ]
+}
