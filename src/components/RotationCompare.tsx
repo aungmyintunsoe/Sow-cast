@@ -13,12 +13,19 @@ import type { Crop, RotationOption } from '../types';
 
 const MONTHS = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
 
+/** Display name for one sequence step. Steps can combine crops ("perennial_tree+cover_legume"). */
+const stepName = (step: string, cropsMap: Record<string, Crop>) =>
+  step
+    .split('+')
+    .map((id) => (id === 'fallow' ? 'Fallow (bare)' : id === 'perennial_tree' ? 'Tree crops' : cropsMap[id]?.name ?? id))
+    .join(' + ');
+
 const SCORE_LABELS: { key: keyof RotationOption['scores']; label: string }[] = [
-  { key: 'soil', label: 'Soil Health' },
-  { key: 'water', label: 'Water Smart' },
-  { key: 'erosion', label: 'Erosion Shield' },
-  { key: 'income', label: 'Farm Income' },
-  { key: 'pest_break', label: 'Pest Break' },
+  { key: 'soil', label: 'Soil health' },
+  { key: 'water', label: 'Water use' },
+  { key: 'erosion', label: 'Erosion control' },
+  { key: 'income', label: 'Farm income' },
+  { key: 'pest_break', label: 'Pest break' },
 ];
 
 interface RotationCompareProps {
@@ -58,14 +65,14 @@ export const RotationCompare: React.FC<RotationCompareProps> = ({
             3. Compare crop rotations for {regionName}
           </h2>
           <p className="text-stone-600 text-sm sm:text-base mt-1">
-            See how your current crop sequence stacks up against 2 satellite-backed alternatives—including what could go wrong and what to verify locally.
+            How the usual crop sequence here compares with two alternatives, including what could go wrong and what to check locally.
           </p>
         </div>
         <button
           onClick={onContinue}
           className="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-5 py-3 rounded-xl shadow-sm transition shrink-0 text-base"
         >
-          <span>Explore Best Crops</span>
+          <span>See best crops</span>
           <ArrowRight className="w-4 h-4" />
         </button>
       </div>
@@ -79,6 +86,7 @@ export const RotationCompare: React.FC<RotationCompareProps> = ({
           return (
             <div
               key={rot.id}
+              data-selected={isSaved}
               className={`card-surface rounded-2xl border-2 p-5 shadow-sm flex flex-col justify-between transition-all ${
                 isSaved
                   ? 'border-brand-600 bg-brand-50/30 ring-2 ring-brand-500/20'
@@ -92,7 +100,7 @@ export const RotationCompare: React.FC<RotationCompareProps> = ({
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-1.5">
                     <span
-                      className={`text-xs font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full ${
+                      className={`text-xs font-bold px-2.5 py-1 rounded-full ${
                         isCurrent
                           ? 'bg-stone-200 text-stone-800'
                           : 'bg-brand-100 text-brand-800'
@@ -100,9 +108,7 @@ export const RotationCompare: React.FC<RotationCompareProps> = ({
                     >
                       {rot.label}
                     </span>
-                    <span className="text-xs font-semibold text-stone-500">
-                      {rot.cover_by_month.filter((v) => v === 1).length}/12 mos covered
-                    </span>
+                    <span className="text-xs font-semibold text-stone-500">Evidence: {rot.confidence}</span>
                   </div>
                   <h3 className="text-lg font-extrabold text-stone-900 leading-snug">
                     {rot.name}
@@ -114,11 +120,15 @@ export const RotationCompare: React.FC<RotationCompareProps> = ({
 
                 {/* Crop Chips */}
                 <div className="flex flex-wrap items-center gap-1.5">
-                  {rot.sequence.map((cropId, idx) => (
-                    <React.Fragment key={`${cropId}-${idx}`}>
-                      <span className="inline-flex items-center gap-1 text-xs font-semibold bg-stone-100 border border-stone-200 text-stone-800 px-2.5 py-1 rounded-lg">
-                        <Sprout className="w-3.5 h-3.5 text-brand-600" />
-                        {cropsMap[cropId]?.name || cropId}
+                  {rot.sequence.map((step, idx) => (
+                    <React.Fragment key={`${step}-${idx}`}>
+                      <span
+                        className={`inline-flex items-center gap-1 text-xs font-semibold border px-2.5 py-1 rounded-lg ${
+                          step === 'fallow' ? 'bg-soil-50 border-soil-200 text-soil-800' : 'bg-stone-100 border-stone-200 text-stone-800'
+                        }`}
+                      >
+                        <Sprout className={`w-3.5 h-3.5 ${step === 'fallow' ? 'text-soil-500' : 'text-brand-600'}`} />
+                        {stepName(step, cropsMap)}
                       </span>
                       {idx < rot.sequence.length - 1 && (
                         <span className="text-stone-400 font-bold text-xs">→</span>
@@ -129,10 +139,14 @@ export const RotationCompare: React.FC<RotationCompareProps> = ({
 
                 {/* 12-Month Living Cover Strip */}
                 <div>
-                  <div className="flex justify-between text-[11px] font-semibold text-stone-600 mb-1">
-                    <span>12-Month Ground Cover</span>
-                    <span className="text-stone-500">Green = Living Roots · Brown = Bare</span>
+                  <div className="flex flex-wrap justify-between gap-x-3 text-[11px] font-semibold text-stone-600 mb-1">
+                    <span>Ground cover by month</span>
+                    <span className="inline-flex items-center gap-2.5 text-stone-500">
+                      <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-brand-500" />Living roots</span>
+                      <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-soil-300" />Bare soil</span>
+                    </span>
                   </div>
+                  {rot.cover_by_month ? (
                   <div className="grid grid-cols-12 gap-1">
                     {rot.cover_by_month.map((covered, mIdx) => (
                       <div key={mIdx} className="flex flex-col items-center gap-0.5">
@@ -148,6 +162,11 @@ export const RotationCompare: React.FC<RotationCompareProps> = ({
                       </div>
                     ))}
                   </div>
+                  ) : (
+                    <p className="text-xs text-stone-500 bg-stone-50 border border-dashed border-stone-300 rounded-lg px-3 py-2">
+                      Shown once sowing and harvest months are collected for this region.
+                    </p>
+                  )}
                 </div>
 
                 {/* 5 Scores */}
@@ -181,9 +200,7 @@ export const RotationCompare: React.FC<RotationCompareProps> = ({
 
                 {/* Why */}
                 <div>
-                  <div className="text-xs font-bold uppercase tracking-wide text-stone-500 mb-1">
-                    Why this works / Tradeoff
-                  </div>
+                  <div className="text-xs font-bold text-stone-700 mb-1">Why it works</div>
                   <p className="text-sm text-stone-800 leading-relaxed">{rot.why}</p>
                 </div>
 
@@ -217,7 +234,7 @@ export const RotationCompare: React.FC<RotationCompareProps> = ({
                 <div className="space-y-1">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-stone-700">
                     <HelpCircle className="w-4 h-4 text-stone-500" />
-                    <span>Unknowns (Satellites cannot see)</span>
+                    <span>What satellites can't see</span>
                   </div>
                   <ul className="space-y-1 pl-5 list-disc text-xs text-stone-600">
                     {rot.gaps.map((g, i) => (
@@ -249,11 +266,11 @@ export const RotationCompare: React.FC<RotationCompareProps> = ({
                       ? 'bg-brand-600 text-white'
                       : isCurrent
                       ? 'bg-stone-200 hover:bg-stone-300 text-stone-800'
-                      : 'bg-nasa-blue hover:bg-blue-900 text-white'
+                      : 'bg-brand-600 hover:bg-brand-700 text-white'
                   }`}
                 >
                   <BookmarkCheck className="w-4 h-4" />
-                  <span>{isSaved ? 'Selected for Your Field' : 'Choose This Plan'}</span>
+                  <span>{isSaved ? 'Chosen for your field' : 'Choose this plan'}</span>
                 </button>
               </div>
             </div>

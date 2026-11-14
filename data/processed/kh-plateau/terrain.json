@@ -1,0 +1,12 @@
+{
+  "site": "kh-plateau",
+  "lat": 13.74,
+  "lon": 106.99,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 317,
+  "slope_pct_field": 1.43,
+  "slope_pct_landscape_mean": 2.19,
+  "relief_m_within_1500m": 77,
+  "erosion_risk_from_slope": "low",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

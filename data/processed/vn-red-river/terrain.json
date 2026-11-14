@@ -1,0 +1,12 @@
+{
+  "site": "vn-red-river",
+  "lat": 20.45,
+  "lon": 106.34,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 5,
+  "slope_pct_field": 0.9,
+  "slope_pct_landscape_mean": 0.27,
+  "relief_m_within_1500m": 8,
+  "erosion_risk_from_slope": "low",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

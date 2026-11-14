@@ -1,0 +1,12 @@
+{
+  "site": "kh-coastal",
+  "lat": 10.61,
+  "lon": 104.18,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 6,
+  "slope_pct_field": 1.24,
+  "slope_pct_landscape_mean": 0.25,
+  "relief_m_within_1500m": 9,
+  "erosion_risk_from_slope": "low",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

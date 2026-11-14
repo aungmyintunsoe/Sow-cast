@@ -1,0 +1,12 @@
+{
+  "site": "kh-mekong-plain",
+  "lat": 11.49,
+  "lon": 105.32,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 2,
+  "slope_pct_field": 3.09,
+  "slope_pct_landscape_mean": 0.57,
+  "relief_m_within_1500m": 14,
+  "erosion_risk_from_slope": "medium",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

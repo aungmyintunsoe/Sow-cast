@@ -1,5 +1,9 @@
-// Step 5 — Turn raw time series into analysis-ready tables + an app-shaped JSON per site.
-// Works with whatever has been fetched: POWER is required; MODIS / soil / terrain are used if present.
+// Step 5 — Merge the weather sources, turn the series into analysis-ready tables, and check quality.
+// Sources, best first:
+//   rain         CHIRPS (01b) → else POWER (unless POWER is broken here) → else ERA5
+//   temperature  POWER (01) when its series passes the 2008 step check → else ERA5 (01c)
+//   greenness    GIBS VIIRS NDVI on cropland pixels (02b) → else MODIS point NDVI (02)
+// Crop water demand, heat/downpour days etc. are recomputed from the merged values (lib.mjs deriveDaily).
 //
 //   node data/scripts/05_build_summaries.mjs [siteId ...]
 //
@@ -7,12 +11,13 @@
 //   monthly_climatology.csv   12 rows — typical year (2001-2024 average)
 //   annual.csv                one row per year — the series to test for trends
 //   monthly_series.csv        one row per year-month — for anomaly / seasonal-shift analysis
-//   trends.json               OLS slope per decade + Mann-Kendall significance for every annual metric
-//   region_climate.json       same shape as RegionDetail in src/types/index.ts (climate/soil parts only)
+//   weather_daily.csv         the merged daily series (what everything below is computed from)
+//   trends.json               OLS slope per decade + Mann-Kendall significance for every annual metric,
+//                             plus 'quality' (which sources were used, and the step checks)
 // And across sites: data/processed/all_sites_annual.csv, all_sites_monthly_climatology.csv
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadConfig, selectedSites, readCSV, writeCSV, writeJSON, PROCESSED_DIR, round, mean, sum, slope, mannKendall } from './lib.mjs';
+import { loadConfig, selectedSites, readCSV, writeCSV, writeJSON, PROCESSED_DIR, round, mean, sum, slope, mannKendall, deriveDaily, stepCheck } from './lib.mjs';
 
 const BARE_NDVI = 0.3; // NDVI below this ≈ bare / sparse cover
 const DAYS = [31, 28.25, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -29,18 +34,48 @@ for (const site of selectedSites(cfg)) {
   const power = opt(path.join(dir, 'power_daily.csv'));
   if (!power) { console.warn(`\n⚠ ${site.id}: no power_daily.csv — run 01_fetch_power.mjs first`); continue; }
   console.log(`\n▶ summaries ${site.id}`);
-  const ndvi = opt(path.join(dir, 'modis_ndvi.csv'));
+  const chirps = opt(path.join(dir, 'chirps_daily.csv'));
+  const era5 = opt(path.join(dir, 'era5_daily.csv'));
+  const gibsNdvi = opt(path.join(dir, 'ndvi_monthly.csv'));
+  const ndvi = gibsNdvi
+    ? gibsNdvi.map((r) => ({ year: r.year, month: r.month, ndvi_clean: r.ndvi }))
+    : opt(path.join(dir, 'modis_ndvi.csv'));
+
+  // ---------- 1) check POWER on its own ----------
+  // POWER (MERRA-2) has a step change around 2008 in data-sparse areas (all of Myanmar, Vietnam's Central
+  // Highlands, Cambodia's plateau): rain jumps 2-10x and temperature drops 0.4-1.9 °C at the same moment.
+  const powerYears = Object.values(groupBy(power, (r) => r.year)).map((rows) => ({
+    year: rows[0].year, precip_mm: sum(rows.map((r) => r.precip_mm)), tmean_c: mean(rows.map((r) => r.tmean_c)),
+  }));
+  const powerCheck = stepCheck(powerYears);
+
+  // ---------- 2) merge sources ----------
+  const tempSource = powerCheck.broken && era5 ? 'ERA5 (Open-Meteo)' : 'NASA POWER';
+  const rainSource = chirps ? 'CHIRPS (ClimateSERV)' : powerCheck.broken && era5 ? 'ERA5 (Open-Meteo)' : 'NASA POWER';
+  const era5By = new Map((era5 ?? []).map((r) => [r.date, r]));
+  const chirpsBy = new Map((chirps ?? []).map((r) => [r.date, r.precip_mm]));
+  const daily = power.map((r) => {
+    const e = era5By.get(r.date);
+    const useEra5T = tempSource.startsWith('ERA5');
+    const tmax = useEra5T ? e?.tmax_c ?? null : r.tmax_c;
+    const tmin = useEra5T ? e?.tmin_c ?? null : r.tmin_c;
+    const tmean = useEra5T ? e?.tmean_c ?? null : r.tmean_c;
+    const precip = rainSource.startsWith('CHIRPS') ? chirpsBy.get(r.date) ?? null : rainSource.startsWith('ERA5') ? e?.precip_mm ?? null : r.precip_mm;
+    return { ...r, tmax_c: tmax, tmin_c: tmin, tmean_c: tmean, precip_mm: precip, ...deriveDaily({ date: r.date, tmax, tmin, precip }, site.location.lat) };
+  });
+  writeCSV(path.join(dir, 'weather_daily.csv'), daily.map((r) => ({
+    date: r.date, year: r.year, month: r.month, tmax_c: r.tmax_c, tmin_c: r.tmin_c, tmean_c: r.tmean_c, precip_mm: r.precip_mm,
+    et0_hargreaves_mm: r.et0_hargreaves_mm, water_balance_mm: r.water_balance_mm, soil_wet_top: r.soil_wet_top,
+    gdd_base10: r.gdd_base10, heat_day: r.heat_day, heavy_rain_day: r.heavy_rain_day,
+  })));
   const et = opt(path.join(dir, 'modis_et.csv'));
   const lst = opt(path.join(dir, 'modis_lst.csv'));
-  const soil = opt(path.join(dir, 'soil_summary.json'));
-  const terrain = opt(path.join(dir, 'terrain.json'));
-  const available = { power: true, ndvi: !!ndvi, modis_et: !!et, modis_lst: !!lst, soil: !!soil, terrain: !!terrain };
 
   // 8-day ET composites → daily rate, attributed to the composite's start month
   const etRate = et?.map((r) => ({ ...r, et_day: r.et_mm_8day === null ? null : r.et_mm_8day / 8, pet_day: r.pet_mm_8day === null ? null : r.pet_mm_8day / 8 }));
 
   // ---------- monthly series (year × month) ----------
-  const ym = groupBy(power, (r) => `${r.year}-${r.month}`);
+  const ym = groupBy(daily, (r) => `${r.year}-${r.month}`);
   const monthlySeries = Object.values(ym).map((rows) => {
     const { year, month } = rows[0];
     const n = (arr, f) => arr?.filter((r) => r.year === year && r.month === month).map(f) ?? [];
@@ -87,7 +122,7 @@ for (const site of selectedSites(cfg)) {
   allMonthly.push(...climatology);
 
   // ---------- annual ----------
-  const byYear = groupBy(power, (r) => r.year);
+  const byYear = groupBy(daily, (r) => r.year);
   const annual = Object.entries(byYear).map(([y, rows]) => {
     const year = Number(y);
     const nd = ndvi?.filter((r) => r.year === year && r.ndvi_clean !== null) ?? [];
@@ -136,51 +171,24 @@ for (const site of selectedSites(cfg)) {
       mann_kendall: mannKendall(ys),
     };
   }
-  writeJSON(path.join(dir, 'trends.json'), { site: site.id, period: `${years[0]}-${years.at(-1)}`, note: 'Mann-Kendall p<0.05 = significant monotonic trend. With 24 years, treat p 0.05-0.15 as "possible", not proven.', trends });
-
-  // ---------- app-shaped JSON (matches RegionDetail in src/types/index.ts) ----------
-  const ts = (k) => trends[k];
-  const regionClimate = {
-    _provenance: {
-      generated: new Date().toISOString(), location: site.location, available,
-      notes: [
-        'Real data replacing make_fake_data.ts for: monthly, annual, trends (except groundwater), soil.',
-        'insights / rotations / crop_fit are NOT generated here — they are the analysis step (see data/NEXT_STEPS.md).',
-        'soil_moisture is the POWER/MERRA-2 GWETTOP wetness index (0-1), not volumetric moisture.',
-      ],
-    },
-    region: { id: site.id, name: site.name, place: site.place, lat: site.location.lat, lon: site.location.lon },
-    monthly: climatology.map((c) => ({
-      month: c.month, tmax_c: c.tmax_c, tmin_c: c.tmin_c, precip_mm: c.precip_mm, soil_moisture: c.soil_moisture,
-      et_mm: c.et_mm ?? c.et0_mm, ndvi: c.ndvi, frost_days: c.frost_days, heat_days: c.heat_days,
-      heavy_rain_days: c.heavy_rain_days, typically_bare: c.typically_bare,
-    })),
-    annual: annual.map((a) => ({
-      year: a.year, heat_days: a.heat_days, precip_mm: a.precip_mm, heavy_rain_days: a.heavy_rain_days,
-      groundwater_anomaly_cm: null, growing_season_days: a.growing_season_days,
-    })),
-    trends: {
-      heat_days_per_decade: ts('heat_days')?.per_decade ?? null,
-      precip_change_pct: ts('precip_mm')?.change_pct_over_period ?? null,
-      heavy_rain_change_pct: ts('heavy_rain_days')?.change_pct_over_period ?? null,
-      groundwater: null, // GRACE-FO is login-only and out of scope for the demo
-    },
-    soil: soil ? {
-      texture: soil.app_labels.texture, organic_matter: soil.app_labels.organic_matter,
-      drainage: soil.app_labels.drainage_heuristic, slope_pct: terrain?.slope_pct_field ?? null,
-      erosion_risk: terrain?.erosion_risk_from_slope ?? null, water_holding: soil.app_labels.water_holding,
-      source: `ISRIC SoilGrids 2.0${terrain ? ' + NASA SRTM' : ''}`,
-    } : null,
-    sources: [
-      'NASA POWER (MERRA-2) daily 2001-2024',
-      ...(ndvi ? ['MODIS MOD13Q1 NDVI 250 m (ORNL DAAC)'] : []),
-      ...(et ? ['MODIS MOD16A2GF ET 500 m (ORNL DAAC)'] : []),
-      ...(lst ? ['MODIS MOD11A2 LST 1 km (ORNL DAAC)'] : []),
-      ...(soil ? ['ISRIC SoilGrids 2.0'] : []),
-      ...(terrain ? ['NASA SRTM 30 m (OpenTopoData)'] : []),
-    ],
+  // ---------- 3) quality of the merged series ----------
+  const finalCheck = stepCheck(annual);
+  const quality = {
+    weather: finalCheck.broken ? 'suspect' : 'ok',
+    rain_source: rainSource,
+    temp_source: tempSource,
+    ndvi_source: gibsNdvi ? 'NASA GIBS VIIRS NDVI (cropland pixels)' : ndvi ? 'MODIS MOD13Q1 (ORNL)' : null,
+    power_check: { ...powerCheck, verdict: powerCheck.broken ? 'POWER has a 2008 step change here; replaced where possible' : 'POWER passes' },
+    final_check: finalCheck,
+    note: finalCheck.broken
+      ? 'The merged weather still shows a step change around 2008; treat trends as unreliable.'
+      : powerCheck.broken
+        ? `POWER weather is broken here (2008 step change), so rain comes from ${rainSource} and temperature from ${tempSource}.`
+        : 'No step change detected around 2008.',
   };
-  writeJSON(path.join(dir, 'region_climate.json'), regionClimate);
+  if (powerCheck.broken) console.warn(`  ⚠ POWER broken here → rain: ${rainSource}, temperature: ${tempSource}${finalCheck.broken ? ' — STILL suspect' : ' — fixed'}`);
+  writeJSON(path.join(dir, 'trends.json'), { site: site.id, period: `${years[0]}-${years.at(-1)}`, note: 'Mann-Kendall p<0.05 = significant monotonic trend. With 24 years, treat p 0.05-0.15 as "possible", not proven.', quality, trends });
+
 }
 
 if (allAnnual.length) writeCSV(path.join(PROCESSED_DIR, 'all_sites_annual.csv'), allAnnual);

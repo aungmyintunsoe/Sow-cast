@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "generate-data": "bun run scripts/make_fake_data.ts"
+    "data:build": "node data/scripts/06_build_app_data.mjs"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",

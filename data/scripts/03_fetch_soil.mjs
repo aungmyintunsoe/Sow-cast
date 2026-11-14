@@ -39,12 +39,38 @@ const cfg = loadConfig();
 const sites = selectedSites(cfg);
 for (const [n, site] of sites.entries()) {
   console.log(`\n▶ SoilGrids ${site.id} (${site.location.lat}, ${site.location.lon})`);
-  const cacheFile = path.join(RAW_DIR, 'soil', `${site.id}.json`);
-  const cached = fs.existsSync(cacheFile);
-  const url = 'https://rest.isric.org/soilgrids/v2.0/properties/query' +
-    `?lon=${site.location.lon}&lat=${site.location.lat}` +
-    PROPS.map((p) => `&property=${p}`).join('') + DEPTHS.map((d) => `&depth=${d}`).join('') + VALUES.map((v) => `&value=${v}`).join('');
-  const json = await fetchJSON(url, { cacheFile, retries: 6 });
+  // Reference points are town centres; SoilGrids has no data over towns or water. If the point is empty,
+  // try 8 points 3 km away, then 6 km away, and keep the first with data (recorded as sampled_at).
+  const candidates = [[0, 0]];
+  for (const km of [3, 6]) for (let k = 0; k < 8; k++) {
+    const a = (k * Math.PI) / 4;
+    candidates.push([(km * Math.cos(a)) / 111.32, (km * Math.sin(a)) / (111.32 * Math.cos((site.location.lat * Math.PI) / 180))]);
+  }
+  let json = null, sampledAt = null, anyFetched = false;
+  for (const [i, [dLat, dLon]] of candidates.entries()) {
+    const lat = round(site.location.lat + dLat, 4), lon = round(site.location.lon + dLon, 4);
+    const cacheFile = path.join(RAW_DIR, 'soil', `${site.id}_${i}.json`);
+    if (!fs.existsSync(cacheFile)) {
+      if (anyFetched) await sleep(13_000); // respect ~5 req/min fair use
+      anyFetched = true;
+    }
+    const url = 'https://rest.isric.org/soilgrids/v2.0/properties/query' +
+      `?lon=${lon}&lat=${lat}` +
+      PROPS.map((p) => `&property=${p}`).join('') + DEPTHS.map((d) => `&depth=${d}`).join('') + VALUES.map((v) => `&value=${v}`).join('');
+    const j = await fetchJSON(url, { cacheFile, retries: 6 });
+    const clay0 = j.properties.layers.find((l) => l.name === 'clay')?.depths[0]?.values.mean;
+    if (clay0 !== null && clay0 !== undefined) {
+      json = j;
+      sampledAt = { lat, lon, km_from_reference: i === 0 ? 0 : i <= 8 ? 3 : 6 };
+      if (i > 0) console.log(`  · no data at the town point; using ${lat}, ${lon} (${sampledAt.km_from_reference} km away)`);
+      break;
+    }
+  }
+  if (!json) {
+    console.warn(`  ⚠ no SoilGrids data within 6 km of ${site.id} — skipped`);
+    continue;
+  }
+  const cached = !anyFetched;
 
   const rows = [];
   const get = {}; // get[prop][depth] = mean (converted)
@@ -83,7 +109,7 @@ for (const [n, site] of sites.entries()) {
 
   const texture = clay !== null && sand !== null && silt !== null ? usdaTexture(sand, silt, clay) : null;
   const summary = {
-    site: site.id, lat: site.location.lat, lon: site.location.lon, source: 'ISRIC SoilGrids 2.0 (250 m, modelled)',
+    site: site.id, lat: site.location.lat, lon: site.location.lon, sampled_at: sampledAt, source: 'ISRIC SoilGrids 2.0 (250 m, modelled)',
     topsoil_0_30cm: {
       clay_pct: round(clay, 1), sand_pct: round(sand, 1), silt_pct: round(silt, 1), usda_texture: texture,
       soc_g_kg: round(soc, 1), organic_matter_pct: round(som, 2), ph: round(ph, 2),

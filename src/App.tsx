@@ -1,11 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import {
   Map,
   Satellite,
   RefreshCw,
   Sprout,
-  Sun,
   MapPin,
   Loader2,
   AlertTriangle,
@@ -15,29 +14,27 @@ import { FieldMap } from './components/FieldMap';
 import { FieldBrief } from './components/FieldBrief';
 import { RotationCompare } from './components/RotationCompare';
 import { CropFitList } from './components/CropFitList';
-import { DesignSwitcher } from './components/DesignSwitcher';
-import { SHOW_DESIGN_SWITCHER } from './theme/themes';
 
 type StepId = 'map' | 'brief' | 'rotations' | 'crops';
 
 const STEPS: { id: StepId; label: string; shortLabel: string; icon: React.ReactNode }[] = [
-  { id: 'map', label: '1. Pick Field', shortLabel: '1. Map', icon: <Map className="w-4 h-4" /> },
+  { id: 'map', label: '1. Pick Field', shortLabel: 'Field', icon: <Map className="w-4 h-4" /> },
   {
     id: 'brief',
     label: '2. Satellite Brief',
-    shortLabel: '2. Sky & Soil',
+    shortLabel: 'Brief',
     icon: <Satellite className="w-4 h-4" />,
   },
   {
     id: 'rotations',
     label: '3. Compare Rotations',
-    shortLabel: '3. Rotations',
+    shortLabel: 'Rotations',
     icon: <RefreshCw className="w-4 h-4" />,
   },
   {
     id: 'crops',
     label: '4. Best Crops',
-    shortLabel: '4. Crops',
+    shortLabel: 'Crops',
     icon: <Sprout className="w-4 h-4" />,
   },
 ];
@@ -48,11 +45,10 @@ export function App() {
     const s = new URLSearchParams(window.location.search).get('step');
     return STEPS.some((x) => x.id === s) ? (s as StepId) : 'map';
   });
-  const [sunMode, setSunMode] = useState(false);
 
   const [regions, setRegions] = useState<RegionSummary[]>([]);
   const [crops, setCrops] = useState<Crop[]>([]);
-  const [selectedRegionId, setSelectedRegionId] = useState<string>('iowa');
+  const [selectedRegionId, setSelectedRegionId] = useState<string>('');
   const [regionDetail, setRegionDetail] = useState<RegionDetail | null>(null);
 
   const [loadingInit, setLoadingInit] = useState(true);
@@ -130,7 +126,7 @@ export function App() {
   }, [crops]);
 
   return (
-    <div className={`min-h-screen flex flex-col ${sunMode ? 'sun-mode' : 'bg-stone-50 text-stone-900'}`}>
+    <div className="min-h-screen flex flex-col bg-stone-50 text-stone-900">
       {/* Top Navbar */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
@@ -144,20 +140,15 @@ export function App() {
                 <h1 className="font-display font-bold text-lg sm:text-xl tracking-tight text-stone-900">
                   Sowcast
                 </h1>
-                <span className="hidden sm:inline-block text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-nasa-blue border border-blue-200 px-2 py-0.5 rounded-full">
+                <span className="hidden sm:inline-block text-[11px] font-semibold bg-blue-50 text-nasa-blue border border-blue-200 px-2 py-0.5 rounded-full">
                   NASA Space Apps · Field Shift
                 </span>
               </div>
-              <p className="text-xs text-stone-500 hidden sm:block">
-                20+ years of satellite data turned into plain crop-rotation decisions
-              </p>
             </div>
           </div>
 
           {/* Right Controls */}
           <div className="flex items-center gap-2">
-            {SHOW_DESIGN_SWITCHER && <DesignSwitcher />}
-
             {regionDetail && (
               <button
                 onClick={() => setStep('map')}
@@ -166,23 +157,10 @@ export function App() {
               >
                 <MapPin className="w-3.5 h-3.5 text-brand-600" />
                 <span className="max-w-[140px] sm:max-w-none truncate">
-                  {regionDetail.region.name}, {regionDetail.region.place}
+                  {regionDetail.region.name}, {regionDetail.region.country}
                 </span>
               </button>
             )}
-
-            <button
-              onClick={() => setSunMode((v) => !v)}
-              className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-xl border transition ${
-                sunMode
-                  ? 'bg-amber-400 text-stone-950 border-stone-900'
-                  : 'bg-white text-stone-700 border-stone-300 hover:bg-stone-100'
-              }`}
-              title="Boost contrast for bright outdoor sunlight"
-            >
-              <Sun className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">{sunMode ? 'Sun Mode ON' : 'Outdoor Mode'}</span>
-            </button>
           </div>
         </div>
 
@@ -195,7 +173,8 @@ export function App() {
                 <button
                   key={s.id}
                   onClick={() => setStep(s.id)}
-                  className={`flex items-center justify-center gap-1.5 py-2 px-2 sm:px-3 rounded-xl text-xs sm:text-sm font-bold transition ${
+                  aria-current={active ? 'step' : undefined}
+                  className={`flex flex-col md:flex-row items-center justify-center gap-0.5 md:gap-1.5 py-1.5 md:py-2 px-1 sm:px-3 rounded-xl text-[11px] sm:text-xs md:text-sm font-bold whitespace-nowrap transition ${
                     active
                       ? 'bg-brand-600 text-white shadow-sm'
                       : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
@@ -226,6 +205,7 @@ export function App() {
             <p className="text-sm font-semibold">Loading field profiles & crop library…</p>
           </div>
         ) : (
+          <MotionConfig reducedMotion="user">
           <AnimatePresence mode="wait">
             <motion.div
               key={`${step}-${selectedRegionId}`}
@@ -251,12 +231,12 @@ export function App() {
               )}
 
               {step === 'brief' && !loadingRegion && regionDetail && (
-                <FieldBrief data={regionDetail} onContinue={() => setStep('rotations')} />
+                <FieldBrief data={regionDetail} cropsMap={cropsMap} onContinue={() => setStep('rotations')} />
               )}
 
               {step === 'rotations' && !loadingRegion && regionDetail && (
                 <RotationCompare
-                  regionName={`${regionDetail.region.name}, ${regionDetail.region.place}`}
+                  regionName={`${regionDetail.region.name}, ${regionDetail.region.country}`}
                   rotations={regionDetail.rotations}
                   cropsMap={cropsMap}
                   onContinue={() => setStep('crops')}
@@ -265,19 +245,20 @@ export function App() {
 
               {step === 'crops' && !loadingRegion && regionDetail && (
                 <CropFitList
-                  regionName={`${regionDetail.region.name}, ${regionDetail.region.place}`}
+                  regionName={`${regionDetail.region.name}, ${regionDetail.region.country}`}
                   cropFit={regionDetail.crop_fit}
                   cropsMap={cropsMap}
                 />
               )}
             </motion.div>
           </AnimatePresence>
+          </MotionConfig>
         )}
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-stone-200 bg-white py-4 px-4 text-center text-xs text-stone-500">
-        Sowcast Demo · Built with static NASA/soil data in <code className="bg-stone-100 px-1 py-0.5 rounded">/public/data</code> · No backend or API keys required
+      <footer className="border-t border-stone-200 bg-white py-4 px-4 text-center text-xs text-stone-600">
+        Sowcast suggests options from satellite patterns. It doesn't replace an agronomist, so check with a local agricultural expert before you change your rotation.
       </footer>
     </div>
   );

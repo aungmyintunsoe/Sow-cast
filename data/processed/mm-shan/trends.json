@@ -1,0 +1,217 @@
+{
+  "site": "mm-shan",
+  "period": "2001-2024",
+  "note": "Mann-Kendall p<0.05 = significant monotonic trend. With 24 years, treat p 0.05-0.15 as \"possible\", not proven.",
+  "quality": {
+    "weather": "ok",
+    "rain_source": "CHIRPS (ClimateSERV)",
+    "temp_source": "ERA5 (Open-Meteo)",
+    "ndvi_source": "NASA GIBS VIIRS NDVI (cropland pixels)",
+    "power_check": {
+      "broken": true,
+      "rain_step_ratio_2008_vs_before": 4.33,
+      "tmean_step_c_2008_vs_before": -0.83,
+      "verdict": "POWER has a 2008 step change here; replaced where possible"
+    },
+    "final_check": {
+      "broken": false,
+      "rain_step_ratio_2008_vs_before": 0.97,
+      "tmean_step_c_2008_vs_before": 0.18
+    },
+    "note": "POWER weather is broken here (2008 step change), so rain comes from CHIRPS (ClimateSERV) and temperature from ERA5 (Open-Meteo)."
+  },
+  "trends": {
+    "tmean_c": {
+      "per_decade": 0.119,
+      "first_10y_mean": 18.91,
+      "last_10y_mean": 18.98,
+      "change_pct_over_period": 1.5,
+      "mann_kendall": {
+        "S": 56,
+        "z": 1.364,
+        "p": 0.1725,
+        "trend": "no significant trend"
+      }
+    },
+    "heat_days": {
+      "per_decade": 0,
+      "first_10y_mean": 0,
+      "last_10y_mean": 0,
+      "change_pct_over_period": null,
+      "mann_kendall": {
+        "S": 0,
+        "z": 0,
+        "p": 1,
+        "trend": "no significant trend"
+      }
+    },
+    "frost_days": {
+      "per_decade": 0,
+      "first_10y_mean": 0,
+      "last_10y_mean": 0,
+      "change_pct_over_period": null,
+      "mann_kendall": {
+        "S": 0,
+        "z": 0,
+        "p": 1,
+        "trend": "no significant trend"
+      }
+    },
+    "frost_free_run_days": {
+      "per_decade": 0.078,
+      "first_10y_mean": 365.2,
+      "last_10y_mean": 365.3,
+      "change_pct_over_period": 0,
+      "mann_kendall": {
+        "S": 18,
+        "z": 0.422,
+        "p": 0.6733,
+        "trend": "no significant trend"
+      }
+    },
+    "precip_mm": {
+      "per_decade": -20.213,
+      "first_10y_mean": 1780.9,
+      "last_10y_mean": 1705.7,
+      "change_pct_over_period": -2.7,
+      "mann_kendall": {
+        "S": -27,
+        "z": -0.645,
+        "p": 0.519,
+        "trend": "no significant trend"
+      }
+    },
+    "heavy_rain_days": {
+      "per_decade": -1.057,
+      "first_10y_mean": 34.8,
+      "last_10y_mean": 31.8,
+      "change_pct_over_period": -7.1,
+      "mann_kendall": {
+        "S": -29,
+        "z": -0.695,
+        "p": 0.4874,
+        "trend": "no significant trend"
+      }
+    },
+    "max_dry_spell_days": {
+      "per_decade": 0.952,
+      "first_10y_mean": 71.4,
+      "last_10y_mean": 72.3,
+      "change_pct_over_period": 3.1,
+      "mann_kendall": {
+        "S": 13,
+        "z": 0.298,
+        "p": 0.766,
+        "trend": "no significant trend"
+      }
+    },
+    "precip_p95_day_mm": {
+      "per_decade": 1.604,
+      "first_10y_mean": 45.76,
+      "last_10y_mean": 47.93,
+      "change_pct_over_period": 7.8,
+      "mann_kendall": {
+        "S": 43,
+        "z": 1.042,
+        "p": 0.2975,
+        "trend": "no significant trend"
+      }
+    },
+    "gdd": {
+      "per_decade": 99.309,
+      "first_10y_mean": 3398.2,
+      "last_10y_mean": 3500.9,
+      "change_pct_over_period": 6.7,
+      "mann_kendall": {
+        "S": 111,
+        "z": 2.728,
+        "p": 0.0064,
+        "trend": "increasing"
+      }
+    },
+    "et0_mm": {
+      "per_decade": 47.552,
+      "first_10y_mean": 1280.6,
+      "last_10y_mean": 1334.5,
+      "change_pct_over_period": 8.4,
+      "mann_kendall": {
+        "S": 108,
+        "z": 2.654,
+        "p": 0.008,
+        "trend": "increasing"
+      }
+    },
+    "water_balance_mm": {
+      "per_decade": -67.813,
+      "first_10y_mean": 500.3,
+      "last_10y_mean": 371.2,
+      "change_pct_over_period": -34.3,
+      "mann_kendall": {
+        "S": -36,
+        "z": -0.868,
+        "p": 0.3853,
+        "trend": "no significant trend"
+      }
+    },
+    "soil_wet_top_mean": {
+      "per_decade": 0.107,
+      "first_10y_mean": 0.32,
+      "last_10y_mean": 0.47,
+      "change_pct_over_period": 61,
+      "mann_kendall": {
+        "S": 182,
+        "z": 4.49,
+        "p": 0,
+        "trend": "increasing"
+      }
+    },
+    "ndvi_mean": {
+      "per_decade": -0.006,
+      "first_10y_mean": null,
+      "last_10y_mean": 0.53,
+      "change_pct_over_period": null,
+      "mann_kendall": {
+        "S": -1,
+        "z": 0,
+        "p": 1,
+        "trend": "no significant trend"
+      }
+    },
+    "ndvi_peak": {
+      "per_decade": -0.021,
+      "first_10y_mean": null,
+      "last_10y_mean": 0.69,
+      "change_pct_over_period": null,
+      "mann_kendall": {
+        "S": -14,
+        "z": -0.793,
+        "p": 0.4277,
+        "trend": "no significant trend"
+      }
+    },
+    "bare_composite_share": {
+      "per_decade": 0,
+      "first_10y_mean": null,
+      "last_10y_mean": 0,
+      "change_pct_over_period": null,
+      "mann_kendall": {
+        "S": 0,
+        "z": 0,
+        "p": 1,
+        "trend": "no significant trend"
+      }
+    },
+    "growing_season_days": {
+      "per_decade": 0.078,
+      "first_10y_mean": 365.2,
+      "last_10y_mean": 365.3,
+      "change_pct_over_period": 0,
+      "mann_kendall": {
+        "S": 18,
+        "z": 0.422,
+        "p": 0.6733,
+        "trend": "no significant trend"
+      }
+    }
+  }
+}

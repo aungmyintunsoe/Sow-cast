@@ -1,0 +1,12 @@
+{
+  "site": "kh-tonle-sap",
+  "lat": 13.1,
+  "lon": 103.2,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 14,
+  "slope_pct_field": 1.8,
+  "slope_pct_landscape_mean": 0.28,
+  "relief_m_within_1500m": 10,
+  "erosion_risk_from_slope": "low",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

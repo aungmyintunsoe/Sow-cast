@@ -1,0 +1,208 @@
+region_id,input,draft,measured,used,source
+mm-dry-zone,rain_mm_approx,754,854,measured,CHIRPS (ClimateSERV)
+mm-dry-zone,mean_temp_c_approx,27.5,26.7,measured,ERA5 (Open-Meteo)
+mm-dry-zone,dry_months_approx,6,6,measured,CHIRPS (ClimateSERV) rain vs crop water demand
+mm-dry-zone,soil_texture,sandy_loam,clay_loam,draft,kept literature value; ISRIC SoilGrids 0-30 cm shown for comparison
+mm-dry-zone,slope_pct_approx,2.0,1.6,measured,"NASA SRTM, mean within ~1.5 km"
+mm-dry-zone,drainage,good,,draft,no measured data yet
+mm-dry-zone,flood_risk_0_3,1,,draft,no measured data yet
+mm-dry-zone,salinity_risk_0_3,1,,draft,no measured data yet
+mm-dry-zone,irrigation_access_0_3,1,,draft,no measured data yet
+mm-ayeyarwady,rain_mm_approx,2600,2907,measured,CHIRPS (ClimateSERV)
+mm-ayeyarwady,mean_temp_c_approx,27.5,26.4,measured,ERA5 (Open-Meteo)
+mm-ayeyarwady,dry_months_approx,4,5,measured,CHIRPS (ClimateSERV) rain vs crop water demand
+mm-ayeyarwady,soil_texture,clay,clay_loam,measured,ISRIC SoilGrids 0-30 cm
+mm-ayeyarwady,slope_pct_approx,0.5,0.5,measured,"NASA SRTM, mean within ~1.5 km"
+mm-ayeyarwady,drainage,poor,,draft,no measured data yet
+mm-ayeyarwady,flood_risk_0_3,3,,draft,no measured data yet
+mm-ayeyarwady,salinity_risk_0_3,2,,draft,no measured data yet
+mm-ayeyarwady,irrigation_access_0_3,1,,draft,no measured data yet
+mm-shan,rain_mm_approx,1400,1753,measured,CHIRPS (ClimateSERV)
+mm-shan,mean_temp_c_approx,20.0,18.9,measured,ERA5 (Open-Meteo)
+mm-shan,dry_months_approx,5,5,measured,CHIRPS (ClimateSERV) rain vs crop water demand
+mm-shan,soil_texture,loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
+mm-shan,slope_pct_approx,12.0,10.8,measured,"NASA SRTM, mean within ~1.5 km"
+mm-shan,drainage,good,,draft,no measured data yet
+mm-shan,flood_risk_0_3,0,,draft,no measured data yet
+mm-shan,salinity_risk_0_3,0,,draft,no measured data yet
+mm-shan,irrigation_access_0_3,1,,draft,no measured data yet
+mm-kachin,rain_mm_approx,2200,2692,measured,ERA5 (Open-Meteo)
+mm-kachin,mean_temp_c_approx,24.0,23.3,measured,ERA5 (Open-Meteo)
+mm-kachin,dry_months_approx,4,5,measured,ERA5 (Open-Meteo) rain vs crop water demand
+mm-kachin,soil_texture,loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
+mm-kachin,slope_pct_approx,10.0,0.8,measured,"NASA SRTM, mean within ~1.5 km"
+mm-kachin,drainage,moderate,,draft,no measured data yet
+mm-kachin,flood_risk_0_3,1,,draft,no measured data yet
+mm-kachin,salinity_risk_0_3,0,,draft,no measured data yet
+mm-kachin,irrigation_access_0_3,0,,draft,no measured data yet
+mm-rakhine,rain_mm_approx,4200,3091,measured,ERA5 (Open-Meteo)
+mm-rakhine,mean_temp_c_approx,27.0,26.0,measured,ERA5 (Open-Meteo)
+mm-rakhine,dry_months_approx,5,6,measured,ERA5 (Open-Meteo) rain vs crop water demand
+mm-rakhine,soil_texture,clay,clay_loam,measured,ISRIC SoilGrids 0-30 cm
+mm-rakhine,slope_pct_approx,1.0,0.4,measured,"NASA SRTM, mean within ~1.5 km"
+mm-rakhine,drainage,poor,,draft,no measured data yet
+mm-rakhine,flood_risk_0_3,3,,draft,no measured data yet
+mm-rakhine,salinity_risk_0_3,2,,draft,no measured data yet
+mm-rakhine,irrigation_access_0_3,0,,draft,no measured data yet
+mm-tanintharyi,rain_mm_approx,4000,3763,measured,ERA5 (Open-Meteo)
+mm-tanintharyi,mean_temp_c_approx,27.0,26.0,measured,ERA5 (Open-Meteo)
+mm-tanintharyi,dry_months_approx,3,4,measured,ERA5 (Open-Meteo) rain vs crop water demand
+mm-tanintharyi,soil_texture,clay_loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
+mm-tanintharyi,slope_pct_approx,5.0,0.8,measured,"NASA SRTM, mean within ~1.5 km"
+mm-tanintharyi,drainage,moderate,,draft,no measured data yet
+mm-tanintharyi,flood_risk_0_3,2,,draft,no measured data yet
+mm-tanintharyi,salinity_risk_0_3,1,,draft,no measured data yet
+mm-tanintharyi,irrigation_access_0_3,0,,draft,no measured data yet
+th-north,rain_mm_approx,1200,1285,measured,NASA POWER
+th-north,mean_temp_c_approx,26.0,23.2,measured,NASA POWER
+th-north,dry_months_approx,5,6,measured,NASA POWER rain vs crop water demand
+th-north,soil_texture,loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
+th-north,slope_pct_approx,8.0,0.6,measured,"NASA SRTM, mean within ~1.5 km"
+th-north,drainage,good,,draft,no measured data yet
+th-north,flood_risk_0_3,1,,draft,no measured data yet
+th-north,salinity_risk_0_3,0,,draft,no measured data yet
+th-north,irrigation_access_0_3,2,,draft,no measured data yet
+th-isan,rain_mm_approx,1190,1394,measured,NASA POWER
+th-isan,mean_temp_c_approx,27.4,26.6,measured,NASA POWER
+th-isan,dry_months_approx,5,6,measured,NASA POWER rain vs crop water demand
+th-isan,soil_texture,sandy,,draft,no measured data yet
+th-isan,slope_pct_approx,3.0,0.6,measured,"NASA SRTM, mean within ~1.5 km"
+th-isan,drainage,good,,draft,no measured data yet
+th-isan,flood_risk_0_3,1,,draft,no measured data yet
+th-isan,salinity_risk_0_3,1,,draft,no measured data yet
+th-isan,irrigation_access_0_3,1,,draft,no measured data yet
+th-central,rain_mm_approx,1100,1243,measured,NASA POWER
+th-central,mean_temp_c_approx,28.0,28.0,measured,NASA POWER
+th-central,dry_months_approx,5,6,measured,NASA POWER rain vs crop water demand
+th-central,soil_texture,clay,,draft,no measured data yet
+th-central,slope_pct_approx,0.5,0.2,measured,"NASA SRTM, mean within ~1.5 km"
+th-central,drainage,poor,,draft,no measured data yet
+th-central,flood_risk_0_3,2,,draft,no measured data yet
+th-central,salinity_risk_0_3,0,,draft,no measured data yet
+th-central,irrigation_access_0_3,3,,draft,no measured data yet
+th-east,rain_mm_approx,3000,2684,measured,NASA POWER
+th-east,mean_temp_c_approx,27.5,27.6,measured,NASA POWER
+th-east,dry_months_approx,4,2,measured,NASA POWER rain vs crop water demand
+th-east,soil_texture,sandy_loam,,draft,no measured data yet
+th-east,slope_pct_approx,5.0,0.5,measured,"NASA SRTM, mean within ~1.5 km"
+th-east,drainage,good,,draft,no measured data yet
+th-east,flood_risk_0_3,1,,draft,no measured data yet
+th-east,salinity_risk_0_3,0,,draft,no measured data yet
+th-east,irrigation_access_0_3,1,,draft,no measured data yet
+th-west,rain_mm_approx,1300,1298,measured,NASA POWER
+th-west,mean_temp_c_approx,27.5,26.6,measured,NASA POWER
+th-west,dry_months_approx,5,6,measured,NASA POWER rain vs crop water demand
+th-west,soil_texture,loam,,draft,no measured data yet
+th-west,slope_pct_approx,4.0,0.5,measured,"NASA SRTM, mean within ~1.5 km"
+th-west,drainage,good,,draft,no measured data yet
+th-west,flood_risk_0_3,1,,draft,no measured data yet
+th-west,salinity_risk_0_3,0,,draft,no measured data yet
+th-west,irrigation_access_0_3,1,,draft,no measured data yet
+th-south,rain_mm_approx,1800,2383,measured,NASA POWER
+th-south,mean_temp_c_approx,27.5,26.5,measured,NASA POWER
+th-south,dry_months_approx,2,1,measured,NASA POWER rain vs crop water demand
+th-south,soil_texture,sandy_loam,,draft,no measured data yet
+th-south,slope_pct_approx,4.0,0.4,measured,"NASA SRTM, mean within ~1.5 km"
+th-south,drainage,moderate,,draft,no measured data yet
+th-south,flood_risk_0_3,2,,draft,no measured data yet
+th-south,salinity_risk_0_3,0,,draft,no measured data yet
+th-south,irrigation_access_0_3,1,,draft,no measured data yet
+vn-northern-mtn,rain_mm_approx,1400,1459,measured,NASA POWER
+vn-northern-mtn,mean_temp_c_approx,21.0,21.0,measured,NASA POWER
+vn-northern-mtn,dry_months_approx,5,5,measured,NASA POWER rain vs crop water demand
+vn-northern-mtn,soil_texture,loam,,draft,no measured data yet
+vn-northern-mtn,slope_pct_approx,25.0,7.0,measured,"NASA SRTM, mean within ~1.5 km"
+vn-northern-mtn,drainage,good,,draft,no measured data yet
+vn-northern-mtn,flood_risk_0_3,0,,draft,no measured data yet
+vn-northern-mtn,salinity_risk_0_3,0,,draft,no measured data yet
+vn-northern-mtn,irrigation_access_0_3,1,,draft,no measured data yet
+vn-red-river,rain_mm_approx,1700,1705,measured,NASA POWER
+vn-red-river,mean_temp_c_approx,24.0,24.0,measured,NASA POWER
+vn-red-river,dry_months_approx,3,4,measured,NASA POWER rain vs crop water demand
+vn-red-river,soil_texture,silty_clay_loam,,draft,no measured data yet
+vn-red-river,slope_pct_approx,0.3,0.3,measured,"NASA SRTM, mean within ~1.5 km"
+vn-red-river,drainage,moderate,,draft,no measured data yet
+vn-red-river,flood_risk_0_3,2,,draft,no measured data yet
+vn-red-river,salinity_risk_0_3,1,,draft,no measured data yet
+vn-red-river,irrigation_access_0_3,3,,draft,no measured data yet
+vn-north-central,rain_mm_approx,1900,1892,measured,NASA POWER
+vn-north-central,mean_temp_c_approx,24.5,24.9,measured,NASA POWER
+vn-north-central,dry_months_approx,3,3,measured,NASA POWER rain vs crop water demand
+vn-north-central,soil_texture,sandy_loam,,draft,no measured data yet
+vn-north-central,slope_pct_approx,3.0,0.2,measured,"NASA SRTM, mean within ~1.5 km"
+vn-north-central,drainage,good,,draft,no measured data yet
+vn-north-central,flood_risk_0_3,2,,draft,no measured data yet
+vn-north-central,salinity_risk_0_3,1,,draft,no measured data yet
+vn-north-central,irrigation_access_0_3,2,,draft,no measured data yet
+vn-south-central,rain_mm_approx,700,1478,measured,NASA POWER
+vn-south-central,mean_temp_c_approx,27.0,25.0,measured,NASA POWER
+vn-south-central,dry_months_approx,8,4,measured,NASA POWER rain vs crop water demand
+vn-south-central,soil_texture,sandy_loam,,draft,no measured data yet
+vn-south-central,slope_pct_approx,3.0,0.3,measured,"NASA SRTM, mean within ~1.5 km"
+vn-south-central,drainage,good,,draft,no measured data yet
+vn-south-central,flood_risk_0_3,1,,draft,no measured data yet
+vn-south-central,salinity_risk_0_3,1,,draft,no measured data yet
+vn-south-central,irrigation_access_0_3,1,,draft,no measured data yet
+vn-central-highlands,rain_mm_approx,1900,,draft,no measured data yet
+vn-central-highlands,mean_temp_c_approx,23.5,,draft,no measured data yet
+vn-central-highlands,dry_months_approx,4,,draft,no measured data yet
+vn-central-highlands,soil_texture,clay_loam,,draft,no measured data yet
+vn-central-highlands,slope_pct_approx,6.0,1.8,measured,"NASA SRTM, mean within ~1.5 km"
+vn-central-highlands,drainage,good,,draft,no measured data yet
+vn-central-highlands,flood_risk_0_3,0,,draft,no measured data yet
+vn-central-highlands,salinity_risk_0_3,0,,draft,no measured data yet
+vn-central-highlands,irrigation_access_0_3,1,,draft,no measured data yet
+vn-southeast,rain_mm_approx,1800,1327,measured,NASA POWER
+vn-southeast,mean_temp_c_approx,27.5,28.0,measured,NASA POWER
+vn-southeast,dry_months_approx,4,5,measured,NASA POWER rain vs crop water demand
+vn-southeast,soil_texture,sandy_loam,,draft,no measured data yet
+vn-southeast,slope_pct_approx,2.0,0.7,measured,"NASA SRTM, mean within ~1.5 km"
+vn-southeast,drainage,good,,draft,no measured data yet
+vn-southeast,flood_risk_0_3,1,,draft,no measured data yet
+vn-southeast,salinity_risk_0_3,0,,draft,no measured data yet
+vn-southeast,irrigation_access_0_3,2,,draft,no measured data yet
+vn-mekong,rain_mm_approx,1700,1748,measured,NASA POWER
+vn-mekong,mean_temp_c_approx,27.5,27.4,measured,NASA POWER
+vn-mekong,dry_months_approx,4,3,measured,NASA POWER rain vs crop water demand
+vn-mekong,soil_texture,clay,,draft,no measured data yet
+vn-mekong,slope_pct_approx,0.1,0.3,measured,"NASA SRTM, mean within ~1.5 km"
+vn-mekong,drainage,poor,,draft,no measured data yet
+vn-mekong,flood_risk_0_3,3,,draft,no measured data yet
+vn-mekong,salinity_risk_0_3,3,,draft,no measured data yet
+vn-mekong,irrigation_access_0_3,3,,draft,no measured data yet
+kh-tonle-sap,rain_mm_approx,1400,1881,measured,NASA POWER
+kh-tonle-sap,mean_temp_c_approx,27.5,27.3,measured,NASA POWER
+kh-tonle-sap,dry_months_approx,5,4,measured,NASA POWER rain vs crop water demand
+kh-tonle-sap,soil_texture,sandy_loam,,draft,no measured data yet
+kh-tonle-sap,slope_pct_approx,1.0,0.3,measured,"NASA SRTM, mean within ~1.5 km"
+kh-tonle-sap,drainage,moderate,,draft,no measured data yet
+kh-tonle-sap,flood_risk_0_3,2,,draft,no measured data yet
+kh-tonle-sap,salinity_risk_0_3,0,,draft,no measured data yet
+kh-tonle-sap,irrigation_access_0_3,1,,draft,no measured data yet
+kh-mekong-plain,rain_mm_approx,1400,1253,measured,NASA POWER
+kh-mekong-plain,mean_temp_c_approx,27.5,28.3,measured,NASA POWER
+kh-mekong-plain,dry_months_approx,5,5,measured,NASA POWER rain vs crop water demand
+kh-mekong-plain,soil_texture,clay,,draft,no measured data yet
+kh-mekong-plain,slope_pct_approx,0.2,0.6,measured,"NASA SRTM, mean within ~1.5 km"
+kh-mekong-plain,drainage,poor,,draft,no measured data yet
+kh-mekong-plain,flood_risk_0_3,3,,draft,no measured data yet
+kh-mekong-plain,salinity_risk_0_3,0,,draft,no measured data yet
+kh-mekong-plain,irrigation_access_0_3,2,,draft,no measured data yet
+kh-plateau,rain_mm_approx,2200,,draft,no measured data yet
+kh-plateau,mean_temp_c_approx,25.0,,draft,no measured data yet
+kh-plateau,dry_months_approx,4,,draft,no measured data yet
+kh-plateau,soil_texture,clay_loam,,draft,no measured data yet
+kh-plateau,slope_pct_approx,6.0,2.2,measured,"NASA SRTM, mean within ~1.5 km"
+kh-plateau,drainage,good,,draft,no measured data yet
+kh-plateau,flood_risk_0_3,0,,draft,no measured data yet
+kh-plateau,salinity_risk_0_3,0,,draft,no measured data yet
+kh-plateau,irrigation_access_0_3,0,,draft,no measured data yet
+kh-coastal,rain_mm_approx,2000,2029,measured,NASA POWER
+kh-coastal,mean_temp_c_approx,27.5,27.6,measured,NASA POWER
+kh-coastal,dry_months_approx,4,4,measured,NASA POWER rain vs crop water demand
+kh-coastal,soil_texture,clay,,draft,no measured data yet
+kh-coastal,slope_pct_approx,0.5,0.2,measured,"NASA SRTM, mean within ~1.5 km"
+kh-coastal,drainage,poor,,draft,no measured data yet
+kh-coastal,flood_risk_0_3,1,,draft,no measured data yet
+kh-coastal,salinity_risk_0_3,2,,draft,no measured data yet
+kh-coastal,irrigation_access_0_3,1,,draft,no measured data yet

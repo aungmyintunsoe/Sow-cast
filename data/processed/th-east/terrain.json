@@ -1,0 +1,12 @@
+{
+  "site": "th-east",
+  "lat": 12.61,
+  "lon": 102.1,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 16,
+  "slope_pct_field": 7.5,
+  "slope_pct_landscape_mean": 0.49,
+  "relief_m_within_1500m": 35,
+  "erosion_risk_from_slope": "high",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

@@ -1,63 +1,57 @@
 # Sowcast `data/` — start here
 
-Real NASA and partner data for the four Sowcast preset locations. Node scripts fetch it with no API keys or logins. A Python environment is set up for the analysis.
+Everything behind the app's numbers, for 23 farming regions in Myanmar, Thailand, Vietnam and Cambodia.
 
 ```bash
-node data/scripts/run_all.mjs        # fetch + build everything (resumable — safe to re-run)
-node data/scripts/run_all.mjs iowa   # one location
+node data/scripts/run_all.mjs        # fetch open data + score crops + build the app's files (resumable, no keys)
+npm run data:build                   # only rebuild public/data from what is already fetched and scored
+python data/inputs/make_data.py      # regenerate the team's draft CSVs after editing them
 ```
 
-Python analysis environment (already created at `data/.venv`):
-
-```powershell
-data\.venv\Scripts\Activate.ps1
-jupyter lab            # notebooks read from data/processed/
-```
-
-On a new machine: `python -m venv data/.venv`, then `pip install -r data/requirements.txt`.
+Node 18+ runs the fetch scripts with no install. Python steps use `data/.venv` (`python -m venv data/.venv`, then `pip install -r data/requirements.txt`).
 
 ## Read in this order
 
 | File | Answers |
 |---|---|
-| [context.md](context.md) | Where this stage fits, key findings so far, design decisions |
-| [API_CALLS.md](API_CALLS.md) | **Which APIs we call**: endpoints, parameters, request counts, gotchas |
-| [DATA_DICTIONARY.md](DATA_DICTIONARY.md) | **What data you have**: every file and column, with units |
-| [NEXT_STEPS.md](NEXT_STEPS.md) | **What to do next in the analysis** |
-| [resources.txt](resources.txt) | **Resources still worth getting** |
-| [VISUALIZATIONS.md](VISUALIZATIONS.md) | **Charts you can build**, mapped to files and app screens |
-| [ANALYSIS_TIPS.md](ANALYSIS_TIPS.md) | **How to analyse it well** |
+| [NEXT_STEPS.md](NEXT_STEPS.md) | **The plan**: what is done, what to collect next, in what order |
+| [context.md](context.md) | Decisions so far and what the data shows |
+| [DATA_DICTIONARY.md](DATA_DICTIONARY.md) | Every file and column |
+| [API_CALLS.md](API_CALLS.md) | Which open APIs we call (pipeline and app map), and their gotchas |
+| [resources.txt](resources.txt) | Sources in use and sources still worth getting |
+| [VISUALIZATIONS.md](VISUALIZATIONS.md) / [ANALYSIS_TIPS.md](ANALYSIS_TIPS.md) | Charts to build; how to analyse the data well |
 
-## Folder layout
+## How data flows
 
 ```
-data/
-├── config/sites.json          # the 4 preset locations (globe menu) + period 2001–2024
-├── scripts/                   # Node, zero dependencies
-│   ├── lib.mjs                # fetch+retry+cache, CSV, stats (OLS, Mann-Kendall)
-│   ├── 01_fetch_power.mjs     # NASA POWER daily weather + soil wetness
-│   ├── 02_fetch_modis.mjs     # MODIS NDVI, land cover, ET, LST (slow service; --only=ndvi,...)
-│   ├── 03_fetch_soil.mjs      # ISRIC SoilGrids profile + derived soil labels
-│   ├── 04_fetch_terrain.mjs   # NASA SRTM elevation → slope (for erosion risk)
-│   ├── 05_build_summaries.mjs # monthly / annual / trends / app-shaped JSON
-│   └── run_all.mjs
-├── requirements.txt           # Python analysis packages
-├── processed/                 # ✅ committed — analyse from here
-│   ├── all_sites_annual.csv, all_sites_monthly_climatology.csv
-│   └── <site>/ power_daily.csv, modis_*.csv, landcover_annual.csv, soil_*.{csv,json}, terrain.json,
-│               monthly_series.csv, monthly_climatology.csv, annual.csv, trends.json, region_climate.json
-├── raw/                       # git-ignored API cache
-└── .venv/                     # git-ignored Python environment
+data/inputs/  team draft data — make_data.py → regions, crops, crop fit, rotations (CSV + xlsx)
+      │
+      ├─ 00_sites_from_inputs.mjs → config/sites.json (23 sites)
+      │     ├─ 01_fetch_power.mjs       NASA POWER daily weather 2001–2024
+      │     ├─ 01b_fetch_chirps.mjs     CHIRPS daily rain (ClimateSERV)          ← rain source everywhere
+      │     ├─ 01c_fetch_era5.mjs       ERA5 daily temperature (Open-Meteo)       ← where POWER is broken
+      │     ├─ 02b_fetch_ndvi_gibs.py   monthly greenness on cropland (NASA GIBS VIIRS NDVI + MODIS land cover)
+      │     ├─ 03_fetch_soil.mjs        ISRIC SoilGrids (samples 3–6 km out if the town point is empty)
+      │     ├─ 04_fetch_terrain.mjs     NASA SRTM slope
+      │     └─ 05_build_summaries.mjs   merge sources + quality check → processed/<site>/
+      │
+      ├─ 05b_score_measured.py   the team's scoring rules (make_data.py) on measured inputs + per-year trend
+      │                          → processed/scored/
+      └─ 06_build_app_data.mjs   → public/data/crops.json, regions/index.json, regions/<id>.json
 ```
+
+Edit `inputs/` (or `make_data.py`), never `public/data`: it is regenerated.
 
 ## Status
 
-Check `processed/<site>/region_climate.json → _provenance.available` for exactly what is in each site's build.
-
-| Source | Status |
+| Data | Status |
 |---|---|
-| NASA POWER (weather, soil wetness) | ✅ all sites, 2001–2024 |
-| SoilGrids (soil), SRTM (slope) | ✅ all sites |
-| MODIS land cover | ✅ all sites |
-| MODIS NDVI | ✅ Iowa; other sites resuming (ORNL service unstable — re-run `02_fetch_modis.mjs`) |
-| MODIS ET, LST | queued after NDVI |
+| Team draft data (23 regions, 21 crops, 483 fit scores, 69 rotations) | ✅ `inputs/`, reproducible from `make_data.py` |
+| NASA POWER weather | ✅ 23/23. Broken (2008 step change) for 8 regions, where it is replaced automatically |
+| CHIRPS rain | see `processed/<site>/chirps_daily.csv`; ClimateSERV takes ~3 min per region |
+| ERA5 temperature | see `processed/<site>/era5_daily.csv`; Open-Meteo has an hourly limit, so re-run if it stops |
+| Greenness (VIIRS NDVI on cropland, 2012–2024) | ✅ 23/23 |
+| SRTM slope | ✅ 23/23 |
+| SoilGrids soil | ⏳ slow (rate limit + timeouts). Re-run `03_fetch_soil.mjs` |
+| Crop scores from measured data + crop-fit trends | ✅ `processed/scored/` (re-run `05b` after new data) |
+| Crop calendars, flood/salinity/irrigation measurements | ❌ to collect (NEXT_STEPS.md Part B) |

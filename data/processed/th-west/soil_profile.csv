@@ -1,0 +1,67 @@
+property,description,depth,top_cm,bottom_cm,mean,q05,q95
+bdod,bulk density (kg/dm³),0-5cm,0,5,1.41,1,1.76
+bdod,bulk density (kg/dm³),5-15cm,5,15,1.44,1.06,1.76
+bdod,bulk density (kg/dm³),15-30cm,15,30,1.46,1.13,1.81
+bdod,bulk density (kg/dm³),30-60cm,30,60,1.47,1.16,1.81
+bdod,bulk density (kg/dm³),60-100cm,60,100,1.48,1.14,1.81
+bdod,bulk density (kg/dm³),100-200cm,100,200,1.49,1.17,1.82
+cec,cation exchange capacity (cmol(c)/kg),0-5cm,0,5,16.9,2.7,43.9
+cec,cation exchange capacity (cmol(c)/kg),5-15cm,5,15,16,2.6,43.9
+cec,cation exchange capacity (cmol(c)/kg),15-30cm,15,30,15.1,2.4,42.6
+cec,cation exchange capacity (cmol(c)/kg),30-60cm,30,60,15.2,2.3,42.6
+cec,cation exchange capacity (cmol(c)/kg),60-100cm,60,100,14.9,2.5,41.4
+cec,cation exchange capacity (cmol(c)/kg),100-200cm,100,200,15,2,41.5
+cfvo,coarse fragments (vol %),0-5cm,0,5,12.3,0,58.1
+cfvo,coarse fragments (vol %),5-15cm,5,15,14.3,0,66
+cfvo,coarse fragments (vol %),15-30cm,15,30,15.7,0,70.2
+cfvo,coarse fragments (vol %),30-60cm,30,60,17.8,0,74.7
+cfvo,coarse fragments (vol %),60-100cm,60,100,19,0,74.7
+cfvo,coarse fragments (vol %),100-200cm,100,200,20.4,0,75
+clay,clay (%),0-5cm,0,5,28.2,2.6,84.9
+clay,clay (%),5-15cm,5,15,29.8,3.4,86.4
+clay,clay (%),15-30cm,15,30,29.4,3,87.7
+clay,clay (%),30-60cm,30,60,30.4,1.9,88.3
+clay,clay (%),60-100cm,60,100,31.6,2.9,86.1
+clay,clay (%),100-200cm,100,200,32,0.8,88.2
+nitrogen,total nitrogen (g/kg),0-5cm,0,5,2.02,0.4,5.51
+nitrogen,total nitrogen (g/kg),5-15cm,5,15,1.36,0.4,3.23
+nitrogen,total nitrogen (g/kg),15-30cm,15,30,0.97,0.2,2.71
+nitrogen,total nitrogen (g/kg),30-60cm,30,60,0.59,0.1,1.34
+nitrogen,total nitrogen (g/kg),60-100cm,60,100,0.45,0.1,1.35
+nitrogen,total nitrogen (g/kg),100-200cm,100,200,0.37,0.1,0.91
+phh2o,pH in water,0-5cm,0,5,6,4.7,8.1
+phh2o,pH in water,5-15cm,5,15,6,4.7,8.1
+phh2o,pH in water,15-30cm,15,30,6.1,4.7,8.2
+phh2o,pH in water,30-60cm,30,60,6.2,4.7,8.2
+phh2o,pH in water,60-100cm,60,100,6.2,4.7,8.4
+phh2o,pH in water,100-200cm,100,200,6.2,4.2,8.4
+sand,sand (%),0-5cm,0,5,40.2,7.5,74
+sand,sand (%),5-15cm,5,15,39.1,6.7,71.6
+sand,sand (%),15-30cm,15,30,39.3,6.4,72.4
+sand,sand (%),30-60cm,30,60,38.1,5.9,71.6
+sand,sand (%),60-100cm,60,100,37.8,6.1,71.6
+sand,sand (%),100-200cm,100,200,38.2,6.2,71.4
+silt,silt (%),0-5cm,0,5,31.6,2.9,76.6
+silt,silt (%),5-15cm,5,15,31.1,2.9,75.8
+silt,silt (%),15-30cm,15,30,31.3,2.9,75.7
+silt,silt (%),30-60cm,30,60,31.4,2.6,78.6
+silt,silt (%),60-100cm,60,100,30.6,2.4,77.7
+silt,silt (%),100-200cm,100,200,29.8,1.9,75.5
+soc,soil organic carbon (g/kg),0-5cm,0,5,23.7,4.6,58.3
+soc,soil organic carbon (g/kg),5-15cm,5,15,14.4,3,32.9
+soc,soil organic carbon (g/kg),15-30cm,15,30,10.4,2.2,30
+soc,soil organic carbon (g/kg),30-60cm,30,60,7.1,1,16.2
+soc,soil organic carbon (g/kg),60-100cm,60,100,5.3,0.8,10.2
+soc,soil organic carbon (g/kg),100-200cm,100,200,4.4,0.4,11.8
+wv0033,"water content at field capacity, 33 kPa (vol %)",0-5cm,0,5,28.8,13.6,40.2
+wv0033,"water content at field capacity, 33 kPa (vol %)",5-15cm,5,15,28.7,12.9,40
+wv0033,"water content at field capacity, 33 kPa (vol %)",15-30cm,15,30,28.9,13.6,39.6
+wv0033,"water content at field capacity, 33 kPa (vol %)",30-60cm,30,60,30.4,15.4,41.4
+wv0033,"water content at field capacity, 33 kPa (vol %)",60-100cm,60,100,30.4,17.9,40.2
+wv0033,"water content at field capacity, 33 kPa (vol %)",100-200cm,100,200,29.5,15.9,41.8
+wv1500,"water content at wilting point, 1500 kPa (vol %)",0-5cm,0,5,14.8,4.3,31.1
+wv1500,"water content at wilting point, 1500 kPa (vol %)",5-15cm,5,15,15,4.4,31.1
+wv1500,"water content at wilting point, 1500 kPa (vol %)",15-30cm,15,30,15.1,4.4,30.7
+wv1500,"water content at wilting point, 1500 kPa (vol %)",30-60cm,30,60,18.6,4.5,32.3
+wv1500,"water content at wilting point, 1500 kPa (vol %)",60-100cm,60,100,19.4,5,32.3
+wv1500,"water content at wilting point, 1500 kPa (vol %)",100-200cm,100,200,19,4.7,33.4

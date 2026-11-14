@@ -1,38 +1,262 @@
 {
-  "_comment": "Sowcast preset locations (the globe's accordion menu). Each 'location' is a point on farmland, checked against MODIS land cover (class 12 = cropland). The regions' town centres were deliberately NOT used: satellite crop and soil data there describes rooftops.",
-  "period": { "start_year": 2001, "end_year": 2024 },
+  "_comment": "GENERATED from data/inputs/sowcast_regions.csv by 00_sites_from_inputs.mjs — edit the CSV, not this file. 'location' is the region's reference town (lat/lon from the CSV). Town centres are fine for POWER (≈50 km grid) but not for field-scale satellite data — see NEXT_STEPS.md (moving points onto cropland).",
+  "period": {
+    "start_year": 2001,
+    "end_year": 2024
+  },
   "sites": [
     {
-      "id": "iowa",
-      "name": "Story County",
-      "place": "Iowa, USA",
-      "location": { "lat": 42.1, "lon": -93.55 },
-      "hemisphere": "N",
-      "note": "Corn & soybean farmland ~9 km NE of Ames."
+      "id": "mm-dry-zone",
+      "name": "Central Dry Zone",
+      "place": "Magway",
+      "country": "Myanmar",
+      "location": {
+        "lat": 20.15,
+        "lon": 94.93
+      },
+      "hemisphere": "N"
     },
     {
-      "id": "punjab",
-      "name": "Ludhiana District",
-      "place": "Punjab, India",
-      "location": { "lat": 30.8, "lon": 75.7 },
-      "hemisphere": "N",
-      "note": "Rice-wheat farmland SW of Ludhiana city."
+      "id": "mm-ayeyarwady",
+      "name": "Ayeyarwady Delta",
+      "place": "Pathein",
+      "country": "Myanmar",
+      "location": {
+        "lat": 16.78,
+        "lon": 94.73
+      },
+      "hemisphere": "N"
     },
     {
-      "id": "nakuru",
-      "name": "Nakuru County",
-      "place": "Rift Valley, Kenya",
-      "location": { "lat": -0.27, "lon": 35.8 },
-      "hemisphere": "S",
-      "note": "Highland maize farmland near Rongai. Equatorial: two rainy seasons (Mar-May, Oct-Dec)."
+      "id": "mm-shan",
+      "name": "Shan Plateau",
+      "place": "Taunggyi",
+      "country": "Myanmar",
+      "location": {
+        "lat": 20.78,
+        "lon": 97.04
+      },
+      "hemisphere": "N"
     },
     {
-      "id": "darling_downs",
-      "name": "Darling Downs",
-      "place": "Queensland, Australia",
-      "location": { "lat": -27.5854, "lon": 151.5134 },
-      "hemisphere": "S",
-      "note": "Dryland grain farmland west of Toowoomba."
+      "id": "mm-kachin",
+      "name": "Kachin Hills",
+      "place": "Myitkyina",
+      "country": "Myanmar",
+      "location": {
+        "lat": 25.38,
+        "lon": 97.4
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "mm-rakhine",
+      "name": "Rakhine Coast",
+      "place": "Sittwe",
+      "country": "Myanmar",
+      "location": {
+        "lat": 20.15,
+        "lon": 92.9
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "mm-tanintharyi",
+      "name": "Tanintharyi",
+      "place": "Dawei",
+      "country": "Myanmar",
+      "location": {
+        "lat": 14.08,
+        "lon": 98.2
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "th-north",
+      "name": "North",
+      "place": "Chiang Mai",
+      "country": "Thailand",
+      "location": {
+        "lat": 18.79,
+        "lon": 98.98
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "th-isan",
+      "name": "Northeast (Isan)",
+      "place": "Khon Kaen",
+      "country": "Thailand",
+      "location": {
+        "lat": 16.43,
+        "lon": 102.83
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "th-central",
+      "name": "Central Plain",
+      "place": "Suphan Buri",
+      "country": "Thailand",
+      "location": {
+        "lat": 14.47,
+        "lon": 100.12
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "th-east",
+      "name": "East",
+      "place": "Chanthaburi",
+      "country": "Thailand",
+      "location": {
+        "lat": 12.61,
+        "lon": 102.1
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "th-west",
+      "name": "West",
+      "place": "Kanchanaburi",
+      "country": "Thailand",
+      "location": {
+        "lat": 14.02,
+        "lon": 99.53
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "th-south",
+      "name": "South",
+      "place": "Surat Thani",
+      "country": "Thailand",
+      "location": {
+        "lat": 9.14,
+        "lon": 99.33
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "vn-northern-mtn",
+      "name": "Northern Midlands and Mountains",
+      "place": "Son La",
+      "country": "Vietnam",
+      "location": {
+        "lat": 21.33,
+        "lon": 103.91
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "vn-red-river",
+      "name": "Red River Delta",
+      "place": "Thai Binh",
+      "country": "Vietnam",
+      "location": {
+        "lat": 20.45,
+        "lon": 106.34
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "vn-north-central",
+      "name": "North Central Coast",
+      "place": "Vinh",
+      "country": "Vietnam",
+      "location": {
+        "lat": 18.68,
+        "lon": 105.68
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "vn-south-central",
+      "name": "South Central Coast",
+      "place": "Ninh Thuan",
+      "country": "Vietnam",
+      "location": {
+        "lat": 11.57,
+        "lon": 108.99
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "vn-central-highlands",
+      "name": "Central Highlands",
+      "place": "Buon Ma Thuot",
+      "country": "Vietnam",
+      "location": {
+        "lat": 12.67,
+        "lon": 108.04
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "vn-southeast",
+      "name": "Southeast",
+      "place": "Tay Ninh",
+      "country": "Vietnam",
+      "location": {
+        "lat": 11.31,
+        "lon": 106.1
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "vn-mekong",
+      "name": "Mekong Delta",
+      "place": "Soc Trang",
+      "country": "Vietnam",
+      "location": {
+        "lat": 9.6,
+        "lon": 105.97
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "kh-tonle-sap",
+      "name": "Tonle Sap Plain",
+      "place": "Battambang",
+      "country": "Cambodia",
+      "location": {
+        "lat": 13.1,
+        "lon": 103.2
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "kh-mekong-plain",
+      "name": "Mekong Plain",
+      "place": "Prey Veng",
+      "country": "Cambodia",
+      "location": {
+        "lat": 11.49,
+        "lon": 105.32
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "kh-plateau",
+      "name": "Plateau and Mountains",
+      "place": "Banlung",
+      "country": "Cambodia",
+      "location": {
+        "lat": 13.74,
+        "lon": 106.99
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "kh-coastal",
+      "name": "Coastal",
+      "place": "Kampot",
+      "country": "Cambodia",
+      "location": {
+        "lat": 10.61,
+        "lon": 104.18
+      },
+      "hemisphere": "N"
     }
   ]
 }

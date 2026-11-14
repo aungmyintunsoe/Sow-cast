@@ -1,0 +1,12 @@
+{
+  "site": "th-isan",
+  "lat": 16.43,
+  "lon": 102.83,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 162,
+  "slope_pct_field": 1.91,
+  "slope_pct_landscape_mean": 0.61,
+  "relief_m_within_1500m": 23,
+  "erosion_risk_from_slope": "low",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

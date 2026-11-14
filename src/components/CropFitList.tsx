@@ -18,31 +18,31 @@ type GoalId = 'overall' | 'soil' | 'water' | 'nitrogen' | 'income';
 const GOALS: { id: GoalId; label: string; icon: React.ReactNode; desc: string }[] = [
   {
     id: 'overall',
-    label: 'Best Overall Fit',
+    label: 'Best overall fit',
     icon: <Sprout className="w-4 h-4" />,
-    desc: 'Balanced match for your 20-year weather & soil',
+    desc: 'Balanced match for the climate, water and soil here',
   },
   {
     id: 'soil',
-    label: 'Protect Soil',
+    label: 'Protect soil',
     icon: <ShieldCheck className="w-4 h-4" />,
     desc: 'Prioritize ground cover, deep roots & organic matter',
   },
   {
     id: 'water',
-    label: 'Save Water',
+    label: 'Save water',
     icon: <Droplets className="w-4 h-4" />,
     desc: 'Low water need & strong drought survival',
   },
   {
     id: 'nitrogen',
-    label: 'Add Nitrogen',
+    label: 'Add nitrogen',
     icon: <Sprout className="w-4 h-4" />,
     desc: 'Legumes that feed nitrogen to the next crop',
   },
   {
     id: 'income',
-    label: 'Cash Market',
+    label: 'Cash market',
     icon: <Coins className="w-4 h-4" />,
     desc: 'Higher market demand and grain value',
   },
@@ -74,7 +74,7 @@ export const CropFitList: React.FC<CropFitListProps> = ({
         } else if (goal === 'water') {
           const lowWaterPts = (6 - crop.water_need) * 18;
           const droughtBonus =
-            crop.drought_tolerance === 'very high' ? 15 : crop.drought_tolerance === 'high' ? 8 : 0;
+            crop.drought_tolerance >= 5 ? 15 : crop.drought_tolerance >= 4 ? 8 : 0;
           goalScore = Math.min(99, Math.round(cf.fit * 0.4 + (lowWaterPts + droughtBonus) * 0.6));
         } else if (goal === 'nitrogen') {
           goalScore = Math.min(
@@ -115,6 +115,7 @@ export const CropFitList: React.FC<CropFitListProps> = ({
               <button
                 key={g.id}
                 onClick={() => setGoal(g.id)}
+                aria-pressed={active}
                 className={`inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-sm font-semibold border transition ${
                   active
                     ? 'bg-brand-600 text-white border-brand-600 shadow-sm'
@@ -132,19 +133,17 @@ export const CropFitList: React.FC<CropFitListProps> = ({
         </p>
       </div>
 
-      {/* Ranked List */}
-      <div className="space-y-3">
+      {/* Ranked list: one container so the ranking reads as a single list */}
+      <ol className="card-surface bg-white rounded-2xl border border-stone-200 overflow-hidden divide-y divide-stone-200">
         {rankedCrops.map((item, idx) => {
-          const { cropObj, goalScore, fit, trend, limits } = item;
+          const { cropObj, goalScore, fit, trend, limits, why, common_locally, parts } = item;
           const isOpen = expandedCrop === cropObj.id;
 
           return (
-            <div
-              key={cropObj.id}
-              className="card-surface bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden transition"
-            >
+            <li key={cropObj.id}>
               <button
                 onClick={() => setExpandedCrop(isOpen ? null : cropObj.id)}
+                aria-expanded={isOpen}
                 className="w-full text-left p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-stone-50/70 transition"
               >
                 <div className="flex items-start gap-3.5">
@@ -164,16 +163,25 @@ export const CropFitList: React.FC<CropFitListProps> = ({
                       <h3 className="text-base sm:text-lg font-bold text-stone-900">
                         {cropObj.name}
                       </h3>
-                      <span className="text-[11px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-md bg-stone-100 text-stone-600">
-                        {cropObj.season}
+                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-stone-100 text-stone-600">
+                        {cropObj.season.charAt(0).toUpperCase() + cropObj.season.slice(1)}
                       </span>
+                      {common_locally && (
+                        <span className="text-[11px] font-bold px-2 py-0.5 rounded-md bg-blue-50 text-nasa-blue">Grown here</span>
+                      )}
                       {cropObj.nitrogen_fixing && (
                         <span className="text-[11px] font-bold px-2 py-0.5 rounded-md bg-brand-100 text-brand-800">
-                          Fixes Nitrogen
+                          Fixes nitrogen
                         </span>
                       )}
                     </div>
                     <p className="text-sm text-stone-600 mt-1">{cropObj.plain_description}</p>
+                    {why.length > 0 && (
+                      <p className="text-xs text-brand-800 mt-1.5">
+                        <span className="font-semibold">Why it fits: </span>
+                        {why.join('; ')}
+                      </p>
+                    )}
 
                     {limits.length > 0 && (
                       <div className="flex flex-wrap items-center gap-1.5 mt-2">
@@ -198,6 +206,7 @@ export const CropFitList: React.FC<CropFitListProps> = ({
                     <span className="text-xs font-semibold text-stone-500">/100</span>
                   </div>
                   <div className="flex items-center gap-2">
+                    {trend !== 'unknown' && (
                     <span
                       className={`inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full ${
                         trend === 'increasing'
@@ -220,6 +229,7 @@ export const CropFitList: React.FC<CropFitListProps> = ({
                         ? 'Facing stress'
                         : 'Steady fit'}
                     </span>
+                    )}
                     {isOpen ? (
                       <ChevronUp className="w-4 h-4 text-stone-400" />
                     ) : (
@@ -234,37 +244,37 @@ export const CropFitList: React.FC<CropFitListProps> = ({
                 <div className="px-4 sm:px-5 pb-4 pt-2 border-t border-stone-100 bg-stone-50/50 text-xs sm:text-sm space-y-3">
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                     <div className="bg-white p-2.5 rounded-xl border border-stone-200">
-                      <div className="text-stone-500 text-xs">Water Need</div>
+                      <div className="text-stone-500 text-xs">Water need</div>
                       <div className="font-bold text-stone-900">{cropObj.water_need} / 5</div>
                     </div>
                     <div className="bg-white p-2.5 rounded-xl border border-stone-200">
-                      <div className="text-stone-500 text-xs">Root Depth</div>
+                      <div className="text-stone-500 text-xs">Root depth</div>
                       <div className="font-bold text-stone-900 capitalize">{cropObj.root_depth}</div>
                     </div>
                     <div className="bg-white p-2.5 rounded-xl border border-stone-200">
-                      <div className="text-stone-500 text-xs">Drought / Frost</div>
-                      <div className="font-bold text-stone-900 capitalize">
-                        {cropObj.drought_tolerance} / {cropObj.frost_tolerance}
+                      <div className="text-stone-500 text-xs">Tolerates drought / flood / salt</div>
+                      <div className="font-bold text-stone-900">
+                        {cropObj.drought_tolerance} / {cropObj.flood_tolerance} / {cropObj.salinity_tolerance} of 5
                       </div>
                     </div>
                     <div className="bg-white p-2.5 rounded-xl border border-stone-200">
-                      <div className="text-stone-500 text-xs">Days to Harvest</div>
+                      <div className="text-stone-500 text-xs">Days to harvest</div>
                       <div className="font-bold text-stone-900">~{cropObj.season_days} days</div>
                     </div>
                   </div>
                   <div className="text-xs text-stone-700 bg-white p-3 rounded-xl border border-stone-200">
-                    <strong className="text-stone-900">Pest & Field Notes: </strong>
+                    <strong className="text-stone-900">Pest and field notes: </strong>
                     {cropObj.pest_notes}
                     <span className="block mt-1 text-stone-500">
-                      Base climate fit: {fit}/100 · Plant family: {cropObj.family}
+                      Base fit {fit}/100 from climate {Math.round(parts.climate * 100)}%, water {Math.round(parts.water * 100)}%, soil {Math.round(parts.soil * 100)}%, risk {Math.round(parts.risk * 100)}% and benefit {Math.round(parts.benefit * 100)}% (draft rule-based score).
                     </span>
                   </div>
                 </div>
               )}
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ol>
     </div>
   );
 };

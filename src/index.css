@@ -3,13 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-  /* Fonts come from the active design (src/theme/themes.ts) */
   body {
-    font-family: var(--font-body);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   }
 
   h1, h2, h3, .font-display {
-    font-family: var(--font-display);
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
   }
 }
 
@@ -21,14 +20,16 @@
   z-index: 1;
 }
 
-/* High-contrast outdoor sun mode */
-.sun-mode {
-  background-color: #ffffff !important;
-  color: #000000 !important;
+/* Card outline kept from the old "Sun Mode": a crisp dark border and no shadow.
+   Card background colours (amber warnings, green opportunities, soil) are left alone.
+   Selected cards opt out so their highlight border and ring stay visible. */
+.card-surface:not([aria-pressed="true"]):not([data-selected="true"]) {
+  border: 1.5px solid #1c1917 !important;
+  box-shadow: none !important;
 }
 
-.sun-mode .card-surface {
-  background-color: #ffffff !important;
-  border: 2px solid #1c1917 !important;
-  box-shadow: none !important;
+/* Visible keyboard focus everywhere (mouse clicks don't trigger it) */
+:focus-visible {
+  outline: 2px solid #2c8742;
+  outline-offset: 2px;
 }

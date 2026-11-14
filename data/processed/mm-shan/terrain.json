@@ -1,0 +1,12 @@
+{
+  "site": "mm-shan",
+  "lat": 20.78,
+  "lon": 97.04,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 1423,
+  "slope_pct_field": 3.34,
+  "slope_pct_landscape_mean": 10.79,
+  "relief_m_within_1500m": 410,
+  "erosion_risk_from_slope": "medium",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

@@ -1,0 +1,12 @@
+{
+  "site": "mm-kachin",
+  "lat": 25.38,
+  "lon": 97.4,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 147,
+  "slope_pct_field": 0.56,
+  "slope_pct_landscape_mean": 0.83,
+  "relief_m_within_1500m": 22,
+  "erosion_risk_from_slope": "low",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

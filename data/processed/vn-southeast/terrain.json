@@ -1,0 +1,12 @@
+{
+  "site": "vn-southeast",
+  "lat": 11.31,
+  "lon": 106.1,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 18,
+  "slope_pct_field": 2.33,
+  "slope_pct_landscape_mean": 0.69,
+  "relief_m_within_1500m": 26,
+  "erosion_risk_from_slope": "medium",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

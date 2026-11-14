@@ -1,0 +1,12 @@
+{
+  "site": "mm-ayeyarwady",
+  "lat": 16.78,
+  "lon": 94.73,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 0,
+  "slope_pct_field": 3.54,
+  "slope_pct_landscape_mean": 0.49,
+  "relief_m_within_1500m": 18,
+  "erosion_risk_from_slope": "medium",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

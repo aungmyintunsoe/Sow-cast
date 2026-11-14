@@ -1,0 +1,11 @@
+{
+  "source": "NASA GIBS: VIIRS SNPP L3 NDVI monthly, decoded from colour tiles; MODIS IGBP land cover 2024 mask",
+  "window_pixels": 81,
+  "pixel_km": 1.14,
+  "cropland_pixels": 28,
+  "mask_used": "cropland",
+  "mask_centre": {
+    "lat": 20.7789,
+    "lon": 97.0077
+  }
+}

@@ -99,15 +99,37 @@ export function writeJSON(file, obj) {
   console.log(`  ✓ wrote ${path.relative(DATA_DIR, file)}`);
 }
 
+/** RFC-4180 CSV parser (handles quoted fields with commas, quotes and newlines). */
+function parseCSVText(text) {
+  const rows = [];
+  let row = [], field = '', inQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (inQuotes) {
+      if (ch === '"' && text[i + 1] === '"') { field += '"'; i++; }
+      else if (ch === '"') inQuotes = false;
+      else field += ch;
+    } else if (ch === '"') inQuotes = true;
+    else if (ch === ',') { row.push(field); field = ''; }
+    else if (ch === '\n' || ch === '\r') {
+      if (ch === '\r' && text[i + 1] === '\n') i++;
+      row.push(field); rows.push(row); row = []; field = '';
+    } else field += ch;
+  }
+  if (field !== '' || row.length) { row.push(field); rows.push(row); }
+  return rows.filter((r) => r.length > 1 || r[0] !== '');
+}
+
+/** Reads a CSV into objects. Numbers become numbers, True/False become booleans, empty becomes null. */
 export function readCSV(file) {
-  const [header, ...lines] = fs.readFileSync(file, 'utf8').trim().split(/\r?\n/);
-  const cols = header.split(',');
-  return lines.map((line) => {
-    const vals = line.split(',');
+  const [cols, ...lines] = parseCSVText(fs.readFileSync(file, 'utf8').replace(/^﻿/, ''));
+  return lines.map((vals) => {
     const row = {};
     cols.forEach((c, i) => {
       const v = vals[i];
-      row[c] = v === '' || v === undefined ? null : isNaN(Number(v)) ? v : Number(v);
+      row[c] = v === '' || v === undefined ? null
+        : v === 'True' ? true : v === 'False' ? false
+        : isNaN(Number(v)) ? v : Number(v);
     });
     return row;
   });
@@ -157,4 +179,44 @@ function normCdf(x) {
 export function doy(dateStr) {
   const d = new Date(dateStr + 'T00:00:00Z');
   return Math.floor((d - Date.UTC(d.getUTCFullYear(), 0, 0)) / 86_400_000);
+}
+
+// ---- daily agro-climate derivations (shared by 01_fetch_power and 05_build_summaries) ----
+export const HEAT_C = 35; // crop heat-stress threshold (pollination damage starts ~32-35 °C)
+export const HEAVY_MM = 20; // ETCCDI "R20mm" very-heavy-precipitation day
+
+/** Extraterrestrial radiation Ra (MJ m-2 day-1), FAO-56 eq. 21 */
+export function extraterrestrialRad(latDeg, j) {
+  const phi = (latDeg * Math.PI) / 180;
+  const dr = 1 + 0.033 * Math.cos((2 * Math.PI * j) / 365);
+  const delta = 0.409 * Math.sin((2 * Math.PI * j) / 365 - 1.39);
+  const ws = Math.acos(Math.max(-1, Math.min(1, -Math.tan(phi) * Math.tan(delta))));
+  return ((24 * 60) / Math.PI) * 0.082 * dr * (ws * Math.sin(phi) * Math.sin(delta) + Math.cos(phi) * Math.cos(delta) * Math.sin(ws));
+}
+
+/** Crop water demand (Hargreaves ET0), water balance, degree days and threshold-day flags for one day. */
+export function deriveDaily({ date, tmax, tmin, precip }, latDeg) {
+  const ok = (v) => v !== null && v !== undefined && Number.isFinite(v);
+  const et0 = ok(tmax) && ok(tmin) && tmax >= tmin
+    ? 0.0023 * 0.408 * extraterrestrialRad(latDeg, doy(date)) * ((tmax + tmin) / 2 + 17.8) * Math.sqrt(tmax - tmin) : null;
+  const gdd = ok(tmax) && ok(tmin) ? Math.max(0, (Math.min(tmax, 30) + Math.max(tmin, 10)) / 2 - 10) : null; // base 10, cap 30
+  return {
+    et0_hargreaves_mm: round(et0, 3),
+    water_balance_mm: ok(precip) && et0 !== null ? round(precip - et0, 3) : null,
+    gdd_base10: round(gdd, 2),
+    frost_day: ok(tmin) ? (tmin < 0 ? 1 : 0) : null,
+    heat_day: ok(tmax) ? (tmax >= HEAT_C ? 1 : 0) : null,
+    heavy_rain_day: ok(precip) ? (precip >= HEAVY_MM ? 1 : 0) : null,
+  };
+}
+
+/** Step-change test around 2008 on annual rain and mean temperature (see 05_build_summaries.mjs). */
+export function stepCheck(annualRows) {
+  const m = (rows, k) => mean(rows.map((r) => r[k]));
+  const early = annualRows.filter((r) => r.year <= 2007), late = annualRows.filter((r) => r.year >= 2008);
+  const rE = m(early, 'precip_mm'), rL = m(late, 'precip_mm'), tE = m(early, 'tmean_c'), tL = m(late, 'tmean_c');
+  const ratio = rE && rL ? rL / rE : null;
+  const tStep = tE !== null && tL !== null ? tL - tE : null;
+  const broken = (ratio !== null && (ratio > 1.8 || ratio < 0.55)) || (tStep !== null && Math.abs(tStep) > 1.0);
+  return { broken, rain_step_ratio_2008_vs_before: round(ratio, 2), tmean_step_c_2008_vs_before: round(tStep, 2) };
 }
