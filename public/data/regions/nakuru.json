@@ -1,0 +1,626 @@
+{
+  "region": {
+    "id": "nakuru",
+    "name": "Nakuru County",
+    "place": "Rift Valley, Kenya",
+    "lat": -0.3,
+    "lon": 36.07
+  },
+  "monthly": [
+    {
+      "month": 1,
+      "tmax_c": 26.2,
+      "tmin_c": 10.2,
+      "precip_mm": 32,
+      "soil_moisture": 0.3,
+      "et_mm": 118,
+      "ndvi": 0.34,
+      "frost_days": 0,
+      "heat_days": 2,
+      "heavy_rain_days": 0,
+      "typically_bare": true
+    },
+    {
+      "month": 2,
+      "tmax_c": 27.1,
+      "tmin_c": 10.6,
+      "precip_mm": 38,
+      "soil_moisture": 0.28,
+      "et_mm": 122,
+      "ndvi": 0.31,
+      "frost_days": 0,
+      "heat_days": 3,
+      "heavy_rain_days": 0,
+      "typically_bare": true
+    },
+    {
+      "month": 3,
+      "tmax_c": 26.8,
+      "tmin_c": 11.4,
+      "precip_mm": 72,
+      "soil_moisture": 0.38,
+      "et_mm": 116,
+      "ndvi": 0.39,
+      "frost_days": 0,
+      "heat_days": 2,
+      "heavy_rain_days": 1,
+      "typically_bare": false
+    },
+    {
+      "month": 4,
+      "tmax_c": 24.8,
+      "tmin_c": 12.1,
+      "precip_mm": 145,
+      "soil_moisture": 0.58,
+      "et_mm": 94,
+      "ndvi": 0.62,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 3,
+      "typically_bare": false
+    },
+    {
+      "month": 5,
+      "tmax_c": 24.1,
+      "tmin_c": 11.6,
+      "precip_mm": 132,
+      "soil_moisture": 0.62,
+      "et_mm": 88,
+      "ndvi": 0.74,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 3,
+      "typically_bare": false
+    },
+    {
+      "month": 6,
+      "tmax_c": 23.6,
+      "tmin_c": 10.4,
+      "precip_mm": 86,
+      "soil_moisture": 0.56,
+      "et_mm": 84,
+      "ndvi": 0.76,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 1,
+      "typically_bare": false
+    },
+    {
+      "month": 7,
+      "tmax_c": 22.9,
+      "tmin_c": 10.1,
+      "precip_mm": 98,
+      "soil_moisture": 0.57,
+      "et_mm": 82,
+      "ndvi": 0.75,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 2,
+      "typically_bare": false
+    },
+    {
+      "month": 8,
+      "tmax_c": 23.2,
+      "tmin_c": 10.2,
+      "precip_mm": 112,
+      "soil_moisture": 0.59,
+      "et_mm": 86,
+      "ndvi": 0.73,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 2,
+      "typically_bare": false
+    },
+    {
+      "month": 9,
+      "tmax_c": 24.4,
+      "tmin_c": 9.8,
+      "precip_mm": 78,
+      "soil_moisture": 0.51,
+      "et_mm": 95,
+      "ndvi": 0.61,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 1,
+      "typically_bare": false
+    },
+    {
+      "month": 10,
+      "tmax_c": 24.8,
+      "tmin_c": 10.5,
+      "precip_mm": 74,
+      "soil_moisture": 0.46,
+      "et_mm": 102,
+      "ndvi": 0.49,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 1,
+      "typically_bare": false
+    },
+    {
+      "month": 11,
+      "tmax_c": 23.9,
+      "tmin_c": 10.9,
+      "precip_mm": 82,
+      "soil_moisture": 0.48,
+      "et_mm": 94,
+      "ndvi": 0.48,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 1,
+      "typically_bare": false
+    },
+    {
+      "month": 12,
+      "tmax_c": 24.9,
+      "tmin_c": 10.3,
+      "precip_mm": 46,
+      "soil_moisture": 0.37,
+      "et_mm": 108,
+      "ndvi": 0.41,
+      "frost_days": 0,
+      "heat_days": 1,
+      "heavy_rain_days": 0,
+      "typically_bare": true
+    }
+  ],
+  "annual": [
+    {
+      "year": 2001,
+      "heat_days": 6,
+      "precip_mm": 1029,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": 0.7,
+      "growing_season_days": 247
+    },
+    {
+      "year": 2002,
+      "heat_days": 8,
+      "precip_mm": 1069,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": 1.4,
+      "growing_season_days": 249
+    },
+    {
+      "year": 2003,
+      "heat_days": 7,
+      "precip_mm": 1025,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": 0.3,
+      "growing_season_days": 246
+    },
+    {
+      "year": 2004,
+      "heat_days": 4,
+      "precip_mm": 939,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": -1.7,
+      "growing_season_days": 241
+    },
+    {
+      "year": 2005,
+      "heat_days": 3,
+      "precip_mm": 913,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": -2.4,
+      "growing_season_days": 239
+    },
+    {
+      "year": 2006,
+      "heat_days": 6,
+      "precip_mm": 968,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -1.4,
+      "growing_season_days": 242
+    },
+    {
+      "year": 2007,
+      "heat_days": 8,
+      "precip_mm": 1022,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": -0.5,
+      "growing_season_days": 245
+    },
+    {
+      "year": 2008,
+      "heat_days": 8,
+      "precip_mm": 1009,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": -0.9,
+      "growing_season_days": 244
+    },
+    {
+      "year": 2009,
+      "heat_days": 7,
+      "precip_mm": 970,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -1.9,
+      "growing_season_days": 241
+    },
+    {
+      "year": 2010,
+      "heat_days": 8,
+      "precip_mm": 979,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": -1.9,
+      "growing_season_days": 241
+    },
+    {
+      "year": 2011,
+      "heat_days": 10,
+      "precip_mm": 1030,
+      "heavy_rain_days": 15,
+      "groundwater_anomaly_cm": -1,
+      "growing_season_days": 244
+    },
+    {
+      "year": 2012,
+      "heat_days": 10,
+      "precip_mm": 1037,
+      "heavy_rain_days": 16,
+      "groundwater_anomaly_cm": -1,
+      "growing_season_days": 244
+    },
+    {
+      "year": 2013,
+      "heat_days": 8,
+      "precip_mm": 968,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": -2.7,
+      "growing_season_days": 239
+    },
+    {
+      "year": 2014,
+      "heat_days": 6,
+      "precip_mm": 900,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -4.3,
+      "growing_season_days": 235
+    },
+    {
+      "year": 2015,
+      "heat_days": 7,
+      "precip_mm": 916,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -4.1,
+      "growing_season_days": 236
+    },
+    {
+      "year": 2016,
+      "heat_days": 10,
+      "precip_mm": 992,
+      "heavy_rain_days": 15,
+      "groundwater_anomaly_cm": -2.7,
+      "growing_season_days": 240
+    },
+    {
+      "year": 2017,
+      "heat_days": 12,
+      "precip_mm": 1030,
+      "heavy_rain_days": 16,
+      "groundwater_anomaly_cm": -2.1,
+      "growing_season_days": 242
+    },
+    {
+      "year": 2018,
+      "heat_days": 11,
+      "precip_mm": 996,
+      "heavy_rain_days": 16,
+      "groundwater_anomaly_cm": -3,
+      "growing_season_days": 239
+    },
+    {
+      "year": 2019,
+      "heat_days": 10,
+      "precip_mm": 957,
+      "heavy_rain_days": 15,
+      "groundwater_anomaly_cm": -3.9,
+      "growing_season_days": 237
+    },
+    {
+      "year": 2020,
+      "heat_days": 11,
+      "precip_mm": 976,
+      "heavy_rain_days": 16,
+      "groundwater_anomaly_cm": -3.7,
+      "growing_season_days": 238
+    },
+    {
+      "year": 2021,
+      "heat_days": 13,
+      "precip_mm": 1015,
+      "heavy_rain_days": 17,
+      "groundwater_anomaly_cm": -3.1,
+      "growing_season_days": 240
+    },
+    {
+      "year": 2022,
+      "heat_days": 12,
+      "precip_mm": 994,
+      "heavy_rain_days": 17,
+      "groundwater_anomaly_cm": -3.7,
+      "growing_season_days": 238
+    },
+    {
+      "year": 2023,
+      "heat_days": 10,
+      "precip_mm": 920,
+      "heavy_rain_days": 15,
+      "groundwater_anomaly_cm": -5.4,
+      "growing_season_days": 233
+    },
+    {
+      "year": 2024,
+      "heat_days": 9,
+      "precip_mm": 885,
+      "heavy_rain_days": 15,
+      "groundwater_anomaly_cm": -6.3,
+      "growing_season_days": 231
+    }
+  ],
+  "trends": {
+    "heat_days_per_decade": 3,
+    "precip_change_pct": -3,
+    "heavy_rain_change_pct": 16,
+    "groundwater": "declining"
+  },
+  "soil": {
+    "texture": "Volcanic clay loam",
+    "organic_matter": "moderate",
+    "drainage": "well",
+    "slope_pct": 6,
+    "erosion_risk": "high",
+    "water_holding": "moderate",
+    "source": "iSDAsoil Africa"
+  },
+  "current_rotation": [
+    {
+      "crop": "corn",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "insights": [
+    {
+      "title": "Long-rains start date has become less predictable",
+      "body": "Rainy season onset in March now shifts by 2–3 weeks from year to year, causing early-planted maize to struggle during dry spells.",
+      "source": "GPM IMERG",
+      "confidence": "high",
+      "badgeType": "warning"
+    },
+    {
+      "title": "Sloped volcanic soils lose topsoil in April downpours",
+      "body": "At 6% average slope, bare ground between January and March is vulnerable to washing away when heavy April rains arrive.",
+      "source": "iSDAsoil + GPM IMERG",
+      "confidence": "high",
+      "badgeType": "warning"
+    },
+    {
+      "title": "Mild year-round temperatures support relay legumes",
+      "body": "With zero frost risk and warm days, drought-hardy cowpea or pigeon pea can protect soil and supply protein even when rains pause.",
+      "source": "NASA POWER",
+      "confidence": "high",
+      "badgeType": "opportunity"
+    }
+  ],
+  "rotations": [
+    {
+      "id": "current",
+      "label": "Current",
+      "name": "Continuous Maize (Corn)",
+      "tagline": "Single annual cereal crop with bare dry season",
+      "sequence": [
+        "corn"
+      ],
+      "cover_by_month": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "scores": {
+        "soil": 2,
+        "water": 2,
+        "erosion": 1,
+        "income": 3,
+        "pest_break": 1
+      },
+      "why": "Maize is the staple food crop, but planting it alone every year drains soil nitrogen, leaves sloped ground bare for 5 months, and encourages Fall Armyworm.",
+      "evidence": [
+        "GPM IMERG",
+        "Landsat NDVI",
+        "iSDAsoil"
+      ],
+      "benefits": [
+        "Direct household food staple",
+        "Simple single-crop management"
+      ],
+      "gaps": [
+        "Field-specific terracing or contour bunds on your farm"
+      ],
+      "risks": [
+        "Total yield loss if March–April rains stall",
+        "Severe gully erosion on 6% slopes"
+      ]
+    },
+    {
+      "id": "sorghum_cowpea",
+      "label": "Option A",
+      "name": "Sorghum + Cowpea → Oats",
+      "tagline": "Drought-proof food security + hillside soil armor",
+      "sequence": [
+        "sorghum",
+        "cowpea",
+        "oats"
+      ],
+      "cover_by_month": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scores": {
+        "soil": 4,
+        "water": 5,
+        "erosion": 4,
+        "income": 4,
+        "pest_break": 4
+      },
+      "why": "Sorghum survives mid-season dry spells far better than maize, while cowpea crawls across the soil to stop erosion and add nitrogen. Short-rains oats give grain or dairy fodder.",
+      "evidence": [
+        "SMAP",
+        "GPM IMERG",
+        "NASA POWER"
+      ],
+      "benefits": [
+        "Reliable harvest even in poor rain years",
+        "Stops hillside runoff during April storms",
+        "Provides both family food and livestock fodder"
+      ],
+      "gaps": [
+        "Bird pressure on sorghum if neighbors do not plant it"
+      ],
+      "risks": [
+        "Check local market price for sorghum vs maize before switching 100% of acreage"
+      ]
+    },
+    {
+      "id": "pigeon_pea_maize",
+      "label": "Option B",
+      "name": "Maize + Pigeon Pea Strip → Groundnut",
+      "tagline": "Keep maize while cutting fertilizer and erosion",
+      "sequence": [
+        "corn",
+        "pigeon_pea",
+        "groundnut"
+      ],
+      "cover_by_month": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scores": {
+        "soil": 5,
+        "water": 4,
+        "erosion": 5,
+        "income": 5,
+        "pest_break": 4
+      },
+      "why": "Deep-rooted pigeon pea stays green through the dry January–February months after maize is harvested, shading the soil and fixing nitrogen for the following high-value groundnuts.",
+      "evidence": [
+        "Landsat NDVI",
+        "iSDAsoil",
+        "ECOSTRESS"
+      ],
+      "benefits": [
+        "Keeps staple maize in the mix",
+        "12-month living ground cover",
+        "High cash value from groundnut & pigeon pea"
+      ],
+      "gaps": [
+        "Seed availability for improved short-duration pigeon pea"
+      ],
+      "risks": [
+        "Free-roaming livestock grazing pigeon pea in dry season if unfenced"
+      ]
+    }
+  ],
+  "crop_fit": [
+    {
+      "crop": "cowpea",
+      "fit": 95,
+      "trend": "increasing",
+      "limits": []
+    },
+    {
+      "crop": "sorghum",
+      "fit": 92,
+      "trend": "increasing",
+      "limits": [
+        "Bird scaring needed near ripening"
+      ]
+    },
+    {
+      "crop": "pigeon_pea",
+      "fit": 90,
+      "trend": "increasing",
+      "limits": []
+    },
+    {
+      "crop": "oats",
+      "fit": 86,
+      "trend": "flat",
+      "limits": [
+        "Best planted for short rains or dairy forage"
+      ]
+    },
+    {
+      "crop": "groundnut",
+      "fit": 83,
+      "trend": "flat",
+      "limits": [
+        "Needs loose soil for pegging"
+      ]
+    },
+    {
+      "crop": "corn",
+      "fit": 76,
+      "trend": "declining",
+      "limits": [
+        "Vulnerable to erratic March rain onset"
+      ]
+    },
+    {
+      "crop": "sunflower",
+      "fit": 78,
+      "trend": "flat",
+      "limits": []
+    },
+    {
+      "crop": "pearl_millet",
+      "fit": 81,
+      "trend": "increasing",
+      "limits": []
+    }
+  ],
+  "sources": [
+    "GPM IMERG",
+    "SMAP",
+    "NASA POWER",
+    "Landsat NDVI",
+    "ECOSTRESS",
+    "iSDAsoil Africa"
+  ]
+}

@@ -1,0 +1,660 @@
+{
+  "region": {
+    "id": "iowa",
+    "name": "Story County",
+    "place": "Iowa, USA",
+    "lat": 42.03,
+    "lon": -93.62
+  },
+  "monthly": [
+    {
+      "month": 1,
+      "tmax_c": -1.8,
+      "tmin_c": -11.5,
+      "precip_mm": 24,
+      "soil_moisture": 0.72,
+      "et_mm": 8,
+      "ndvi": 0.16,
+      "frost_days": 29,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": true
+    },
+    {
+      "month": 2,
+      "tmax_c": 1.2,
+      "tmin_c": -8.9,
+      "precip_mm": 28,
+      "soil_moisture": 0.74,
+      "et_mm": 12,
+      "ndvi": 0.17,
+      "frost_days": 25,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": true
+    },
+    {
+      "month": 3,
+      "tmax_c": 8.5,
+      "tmin_c": -2.4,
+      "precip_mm": 52,
+      "soil_moisture": 0.79,
+      "et_mm": 32,
+      "ndvi": 0.22,
+      "frost_days": 18,
+      "heat_days": 0,
+      "heavy_rain_days": 1,
+      "typically_bare": true
+    },
+    {
+      "month": 4,
+      "tmax_c": 15.8,
+      "tmin_c": 3.4,
+      "precip_mm": 89,
+      "soil_moisture": 0.78,
+      "et_mm": 64,
+      "ndvi": 0.3,
+      "frost_days": 7,
+      "heat_days": 0,
+      "heavy_rain_days": 2,
+      "typically_bare": true
+    },
+    {
+      "month": 5,
+      "tmax_c": 22.1,
+      "tmin_c": 9.8,
+      "precip_mm": 118,
+      "soil_moisture": 0.73,
+      "et_mm": 105,
+      "ndvi": 0.48,
+      "frost_days": 1,
+      "heat_days": 0,
+      "heavy_rain_days": 3,
+      "typically_bare": false
+    },
+    {
+      "month": 6,
+      "tmax_c": 27.2,
+      "tmin_c": 15.3,
+      "precip_mm": 128,
+      "soil_moisture": 0.66,
+      "et_mm": 138,
+      "ndvi": 0.76,
+      "frost_days": 0,
+      "heat_days": 3,
+      "heavy_rain_days": 3,
+      "typically_bare": false
+    },
+    {
+      "month": 7,
+      "tmax_c": 29.1,
+      "tmin_c": 17.6,
+      "precip_mm": 104,
+      "soil_moisture": 0.56,
+      "et_mm": 148,
+      "ndvi": 0.85,
+      "frost_days": 0,
+      "heat_days": 6,
+      "heavy_rain_days": 2,
+      "typically_bare": false
+    },
+    {
+      "month": 8,
+      "tmax_c": 28,
+      "tmin_c": 16.4,
+      "precip_mm": 102,
+      "soil_moisture": 0.54,
+      "et_mm": 126,
+      "ndvi": 0.81,
+      "frost_days": 0,
+      "heat_days": 4,
+      "heavy_rain_days": 2,
+      "typically_bare": false
+    },
+    {
+      "month": 9,
+      "tmax_c": 24.1,
+      "tmin_c": 11.2,
+      "precip_mm": 82,
+      "soil_moisture": 0.58,
+      "et_mm": 82,
+      "ndvi": 0.58,
+      "frost_days": 0,
+      "heat_days": 1,
+      "heavy_rain_days": 1,
+      "typically_bare": false
+    },
+    {
+      "month": 10,
+      "tmax_c": 16.9,
+      "tmin_c": 4.5,
+      "precip_mm": 66,
+      "soil_moisture": 0.65,
+      "et_mm": 45,
+      "ndvi": 0.28,
+      "frost_days": 6,
+      "heat_days": 0,
+      "heavy_rain_days": 1,
+      "typically_bare": true
+    },
+    {
+      "month": 11,
+      "tmax_c": 8.2,
+      "tmin_c": -2.6,
+      "precip_mm": 46,
+      "soil_moisture": 0.7,
+      "et_mm": 18,
+      "ndvi": 0.19,
+      "frost_days": 19,
+      "heat_days": 0,
+      "heavy_rain_days": 1,
+      "typically_bare": true
+    },
+    {
+      "month": 12,
+      "tmax_c": 0.5,
+      "tmin_c": -8.8,
+      "precip_mm": 31,
+      "soil_moisture": 0.72,
+      "et_mm": 9,
+      "ndvi": 0.17,
+      "frost_days": 28,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": true
+    }
+  ],
+  "annual": [
+    {
+      "year": 2001,
+      "heat_days": 10,
+      "precip_mm": 904,
+      "heavy_rain_days": 10,
+      "groundwater_anomaly_cm": 0.7,
+      "growing_season_days": 168
+    },
+    {
+      "year": 2002,
+      "heat_days": 12,
+      "precip_mm": 947,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": 1.6,
+      "growing_season_days": 171
+    },
+    {
+      "year": 2003,
+      "heat_days": 11,
+      "precip_mm": 906,
+      "heavy_rain_days": 10,
+      "groundwater_anomaly_cm": 0.8,
+      "growing_season_days": 169
+    },
+    {
+      "year": 2004,
+      "heat_days": 8,
+      "precip_mm": 823,
+      "heavy_rain_days": 8,
+      "groundwater_anomaly_cm": -1,
+      "growing_season_days": 164
+    },
+    {
+      "year": 2005,
+      "heat_days": 7,
+      "precip_mm": 800,
+      "heavy_rain_days": 8,
+      "groundwater_anomaly_cm": -1.4,
+      "growing_season_days": 163
+    },
+    {
+      "year": 2006,
+      "heat_days": 10,
+      "precip_mm": 858,
+      "heavy_rain_days": 10,
+      "groundwater_anomaly_cm": -0.2,
+      "growing_season_days": 167
+    },
+    {
+      "year": 2007,
+      "heat_days": 12,
+      "precip_mm": 915,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": 1,
+      "growing_season_days": 171
+    },
+    {
+      "year": 2008,
+      "heat_days": 12,
+      "precip_mm": 905,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": 0.8,
+      "growing_season_days": 171
+    },
+    {
+      "year": 2009,
+      "heat_days": 10,
+      "precip_mm": 869,
+      "heavy_rain_days": 10,
+      "groundwater_anomaly_cm": 0.1,
+      "growing_season_days": 169
+    },
+    {
+      "year": 2010,
+      "heat_days": 11,
+      "precip_mm": 881,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": 0.3,
+      "growing_season_days": 170
+    },
+    {
+      "year": 2011,
+      "heat_days": 13,
+      "precip_mm": 935,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": 1.5,
+      "growing_season_days": 174
+    },
+    {
+      "year": 2012,
+      "heat_days": 14,
+      "precip_mm": 945,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": 1.7,
+      "growing_season_days": 175
+    },
+    {
+      "year": 2013,
+      "heat_days": 12,
+      "precip_mm": 879,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": 0.3,
+      "growing_season_days": 171
+    },
+    {
+      "year": 2014,
+      "heat_days": 9,
+      "precip_mm": 814,
+      "heavy_rain_days": 10,
+      "groundwater_anomaly_cm": -1,
+      "growing_season_days": 168
+    },
+    {
+      "year": 2015,
+      "heat_days": 10,
+      "precip_mm": 833,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": -0.6,
+      "growing_season_days": 169
+    },
+    {
+      "year": 2016,
+      "heat_days": 13,
+      "precip_mm": 912,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": 1.1,
+      "growing_season_days": 174
+    },
+    {
+      "year": 2017,
+      "heat_days": 15,
+      "precip_mm": 953,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": 1.9,
+      "growing_season_days": 177
+    },
+    {
+      "year": 2018,
+      "heat_days": 14,
+      "precip_mm": 922,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": 1.3,
+      "growing_season_days": 176
+    },
+    {
+      "year": 2019,
+      "heat_days": 13,
+      "precip_mm": 886,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": 0.6,
+      "growing_season_days": 174
+    },
+    {
+      "year": 2020,
+      "heat_days": 14,
+      "precip_mm": 908,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": 1,
+      "growing_season_days": 176
+    },
+    {
+      "year": 2021,
+      "heat_days": 16,
+      "precip_mm": 950,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": 1.9,
+      "growing_season_days": 179
+    },
+    {
+      "year": 2022,
+      "heat_days": 15,
+      "precip_mm": 932,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": 1.6,
+      "growing_season_days": 178
+    },
+    {
+      "year": 2023,
+      "heat_days": 13,
+      "precip_mm": 861,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": 0.1,
+      "growing_season_days": 174
+    },
+    {
+      "year": 2024,
+      "heat_days": 12,
+      "precip_mm": 829,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": -0.6,
+      "growing_season_days": 173
+    }
+  ],
+  "trends": {
+    "heat_days_per_decade": 2.5,
+    "precip_change_pct": 5,
+    "heavy_rain_change_pct": 19,
+    "groundwater": "stable"
+  },
+  "soil": {
+    "texture": "Silty clay loam",
+    "organic_matter": "good",
+    "drainage": "moderate",
+    "slope_pct": 3,
+    "erosion_risk": "medium",
+    "water_holding": "high",
+    "source": "USDA SSURGO"
+  },
+  "current_rotation": [
+    {
+      "crop": "corn",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "crop": "soybean",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "insights": [
+    {
+      "title": "Fields sit bare during the heaviest spring storms",
+      "body": "Satellite greenness shows almost no living plant cover from November through April, while heavy rainstorms in April and May have jumped 19% over the last 20 years.",
+      "source": "Landsat NDVI + GPM IMERG",
+      "confidence": "high",
+      "badgeType": "warning"
+    },
+    {
+      "title": "Longer frost-free window opens cover crop time",
+      "body": "The growing season is now about 12 days longer than in 2001, giving autumn-planted rye or winter wheat extra weeks to root before freeze-up.",
+      "source": "NASA POWER",
+      "confidence": "high",
+      "badgeType": "opportunity"
+    },
+    {
+      "title": "Subsoil moisture holds steady but August heat spikes",
+      "body": "Deep soil water stays strong overall, but days above 32°C are climbing by 2.5 days per decade, stressing corn during late grain-fill.",
+      "source": "SMAP + ECOSTRESS",
+      "confidence": "medium",
+      "badgeType": "neutral"
+    }
+  ],
+  "rotations": [
+    {
+      "id": "current",
+      "label": "Current",
+      "name": "Corn → Soybean",
+      "tagline": "2-year standard summer grain rotation",
+      "sequence": [
+        "corn",
+        "soybean"
+      ],
+      "cover_by_month": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "scores": {
+        "soil": 2,
+        "water": 3,
+        "erosion": 2,
+        "income": 4,
+        "pest_break": 2
+      },
+      "why": "Generates strong cash income in good years, but leaves topsoil exposed for 7 months every year and feeds recurring rootworm and nematode pressure.",
+      "evidence": [
+        "Landsat NDVI",
+        "GPM IMERG",
+        "USDA SSURGO"
+      ],
+      "benefits": [
+        "Familiar machinery and local grain buyers",
+        "High peak-year revenue"
+      ],
+      "gaps": [
+        "Exact field tile-drainage spacing is not visible from space"
+      ],
+      "risks": [
+        "Spring washouts on 3%+ slopes",
+        "Rising fertilizer costs if organic matter drops"
+      ]
+    },
+    {
+      "id": "rye_bridge",
+      "label": "Option A",
+      "name": "Corn → Cereal Rye → Soybean → Cereal Rye",
+      "tagline": "Keep living roots in the soil all winter",
+      "sequence": [
+        "corn",
+        "cereal_rye",
+        "soybean",
+        "cereal_rye"
+      ],
+      "cover_by_month": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scores": {
+        "soil": 5,
+        "water": 4,
+        "erosion": 5,
+        "income": 4,
+        "pest_break": 3
+      },
+      "why": "Adding winter cereal rye after harvest keeps living roots holding soil during April–May downpours without giving up any summer corn or soybean harvest.",
+      "evidence": [
+        "GPM IMERG",
+        "Landsat NDVI",
+        "SMAP"
+      ],
+      "benefits": [
+        "Cuts spring soil erosion by up to 60%",
+        "Traps leftover nitrogen before it leaches",
+        "Suppresses early-season pigweed and waterhemp"
+      ],
+      "gaps": [
+        "Local custom-seeding availability in late September"
+      ],
+      "risks": [
+        "Must terminate rye 10–14 days before planting corn so it does not tie up starter nitrogen"
+      ]
+    },
+    {
+      "id": "three_crop",
+      "label": "Option B",
+      "name": "Corn → Soybean → Winter Wheat + Red Clover",
+      "tagline": "3-year diversity to break pests and cut nitrogen bills",
+      "sequence": [
+        "corn",
+        "soybean",
+        "winter_wheat",
+        "red_clover"
+      ],
+      "cover_by_month": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scores": {
+        "soil": 5,
+        "water": 4,
+        "erosion": 5,
+        "income": 3,
+        "pest_break": 5
+      },
+      "why": "Adding winter wheat with frost-seeded red clover breaks the 2-year corn/soybean pest cycle and supplies 50–80 lbs/acre of natural nitrogen for the next corn crop.",
+      "evidence": [
+        "NASA POWER",
+        "Landsat NDVI",
+        "USDA SSURGO"
+      ],
+      "benefits": [
+        "Major drop in rootworm and cyst nematode pressure",
+        "Free nitrogen from clover reduces fertilizer bills",
+        "Spreads farm workload across summer and autumn"
+      ],
+      "gaps": [
+        "Local elevator market price for winter wheat vs corn"
+      ],
+      "risks": [
+        "Wheat harvest in July needs timely storage or buyer contract"
+      ]
+    }
+  ],
+  "crop_fit": [
+    {
+      "crop": "cereal_rye",
+      "fit": 95,
+      "trend": "increasing",
+      "limits": []
+    },
+    {
+      "crop": "soybean",
+      "fit": 90,
+      "trend": "flat",
+      "limits": [
+        "Increasing heavy May rain delays planting"
+      ]
+    },
+    {
+      "crop": "corn",
+      "fit": 86,
+      "trend": "declining",
+      "limits": [
+        "More August heat days above 32°C"
+      ]
+    },
+    {
+      "crop": "winter_wheat",
+      "fit": 84,
+      "trend": "increasing",
+      "limits": [
+        "Check local grain elevator contract"
+      ]
+    },
+    {
+      "crop": "red_clover",
+      "fit": 82,
+      "trend": "flat",
+      "limits": []
+    },
+    {
+      "crop": "oats",
+      "fit": 79,
+      "trend": "flat",
+      "limits": [
+        "Lower per-acre cash return unless sold for seed/forage"
+      ]
+    },
+    {
+      "crop": "alfalfa",
+      "fit": 78,
+      "trend": "flat",
+      "limits": [
+        "Best if livestock or hay buyer is nearby"
+      ]
+    },
+    {
+      "crop": "hairy_vetch",
+      "fit": 72,
+      "trend": "increasing",
+      "limits": [
+        "Can volunteer in wheat if not terminated cleanly"
+      ]
+    },
+    {
+      "crop": "sorghum",
+      "fit": 64,
+      "trend": "increasing",
+      "limits": [
+        "Cool May soils slow emergence"
+      ]
+    },
+    {
+      "crop": "sunflower",
+      "fit": 60,
+      "trend": "flat",
+      "limits": [
+        "Humid summers raise white mold risk"
+      ]
+    }
+  ],
+  "sources": [
+    "NASA POWER",
+    "SMAP",
+    "GPM IMERG",
+    "Landsat NDVI",
+    "ECOSTRESS",
+    "GRACE-FO",
+    "USDA SSURGO"
+  ]
+}

@@ -1,0 +1,643 @@
+{
+  "region": {
+    "id": "punjab",
+    "name": "Ludhiana District",
+    "place": "Punjab, India",
+    "lat": 30.9,
+    "lon": 75.85
+  },
+  "monthly": [
+    {
+      "month": 1,
+      "tmax_c": 19.2,
+      "tmin_c": 6.1,
+      "precip_mm": 25,
+      "soil_moisture": 0.42,
+      "et_mm": 42,
+      "ndvi": 0.72,
+      "frost_days": 1,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": false
+    },
+    {
+      "month": 2,
+      "tmax_c": 22.5,
+      "tmin_c": 8.8,
+      "precip_mm": 28,
+      "soil_moisture": 0.41,
+      "et_mm": 58,
+      "ndvi": 0.78,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": false
+    },
+    {
+      "month": 3,
+      "tmax_c": 28.1,
+      "tmin_c": 13.4,
+      "precip_mm": 24,
+      "soil_moisture": 0.35,
+      "et_mm": 92,
+      "ndvi": 0.65,
+      "frost_days": 0,
+      "heat_days": 1,
+      "heavy_rain_days": 0,
+      "typically_bare": false
+    },
+    {
+      "month": 4,
+      "tmax_c": 35.6,
+      "tmin_c": 19.1,
+      "precip_mm": 16,
+      "soil_moisture": 0.24,
+      "et_mm": 138,
+      "ndvi": 0.25,
+      "frost_days": 0,
+      "heat_days": 12,
+      "heavy_rain_days": 0,
+      "typically_bare": true
+    },
+    {
+      "month": 5,
+      "tmax_c": 40.4,
+      "tmin_c": 24.3,
+      "precip_mm": 22,
+      "soil_moisture": 0.19,
+      "et_mm": 175,
+      "ndvi": 0.19,
+      "frost_days": 0,
+      "heat_days": 26,
+      "heavy_rain_days": 0,
+      "typically_bare": true
+    },
+    {
+      "month": 6,
+      "tmax_c": 39.2,
+      "tmin_c": 26.8,
+      "precip_mm": 78,
+      "soil_moisture": 0.31,
+      "et_mm": 168,
+      "ndvi": 0.36,
+      "frost_days": 0,
+      "heat_days": 22,
+      "heavy_rain_days": 2,
+      "typically_bare": false
+    },
+    {
+      "month": 7,
+      "tmax_c": 34.4,
+      "tmin_c": 26.4,
+      "precip_mm": 215,
+      "soil_moisture": 0.62,
+      "et_mm": 134,
+      "ndvi": 0.68,
+      "frost_days": 0,
+      "heat_days": 6,
+      "heavy_rain_days": 5,
+      "typically_bare": false
+    },
+    {
+      "month": 8,
+      "tmax_c": 33.6,
+      "tmin_c": 25.8,
+      "precip_mm": 188,
+      "soil_moisture": 0.65,
+      "et_mm": 122,
+      "ndvi": 0.8,
+      "frost_days": 0,
+      "heat_days": 4,
+      "heavy_rain_days": 4,
+      "typically_bare": false
+    },
+    {
+      "month": 9,
+      "tmax_c": 33.5,
+      "tmin_c": 23.2,
+      "precip_mm": 102,
+      "soil_moisture": 0.54,
+      "et_mm": 108,
+      "ndvi": 0.74,
+      "frost_days": 0,
+      "heat_days": 4,
+      "heavy_rain_days": 2,
+      "typically_bare": false
+    },
+    {
+      "month": 10,
+      "tmax_c": 31.8,
+      "tmin_c": 16.5,
+      "precip_mm": 14,
+      "soil_moisture": 0.36,
+      "et_mm": 86,
+      "ndvi": 0.32,
+      "frost_days": 0,
+      "heat_days": 2,
+      "heavy_rain_days": 0,
+      "typically_bare": true
+    },
+    {
+      "month": 11,
+      "tmax_c": 26.8,
+      "tmin_c": 10.6,
+      "precip_mm": 6,
+      "soil_moisture": 0.34,
+      "et_mm": 56,
+      "ndvi": 0.38,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": false
+    },
+    {
+      "month": 12,
+      "tmax_c": 20.9,
+      "tmin_c": 6.8,
+      "precip_mm": 14,
+      "soil_moisture": 0.4,
+      "et_mm": 40,
+      "ndvi": 0.58,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": false
+    }
+  ],
+  "annual": [
+    {
+      "year": 2001,
+      "heat_days": 63,
+      "precip_mm": 759,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": 0.7,
+      "growing_season_days": 317
+    },
+    {
+      "year": 2002,
+      "heat_days": 65,
+      "precip_mm": 798,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -0.5,
+      "growing_season_days": 320
+    },
+    {
+      "year": 2003,
+      "heat_days": 65,
+      "precip_mm": 752,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": -3.5,
+      "growing_season_days": 317
+    },
+    {
+      "year": 2004,
+      "heat_days": 62,
+      "precip_mm": 665,
+      "heavy_rain_days": 10,
+      "groundwater_anomaly_cm": -7.4,
+      "growing_season_days": 313
+    },
+    {
+      "year": 2005,
+      "heat_days": 62,
+      "precip_mm": 638,
+      "heavy_rain_days": 10,
+      "groundwater_anomaly_cm": -10,
+      "growing_season_days": 312
+    },
+    {
+      "year": 2006,
+      "heat_days": 65,
+      "precip_mm": 692,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": -10.9,
+      "growing_season_days": 315
+    },
+    {
+      "year": 2007,
+      "heat_days": 67,
+      "precip_mm": 744,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -11.9,
+      "growing_season_days": 319
+    },
+    {
+      "year": 2008,
+      "heat_days": 68,
+      "precip_mm": 730,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -14.2,
+      "growing_season_days": 318
+    },
+    {
+      "year": 2009,
+      "heat_days": 67,
+      "precip_mm": 689,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": -17.1,
+      "growing_season_days": 316
+    },
+    {
+      "year": 2010,
+      "heat_days": 68,
+      "precip_mm": 698,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": -19,
+      "growing_season_days": 317
+    },
+    {
+      "year": 2011,
+      "heat_days": 71,
+      "precip_mm": 747,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": -20,
+      "growing_season_days": 321
+    },
+    {
+      "year": 2012,
+      "heat_days": 72,
+      "precip_mm": 753,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": -21.9,
+      "growing_season_days": 322
+    },
+    {
+      "year": 2013,
+      "heat_days": 70,
+      "precip_mm": 683,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -25.5,
+      "growing_season_days": 318
+    },
+    {
+      "year": 2014,
+      "heat_days": 68,
+      "precip_mm": 613,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": -29,
+      "growing_season_days": 314
+    },
+    {
+      "year": 2015,
+      "heat_days": 70,
+      "precip_mm": 628,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": -30.7,
+      "growing_season_days": 316
+    },
+    {
+      "year": 2016,
+      "heat_days": 73,
+      "precip_mm": 702,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": -31.2,
+      "growing_season_days": 320
+    },
+    {
+      "year": 2017,
+      "heat_days": 75,
+      "precip_mm": 739,
+      "heavy_rain_days": 15,
+      "groundwater_anomaly_cm": -32.5,
+      "growing_season_days": 323
+    },
+    {
+      "year": 2018,
+      "heat_days": 75,
+      "precip_mm": 704,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": -35.3,
+      "growing_season_days": 321
+    },
+    {
+      "year": 2019,
+      "heat_days": 74,
+      "precip_mm": 664,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -38.1,
+      "growing_season_days": 319
+    },
+    {
+      "year": 2020,
+      "heat_days": 75,
+      "precip_mm": 681,
+      "heavy_rain_days": 14,
+      "groundwater_anomaly_cm": -39.8,
+      "growing_season_days": 321
+    },
+    {
+      "year": 2021,
+      "heat_days": 78,
+      "precip_mm": 719,
+      "heavy_rain_days": 15,
+      "groundwater_anomaly_cm": -41.1,
+      "growing_season_days": 324
+    },
+    {
+      "year": 2022,
+      "heat_days": 78,
+      "precip_mm": 697,
+      "heavy_rain_days": 15,
+      "groundwater_anomaly_cm": -43.6,
+      "growing_season_days": 323
+    },
+    {
+      "year": 2023,
+      "heat_days": 76,
+      "precip_mm": 621,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -47.2,
+      "growing_season_days": 319
+    },
+    {
+      "year": 2024,
+      "heat_days": 75,
+      "precip_mm": 585,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -50,
+      "growing_season_days": 317
+    }
+  ],
+  "trends": {
+    "heat_days_per_decade": 7,
+    "precip_change_pct": -8,
+    "heavy_rain_change_pct": 14,
+    "groundwater": "rapidly declining"
+  },
+  "soil": {
+    "texture": "Alluvial sandy loam",
+    "organic_matter": "low",
+    "drainage": "well",
+    "slope_pct": 1,
+    "erosion_risk": "low",
+    "water_holding": "moderate",
+    "source": "ISRIC SoilGrids + NBSS"
+  },
+  "current_rotation": [
+    {
+      "crop": "winter_wheat",
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "crop": "corn",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "insights": [
+    {
+      "title": "Underground water reserves are dropping fast",
+      "body": "NASA gravity satellites show groundwater has fallen steadily for 20+ years. Pumping water for flooded summer paddy is forcing deeper, costlier borewells every 3–5 years.",
+      "source": "GRACE-FO",
+      "confidence": "high",
+      "badgeType": "warning"
+    },
+    {
+      "title": "March–April heat spikes hurt late-sown wheat",
+      "body": "Days above 35°C are climbing by 7 days per decade, causing early grain shriveling if wheat matures past late March.",
+      "source": "NASA POWER + ECOSTRESS",
+      "confidence": "high",
+      "badgeType": "warning"
+    },
+    {
+      "title": "65-day summer gap fits fast nitrogen-fixing pulses",
+      "body": "Between April wheat harvest and late June monsoon onset, short-season green gram can add soil nitrogen and extra income using minimal water.",
+      "source": "SMAP + Landsat NDVI",
+      "confidence": "high",
+      "badgeType": "opportunity"
+    }
+  ],
+  "rotations": [
+    {
+      "id": "current",
+      "label": "Current",
+      "name": "Flooded Paddy → Winter Wheat",
+      "tagline": "High water-demand double cereal system",
+      "sequence": [
+        "corn",
+        "winter_wheat"
+      ],
+      "cover_by_month": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "scores": {
+        "soil": 1,
+        "water": 1,
+        "erosion": 3,
+        "income": 4,
+        "pest_break": 1
+      },
+      "why": "Steady minimum support prices make this familiar, but continuous cereal cropping depletes organic matter and drains underground aquifers.",
+      "evidence": [
+        "GRACE-FO",
+        "SMAP",
+        "NASA POWER"
+      ],
+      "benefits": [
+        "Guaranteed procurement markets",
+        "Predictable machinery setup"
+      ],
+      "gaps": [
+        "Exact depth to water table on your specific tube-well"
+      ],
+      "risks": [
+        "Borewell pump burnout or failure during dry June",
+        "Late-March heat wave shriveling wheat yields"
+      ]
+    },
+    {
+      "id": "green_gram_bridge",
+      "label": "Option A",
+      "name": "Winter Wheat → Green Gram → Corn (Maize)",
+      "tagline": "Cut summer water use by 60% & rebuild soil nitrogen",
+      "sequence": [
+        "winter_wheat",
+        "green_gram",
+        "corn"
+      ],
+      "cover_by_month": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "scores": {
+        "soil": 4,
+        "water": 4,
+        "erosion": 4,
+        "income": 4,
+        "pest_break": 4
+      },
+      "why": "Replacing water-heavy flooded paddy with maize and inserting a 65-day green gram crop in May–June cuts groundwater pumping dramatically while adding free nitrogen.",
+      "evidence": [
+        "GRACE-FO",
+        "GPM IMERG",
+        "Landsat NDVI"
+      ],
+      "benefits": [
+        "Saves massive electricity and borewell pumping",
+        "Extra harvest of high-protein mung beans",
+        "Breaks paddy straw burning cycle"
+      ],
+      "gaps": [
+        "Local buyer pricing for maize vs paddy"
+      ],
+      "risks": [
+        "Waterlogging in low-lying fields during heavy July monsoon bursts"
+      ]
+    },
+    {
+      "id": "mustard_pigeon",
+      "label": "Option B",
+      "name": "Pigeon Pea → Indian Mustard",
+      "tagline": "Low-water, heat-resilient oilseed + pulse rotation",
+      "sequence": [
+        "pigeon_pea",
+        "mustard"
+      ],
+      "cover_by_month": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scores": {
+        "soil": 5,
+        "water": 5,
+        "erosion": 4,
+        "income": 3,
+        "pest_break": 5
+      },
+      "why": "Deep taproots from both pigeon pea and mustard break compacted plow-pans and thrive on monsoon rain plus 1–2 light irrigations.",
+      "evidence": [
+        "GRACE-FO",
+        "ECOSTRESS",
+        "SMAP"
+      ],
+      "benefits": [
+        "Near-zero groundwater depletion",
+        "Shatters hard subsoil layers naturally",
+        "Strong market demand for mustard oil and dal"
+      ],
+      "gaps": [
+        "Pod borer control readiness for pigeon pea"
+      ],
+      "risks": [
+        "Sudden frost in January can nip mustard pods if sown too late"
+      ]
+    }
+  ],
+  "crop_fit": [
+    {
+      "crop": "green_gram",
+      "fit": 94,
+      "trend": "increasing",
+      "limits": []
+    },
+    {
+      "crop": "mustard",
+      "fit": 91,
+      "trend": "flat",
+      "limits": [
+        "Watch for aphids in warm February"
+      ]
+    },
+    {
+      "crop": "pigeon_pea",
+      "fit": 89,
+      "trend": "increasing",
+      "limits": [
+        "Needs well-drained fields"
+      ]
+    },
+    {
+      "crop": "pearl_millet",
+      "fit": 87,
+      "trend": "increasing",
+      "limits": []
+    },
+    {
+      "crop": "winter_wheat",
+      "fit": 81,
+      "trend": "declining",
+      "limits": [
+        "Rising March heat stress"
+      ]
+    },
+    {
+      "crop": "chickpea",
+      "fit": 80,
+      "trend": "flat",
+      "limits": [
+        "Avoid heavy irrigated soils"
+      ]
+    },
+    {
+      "crop": "corn",
+      "fit": 77,
+      "trend": "flat",
+      "limits": [
+        "Needs drainage during peak July monsoon"
+      ]
+    },
+    {
+      "crop": "sorghum",
+      "fit": 76,
+      "trend": "increasing",
+      "limits": []
+    },
+    {
+      "crop": "sesame",
+      "fit": 74,
+      "trend": "increasing",
+      "limits": []
+    }
+  ],
+  "sources": [
+    "GRACE-FO",
+    "NASA POWER",
+    "SMAP",
+    "GPM IMERG",
+    "Landsat NDVI",
+    "ECOSTRESS",
+    "ISRIC SoilGrids"
+  ]
+}

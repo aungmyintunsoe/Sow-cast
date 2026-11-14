@@ -1,0 +1,624 @@
+{
+  "region": {
+    "id": "darling_downs",
+    "name": "Darling Downs",
+    "place": "Queensland, Australia",
+    "lat": -27.56,
+    "lon": 151.95
+  },
+  "monthly": [
+    {
+      "month": 1,
+      "tmax_c": 31.2,
+      "tmin_c": 17.8,
+      "precip_mm": 92,
+      "soil_moisture": 0.44,
+      "et_mm": 165,
+      "ndvi": 0.54,
+      "frost_days": 0,
+      "heat_days": 8,
+      "heavy_rain_days": 2,
+      "typically_bare": false
+    },
+    {
+      "month": 2,
+      "tmax_c": 30.1,
+      "tmin_c": 17.4,
+      "precip_mm": 84,
+      "soil_moisture": 0.46,
+      "et_mm": 142,
+      "ndvi": 0.58,
+      "frost_days": 0,
+      "heat_days": 6,
+      "heavy_rain_days": 2,
+      "typically_bare": false
+    },
+    {
+      "month": 3,
+      "tmax_c": 28.4,
+      "tmin_c": 15.2,
+      "precip_mm": 62,
+      "soil_moisture": 0.43,
+      "et_mm": 122,
+      "ndvi": 0.51,
+      "frost_days": 0,
+      "heat_days": 2,
+      "heavy_rain_days": 1,
+      "typically_bare": false
+    },
+    {
+      "month": 4,
+      "tmax_c": 25.1,
+      "tmin_c": 11.4,
+      "precip_mm": 38,
+      "soil_moisture": 0.39,
+      "et_mm": 88,
+      "ndvi": 0.36,
+      "frost_days": 0,
+      "heat_days": 0,
+      "heavy_rain_days": 1,
+      "typically_bare": true
+    },
+    {
+      "month": 5,
+      "tmax_c": 21.4,
+      "tmin_c": 7.2,
+      "precip_mm": 36,
+      "soil_moisture": 0.38,
+      "et_mm": 62,
+      "ndvi": 0.34,
+      "frost_days": 1,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": false
+    },
+    {
+      "month": 6,
+      "tmax_c": 18.2,
+      "tmin_c": 4.5,
+      "precip_mm": 34,
+      "soil_moisture": 0.4,
+      "et_mm": 46,
+      "ndvi": 0.42,
+      "frost_days": 4,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": false
+    },
+    {
+      "month": 7,
+      "tmax_c": 17.8,
+      "tmin_c": 3.4,
+      "precip_mm": 32,
+      "soil_moisture": 0.39,
+      "et_mm": 48,
+      "ndvi": 0.52,
+      "frost_days": 6,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": false
+    },
+    {
+      "month": 8,
+      "tmax_c": 19.8,
+      "tmin_c": 4.8,
+      "precip_mm": 28,
+      "soil_moisture": 0.36,
+      "et_mm": 64,
+      "ndvi": 0.58,
+      "frost_days": 3,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": false
+    },
+    {
+      "month": 9,
+      "tmax_c": 23.6,
+      "tmin_c": 8.2,
+      "precip_mm": 36,
+      "soil_moisture": 0.33,
+      "et_mm": 92,
+      "ndvi": 0.52,
+      "frost_days": 0,
+      "heat_days": 1,
+      "heavy_rain_days": 1,
+      "typically_bare": false
+    },
+    {
+      "month": 10,
+      "tmax_c": 26.8,
+      "tmin_c": 12.1,
+      "precip_mm": 58,
+      "soil_moisture": 0.34,
+      "et_mm": 124,
+      "ndvi": 0.38,
+      "frost_days": 0,
+      "heat_days": 3,
+      "heavy_rain_days": 1,
+      "typically_bare": true
+    },
+    {
+      "month": 11,
+      "tmax_c": 29.2,
+      "tmin_c": 14.9,
+      "precip_mm": 76,
+      "soil_moisture": 0.38,
+      "et_mm": 148,
+      "ndvi": 0.41,
+      "frost_days": 0,
+      "heat_days": 5,
+      "heavy_rain_days": 2,
+      "typically_bare": false
+    },
+    {
+      "month": 12,
+      "tmax_c": 30.8,
+      "tmin_c": 16.8,
+      "precip_mm": 88,
+      "soil_moisture": 0.42,
+      "et_mm": 162,
+      "ndvi": 0.49,
+      "frost_days": 0,
+      "heat_days": 7,
+      "heavy_rain_days": 2,
+      "typically_bare": false
+    }
+  ],
+  "annual": [
+    {
+      "year": 2001,
+      "heat_days": 25,
+      "precip_mm": 699,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": 0.7,
+      "growing_season_days": 292
+    },
+    {
+      "year": 2002,
+      "heat_days": 27,
+      "precip_mm": 737,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": 1.2,
+      "growing_season_days": 295
+    },
+    {
+      "year": 2003,
+      "heat_days": 26,
+      "precip_mm": 691,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": -0.1,
+      "growing_season_days": 293
+    },
+    {
+      "year": 2004,
+      "heat_days": 24,
+      "precip_mm": 603,
+      "heavy_rain_days": 9,
+      "groundwater_anomaly_cm": -2.3,
+      "growing_season_days": 288
+    },
+    {
+      "year": 2005,
+      "heat_days": 23,
+      "precip_mm": 576,
+      "heavy_rain_days": 9,
+      "groundwater_anomaly_cm": -3.2,
+      "growing_season_days": 287
+    },
+    {
+      "year": 2006,
+      "heat_days": 26,
+      "precip_mm": 629,
+      "heavy_rain_days": 10,
+      "groundwater_anomaly_cm": -2.4,
+      "growing_season_days": 291
+    },
+    {
+      "year": 2007,
+      "heat_days": 28,
+      "precip_mm": 681,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": -1.7,
+      "growing_season_days": 294
+    },
+    {
+      "year": 2008,
+      "heat_days": 28,
+      "precip_mm": 666,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": -2.3,
+      "growing_season_days": 294
+    },
+    {
+      "year": 2009,
+      "heat_days": 27,
+      "precip_mm": 624,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": -3.5,
+      "growing_season_days": 292
+    },
+    {
+      "year": 2010,
+      "heat_days": 28,
+      "precip_mm": 632,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": -3.7,
+      "growing_season_days": 293
+    },
+    {
+      "year": 2011,
+      "heat_days": 30,
+      "precip_mm": 681,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": -3,
+      "growing_season_days": 297
+    },
+    {
+      "year": 2012,
+      "heat_days": 31,
+      "precip_mm": 686,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -3.2,
+      "growing_season_days": 298
+    },
+    {
+      "year": 2013,
+      "heat_days": 29,
+      "precip_mm": 616,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": -5.1,
+      "growing_season_days": 294
+    },
+    {
+      "year": 2014,
+      "heat_days": 27,
+      "precip_mm": 545,
+      "heavy_rain_days": 10,
+      "groundwater_anomaly_cm": -6.9,
+      "growing_season_days": 291
+    },
+    {
+      "year": 2015,
+      "heat_days": 28,
+      "precip_mm": 559,
+      "heavy_rain_days": 10,
+      "groundwater_anomaly_cm": -6.9,
+      "growing_season_days": 292
+    },
+    {
+      "year": 2016,
+      "heat_days": 31,
+      "precip_mm": 633,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": -5.7,
+      "growing_season_days": 297
+    },
+    {
+      "year": 2017,
+      "heat_days": 33,
+      "precip_mm": 670,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -5.3,
+      "growing_season_days": 300
+    },
+    {
+      "year": 2018,
+      "heat_days": 32,
+      "precip_mm": 633,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -6.4,
+      "growing_season_days": 298
+    },
+    {
+      "year": 2019,
+      "heat_days": 32,
+      "precip_mm": 593,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": -7.5,
+      "growing_season_days": 296
+    },
+    {
+      "year": 2020,
+      "heat_days": 33,
+      "precip_mm": 610,
+      "heavy_rain_days": 12,
+      "groundwater_anomaly_cm": -7.5,
+      "growing_season_days": 298
+    },
+    {
+      "year": 2021,
+      "heat_days": 35,
+      "precip_mm": 647,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -7.1,
+      "growing_season_days": 301
+    },
+    {
+      "year": 2022,
+      "heat_days": 34,
+      "precip_mm": 624,
+      "heavy_rain_days": 13,
+      "groundwater_anomaly_cm": -7.9,
+      "growing_season_days": 300
+    },
+    {
+      "year": 2023,
+      "heat_days": 32,
+      "precip_mm": 548,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": -9.8,
+      "growing_season_days": 296
+    },
+    {
+      "year": 2024,
+      "heat_days": 31,
+      "precip_mm": 511,
+      "heavy_rain_days": 11,
+      "groundwater_anomaly_cm": -10.9,
+      "growing_season_days": 294
+    }
+  ],
+  "trends": {
+    "heat_days_per_decade": 4.5,
+    "precip_change_pct": -10,
+    "heavy_rain_change_pct": 10,
+    "groundwater": "declining"
+  },
+  "soil": {
+    "texture": "Deep cracking black clay (Vertisol)",
+    "organic_matter": "moderate",
+    "drainage": "moderate",
+    "slope_pct": 2,
+    "erosion_risk": "medium",
+    "water_holding": "high",
+    "source": "TERN SoilGrid Australia"
+  },
+  "current_rotation": [
+    {
+      "crop": "sorghum",
+      "months": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "crop": "winter_wheat",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "insights": [
+    {
+      "title": "Summer heat spikes are shortening fallow storage",
+      "body": "Hot days above 33°C have risen 4.5 days per decade, baking moisture out of bare fallow soil before winter wheat can use it.",
+      "source": "NASA POWER + ECOSTRESS",
+      "confidence": "high",
+      "badgeType": "warning"
+    },
+    {
+      "title": "Deep black clay holds water well if covered",
+      "body": "Your soil acts like a giant sponge when protected by stubble or cover crops, holding enough subsoil water to carry winter pulses without rain.",
+      "source": "SMAP + TERN SoilGrid",
+      "confidence": "high",
+      "badgeType": "opportunity"
+    }
+  ],
+  "rotations": [
+    {
+      "id": "current",
+      "label": "Current",
+      "name": "Sorghum → Long Fallow → Winter Wheat",
+      "tagline": "Classic dryland grain + bare chemical fallow",
+      "sequence": [
+        "sorghum",
+        "winter_wheat"
+      ],
+      "cover_by_month": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scores": {
+        "soil": 3,
+        "water": 3,
+        "erosion": 3,
+        "income": 4,
+        "pest_break": 2
+      },
+      "why": "Stores water during bare fallow, but repeated grass-on-grass crops (sorghum & wheat) let root-lesion nematodes and herbicide-resistant weeds multiply.",
+      "evidence": [
+        "SMAP",
+        "ECOSTRESS",
+        "TERN SoilGrid"
+      ],
+      "benefits": [
+        "Proven dryland water-banking approach",
+        "Strong grain infrastructure"
+      ],
+      "gaps": [
+        "Subsoil chloride or sodicity depth on individual paddocks"
+      ],
+      "risks": [
+        "Herbicide-resistant fleabane & feathertop Rhodes grass in fallow",
+        "Crown rot buildup in wheat"
+      ]
+    },
+    {
+      "id": "chickpea_break",
+      "label": "Option A",
+      "name": "Sorghum → Chickpea → Winter Wheat",
+      "tagline": "High-value pulse break to slash root disease",
+      "sequence": [
+        "sorghum",
+        "chickpea",
+        "winter_wheat"
+      ],
+      "cover_by_month": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scores": {
+        "soil": 4,
+        "water": 4,
+        "erosion": 3,
+        "income": 5,
+        "pest_break": 5
+      },
+      "why": "Adding winter chickpea breaks cereal crown rot and nematode pressure while fixing nitrogen for the next sorghum crop on stored clay moisture.",
+      "evidence": [
+        "SMAP",
+        "NASA POWER",
+        "Landsat NDVI"
+      ],
+      "benefits": [
+        "Higher wheat yields after a pulse break",
+        "Strong export cash prices for chickpea",
+        "Lowers nitrogen fertilizer needs"
+      ],
+      "gaps": [
+        "Paddock drainage during rare wet winters"
+      ],
+      "risks": [
+        "Ascochyta blight if winter turns unusually wet—needs timely fungicide check"
+      ]
+    },
+    {
+      "id": "sunflower_mung",
+      "label": "Option B",
+      "name": "Green Gram → Winter Wheat → Sunflower",
+      "tagline": "Taproot diversity for hotter summers",
+      "sequence": [
+        "green_gram",
+        "winter_wheat",
+        "sunflower"
+      ],
+      "cover_by_month": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scores": {
+        "soil": 4,
+        "water": 4,
+        "erosion": 4,
+        "income": 4,
+        "pest_break": 5
+      },
+      "why": "Quick summer green gram + deep-rooted sunflower break grass-weed herbicide cycles and pull nutrients up from deep black clay.",
+      "evidence": [
+        "ECOSTRESS",
+        "SMAP",
+        "GPM IMERG"
+      ],
+      "benefits": [
+        "Three completely different plant families",
+        "Resilient to 40°C summer spikes",
+        "Breaks stubborn grass weeds"
+      ],
+      "gaps": [
+        "Local crushing/delivery contracts for sunflower"
+      ],
+      "risks": [
+        "Rutherglen bug pressure on sunflower heads during dry springs"
+      ]
+    }
+  ],
+  "crop_fit": [
+    {
+      "crop": "chickpea",
+      "fit": 93,
+      "trend": "flat",
+      "limits": [
+        "Monitor winter Ascochyta blight"
+      ]
+    },
+    {
+      "crop": "sorghum",
+      "fit": 91,
+      "trend": "flat",
+      "limits": []
+    },
+    {
+      "crop": "green_gram",
+      "fit": 88,
+      "trend": "increasing",
+      "limits": [
+        "Needs ~65 frost-free warm days"
+      ]
+    },
+    {
+      "crop": "winter_wheat",
+      "fit": 84,
+      "trend": "declining",
+      "limits": [
+        "Drier winter trend requires stored soil water"
+      ]
+    },
+    {
+      "crop": "sunflower",
+      "fit": 82,
+      "trend": "increasing",
+      "limits": []
+    },
+    {
+      "crop": "safflower",
+      "fit": 79,
+      "trend": "increasing",
+      "limits": []
+    },
+    {
+      "crop": "sesame",
+      "fit": 76,
+      "trend": "increasing",
+      "limits": [
+        "Emerging niche market"
+      ]
+    }
+  ],
+  "sources": [
+    "NASA POWER",
+    "SMAP",
+    "GPM IMERG",
+    "Landsat NDVI",
+    "ECOSTRESS",
+    "TERN SoilGrid"
+  ]
+}

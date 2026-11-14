@@ -1,0 +1,34 @@
+[
+  {
+    "id": "iowa",
+    "name": "Story County",
+    "place": "Iowa, USA",
+    "lat": 42.03,
+    "lon": -93.62,
+    "tagline": "Corn & soybean belt facing heavier spring storms"
+  },
+  {
+    "id": "punjab",
+    "name": "Ludhiana District",
+    "place": "Punjab, India",
+    "lat": 30.9,
+    "lon": 75.85,
+    "tagline": "Rice–wheat belt under rapid groundwater drawdown"
+  },
+  {
+    "id": "nakuru",
+    "name": "Nakuru County",
+    "place": "Rift Valley, Kenya",
+    "lat": -0.3,
+    "lon": 36.07,
+    "tagline": "Highland maize farms with shifting rainy seasons"
+  },
+  {
+    "id": "darling_downs",
+    "name": "Darling Downs",
+    "place": "Queensland, Australia",
+    "lat": -27.56,
+    "lon": 151.95,
+    "tagline": "Dryland grain country adapting to hotter summers"
+  }
+]
