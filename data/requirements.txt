@@ -1,0 +1,12 @@
+# Analysis environment for data/processed (fetching stays in Node scripts).
+# Setup (PowerShell, from the repo root):
+#   python -m venv data/.venv
+#   data\.venv\Scripts\Activate.ps1
+#   pip install -r data/requirements.txt
+pandas
+numpy
+scipy
+matplotlib
+plotly
+jupyterlab
+pymannkendall

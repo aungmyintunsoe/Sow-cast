@@ -1,7 +1,7 @@
-// Step 6 — Turn raw time series into analysis-ready tables + an app-shaped JSON per site.
+// Step 5 — Turn raw time series into analysis-ready tables + an app-shaped JSON per site.
 // Works with whatever has been fetched: POWER is required; MODIS / soil / terrain are used if present.
 //
-//   node data/scripts/06_build_summaries.mjs [siteId ...]
+//   node data/scripts/05_build_summaries.mjs [siteId ...]
 //
 // Outputs (data/processed/<site>/):
 //   monthly_climatology.csv   12 rows — typical year (2001-2024 average)
@@ -112,7 +112,7 @@ for (const site of selectedSites(cfg)) {
       bare_composite_share: nd.length ? round(nd.filter((r) => r.ndvi_clean < BARE_NDVI).length / nd.length, 2) : null,
       et_modis_mm: etY.length ? round(mean(etY.map((r) => r.et_day)) * 365, 0) : null,
       lst_day_max_c: lsY.length ? round(Math.max(...lsY.map((r) => r.lst_day_c)), 1) : null,
-      groundwater_anomaly_cm: null, // needs GRACE-FO — see NEXT_STEPS.md
+      groundwater_anomaly_cm: null, // GRACE-FO is login-only and out of scope for the demo
       growing_season_days: longestRun(rows.map((r) => r.tmin_c !== null && r.tmin_c > 0)), // thermal proxy (frost-free run)
     };
   }).sort((a, b) => a.year - b.year);
@@ -142,14 +142,14 @@ for (const site of selectedSites(cfg)) {
   const ts = (k) => trends[k];
   const regionClimate = {
     _provenance: {
-      generated: new Date().toISOString(), field_point: site.field, pin: site.pin, available,
+      generated: new Date().toISOString(), location: site.location, available,
       notes: [
         'Real data replacing make_fake_data.ts for: monthly, annual, trends (except groundwater), soil.',
         'insights / rotations / crop_fit are NOT generated here — they are the analysis step (see data/NEXT_STEPS.md).',
-        'soil_moisture is the POWER/MERRA-2 GWETTOP wetness index (0-1), not SMAP volumetric moisture.',
+        'soil_moisture is the POWER/MERRA-2 GWETTOP wetness index (0-1), not volumetric moisture.',
       ],
     },
-    region: { id: site.id, name: site.name, place: site.place, lat: site.pin.lat, lon: site.pin.lon },
+    region: { id: site.id, name: site.name, place: site.place, lat: site.location.lat, lon: site.location.lon },
     monthly: climatology.map((c) => ({
       month: c.month, tmax_c: c.tmax_c, tmin_c: c.tmin_c, precip_mm: c.precip_mm, soil_moisture: c.soil_moisture,
       et_mm: c.et_mm ?? c.et0_mm, ndvi: c.ndvi, frost_days: c.frost_days, heat_days: c.heat_days,
@@ -163,7 +163,7 @@ for (const site of selectedSites(cfg)) {
       heat_days_per_decade: ts('heat_days')?.per_decade ?? null,
       precip_change_pct: ts('precip_mm')?.change_pct_over_period ?? null,
       heavy_rain_change_pct: ts('heavy_rain_days')?.change_pct_over_period ?? null,
-      groundwater: null, // 'rapidly declining' | 'declining' | 'stable' | 'recharging' — needs GRACE-FO
+      groundwater: null, // GRACE-FO is login-only and out of scope for the demo
     },
     soil: soil ? {
       texture: soil.app_labels.texture, organic_matter: soil.app_labels.organic_matter,

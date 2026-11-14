@@ -15,6 +15,8 @@ import { FieldMap } from './components/FieldMap';
 import { FieldBrief } from './components/FieldBrief';
 import { RotationCompare } from './components/RotationCompare';
 import { CropFitList } from './components/CropFitList';
+import { DesignSwitcher } from './components/DesignSwitcher';
+import { SHOW_DESIGN_SWITCHER } from './theme/themes';
 
 type StepId = 'map' | 'brief' | 'rotations' | 'crops';
 
@@ -41,7 +43,11 @@ const STEPS: { id: StepId; label: string; shortLabel: string; icon: React.ReactN
 ];
 
 export function App() {
-  const [step, setStep] = useState<StepId>('map');
+  // ?step=brief|rotations|crops opens a page directly (handy for comparing designs page by page)
+  const [step, setStep] = useState<StepId>(() => {
+    const s = new URLSearchParams(window.location.search).get('step');
+    return STEPS.some((x) => x.id === s) ? (s as StepId) : 'map';
+  });
   const [sunMode, setSunMode] = useState(false);
 
   const [regions, setRegions] = useState<RegionSummary[]>([]);
@@ -150,6 +156,8 @@ export function App() {
 
           {/* Right Controls */}
           <div className="flex items-center gap-2">
+            {SHOW_DESIGN_SWITCHER && <DesignSwitcher />}
+
             {regionDetail && (
               <button
                 onClick={() => setStep('map')}

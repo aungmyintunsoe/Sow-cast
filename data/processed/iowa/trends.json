@@ -147,6 +147,42 @@
         "trend": "no significant trend"
       }
     },
+    "ndvi_mean": {
+      "per_decade": 0.008,
+      "first_10y_mean": 0.44,
+      "last_10y_mean": 0.45,
+      "change_pct_over_period": 4.2,
+      "mann_kendall": {
+        "S": 36,
+        "z": 0.868,
+        "p": 0.3853,
+        "trend": "no significant trend"
+      }
+    },
+    "ndvi_peak": {
+      "per_decade": 0.011,
+      "first_10y_mean": 0.91,
+      "last_10y_mean": 0.92,
+      "change_pct_over_period": 2.9,
+      "mann_kendall": {
+        "S": 105,
+        "z": 2.58,
+        "p": 0.0099,
+        "trend": "increasing"
+      }
+    },
+    "bare_composite_share": {
+      "per_decade": -0.014,
+      "first_10y_mean": 0.55,
+      "last_10y_mean": 0.53,
+      "change_pct_over_period": -5.8,
+      "mann_kendall": {
+        "S": -11,
+        "z": -0.248,
+        "p": 0.8041,
+        "trend": "no significant trend"
+      }
+    },
     "growing_season_days": {
       "per_decade": 6.809,
       "first_10y_mean": 175.1,

@@ -40,7 +40,7 @@ function hornSlope(z, s) {
 const cfg = loadConfig();
 for (const site of selectedSites(cfg)) {
   console.log(`\n▶ SRTM ${site.id}`);
-  const { lat, lon } = site.field;
+  const { lat, lon } = site.location;
   const local = await elevations(site, grid(lat, lon, 3, 100), 'local100m');
   const ctx = await elevations(site, grid(lat, lon, 7, 500), 'context500m');
 

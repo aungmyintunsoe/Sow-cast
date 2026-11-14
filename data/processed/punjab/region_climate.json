@@ -1,13 +1,9 @@
 {
   "_provenance": {
-    "generated": "2026-11-14T11:21:19.265Z",
-    "field_point": {
+    "generated": "2026-11-14T13:10:05.896Z",
+    "location": {
       "lat": 30.8,
       "lon": 75.7
-    },
-    "pin": {
-      "lat": 30.9,
-      "lon": 75.85
     },
     "available": {
       "power": true,
@@ -20,15 +16,15 @@
     "notes": [
       "Real data replacing make_fake_data.ts for: monthly, annual, trends (except groundwater), soil.",
       "insights / rotations / crop_fit are NOT generated here — they are the analysis step (see data/NEXT_STEPS.md).",
-      "soil_moisture is the POWER/MERRA-2 GWETTOP wetness index (0-1), not SMAP volumetric moisture."
+      "soil_moisture is the POWER/MERRA-2 GWETTOP wetness index (0-1), not volumetric moisture."
     ]
   },
   "region": {
     "id": "punjab",
     "name": "Ludhiana District",
     "place": "Punjab, India",
-    "lat": 30.9,
-    "lon": 75.85
+    "lat": 30.8,
+    "lon": 75.7
   },
   "monthly": [
     {

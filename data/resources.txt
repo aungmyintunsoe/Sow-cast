@@ -1,57 +1,43 @@
 SOWCAST — DATA RESOURCES
 ========================
-Updated 2026-11-14. "Provided" = named in the project README. "Added" = we wired it up. "Needed" = recommended next.
+Updated 2026-11-14. Demo scope: open data only (no logins), no map APIs (globe + preset locations).
 
-A. WHAT THE PIPELINE USES NOW (no keys, all working)
-----------------------------------------------------
-[provided] NASA POWER daily point API ........ heat, frost, rain, humidity, solar, soil wetness   https://power.larc.nasa.gov/
-[provided] MODIS NDVI (MOD13Q1) via ORNL ...... green vs bare, 250 m, 16-day                       https://modis.ornl.gov/data/modis_webservice.html
-[provided] NASA SRTM 30 m via OpenTopoData .... elevation, slope                                   https://www.opentopodata.org/
-[added]    MODIS land cover (MCD12Q1) ......... checks sample points are on cropland
-[added]    MODIS ET/PET (MOD16A2GF) ........... real evapotranspiration incl. irrigation
-[added]    MODIS LST (MOD11A2) ................ 20-year land-surface heat (ECOSTRESS only starts 2018)
-[added]    ISRIC SoilGrids 2.0 ................ global soil, replaces US-only SSURGO                 https://rest.isric.org/
-[added]    NASA CMR search .................... inventory of login-only datasets                     https://cmr.earthdata.nasa.gov/
+A. IN USE (no keys, all wired into data/scripts)
+------------------------------------------------
+NASA POWER daily point API ........ heat, frost, rain, humidity, solar, soil wetness   https://power.larc.nasa.gov/
+MODIS via ORNL DAAC web service ... NDVI (MOD13Q1), land cover (MCD12Q1),              https://modis.ornl.gov/data/modis_webservice.html
+                                    ET/PET (MOD16A2GF), land-surface temp (MOD11A2)
+ISRIC SoilGrids 2.0 ............... soil texture, carbon, pH, water retention           https://rest.isric.org/
+NASA SRTM 30 m via OpenTopoData ... elevation -> slope for erosion risk                 https://www.opentopodata.org/
 
-B. NEEDED — ACCOUNTS / ACCESS
------------------------------
-1. NASA Earthdata login (free, ~5 min) — unlocks everything below.  https://urs.earthdata.nasa.gov/users/new
-   [provided] SMAP soil moisture ........ via AppEEARS (script ready: scripts/earthdata/appeears_point_request.mjs)
-   [provided] ECOSTRESS heat ............ via AppEEARS (same script)
-   [provided] Landsat (as HLS 30 m) ..... via AppEEARS (same script)
-   [provided] GPM IMERG daily rain ...... via Giovanni  https://giovanni.gsfc.nasa.gov/
-   [provided] GRACE-FO groundwater ...... JPL mascon NetCDF from PO.DAAC  https://podaac.jpl.nasa.gov/dataset/TELLUS_GRAC-GRFO_MASCON_CRI_GRID_RL06.3_V4
-2. Python 3.11+ with pandas, xarray, netCDF4, matplotlib/plotly, pymannkendall, statsmodels
-   — Node covers fetching, but GRACE-FO NetCDF and the statistics are much easier in Python/Jupyter.
-   (Python is NOT currently installed on this machine — `python` opens the Microsoft Store stub.)
+B. ON THIS MACHINE
+------------------
+Node 24 ........ runs the fetch scripts (no npm install needed)
+Python 3.15.2 .. installed; analysis venv at data/.venv with pandas, numpy, scipy, matplotlib,
+                 plotly, jupyterlab, pymannkendall (see requirements.txt).
+                 Restart terminals / VS Code so `python` is on PATH.
 
-C. NEEDED — LOCAL GROUND TRUTH (to validate satellite numbers; all free)
--------------------------------------------------------------------------
-Weather cross-checks (POWER is ~50 km grid; these are finer / station-based):
-  - CHIRPS rainfall, 5 km, global tropics — best for Nakuru          https://www.chc.ucsb.edu/data/chirps
-  - SILO (Queensland Gov) station-based grids — Darling Downs frost   https://www.longpaddock.qld.gov.au/silo/
-  - IMD gridded rainfall/temperature — Punjab                         https://www.imdpune.gov.in/
-  - PRISM 4 km / Iowa Environmental Mesonet — Iowa                    https://prism.oregonstate.edu/  https://mesonet.agron.iastate.edu/
-Crop calendars & what is actually grown (for rotations + backtesting crop_fit):
-  - USDA NASS Cropland Data Layer + QuickStats (free API key) — Iowa  https://nassgeodata.gmu.edu/CropScape/  https://quickstats.nass.usda.gov/api
-  - GEOGLAM / FAO crop calendars — all sites                          https://cropmonitor.org/  https://www.fao.org/agriculture/seed/cropcalendar
-  - FAOSTAT country crop yields                                       https://www.fao.org/faostat/
-  - ABARES (Australia), India DES district yields, Kenya KNBS / MoA county data
-Soil validation:
-  - USDA SSURGO / Web Soil Survey — Iowa                              https://websoilsurvey.nrcs.usda.gov/
-  - APSoil characterised profiles — Darling Downs (SoilGrids under-estimates its clay water capacity)
-Groundwater validation:
-  - CGWB well levels — Punjab                                         https://cgwb.gov.in/
-  - USGS NWIS wells — Iowa                                            https://waterdata.usgs.gov/
+C. WORTH GETTING — FREE, NO LOGIN (optional validation of the weak spots)
+--------------------------------------------------------------------------
+Weather cross-checks (POWER is a ~50 km grid):
+  - CHIRPS rainfall, 5 km (files on an open server) — Nakuru rain      https://www.chc.ucsb.edu/data/chirps
+  - SILO (Queensland Gov) gridded/station data — Darling Downs frost   https://www.longpaddock.qld.gov.au/silo/
+  - Iowa Environmental Mesonet station data — Iowa                    https://mesonet.agron.iastate.edu/
+Crop calendars & what is actually grown (rotations + backtesting crop_fit):
+  - GEOGLAM crop calendars                                             https://cropmonitor.org/
+  - FAO crop calendar                                                  https://www.fao.org/agriculture/seed/cropcalendar
+  - FAOSTAT country yields (bulk CSV download)                         https://www.fao.org/faostat/
+  - USDA NASS Cropland Data Layer (CropScape) — Iowa                   https://nassgeodata.gmu.edu/CropScape/
 
-D. NEEDED — PEOPLE / DOMAIN INPUT
----------------------------------
-  - An agronomist (or extension service doc) per region to sanity-check the thresholds: heat 35 °C, heavy rain 20 mm, bare NDVI 0.3.
-  - Real crop-season months for each crop in each region (the app's crops.json has temperatures but not regional sowing dates).
-  - Farmer feedback on the insight-card wording.
+D. PEOPLE / DOMAIN INPUT
+------------------------
+  - An agronomist or extension-service document per region to sanity-check thresholds:
+    heat 35 °C, heavy rain 20 mm, bare NDVI 0.3.
+  - Regional sowing/harvest months for each crop (crops.json has temperature limits but no calendars).
+  - Farmer feedback on insight-card wording.
 
-E. NICE TO HAVE
----------------
-  - Google Earth Engine account — field-polygon NDVI instead of single pixels, any region in minutes.
-  - Sentinel-1 radar (Copernicus) — sees crops through monsoon/rainy-season clouds (Punjab Jul–Sep, Nakuru).
-  - NASA FIRMS active fire — stubble burning after rice harvest in Punjab (Oct–Nov) affects bare-soil signal.
+E. DELIBERATELY OUT OF SCOPE FOR THE DEMO
+-----------------------------------------
+  Login-only NASA data: SMAP, GPM IMERG, ECOSTRESS, GRACE-FO, Landsat/HLS (need an Earthdata account).
+  Map tile / geocoding APIs (the app uses a globe with fixed preset locations).
+  -> Consequence: no groundwater data. The groundwater card becomes a "water budget" card (NEXT_STEPS.md §2).

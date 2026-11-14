@@ -13,9 +13,6 @@ export function loadConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
 }
 
-export function saveConfig(cfg) {
-  fs.writeFileSync(CONFIG_PATH, JSON.stringify(cfg, null, 2) + '\n');
-}
 
 /** Sites filtered by optional CLI args: `node script.mjs iowa punjab` */
 export function selectedSites(cfg = loadConfig()) {
@@ -155,13 +152,6 @@ function normCdf(x) {
   return x > 0 ? 1 - p : p;
 }
 
-// ---- MODIS sinusoidal grid helpers (for ORNL subset responses) ----
-const R_SIN = 6371007.181;
-export function sinusoidalToLatLon(x, y) {
-  const lat = y / R_SIN;
-  const lon = x / (R_SIN * Math.cos(lat));
-  return { lat: (lat * 180) / Math.PI, lon: (lon * 180) / Math.PI };
-}
 
 /** YYYY-MM-DD → day of year */
 export function doy(dateStr) {

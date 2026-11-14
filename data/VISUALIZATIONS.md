@@ -9,7 +9,7 @@ Each chart names its **source file** and the **question it answers**. The ⭐ ch
 | ⭐ V1 | **Field Year Calendar**: 12 columns, one strip per variable (rain, heat days, frost days, NDVI-green/bare) | `monthly_climatology.csv` | "What does a normal year look like on my field?" | Already a screen in the app. Real NDVI makes the bare strip honest. Colour bare months (`typically_bare`) in soil-brown. |
 | ⭐ V2 | **Then vs now** paired bars: first 10 years vs last 10 years | `trends.json` → `first_10y_mean` / `last_10y_mean` | "Is it getting worse?" | Easier for farmers than slopes and p-values. Show only metrics with p < 0.15. |
 | ⭐ V3 | **Rain vs thirst** (monthly rain bars + ET0 line, shaded deficit) | `monthly_climatology.csv` (`precip_mm`, `et0_mm`) | "When is my field short of water?" | Punjab's April–June gap of about 140–210 mm/month is striking. |
-| ⭐ V4 | **Groundwater line**: GRACE-FO anomaly 2002–2024 | needs GRACE-FO (`NEXT_STEPS.md` §2) | "Is the water under me running out?" | One line with a trend. Label in plain words, e.g. "down X cm since 2003". |
+| ⭐ V4 | **Water budget bar**: yearly rain vs crop demand (ET0), deficit highlighted; MODIS ET overlaid once fetched | `annual.csv` (`precip_mm`, `et0_mm`, `et_modis_mm`) | "How much water does my field need beyond the rain?" | Replaces the groundwater line (no open groundwater data). Punjab: ~1,040 mm/yr gap = irrigation dependence. |
 | ⭐ V5 | **Cover vs storms**: monthly NDVI area with heavy-rain-day bars on top | `monthly_climatology.csv` | "Is my soil bare when the big rains hit?" | The core argument for cover crops. |
 | ⭐ V6 | **"What if?" sliders** recomputing V3 and the heat-day count | `power_daily.csv` | "What if it's 2 °C hotter / 20% drier?" | Shift `tmax`, scale `precip`, recount heat days and deficit from the daily data. Don't extrapolate trends. |
 
@@ -26,13 +26,12 @@ Each chart names its **source file** and the **question it answers**. The ⭐ ch
 | V13 | **Soil profile**: horizontal bars by depth for clay, SOC and water capacity, with q05–q95 whiskers | `soil_profile.csv` | Displays prediction uncertainty honestly. |
 | V14 | **NDVI vs water balance scatter**: one dot per growing season | `annual.csv` | Does drought show up in greenness? A flat cloud in Punjab means irrigation is buffering it. |
 | V15 | **ET/PET ratio over the season** | `modis_et.csv` | Water stress as the plant sees it, including irrigation. |
-| V16 | **Data coverage strip**: what data exists in which years per source | `data_availability.csv`, file date ranges | Sets expectations: SMAP from 2015, ECOSTRESS from 2018, MODIS and POWER from 2001. |
-| V17 | **Locator map**: app pin vs field point over satellite imagery | `config/sites.json`, `site_check.csv` | Documents *why* we moved the sample points. Builds trust. |
+| V16 | **Land-cover strip**: 24 coloured cells per location, one per year | `landcover_annual.csv` | Shows how stable each location is as cropland. Darling Downs flips between crop and grassland (fallow years). |
 
 ## For the pitch
 
 - **V2 + V4 together** make the "what's changing" slide: a real number and a real source for each.
-- **V8 for Punjab** (two green humps) next to the groundwater decline makes the "this is why we flag water" slide.
+- **V8 for Punjab** (two green humps) next to V4's water gap makes the "this is why we flag water" slide: green all year despite a 1,000 mm deficit means irrigation.
 - **V10** introduces the four regions.
 
 ## Design rules that matter for this audience
@@ -41,4 +40,4 @@ Each chart names its **source file** and the **question it answers**. The ⭐ ch
 - **Show uncertainty** (bands and whiskers). The app promises to say what it doesn't know.
 - Use colour-blind-safe palettes. Keep red or orange for "warning" cards only.
 - Put the **source and years** in small text under every chart (e.g. "NASA POWER, 2001–2024"). The app's trust story depends on it.
-- Use the existing **Recharts** dependency (`package.json`) for app charts. Python (matplotlib or plotly) or Observable is fine for analysis notebooks.
+- Use the existing **Recharts** dependency (`package.json`) for app charts. Python (matplotlib or plotly, both installed in `data/.venv`) works for analysis notebooks.

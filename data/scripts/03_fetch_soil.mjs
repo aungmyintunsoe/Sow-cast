@@ -38,11 +38,11 @@ function usdaTexture(sand, silt, clay) {
 const cfg = loadConfig();
 const sites = selectedSites(cfg);
 for (const [n, site] of sites.entries()) {
-  console.log(`\n▶ SoilGrids ${site.id} (${site.field.lat}, ${site.field.lon})`);
+  console.log(`\n▶ SoilGrids ${site.id} (${site.location.lat}, ${site.location.lon})`);
   const cacheFile = path.join(RAW_DIR, 'soil', `${site.id}.json`);
   const cached = fs.existsSync(cacheFile);
   const url = 'https://rest.isric.org/soilgrids/v2.0/properties/query' +
-    `?lon=${site.field.lon}&lat=${site.field.lat}` +
+    `?lon=${site.location.lon}&lat=${site.location.lat}` +
     PROPS.map((p) => `&property=${p}`).join('') + DEPTHS.map((d) => `&depth=${d}`).join('') + VALUES.map((v) => `&value=${v}`).join('');
   const json = await fetchJSON(url, { cacheFile, retries: 6 });
 
@@ -83,7 +83,7 @@ for (const [n, site] of sites.entries()) {
 
   const texture = clay !== null && sand !== null && silt !== null ? usdaTexture(sand, silt, clay) : null;
   const summary = {
-    site: site.id, lat: site.field.lat, lon: site.field.lon, source: 'ISRIC SoilGrids 2.0 (250 m, modelled)',
+    site: site.id, lat: site.location.lat, lon: site.location.lon, source: 'ISRIC SoilGrids 2.0 (250 m, modelled)',
     topsoil_0_30cm: {
       clay_pct: round(clay, 1), sand_pct: round(sand, 1), silt_pct: round(silt, 1), usda_texture: texture,
       soc_g_kg: round(soc, 1), organic_matter_pct: round(som, 2), ph: round(ph, 2),

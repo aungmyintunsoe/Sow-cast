@@ -1,2 +1,3 @@
-# Raw API responses are a re-downloadable cache (tens of MB). Processed tables are committed.
 raw/
+.venv/
+.ipynb_checkpoints/

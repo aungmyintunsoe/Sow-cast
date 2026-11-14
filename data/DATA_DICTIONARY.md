@@ -1,4 +1,4 @@
-# Data dictionary — what you can now fetch
+# Data dictionary — what you now have
 
 All analysis-ready files live in `data/processed/`. Each site has its own folder: `iowa/`, `punjab/`, `nakuru/` and `darling_downs/`. The period is **2001-01-01 → 2024-12-31** (24 years, 8,766 days).
 
@@ -8,8 +8,6 @@ All analysis-ready files live in `data/processed/`. Each site has its own folder
 |---|---|---|
 | `all_sites_annual.csv` | 96 (4 × 24) | One row per site-year with every annual metric. **Best file for a first look.** |
 | `all_sites_monthly_climatology.csv` | 48 (4 × 12) | The "typical year" for each site. |
-| `site_check.csv` | 4 | App pin vs sampled field point, with land cover at each. |
-| `data_availability.csv` | 32 | Login-only NASA datasets and how many files cover each field, plus date range. |
 
 ## Per-site files
 
@@ -45,9 +43,9 @@ All analysis-ready files live in `data/processed/`. Each site has its own folder
 
 ### `modis_lst.csv` — MODIS MOD11A2, 8-day, 1 km ⏳
 
-`lst_day_c` is daytime land-surface temperature, the leaf and soil "skin" heat. It runs hotter than air temperature and is the long-record stand-in for ECOSTRESS.
+`lst_day_c` is daytime land-surface temperature, the leaf and soil "skin" heat. It runs hotter than air temperature. This is the demo's "heat stress" source.
 
-### `landcover_annual.csv` — MODIS MCD12Q1, yearly ⏳
+### `landcover_annual.csv` — MODIS MCD12Q1, yearly ✅
 
 `igbp_class`: 10 = grassland, 12 = cropland, 13 = urban, 14 = cropland/natural mosaic.
 
@@ -63,7 +61,7 @@ Depth-weighted 0–30 cm topsoil values, USDA texture class, organic matter %, a
 
 `elevation_m`, `slope_pct_field` (100 m scale), `slope_pct_landscape_mean` (~1.5 km), `relief_m_within_1500m` and `erosion_risk_from_slope`.
 
-### Built by `06_build_summaries.mjs` ✅
+### Built by `05_build_summaries.mjs` ✅
 
 | File | What |
 |---|---|
@@ -73,18 +71,18 @@ Depth-weighted 0–30 cm topsoil values, USDA texture class, organic matter %, a
 | `trends.json` | for every annual metric: OLS slope per decade, first-10-year vs last-10-year means, % change, Mann-Kendall z and p |
 | `region_climate.json` | **same shape as `RegionDetail` in `src/types/index.ts`** (`monthly`, `annual`, `trends`, `soil`, `sources`). It can replace the fake values in `public/data/regions/*.json`. `_provenance.available` lists which sources were present when it was built. |
 
-✅ = fetched for all 4 sites. ⏳ = the MODIS download is slow; re-run `02_fetch_modis.mjs` and then `06_build_summaries.mjs` to fill these in. Check `region_climate.json → _provenance.available` to see what made it in.
+✅ = fetched for all 4 sites. ⏳ = the ORNL MODIS service is unstable; re-run `02_fetch_modis.mjs` and then `05_build_summaries.mjs` to fill these in. Check `region_climate.json → _provenance.available` to see what made it in.
 
 ## How app fields map to real data
 
 | App field (`src/types`) | Now comes from | Still missing |
 |---|---|---|
 | `monthly.tmax_c / tmin_c / precip_mm` | POWER | — |
-| `monthly.soil_moisture` | POWER `GWETTOP` (index) | SMAP volumetric (AppEEARS) |
+| `monthly.soil_moisture` | POWER `GWETTOP` (0–1 wetness index, modelled) | — (label it "soil wetness", not %) |
 | `monthly.et_mm` | MODIS ET (falls back to POWER ET0) | — |
-| `monthly.ndvi`, `typically_bare` | MODIS NDVI | HLS 30 m for field scale |
-| `monthly.frost_days / heat_days / heavy_rain_days` | POWER (derived) | IMERG to cross-check rain |
-| `annual.*` | POWER (+ MODIS) | `groundwater_anomaly_cm` → GRACE-FO |
-| `trends.*` | `trends.json` | `groundwater` → GRACE-FO |
+| `monthly.ndvi`, `typically_bare` | MODIS NDVI 250 m | — |
+| `monthly.frost_days / heat_days / heavy_rain_days` | POWER (derived) | — |
+| `annual.*` | POWER (+ MODIS) | `groundwater_anomaly_cm` stays null (no open source) |
+| `trends.*` | `trends.json` | `groundwater` stays null; drop it from the UI |
 | `soil.*` | SoilGrids + SRTM | — |
 | `insights`, `rotations`, `crop_fit` | **not data — these are the analysis outputs** | see `NEXT_STEPS.md` |

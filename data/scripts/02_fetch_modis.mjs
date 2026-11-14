@@ -23,7 +23,7 @@ const cfg = loadConfig();
 const { start_year, end_year } = cfg.period;
 
 async function series(site, product, band) {
-  const { lat, lon } = site.field;
+  const { lat, lon } = site.location;
   const dates = (await fetchJSON(`${ORNL}/${product}/dates?latitude=${lat}&longitude=${lon}`, {
     cacheFile: path.join(RAW_DIR, 'modis', site.id, `${product}_dates.json`),
   })).dates.filter((d) => {
@@ -99,7 +99,7 @@ const phases = onlyArg ? onlyArg.slice(7).split(',') : Object.keys(PHASES);
 for (const phase of phases) {
   if (!PHASES[phase]) throw new Error(`unknown phase '${phase}' — use ${Object.keys(PHASES).join(', ')}`);
   for (const site of selectedSites(cfg)) {
-    console.log(`\n▶ MODIS ${phase} — ${site.id} (${site.field.lat}, ${site.field.lon})`);
+    console.log(`\n▶ MODIS ${phase} — ${site.id} (${site.location.lat}, ${site.location.lon})`);
     try {
       await PHASES[phase](site);
     } catch (err) {

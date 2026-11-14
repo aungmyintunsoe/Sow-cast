@@ -1,17 +1,13 @@
 {
   "_provenance": {
-    "generated": "2026-11-14T11:21:19.196Z",
-    "field_point": {
+    "generated": "2026-11-14T13:10:05.835Z",
+    "location": {
       "lat": 42.1,
       "lon": -93.55
     },
-    "pin": {
-      "lat": 42.03,
-      "lon": -93.62
-    },
     "available": {
       "power": true,
-      "ndvi": false,
+      "ndvi": true,
       "modis_et": false,
       "modis_lst": false,
       "soil": true,
@@ -20,15 +16,15 @@
     "notes": [
       "Real data replacing make_fake_data.ts for: monthly, annual, trends (except groundwater), soil.",
       "insights / rotations / crop_fit are NOT generated here — they are the analysis step (see data/NEXT_STEPS.md).",
-      "soil_moisture is the POWER/MERRA-2 GWETTOP wetness index (0-1), not SMAP volumetric moisture."
+      "soil_moisture is the POWER/MERRA-2 GWETTOP wetness index (0-1), not volumetric moisture."
     ]
   },
   "region": {
     "id": "iowa",
     "name": "Story County",
     "place": "Iowa, USA",
-    "lat": 42.03,
-    "lon": -93.62
+    "lat": 42.1,
+    "lon": -93.55
   },
   "monthly": [
     {
@@ -38,11 +34,11 @@
       "precip_mm": 24,
       "soil_moisture": 0.558,
       "et_mm": 13.7,
-      "ndvi": null,
+      "ndvi": 0.213,
       "frost_days": 30.5,
       "heat_days": 0,
       "heavy_rain_days": 0,
-      "typically_bare": null
+      "typically_bare": true
     },
     {
       "month": 2,
@@ -51,11 +47,11 @@
       "precip_mm": 27,
       "soil_moisture": 0.571,
       "et_mm": 22.5,
-      "ndvi": null,
+      "ndvi": 0.222,
       "frost_days": 27.4,
       "heat_days": 0,
       "heavy_rain_days": 0.1,
-      "typically_bare": null
+      "typically_bare": true
     },
     {
       "month": 3,
@@ -64,11 +60,11 @@
       "precip_mm": 47.5,
       "soil_moisture": 0.583,
       "et_mm": 56.2,
-      "ndvi": null,
+      "ndvi": 0.228,
       "frost_days": 23.3,
       "heat_days": 0,
       "heavy_rain_days": 0.4,
-      "typically_bare": null
+      "typically_bare": true
     },
     {
       "month": 4,
@@ -77,11 +73,11 @@
       "precip_mm": 84.6,
       "soil_moisture": 0.586,
       "et_mm": 96,
-      "ndvi": null,
+      "ndvi": 0.252,
       "frost_days": 8.6,
       "heat_days": 0,
       "heavy_rain_days": 1,
-      "typically_bare": null
+      "typically_bare": true
     },
     {
       "month": 5,
@@ -90,11 +86,11 @@
       "precip_mm": 116,
       "soil_moisture": 0.589,
       "et_mm": 134.7,
-      "ndvi": null,
+      "ndvi": 0.304,
       "frost_days": 0.3,
       "heat_days": 0.1,
       "heavy_rain_days": 1.4,
-      "typically_bare": null
+      "typically_bare": false
     },
     {
       "month": 6,
@@ -103,11 +99,11 @@
       "precip_mm": 121.7,
       "soil_moisture": 0.552,
       "et_mm": 156.4,
-      "ndvi": null,
+      "ndvi": 0.688,
       "frost_days": 0,
       "heat_days": 0.5,
       "heavy_rain_days": 1.5,
-      "typically_bare": null
+      "typically_bare": false
     },
     {
       "month": 7,
@@ -116,11 +112,11 @@
       "precip_mm": 93.3,
       "soil_moisture": 0.489,
       "et_mm": 165,
-      "ndvi": null,
+      "ndvi": 0.893,
       "frost_days": 0,
       "heat_days": 2.9,
       "heavy_rain_days": 1,
-      "typically_bare": null
+      "typically_bare": false
     },
     {
       "month": 8,
@@ -129,11 +125,11 @@
       "precip_mm": 104.7,
       "soil_moisture": 0.455,
       "et_mm": 145.6,
-      "ndvi": null,
+      "ndvi": 0.846,
       "frost_days": 0,
       "heat_days": 2.2,
       "heavy_rain_days": 1.2,
-      "typically_bare": null
+      "typically_bare": false
     },
     {
       "month": 9,
@@ -142,11 +138,11 @@
       "precip_mm": 77.8,
       "soil_moisture": 0.459,
       "et_mm": 106.8,
-      "ndvi": null,
+      "ndvi": 0.467,
       "frost_days": 0,
       "heat_days": 0.4,
       "heavy_rain_days": 0.6,
-      "typically_bare": null
+      "typically_bare": false
     },
     {
       "month": 10,
@@ -155,11 +151,11 @@
       "precip_mm": 67.1,
       "soil_moisture": 0.485,
       "et_mm": 61.9,
-      "ndvi": null,
+      "ndvi": 0.263,
       "frost_days": 5.3,
       "heat_days": 0,
       "heavy_rain_days": 0.8,
-      "typically_bare": null
+      "typically_bare": true
     },
     {
       "month": 11,
@@ -168,11 +164,11 @@
       "precip_mm": 40,
       "soil_moisture": 0.52,
       "et_mm": 29.9,
-      "ndvi": null,
+      "ndvi": 0.23,
       "frost_days": 19,
       "heat_days": 0,
       "heavy_rain_days": 0.3,
-      "typically_bare": null
+      "typically_bare": true
     },
     {
       "month": 12,
@@ -181,11 +177,11 @@
       "precip_mm": 36.6,
       "soil_moisture": 0.54,
       "et_mm": 15.2,
-      "ndvi": null,
+      "ndvi": 0.216,
       "frost_days": 29.2,
       "heat_days": 0,
       "heavy_rain_days": 0.2,
-      "typically_bare": null
+      "typically_bare": true
     }
   ],
   "annual": [
@@ -399,6 +395,7 @@
   },
   "sources": [
     "NASA POWER (MERRA-2) daily 2001-2024",
+    "MODIS MOD13Q1 NDVI 250 m (ORNL DAAC)",
     "ISRIC SoilGrids 2.0",
     "NASA SRTM 30 m (OpenTopoData)"
   ]

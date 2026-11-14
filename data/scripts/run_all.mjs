@@ -11,13 +11,11 @@ import { fileURLToPath } from 'node:url';
 const here = path.dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
 const steps = [
-  ['00_verify_sites.mjs', 'check field points are on cropland (MODIS land cover)'],
   ['01_fetch_power.mjs', 'NASA POWER daily weather + soil wetness'],
   ['03_fetch_soil.mjs', 'ISRIC SoilGrids soil profile'],
   ['04_fetch_terrain.mjs', 'NASA SRTM elevation + slope'],
-  ['05_check_availability.mjs', 'NASA CMR inventory of login-only datasets'],
   ['02_fetch_modis.mjs', 'MODIS NDVI, land cover, ET, LST (slowest — ORNL service)'],
-  ['06_build_summaries.mjs', 'monthly / annual / trend tables + app-shaped JSON'],
+  ['05_build_summaries.mjs', 'monthly / annual / trend tables + app-shaped JSON'],
 ];
 
 const failed = [];

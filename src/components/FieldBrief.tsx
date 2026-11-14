@@ -23,6 +23,7 @@ import {
   Satellite,
 } from 'lucide-react';
 import type { RegionDetail } from '../types';
+import { useDesign } from '../theme/ThemeProvider';
 
 const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -32,6 +33,8 @@ interface FieldBriefProps {
 }
 
 export const FieldBrief: React.FC<FieldBriefProps> = ({ data, onContinue }) => {
+  const { chart } = useDesign();
+  const tooltipStyle = { borderRadius: '12px', border: `1px solid ${chart.tooltipBorder}`, fontSize: '12px', background: chart.tooltipBg, color: chart.tooltipText };
   const [trendMetric, setTrendMetric] = useState<'heat_days' | 'precip_mm' | 'groundwater_anomaly_cm'>('heat_days');
 
   const bareMonthsCount = data.monthly.filter((m) => m.typically_bare).length;
@@ -204,20 +207,20 @@ export const FieldBrief: React.FC<FieldBriefProps> = ({ data, onContinue }) => {
           <div className="h-64 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <ComposedChart data={monthlyChartData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e7e5e4" />
-                <XAxis dataKey="name" tick={{ fontSize: 12, fill: '#44403c' }} />
-                <YAxis yAxisId="left" tick={{ fontSize: 12, fill: '#1d4ed8' }} unit="mm" />
-                <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 12, fill: '#15803d' }} domain={[0, 100]} unit="%" />
+                <CartesianGrid strokeDasharray="3 3" stroke={chart.grid} />
+                <XAxis dataKey="name" tick={{ fontSize: 12, fill: chart.tick }} />
+                <YAxis yAxisId="left" tick={{ fontSize: 12, fill: chart.rainAxis }} unit="mm" />
+                <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 12, fill: chart.plantAxis }} domain={[0, 100]} unit="%" />
                 <Tooltip
-                  contentStyle={{ borderRadius: '12px', border: '1px solid #d6d3d1', fontSize: '12px' }}
+                  contentStyle={tooltipStyle}
                 />
-                <Bar yAxisId="left" dataKey="rain" name="Rainfall (mm)" fill="#60a5fa" radius={[4, 4, 0, 0]} />
+                <Bar yAxisId="left" dataKey="rain" name="Rainfall (mm)" fill={chart.rainBar} radius={[4, 4, 0, 0]} />
                 <Line
                   yAxisId="right"
                   type="monotone"
                   dataKey="plantCoverPct"
                   name="Plant Cover (%)"
-                  stroke="#16a34a"
+                  stroke={chart.plantLine}
                   strokeWidth={3}
                   dot={{ r: 3 }}
                 />
@@ -265,11 +268,11 @@ export const FieldBrief: React.FC<FieldBriefProps> = ({ data, onContinue }) => {
           <div className="h-64 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={data.annual}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e7e5e4" />
-                <XAxis dataKey="year" tick={{ fontSize: 12, fill: '#44403c' }} />
-                <YAxis tick={{ fontSize: 12, fill: '#44403c' }} />
+                <CartesianGrid strokeDasharray="3 3" stroke={chart.grid} />
+                <XAxis dataKey="year" tick={{ fontSize: 12, fill: chart.tick }} />
+                <YAxis tick={{ fontSize: 12, fill: chart.tick }} />
                 <Tooltip
-                  contentStyle={{ borderRadius: '12px', border: '1px solid #d6d3d1', fontSize: '12px' }}
+                  contentStyle={tooltipStyle}
                 />
                 <Area
                   type="monotone"
@@ -283,17 +286,17 @@ export const FieldBrief: React.FC<FieldBriefProps> = ({ data, onContinue }) => {
                   }
                   stroke={
                     trendMetric === 'heat_days'
-                      ? '#ea580c'
+                      ? chart.heatStroke
                       : trendMetric === 'precip_mm'
-                      ? '#2563eb'
-                      : '#0B3D91'
+                      ? chart.rainStroke
+                      : chart.waterStroke
                   }
                   fill={
                     trendMetric === 'heat_days'
-                      ? '#fed7aa'
+                      ? chart.heatFill
                       : trendMetric === 'precip_mm'
-                      ? '#bfdbfe'
-                      : '#dbeafe'
+                      ? chart.rainFill
+                      : chart.waterFill
                   }
                   strokeWidth={2.5}
                 />

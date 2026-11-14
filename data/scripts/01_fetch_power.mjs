@@ -34,13 +34,13 @@ const { start_year, end_year } = cfg.period;
 const CHUNK = 6;
 
 for (const site of selectedSites(cfg)) {
-  console.log(`\n▶ POWER ${site.id} (${site.field.lat}, ${site.field.lon})`);
+  console.log(`\n▶ POWER ${site.id} (${site.location.lat}, ${site.location.lon})`);
   const merged = {};
   for (let y0 = start_year; y0 <= end_year; y0 += CHUNK) {
     const y1 = Math.min(end_year, y0 + CHUNK - 1);
     const url =
       'https://power.larc.nasa.gov/api/temporal/daily/point' +
-      `?parameters=${PARAMS.join(',')}&community=AG&latitude=${site.field.lat}&longitude=${site.field.lon}` +
+      `?parameters=${PARAMS.join(',')}&community=AG&latitude=${site.location.lat}&longitude=${site.location.lon}` +
       `&start=${y0}0101&end=${y1}1231&format=JSON&time-standard=LST`;
     console.log(`  · ${y0}-${y1}`);
     const json = await fetchJSON(url, { cacheFile: path.join(RAW_DIR, 'power', `${site.id}_${y0}_${y1}.json`) });
@@ -55,7 +55,7 @@ for (const site of selectedSites(cfg)) {
     const v = merged[d];
     const date = `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}`;
     const tmax = v.T2M_MAX, tmin = v.T2M_MIN, tmean = v.T2M;
-    const ra = extraterrestrialRad(site.field.lat, doy(date));
+    const ra = extraterrestrialRad(site.location.lat, doy(date));
     const et0 = tmax !== null && tmin !== null && tmax >= tmin
       ? 0.0023 * 0.408 * ra * ((tmax + tmin) / 2 + 17.8) * Math.sqrt(tmax - tmin) : null; // Hargreaves (mm/day)
     const gdd = tmax !== null && tmin !== null

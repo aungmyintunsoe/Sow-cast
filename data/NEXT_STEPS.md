@@ -1,68 +1,63 @@
 # Next steps — from fetched data to the app's insight cards
 
-The infrastructure stage is done when every row in `region_climate.json → _provenance.available` is `true`. After that, the work moves from *getting* data to *deciding what it means for a farmer*.
+Scope: open data only (POWER, MODIS, SoilGrids, SRTM). Analysis runs in Python (`data/.venv`).
 
-## 0. Finish the fetch (≈ 1–3 h of waiting, no effort)
+## 0. Finish the MODIS fetch (waiting, no effort)
 
 ```bash
-node data/scripts/02_fetch_modis.mjs --only=ndvi,landcover   # most valuable first
-node data/scripts/02_fetch_modis.mjs --only=et,lst            # then the rest
-node data/scripts/06_build_summaries.mjs                      # rebuild tables with MODIS included
+node data/scripts/02_fetch_modis.mjs --only=ndvi     # most valuable first
+node data/scripts/02_fetch_modis.mjs --only=et,lst
+node data/scripts/05_build_summaries.mjs             # rebuild tables with MODIS included
 ```
 
-Re-running is safe: finished pages come from `data/raw/` cache.
+The ORNL service is unstable, so re-run until `region_climate.json → _provenance.available` is all `true`. Finished pages are cached and never re-downloaded.
 
-## 1. Sanity-check before analysing (½ day)
+## 1. Sanity-check before analysing (½ day, in a notebook)
 
-1. **Plot daily `tmax_c`, `precip_mm` and `ndvi_clean` for each site** and look for gaps, spikes and flat lines. See chart V1 in `VISUALIZATIONS.md`.
-2. **Cross-check rain against a local source** for at least one site (see `resources.txt` §B). POWER's ~50 km grid is a known weak spot. We already see two suspicious signals:
-   - **Punjab:** +242 mm/decade of rain and −0.75 °C/decade (p < 0.001). Irrigation cooling in NW India is documented, but this is the strongest claim in the dataset. Confirm it with GPM IMERG and IMD data before any farmer sees it. Also re-run the trend without 2023 (flood year): it should survive.
-   - **Darling Downs:** 0.9 frost days/yr. The region is known for regular winter frosts, and grid-mean minimum temperature misses frosts that form on cold, low ground. Check against SILO station data, or use a `tmin < 2 °C` "frost-risk day" instead.
-   - **Nakuru:** 1,388 mm/yr on the Rift escarpment is probably high. Check against CHIRPS.
-3. **Confirm the field points.** Open each `field` lat/lon from `config/sites.json` in Google Maps satellite view and make sure it is a farm field.
+1. **Plot daily `tmax_c` and `precip_mm`, and 16-day `ndvi_clean`, for each site.** Look for gaps, spikes and flat lines.
+2. **Known suspicious signals.** Show these to farmers softly or not at all:
+   - **Punjab:** rain 564 → 894 mm and −0.75 °C/decade. The trend survives dropping 2023 (p = 0.0002) and is consistent with documented irrigation cooling. Still, it rests on one source, so word it as "possible", not "proven".
+   - **Darling Downs:** 0.9 frost days/yr is almost certainly an under-count (a ~50 km grid misses frosts that form on cold, low ground). Use a `tmin < 2 °C` "frost-risk day" instead, or leave frost off this site.
+   - **Nakuru:** 1,388 mm/yr on the Rift escarpment is probably high. Lean on *changes* (heavy-rain days) rather than absolute totals.
+3. **Land cover at the locations** (`landcover_annual.csv`): Iowa and Punjab are cropland in all 24 years. Darling Downs is cropland in 9 years and grassland in 15, which is typical for dryland grain with long fallows. Interpret its NDVI as "crop + fallow + pasture".
 
-## 2. Fill the login-only gaps (needs one free NASA Earthdata account)
+## 2. Turn data into the four insight cards (core analysis)
 
-| Gap | How | Effort |
-|---|---|---|
-| SMAP soil moisture, ECOSTRESS heat, HLS 30 m NDVI | `node data/scripts/earthdata/appeears_point_request.mjs` (script ready) | 10 min plus ~1 h server queue |
-| GPM IMERG daily rain | Giovanni time-series (web UI, export CSV) or OPeNDAP. Variable: `GPM_3IMERGDF v07 precipitation` | 30 min per site via UI |
-| **GRACE-FO groundwater** | Download the JPL mascon NetCDF (`TELLUS_GRAC-GRFO_MASCON_CRI_GRID_RL06.3_V4`, one ~100 MB file) from PO.DAAC, then in Python: `xr.open_dataset(f).lwe_thickness.sel(lat=…, lon=…, method="nearest")` | 1 h. **This is the only source for the "Groundwater decline" card and `trends.groundwater`.** |
-
-## 3. Turn data into the four insight cards (core analysis)
-
-The app shows four plain-English cards (`PlainInsight`). Define each as a **rule over the processed tables**, so every card is traceable to numbers:
+Groundwater has no open source, so the four cards become:
 
 | Card | Signal | Suggested rule (tune it) | File |
 |---|---|---|---|
-| **Bare soil** | months with low cover during heavy rain | `typically_bare` months that overlap the top-3 `heavy_rain_days` months | `monthly_climatology.csv` |
-| **Heat** | more heat at sensitive stages | `heat_days` trend p < 0.1 **and** heat days fall within the crop's flowering months | `annual.csv`, `trends.json` |
-| **Water** | demand outpacing supply | `water_balance_mm` deficit in growing months, `max_dry_spell_days` trend, `et_ratio` < 0.5 | `monthly_series.csv`, `modis_et.csv` |
-| **Groundwater** | aquifer drawdown | GRACE-FO slope in cm/yr, labelled `rapidly declining` (< −2), `declining` (< −0.5), `stable` or `recharging` | needs §2 |
+| **Bare soil** | low cover during heavy rain | `typically_bare` months overlapping the top-3 `heavy_rain_days` months | `monthly_climatology.csv` |
+| **Heat** | more heat at sensitive stages | `heat_days` in flowering months, plus MODIS `lst_day_c` peaks | `annual.csv`, `modis_lst.csv` |
+| **Rain pattern** | rain arriving in fewer, heavier bursts or longer gaps | `heavy_rain_days` / `precip_p95_day_mm` / `max_dry_spell_days` trend | `annual.csv`, `trends.json` |
+| **Water budget** (replaces groundwater) | crop demand vs rain | yearly `water_balance_mm` deficit, plus MODIS `et_ratio`. If NDVI stays green during a deficit, the field depends on irrigation (Punjab's story). | `monthly_series.csv`, `modis_et.csv` |
 
 Set `confidence` from the evidence:
-- `high`: Mann-Kendall p < 0.05 **and** two sources agree
-- `medium`: p < 0.15, or only one source
-- `experimental`: ECOSTRESS or other short records
+- `high`: Mann-Kendall p < 0.05 **and** physically consistent across variables (e.g. more rain → wetter soil → greener NDVI)
+- `medium`: p < 0.15, or only one variable supports it
+- `experimental`: anything resting on a known weak spot (§1.2)
 
-Early signals worth turning into cards:
-- **Iowa:** longest dry spell up from 20 to 26 days (p = 0.02). Frost-free season up 7 days per decade (p = 0.03).
-- **Nakuru:** heavy-rain days 6 → 16 per year, and the wettest 5% of days got 50% heavier (p < 0.02). That is an erosion risk on a 15% slope.
-- **Darling Downs:** about 1,080 mm/yr water deficit (ET0 ≫ rain), so this is a dryland system.
-- **Punjab:** about 1,040 mm/yr deficit covered by irrigation, which makes the groundwater card essential.
+Early signals ready to become cards:
+- **Iowa:** longest dry spell 20 → 26 days (p = 0.02).
+- **Nakuru:** heavy-rain days 6 → 16 per year on a 15% slope, which is an erosion risk.
+- **Darling Downs:** ~1,080 mm/yr deficit, so a dryland system.
+- **Punjab:** ~1,040 mm/yr deficit that rain can't cover, so irrigation dependence.
 
-## 4. Crop fit and rotations (replace the fake `crop_fit` / `rotations`)
+## 3. Crop fit and rotations (replace the fake `crop_fit` / `rotations`)
 
-1. **Crop fit (0–100):** for each crop in `public/data/crops.json`, score how often the site's monthly climatology falls inside `temp_min_c`–`temp_max_c` across `season_days`. Then penalise:
+1. **Crop fit (0–100):** for each crop in `public/data/crops.json`, score how often the site's monthly climatology falls within `temp_min_c`–`temp_max_c` over `season_days`. Then penalise:
    - heat days in the crop's months
    - frost days, scaled by `frost_tolerance`
-   - water deficit in the crop's months relative to `water_need`
+   - water deficit relative to `water_need`
 
-   This makes the README formula concrete: `(Local Fit) × (Goal Alignment) − (Irrigation Penalty)`.
-2. **Trend (`increasing`/`flat`/`declining`):** score the first 10 years and the last 10 years separately and compare.
-3. **Rotations:** `cover_by_month` should come from **observed NDVI** for "Current" and from crop calendars for the alternatives. The `erosion` score is bare months × heavy rain × slope.
-4. **Backtest:** does the fit score rank the crops farmers actually grow there highly? If it says corn is a poor fit in Iowa, the formula is wrong. See `resources.txt` §C for yield and crop-calendar data.
+   This makes `(Local Fit) × (Goal Alignment) − (Irrigation Penalty)` concrete.
+2. **Trend:** score the first 10 years and the last 10 years separately, then compare them to get `increasing`/`flat`/`declining`.
+3. **Rotations:** for "Current", `cover_by_month` comes from **observed NDVI**. Alternatives use crop calendars. The `erosion` score is bare months × heavy rain × slope.
+4. **Backtest:** crops farmers actually grow there should score well. If corn scores poorly in Iowa, fix the formula.
 
-## 5. Ship it into the app
+## 4. Ship it into the app
 
-Merge `processed/<site>/region_climate.json` into `public/data/regions/<site>.json`, keeping the analysis outputs (`insights`, `rotations`, `crop_fit`) from steps 3–4. Do it with a small script rather than by hand, so the app can be regenerated whenever data is refreshed. `scripts/make_fake_data.ts` then becomes obsolete.
+1. Write a merge script that combines `processed/<site>/region_climate.json` with the analysis outputs (`insights`, `rotations`, `crop_fit`) into `public/data/regions/<site>.json`.
+2. Update `public/data/regions/index.json` with the coordinates from `config/sites.json`, which are the globe's preset locations.
+3. Retire `scripts/make_fake_data.ts`.
+4. Update the project README's data-source table (see `context.md`).
