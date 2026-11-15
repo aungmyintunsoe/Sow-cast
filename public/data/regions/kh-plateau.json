@@ -386,13 +386,13 @@
     "note": null
   },
   "soil": {
-    "texture": "sand",
-    "organic_matter": "very low",
-    "drainage": "well",
-    "water_holding": "low",
+    "texture": "clay loam",
+    "organic_matter": "good",
+    "drainage": "moderate",
+    "water_holding": "moderate",
     "slope_pct": 1.43,
     "erosion_risk": "low",
-    "sampled_km_from_town": 0,
+    "sampled_km_from_town": 3,
     "source": "ISRIC SoilGrids + NASA SRTM"
   },
   "priors": {
@@ -441,7 +441,7 @@
     {
       "input": "soil_texture",
       "draft": "clay_loam",
-      "measured": "sandy",
+      "measured": "clay_loam",
       "used": "measured",
       "source": "ISRIC SoilGrids 0-30 cm"
     },
@@ -498,7 +498,7 @@
     },
     {
       "title": "Best-matched crops for this area",
-      "body": "Groundnut, Cowpea and Cashew score highest on climate, water and soil fit.",
+      "body": "Pigeon pea, Rubber and Cashew score highest on climate, water and soil fit.",
       "source": "Sowcast crop-fit score using measured climate and soil",
       "confidence": "medium",
       "badgeType": "opportunity"
@@ -526,12 +526,12 @@
       "goal_match": null,
       "change_vs_current": null,
       "scores": {
-        "soil": 0,
+        "soil": 4,
         "market": 59,
         "water": 83,
         "resilience": 74,
         "low_cost": 34,
-        "suitability": 77
+        "suitability": 92
       },
       "why": [
         "The usual pattern in Plateau and Mountains, based on general knowledge."
@@ -570,33 +570,34 @@
     "by_goal": {
       "balanced": [
         {
-          "id": "plan:green_gram|pigeon_pea|sesame",
+          "id": "plan:green_gram|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "balanced",
           "rank": 1,
-          "name": "Green gram then Pigeon pea then Sesame",
+          "name": "Green gram then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "green_gram",
-            "pigeon_pea",
-            "sesame"
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 86,
-          "change_vs_current": 24.1,
+          "goal_match": 92,
+          "change_vs_current": 24.4,
           "scores": {
-            "soil": 68,
-            "market": 68,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 56,
-            "suitability": 86
+            "soil": 88,
+            "market": 64,
+            "water": 81,
+            "resilience": 92,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
             "Green gram and Pigeon pea fix nitrogen (~30-60 kg N/ha (rough))",
-            "No crop repeats back-to-back on the same plot",
-            "Average income score 3.3/5 (rough)",
-            "Sold as pulse / oilseed"
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "Average income score 3.0/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Includes crops already grown locally (existing know-how and buyers)"
           ],
           "cautions": [],
           "evidence": [],
@@ -626,12 +627,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -643,12 +644,12 @@
                   null,
                   null,
                   null,
-                  "sesame",
-                  "sesame",
-                  "sesame",
-                  null,
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -660,33 +661,125 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:cowpea|pigeon_pea|sesame",
+          "id": "plan:black_gram|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "balanced",
           "rank": 2,
-          "name": "Cowpea then Pigeon pea then Sesame",
+          "name": "Black gram then Maize then Pigeon pea",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "maize",
+            "pigeon_pea"
+          ],
+          "goal_match": 91,
+          "change_vs_current": 24,
+          "scores": {
+            "soil": 88,
+            "market": 64,
+            "water": 81,
+            "resilience": 90,
+            "low_cost": 51,
+            "suitability": 93
+          },
+          "why": [
+            "Black gram and Pigeon pea fix nitrogen (~30-60 kg N/ha (rough))",
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "Average income score 3.0/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Includes crops already grown locally (existing know-how and buyers)"
+          ],
+          "cautions": [],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  null,
+                  null
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:cowpea|maize|pigeon_pea",
+          "kind": "recommended",
+          "goal": "balanced",
+          "rank": 3,
+          "name": "Cowpea then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "cowpea",
-            "pigeon_pea",
-            "sesame"
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 85,
-          "change_vs_current": 23.4,
+          "goal_match": 89,
+          "change_vs_current": 23.7,
           "scores": {
-            "soil": 69,
-            "market": 62,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 56,
-            "suitability": 87
+            "soil": 89,
+            "market": 59,
+            "water": 81,
+            "resilience": 92,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
             "Cowpea and Pigeon pea fix nitrogen (~40-80 kg N/ha (rough))",
-            "No crop repeats back-to-back on the same plot",
-            "Average income score 3.0/5 (rough)",
-            "Sold as pulse / oilseed"
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "Average income score 2.7/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Includes crops already grown locally (existing know-how and buyers)"
           ],
           "cautions": [],
           "evidence": [],
@@ -716,12 +809,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -733,102 +826,12 @@
                   null,
                   null,
                   null,
-                  "sesame",
-                  "sesame",
-                  "sesame",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              }
-            ],
-            "approximate": true
-          },
-          "confidence": "low",
-          "basis": "Team recommender (rec.py) on measured data"
-        },
-        {
-          "id": "plan:green_gram|pigeon_pea|sweet_potato",
-          "kind": "recommended",
-          "goal": "balanced",
-          "rank": 3,
-          "name": "Green gram then Pigeon pea then Sweet potato",
-          "tagline": null,
-          "plan_type": "3-year rotation",
-          "sequence": [
-            "green_gram",
-            "pigeon_pea",
-            "sweet_potato"
-          ],
-          "goal_match": 85,
-          "change_vs_current": 23.4,
-          "scores": {
-            "soil": 72,
-            "market": 60,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 57,
-            "suitability": 88
-          },
-          "why": [
-            "Green gram and Pigeon pea fix nitrogen (~30-60 kg N/ha (rough))",
-            "No crop repeats back-to-back on the same plot",
-            "Average income score 3.0/5 (rough)",
-            "Sold as pulse / oilseed, staple"
-          ],
-          "cautions": [],
-          "evidence": [],
-          "calendar": {
-            "rows": [
-              {
-                "label": "Year 1",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "green_gram",
-                  "green_gram",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 2",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
                   "pigeon_pea",
                   "pigeon_pea",
                   "pigeon_pea",
                   "pigeon_pea",
                   "pigeon_pea",
                   "pigeon_pea",
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 3",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  null,
-                  null,
                   null,
                   null
                 ]
@@ -842,32 +845,32 @@
       ],
       "soil_health": [
         {
-          "id": "plan:cowpea|pigeon_pea|sweet_potato",
+          "id": "plan:cowpea|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "soil_health",
           "rank": 1,
-          "name": "Cowpea then Pigeon pea then Sweet potato",
+          "name": "Cowpea then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "cowpea",
-            "pigeon_pea",
-            "sweet_potato"
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 95,
-          "change_vs_current": 73,
+          "goal_match": 96,
+          "change_vs_current": 85,
           "scores": {
-            "soil": 73,
-            "market": 55,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 57,
-            "suitability": 89
+            "soil": 89,
+            "market": 59,
+            "water": 81,
+            "resilience": 92,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
             "Cowpea and Pigeon pea fix nitrogen (~40-80 kg N/ha (rough))",
-            "No crop repeats back-to-back on the same plot",
-            "Average ground-cover score 4.0/5"
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "No crop repeats back-to-back on the same plot"
           ],
           "cautions": [],
           "evidence": [],
@@ -897,12 +900,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -914,12 +917,12 @@
                   null,
                   null,
                   null,
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -931,32 +934,32 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:green_gram|pigeon_pea|sweet_potato",
+          "id": "plan:green_gram|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "soil_health",
           "rank": 2,
-          "name": "Green gram then Pigeon pea then Sweet potato",
+          "name": "Green gram then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "green_gram",
-            "pigeon_pea",
-            "sweet_potato"
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 93,
-          "change_vs_current": 71.7,
+          "goal_match": 95,
+          "change_vs_current": 83.7,
           "scores": {
-            "soil": 72,
-            "market": 60,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 57,
-            "suitability": 88
+            "soil": 88,
+            "market": 64,
+            "water": 81,
+            "resilience": 92,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
             "Green gram and Pigeon pea fix nitrogen (~30-60 kg N/ha (rough))",
-            "No crop repeats back-to-back on the same plot",
-            "Average ground-cover score 3.7/5"
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "No crop repeats back-to-back on the same plot"
           ],
           "cautions": [],
           "evidence": [],
@@ -986,12 +989,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -1003,12 +1006,12 @@
                   null,
                   null,
                   null,
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -1020,32 +1023,32 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:cowpea|pigeon_pea|sesame",
+          "id": "plan:black_gram|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "soil_health",
           "rank": 3,
-          "name": "Cowpea then Pigeon pea then Sesame",
+          "name": "Black gram then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
-            "cowpea",
-            "pigeon_pea",
-            "sesame"
+            "black_gram",
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 90,
-          "change_vs_current": 69.3,
+          "goal_match": 94,
+          "change_vs_current": 83.7,
           "scores": {
-            "soil": 69,
-            "market": 62,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 56,
-            "suitability": 87
+            "soil": 88,
+            "market": 64,
+            "water": 81,
+            "resilience": 90,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
-            "Cowpea and Pigeon pea fix nitrogen (~40-80 kg N/ha (rough))",
-            "No crop repeats back-to-back on the same plot",
-            "Average ground-cover score 3.3/5"
+            "Black gram and Pigeon pea fix nitrogen (~30-60 kg N/ha (rough))",
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "No crop repeats back-to-back on the same plot"
           ],
           "cautions": [],
           "evidence": [],
@@ -1058,9 +1061,9 @@
                   null,
                   null,
                   null,
-                  "cowpea",
-                  "cowpea",
-                  "cowpea",
+                  "black_gram",
+                  "black_gram",
+                  "black_gram",
                   null,
                   null,
                   null,
@@ -1075,12 +1078,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -1092,12 +1095,12 @@
                   null,
                   null,
                   null,
-                  "sesame",
-                  "sesame",
-                  "sesame",
-                  null,
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -1111,31 +1114,32 @@
       ],
       "market_income": [
         {
-          "id": "plan:green_gram|pigeon_pea|sesame",
+          "id": "plan:green_gram|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "market_income",
           "rank": 1,
-          "name": "Green gram then Pigeon pea then Sesame",
+          "name": "Green gram then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "green_gram",
-            "pigeon_pea",
-            "sesame"
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 82,
-          "change_vs_current": 9,
+          "goal_match": 90,
+          "change_vs_current": 5.7,
           "scores": {
-            "soil": 68,
-            "market": 68,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 56,
-            "suitability": 86
+            "soil": 88,
+            "market": 64,
+            "water": 81,
+            "resilience": 92,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
-            "Average income score 3.3/5 (rough)",
-            "Sold as pulse / oilseed"
+            "Average income score 3.0/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Includes crops already grown locally (existing know-how and buyers)"
           ],
           "cautions": [],
           "evidence": [],
@@ -1165,12 +1169,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -1182,12 +1186,12 @@
                   null,
                   null,
                   null,
-                  "sesame",
-                  "sesame",
-                  "sesame",
-                  null,
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -1199,32 +1203,32 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:groundnut|pigeon_pea|sesame",
+          "id": "plan:black_gram|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "market_income",
           "rank": 2,
-          "name": "Groundnut then Pigeon pea then Sesame",
+          "name": "Black gram then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
-            "groundnut",
-            "pigeon_pea",
-            "sesame"
+            "black_gram",
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 81,
-          "change_vs_current": 10,
+          "goal_match": 89,
+          "change_vs_current": 5.7,
           "scores": {
-            "soil": 68,
-            "market": 68,
+            "soil": 88,
+            "market": 64,
             "water": 81,
-            "resilience": 94,
-            "low_cost": 49,
-            "suitability": 87
+            "resilience": 90,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
-            "Average income score 3.7/5 (rough)",
-            "Sold as pulse / oilseed",
-            "Hard to store (Groundnut): arrange a buyer before planting"
+            "Average income score 3.0/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Includes crops already grown locally (existing know-how and buyers)"
           ],
           "cautions": [],
           "evidence": [],
@@ -1237,9 +1241,9 @@
                   null,
                   null,
                   null,
-                  "groundnut",
-                  "groundnut",
-                  "groundnut",
+                  "black_gram",
+                  "black_gram",
+                  "black_gram",
                   null,
                   null,
                   null,
@@ -1254,12 +1258,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -1271,12 +1275,12 @@
                   null,
                   null,
                   null,
-                  "sesame",
-                  "sesame",
-                  "sesame",
-                  null,
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -1288,32 +1292,33 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:green_gram|groundnut|sesame",
+          "id": "plan:groundnut|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "market_income",
           "rank": 3,
-          "name": "Green gram then Groundnut then Sesame",
+          "name": "Groundnut then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
-            "green_gram",
             "groundnut",
-            "sesame"
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 79,
-          "change_vs_current": 10,
+          "goal_match": 88,
+          "change_vs_current": 6.7,
           "scores": {
-            "soil": 66,
-            "market": 68,
-            "water": 81,
-            "resilience": 92,
-            "low_cost": 49,
-            "suitability": 87
+            "soil": 88,
+            "market": 65,
+            "water": 78,
+            "resilience": 90,
+            "low_cost": 44,
+            "suitability": 93
           },
           "why": [
-            "Average income score 3.7/5 (rough)",
-            "Sold as pulse / oilseed",
-            "Hard to store (Groundnut): arrange a buyer before planting"
+            "Average income score 3.3/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Hard to store (Groundnut): arrange a buyer before planting",
+            "Includes crops already grown locally (existing know-how and buyers)"
           ],
           "cautions": [],
           "evidence": [],
@@ -1326,9 +1331,9 @@
                   null,
                   null,
                   null,
-                  "green_gram",
-                  "green_gram",
-                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut",
                   null,
                   null,
                   null,
@@ -1343,10 +1348,10 @@
                   null,
                   null,
                   null,
-                  "groundnut",
-                  "groundnut",
-                  "groundnut",
-                  null,
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
                   null,
                   null,
                   null,
@@ -1360,12 +1365,12 @@
                   null,
                   null,
                   null,
-                  "sesame",
-                  "sesame",
-                  "sesame",
-                  null,
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -1379,119 +1384,30 @@
       ],
       "water_saving": [
         {
-          "id": "plan:cowpea|pigeon_pea|sweet_potato",
+          "id": "plan:green_gram|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "water_saving",
           "rank": 1,
-          "name": "Cowpea then Pigeon pea then Sweet potato",
-          "tagline": null,
-          "plan_type": "3-year rotation",
-          "sequence": [
-            "cowpea",
-            "pigeon_pea",
-            "sweet_potato"
-          ],
-          "goal_match": 92,
-          "change_vs_current": -0.1,
-          "scores": {
-            "soil": 73,
-            "market": 55,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 57,
-            "suitability": 89
-          },
-          "why": [
-            "Average water need 2.0/5 (lower is better)",
-            "Season rain ~2185 mm",
-            "Water source: rain only"
-          ],
-          "cautions": [],
-          "evidence": [],
-          "calendar": {
-            "rows": [
-              {
-                "label": "Year 1",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "cowpea",
-                  "cowpea",
-                  "cowpea",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 2",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 3",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              }
-            ],
-            "approximate": true
-          },
-          "confidence": "low",
-          "basis": "Team recommender (rec.py) on measured data"
-        },
-        {
-          "id": "plan:green_gram|pigeon_pea|sweet_potato",
-          "kind": "recommended",
-          "goal": "water_saving",
-          "rank": 2,
-          "name": "Green gram then Pigeon pea then Sweet potato",
+          "name": "Green gram then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "green_gram",
-            "pigeon_pea",
-            "sweet_potato"
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 90,
-          "change_vs_current": -0.1,
+          "goal_match": 87,
+          "change_vs_current": -2.6,
           "scores": {
-            "soil": 72,
-            "market": 60,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 57,
-            "suitability": 88
+            "soil": 88,
+            "market": 64,
+            "water": 81,
+            "resilience": 92,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
-            "Average water need 2.0/5 (lower is better)",
+            "Average water need 2.3/5 (lower is better)",
             "Season rain ~2185 mm",
             "Water source: rain only"
           ],
@@ -1523,12 +1439,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -1540,12 +1456,12 @@
                   null,
                   null,
                   null,
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -1557,30 +1473,30 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:cowpea|pigeon_pea|sesame",
+          "id": "plan:cowpea|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "water_saving",
-          "rank": 3,
-          "name": "Cowpea then Pigeon pea then Sesame",
+          "rank": 2,
+          "name": "Cowpea then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "cowpea",
-            "pigeon_pea",
-            "sesame"
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 90,
-          "change_vs_current": -0.1,
+          "goal_match": 87,
+          "change_vs_current": -2.6,
           "scores": {
-            "soil": 69,
-            "market": 62,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 56,
-            "suitability": 87
+            "soil": 89,
+            "market": 59,
+            "water": 81,
+            "resilience": 92,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
-            "Average water need 2.0/5 (lower is better)",
+            "Average water need 2.3/5 (lower is better)",
             "Season rain ~2185 mm",
             "Water source: rain only"
           ],
@@ -1612,12 +1528,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -1629,12 +1545,101 @@
                   null,
                   null,
                   null,
-                  "sesame",
-                  "sesame",
-                  "sesame",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  null,
+                  null
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:black_gram|maize|pigeon_pea",
+          "kind": "recommended",
+          "goal": "water_saving",
+          "rank": 3,
+          "name": "Black gram then Maize then Pigeon pea",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "maize",
+            "pigeon_pea"
+          ],
+          "goal_match": 87,
+          "change_vs_current": -2.4,
+          "scores": {
+            "soil": 88,
+            "market": 64,
+            "water": 81,
+            "resilience": 90,
+            "low_cost": 51,
+            "suitability": 93
+          },
+          "why": [
+            "Average water need 2.3/5 (lower is better)",
+            "Season rain ~2185 mm",
+            "Water source: rain only"
+          ],
+          "cautions": [],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
                   null,
                   null,
                   null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -1648,115 +1653,27 @@
       ],
       "low_risk": [
         {
-          "id": "plan:cowpea|pigeon_pea|sweet_potato",
+          "id": "plan:green_gram|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "low_risk",
           "rank": 1,
-          "name": "Cowpea then Pigeon pea then Sweet potato",
-          "tagline": null,
-          "plan_type": "3-year rotation",
-          "sequence": [
-            "cowpea",
-            "pigeon_pea",
-            "sweet_potato"
-          ],
-          "goal_match": 94,
-          "change_vs_current": 22,
-          "scores": {
-            "soil": 73,
-            "market": 55,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 57,
-            "suitability": 89
-          },
-          "why": [
-            "Tolerates drought common here",
-            "3 different crop(s) spread the risk"
-          ],
-          "cautions": [],
-          "evidence": [],
-          "calendar": {
-            "rows": [
-              {
-                "label": "Year 1",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "cowpea",
-                  "cowpea",
-                  "cowpea",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 2",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 3",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              }
-            ],
-            "approximate": true
-          },
-          "confidence": "low",
-          "basis": "Team recommender (rec.py) on measured data"
-        },
-        {
-          "id": "plan:green_gram|pigeon_pea|sweet_potato",
-          "kind": "recommended",
-          "goal": "low_risk",
-          "rank": 2,
-          "name": "Green gram then Pigeon pea then Sweet potato",
+          "name": "Green gram then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "green_gram",
-            "pigeon_pea",
-            "sweet_potato"
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 92,
-          "change_vs_current": 21.9,
+          "goal_match": 94,
+          "change_vs_current": 17.7,
           "scores": {
-            "soil": 72,
-            "market": 60,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 57,
-            "suitability": 88
+            "soil": 88,
+            "market": 64,
+            "water": 81,
+            "resilience": 92,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
             "Tolerates drought common here",
@@ -1790,12 +1707,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -1807,12 +1724,12 @@
                   null,
                   null,
                   null,
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -1824,27 +1741,27 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:cowpea|pigeon_pea|sesame",
+          "id": "plan:cowpea|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "low_risk",
-          "rank": 3,
-          "name": "Cowpea then Pigeon pea then Sesame",
+          "rank": 2,
+          "name": "Cowpea then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "cowpea",
-            "pigeon_pea",
-            "sesame"
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 92,
-          "change_vs_current": 21.9,
+          "goal_match": 94,
+          "change_vs_current": 17.9,
           "scores": {
-            "soil": 69,
-            "market": 62,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 56,
-            "suitability": 87
+            "soil": 89,
+            "market": 59,
+            "water": 81,
+            "resilience": 92,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
             "Tolerates drought common here",
@@ -1878,12 +1795,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -1895,12 +1812,100 @@
                   null,
                   null,
                   null,
-                  "sesame",
-                  "sesame",
-                  "sesame",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  null,
+                  null
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:black_gram|maize|pigeon_pea",
+          "kind": "recommended",
+          "goal": "low_risk",
+          "rank": 3,
+          "name": "Black gram then Maize then Pigeon pea",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "maize",
+            "pigeon_pea"
+          ],
+          "goal_match": 90,
+          "change_vs_current": 15.7,
+          "scores": {
+            "soil": 88,
+            "market": 64,
+            "water": 81,
+            "resilience": 90,
+            "low_cost": 51,
+            "suitability": 93
+          },
+          "why": [
+            "Tolerates drought common here",
+            "3 different crop(s) spread the risk"
+          ],
+          "cautions": [],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
                   null,
                   null,
                   null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -1914,30 +1919,30 @@
       ],
       "low_cost_labour": [
         {
-          "id": "plan:green_gram|pigeon_pea|sweet_potato",
+          "id": "plan:green_gram|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "low_cost_labour",
           "rank": 1,
-          "name": "Green gram then Pigeon pea then Sweet potato",
+          "name": "Green gram then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "green_gram",
-            "pigeon_pea",
-            "sweet_potato"
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 89,
-          "change_vs_current": 22.7,
+          "goal_match": 95,
+          "change_vs_current": 17.3,
           "scores": {
-            "soil": 72,
-            "market": 60,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 57,
-            "suitability": 88
+            "soil": 88,
+            "market": 64,
+            "water": 81,
+            "resilience": 92,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
-            "Mean labour need 3.0/5, fertiliser need 1.3/5 (legumes reduce fertiliser need)"
+            "Mean labour need 3.0/5, fertiliser need 2.3/5 (legumes reduce fertiliser need)"
           ],
           "cautions": [],
           "evidence": [],
@@ -1967,12 +1972,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -1984,12 +1989,12 @@
                   null,
                   null,
                   null,
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -2001,30 +2006,117 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:cowpea|pigeon_pea|sweet_potato",
+          "id": "plan:black_gram|maize|pigeon_pea",
           "kind": "recommended",
           "goal": "low_cost_labour",
           "rank": 2,
-          "name": "Cowpea then Pigeon pea then Sweet potato",
+          "name": "Black gram then Maize then Pigeon pea",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "maize",
+            "pigeon_pea"
+          ],
+          "goal_match": 95,
+          "change_vs_current": 17.3,
+          "scores": {
+            "soil": 88,
+            "market": 64,
+            "water": 81,
+            "resilience": 90,
+            "low_cost": 51,
+            "suitability": 93
+          },
+          "why": [
+            "Mean labour need 3.0/5, fertiliser need 2.3/5 (legumes reduce fertiliser need)"
+          ],
+          "cautions": [],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  null,
+                  null
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:cowpea|maize|pigeon_pea",
+          "kind": "recommended",
+          "goal": "low_cost_labour",
+          "rank": 3,
+          "name": "Cowpea then Maize then Pigeon pea",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "cowpea",
-            "pigeon_pea",
-            "sweet_potato"
+            "maize",
+            "pigeon_pea"
           ],
-          "goal_match": 89,
-          "change_vs_current": 22.7,
+          "goal_match": 93,
+          "change_vs_current": 17.3,
           "scores": {
-            "soil": 73,
-            "market": 55,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 57,
-            "suitability": 89
+            "soil": 89,
+            "market": 59,
+            "water": 81,
+            "resilience": 92,
+            "low_cost": 51,
+            "suitability": 93
           },
           "why": [
-            "Mean labour need 3.0/5, fertiliser need 1.3/5 (legumes reduce fertiliser need)"
+            "Mean labour need 3.0/5, fertiliser need 2.3/5 (legumes reduce fertiliser need)"
           ],
           "cautions": [],
           "evidence": [],
@@ -2054,12 +2146,12 @@
                   null,
                   null,
                   null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
+                  "maize",
+                  "maize",
+                  "maize",
+                  "maize",
+                  null,
+                  null,
                   null,
                   null
                 ]
@@ -2071,99 +2163,12 @@
                   null,
                   null,
                   null,
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  "sweet_potato",
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              }
-            ],
-            "approximate": true
-          },
-          "confidence": "low",
-          "basis": "Team recommender (rec.py) on measured data"
-        },
-        {
-          "id": "plan:green_gram|pigeon_pea|sesame",
-          "kind": "recommended",
-          "goal": "low_cost_labour",
-          "rank": 3,
-          "name": "Green gram then Pigeon pea then Sesame",
-          "tagline": null,
-          "plan_type": "3-year rotation",
-          "sequence": [
-            "green_gram",
-            "pigeon_pea",
-            "sesame"
-          ],
-          "goal_match": 87,
-          "change_vs_current": 21.7,
-          "scores": {
-            "soil": 68,
-            "market": 68,
-            "water": 83,
-            "resilience": 96,
-            "low_cost": 56,
-            "suitability": 86
-          },
-          "why": [
-            "Mean labour need 3.0/5, fertiliser need 1.3/5 (legumes reduce fertiliser need)"
-          ],
-          "cautions": [],
-          "evidence": [],
-          "calendar": {
-            "rows": [
-              {
-                "label": "Year 1",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "green_gram",
-                  "green_gram",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 2",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
                   "pigeon_pea",
                   "pigeon_pea",
                   "pigeon_pea",
                   "pigeon_pea",
                   "pigeon_pea",
                   "pigeon_pea",
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 3",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "sesame",
-                  "sesame",
-                  "sesame",
-                  null,
-                  null,
-                  null,
                   null,
                   null
                 ]
@@ -3516,23 +3521,71 @@
     },
     "crop_outlook": [
       {
-        "crop": "groundnut",
-        "fit_now": 90,
-        "fit_trend_2035": 90,
-        "fit_bad_year_2035": 90,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "cowpea",
-        "fit_now": 90,
-        "fit_trend_2035": 90,
+        "crop": "pigeon_pea",
+        "fit_now": 89,
+        "fit_trend_2035": 89,
         "fit_bad_year_2035": 90,
         "water_now": 0.99,
         "water_bad_year": 1
       },
       {
-        "crop": "pigeon_pea",
+        "crop": "soybean",
+        "fit_now": 88,
+        "fit_trend_2035": 88,
+        "fit_bad_year_2035": 88,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "groundnut",
+        "fit_now": 88,
+        "fit_trend_2035": 88,
+        "fit_bad_year_2035": 88,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "black_gram",
+        "fit_now": 88,
+        "fit_trend_2035": 88,
+        "fit_bad_year_2035": 88,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "maize",
+        "fit_now": 88,
+        "fit_trend_2035": 88,
+        "fit_bad_year_2035": 88,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "green_gram",
+        "fit_now": 88,
+        "fit_trend_2035": 88,
+        "fit_bad_year_2035": 88,
+        "water_now": 0.99,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "cowpea",
+        "fit_now": 88,
+        "fit_trend_2035": 88,
+        "fit_bad_year_2035": 88,
+        "water_now": 0.99,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "cassava",
+        "fit_now": 87,
+        "fit_trend_2035": 87,
+        "fit_bad_year_2035": 88,
+        "water_now": 0.99,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "chickpea",
         "fit_now": 87,
         "fit_trend_2035": 87,
         "fit_bad_year_2035": 87,
@@ -3540,35 +3593,11 @@
         "water_bad_year": 1
       },
       {
-        "crop": "green_gram",
-        "fit_now": 85,
-        "fit_trend_2035": 85,
-        "fit_bad_year_2035": 86,
-        "water_now": 0.99,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "soybean",
-        "fit_now": 81,
-        "fit_trend_2035": 81,
-        "fit_bad_year_2035": 81,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "black_gram",
-        "fit_now": 81,
-        "fit_trend_2035": 81,
-        "fit_bad_year_2035": 81,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "chickpea",
+        "crop": "sugarcane",
         "fit_now": 80,
         "fit_trend_2035": 80,
         "fit_bad_year_2035": 80,
-        "water_now": 0.99,
+        "water_now": 1,
         "water_bad_year": 1
       },
       {
@@ -3580,26 +3609,58 @@
         "water_bad_year": 1
       },
       {
-        "crop": "cassava",
-        "fit_now": 74,
-        "fit_trend_2035": 74,
-        "fit_bad_year_2035": 74,
-        "water_now": 0.99,
+        "crop": "rice",
+        "fit_now": 77,
+        "fit_trend_2035": 77,
+        "fit_bad_year_2035": 77,
+        "water_now": 1,
         "water_bad_year": 1
       },
       {
         "crop": "sesame",
-        "fit_now": 72,
-        "fit_trend_2035": 72,
-        "fit_bad_year_2035": 73,
+        "fit_now": 77,
+        "fit_trend_2035": 77,
+        "fit_bad_year_2035": 77,
+        "water_now": 0.99,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "sunflower",
+        "fit_now": 76,
+        "fit_trend_2035": 76,
+        "fit_bad_year_2035": 77,
         "water_now": 0.99,
         "water_bad_year": 1
       },
       {
         "crop": "pineapple",
-        "fit_now": 72,
-        "fit_trend_2035": 72,
-        "fit_bad_year_2035": 73,
+        "fit_now": 76,
+        "fit_trend_2035": 76,
+        "fit_bad_year_2035": 77,
+        "water_now": 0.99,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "salt_rice",
+        "fit_now": 75,
+        "fit_trend_2035": 75,
+        "fit_bad_year_2035": 75,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "vegetables",
+        "fit_now": 75,
+        "fit_trend_2035": 75,
+        "fit_bad_year_2035": 75,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "sorghum",
+        "fit_now": 74,
+        "fit_trend_2035": 74,
+        "fit_bad_year_2035": 75,
         "water_now": 0.99,
         "water_bad_year": 1
       },
@@ -3612,74 +3673,18 @@
         "water_bad_year": 1
       },
       {
-        "crop": "sorghum",
-        "fit_now": 70,
-        "fit_trend_2035": 70,
-        "fit_bad_year_2035": 71,
-        "water_now": 0.99,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "sunflower",
-        "fit_now": 68,
-        "fit_trend_2035": 68,
-        "fit_bad_year_2035": 68,
-        "water_now": 0.99,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "vegetables",
-        "fit_now": 66,
-        "fit_trend_2035": 66,
-        "fit_bad_year_2035": 66,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "maize",
-        "fit_now": 66,
-        "fit_trend_2035": 66,
-        "fit_bad_year_2035": 66,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "rice",
-        "fit_now": 63,
-        "fit_trend_2035": 63,
-        "fit_bad_year_2035": 63,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "salt_rice",
-        "fit_now": 61,
-        "fit_trend_2035": 61,
-        "fit_bad_year_2035": 61,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
         "crop": "sunn_hemp",
-        "fit_now": 61,
-        "fit_trend_2035": 61,
-        "fit_bad_year_2035": 62,
+        "fit_now": 59,
+        "fit_trend_2035": 59,
+        "fit_bad_year_2035": 60,
         "water_now": 0.99,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "sugarcane",
-        "fit_now": 58,
-        "fit_trend_2035": 58,
-        "fit_bad_year_2035": 58,
-        "water_now": 1,
         "water_bad_year": 1
       },
       {
         "crop": "potato",
-        "fit_now": 51,
-        "fit_trend_2035": 51,
-        "fit_bad_year_2035": 46,
+        "fit_now": 59,
+        "fit_trend_2035": 59,
+        "fit_bad_year_2035": 54,
         "water_now": 1,
         "water_bad_year": 1
       }
@@ -3709,43 +3714,16 @@
   },
   "crop_fit": [
     {
-      "crop": "groundnut",
+      "crop": "pigeon_pea",
       "rank": 1,
-      "fit": 90,
+      "fit": 89,
       "fit_band": "high",
       "trend": "flat",
       "limits": [],
       "why": [
         "rainfall (~2185 mm in season) covers its water need",
         "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 1,
-        "risk": 0.99,
-        "benefit": 0.77
-      },
-      "label": "Very good fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Aug (rough)",
-      "sow_month": 5,
-      "yield_outlook": "upper half of typical range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
-      "crop": "cowpea",
-      "rank": 2,
-      "fit": 90,
-      "fit_band": "high",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "fixes nitrogen for the next crop"
       ],
       "common_locally": false,
       "parts": {
@@ -3757,150 +3735,15 @@
       },
       "label": "Very good fit",
       "planting_window": "May-Jun",
-      "harvest": "~Jul (rough)",
-      "sow_month": 5,
-      "yield_outlook": "upper half of typical range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
-      "crop": "cashew",
-      "rank": 3,
-      "fit": 89,
-      "fit_band": "high",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "copes with sandy soil"
-      ],
-      "common_locally": true,
-      "parts": {
-        "climate": 1,
-        "water": 0.99,
-        "soil": 1,
-        "risk": 1,
-        "benefit": 0.41
-      },
-      "label": "Very good fit",
-      "planting_window": "May-Jun (start of wet season)",
-      "harvest": "multi-year",
-      "sow_month": 6,
-      "yield_outlook": "upper half of typical range",
-      "rotation_tip": "Perennial tree crop, not a rotation crop; use a legume cover between young rows."
-    },
-    {
-      "crop": "pigeon_pea",
-      "rank": 4,
-      "fit": 87,
-      "fit_band": "high",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 0.99,
-        "soil": 0.88,
-        "risk": 1,
-        "benefit": 0.84
-      },
-      "label": "Very good fit",
-      "planting_window": "May-Jun",
       "harvest": "~Nov (rough)",
       "sow_month": 5,
       "yield_outlook": "upper half of typical range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
-      "crop": "green_gram",
-      "rank": 5,
-      "fit": 85,
-      "fit_band": "high",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 0.99,
-        "soil": 0.88,
-        "risk": 0.99,
-        "benefit": 0.77
-      },
-      "label": "Very good fit",
-      "planting_window": "wet season May-Jun; or dry season Nov-Dec if moisture allows",
-      "harvest": "~Jul (rough)",
-      "sow_month": 5,
-      "yield_outlook": "upper half of typical range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
-      "crop": "soybean",
-      "rank": 6,
-      "fit": 81,
-      "fit_band": "high",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
-        "risk": 0.99,
-        "benefit": 0.77
-      },
-      "label": "Good fit",
-      "planting_window": "wet season May-Jun; or dry season Nov-Dec if moisture allows",
-      "harvest": "~Aug (rough)",
-      "sow_month": 5,
-      "yield_outlook": "upper half of typical range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
-      "crop": "black_gram",
-      "rank": 7,
-      "fit": 81,
-      "fit_band": "high",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
-        "risk": 0.99,
-        "benefit": 0.77
-      },
-      "label": "Good fit",
-      "planting_window": "wet season May-Jun; or dry season Nov-Dec if moisture allows",
-      "harvest": "~Aug (rough)",
-      "sow_month": 5,
-      "yield_outlook": "upper half of typical range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
     },
     {
       "crop": "rubber",
-      "rank": 8,
-      "fit": 81,
+      "rank": 2,
+      "fit": 89,
       "fit_band": "high",
       "trend": "flat",
       "limits": [],
@@ -3913,11 +3756,11 @@
       "parts": {
         "climate": 1,
         "water": 1,
-        "soil": 0.76,
+        "soil": 1,
         "risk": 1,
         "benefit": 0.41
       },
-      "label": "Good fit",
+      "label": "Very good fit",
       "planting_window": "May-Jun (start of wet season)",
       "harvest": "multi-year",
       "sow_month": 6,
@@ -3925,42 +3768,283 @@
       "rotation_tip": "Perennial tree crop, not a rotation crop; use a legume cover between young rows."
     },
     {
-      "crop": "chickpea",
-      "rank": 9,
-      "fit": 80,
-      "fit_band": "high",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 0.99,
-        "soil": 0.76,
-        "risk": 0.99,
-        "benefit": 0.73
-      },
-      "label": "Good fit",
-      "planting_window": "Oct-Nov (after monsoon, on residual moisture)",
-      "harvest": "~Jan (rough)",
-      "sow_month": 10,
-      "yield_outlook": "upper half of typical range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
-      "crop": "sweet_potato",
-      "rank": 10,
-      "fit": 78,
+      "crop": "cashew",
+      "rank": 3,
+      "fit": 89,
       "fit_band": "high",
       "trend": "flat",
       "limits": [],
       "why": [
         "rainfall (~2185 mm in season) covers its water need",
         "temperature (~26 C) is in its range",
-        "copes with sandy soil"
+        "already grown locally (farmer know-how, market)"
+      ],
+      "common_locally": true,
+      "parts": {
+        "climate": 1,
+        "water": 0.99,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.41
+      },
+      "label": "Very good fit",
+      "planting_window": "May-Jun (start of wet season)",
+      "harvest": "multi-year",
+      "sow_month": 6,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Perennial tree crop, not a rotation crop; use a legume cover between young rows."
+    },
+    {
+      "crop": "soybean",
+      "rank": 4,
+      "fit": 88,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.68
+      },
+      "label": "Very good fit",
+      "planting_window": "wet season May-Jun; or dry season Nov-Dec if moisture allows",
+      "harvest": "~Aug (rough)",
+      "sow_month": 5,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "groundnut",
+      "rank": 5,
+      "fit": 88,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.68
+      },
+      "label": "Very good fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Aug (rough)",
+      "sow_month": 5,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "black_gram",
+      "rank": 6,
+      "fit": 88,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.68
+      },
+      "label": "Very good fit",
+      "planting_window": "wet season May-Jun; or dry season Nov-Dec if moisture allows",
+      "harvest": "~Aug (rough)",
+      "sow_month": 5,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "maize",
+      "rank": 7,
+      "fit": 88,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "already grown locally (farmer know-how, market)"
+      ],
+      "common_locally": true,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.38
+      },
+      "label": "Very good fit",
+      "planting_window": "wet season May-Jun; or dry season Nov-Dec if moisture allows",
+      "harvest": "~Sep (rough)",
+      "sow_month": 5,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "green_gram",
+      "rank": 8,
+      "fit": 88,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.99,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.68
+      },
+      "label": "Very good fit",
+      "planting_window": "wet season May-Jun; or dry season Nov-Dec if moisture allows",
+      "harvest": "~Jul (rough)",
+      "sow_month": 5,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "cowpea",
+      "rank": 9,
+      "fit": 88,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.99,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.68
+      },
+      "label": "Very good fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Jul (rough)",
+      "sow_month": 5,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "cassava",
+      "rank": 10,
+      "fit": 87,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "already grown locally (farmer know-how, market)"
+      ],
+      "common_locally": true,
+      "parts": {
+        "climate": 1,
+        "water": 0.99,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.37
+      },
+      "label": "Very good fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Mar (rough)",
+      "sow_month": 5,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "chickpea",
+      "rank": 11,
+      "fit": 87,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "temperature (~26 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.99,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.65
+      },
+      "label": "Very good fit",
+      "planting_window": "Oct-Nov (after monsoon, on residual moisture)",
+      "harvest": "~Jan (rough)",
+      "sow_month": 10,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "sugarcane",
+      "rank": 12,
+      "fit": 80,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.41
+      },
+      "label": "Good fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Apr (rough)",
+      "sow_month": 5,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "sweet_potato",
+      "rank": 13,
+      "fit": 78,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range"
       ],
       "common_locally": false,
       "parts": {
@@ -3978,94 +4062,195 @@
       "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
     },
     {
-      "crop": "cassava",
-      "rank": 11,
+      "crop": "rice",
+      "rank": 14,
+      "fit": 77,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.34
+      },
+      "label": "Good fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Sep (rough)",
+      "sow_month": 5,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "sesame",
+      "rank": 15,
+      "fit": 77,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.99,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.34
+      },
+      "label": "Good fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Aug (rough)",
+      "sow_month": 5,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "sunflower",
+      "rank": 16,
+      "fit": 76,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.99,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.34
+      },
+      "label": "Good fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Aug (rough)",
+      "sow_month": 5,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "pineapple",
+      "rank": 17,
+      "fit": 76,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.99,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.34
+      },
+      "label": "Good fit",
+      "planting_window": "May-Jun (start of wet season)",
+      "harvest": "~Sep (rough)",
+      "sow_month": 6,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "salt_rice",
+      "rank": 18,
+      "fit": 75,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2185 mm in season) covers its water need",
+        "temperature (~26 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.3
+      },
+      "label": "Good fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Sep (rough)",
+      "sow_month": 5,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "vegetables",
+      "rank": 19,
+      "fit": 75,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "temperature (~26 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.3
+      },
+      "label": "Good fit",
+      "planting_window": "Nov-Dec (dry season; needs irrigation or residual moisture)",
+      "harvest": "~Jan (rough)",
+      "sow_month": 11,
+      "yield_outlook": "upper half of typical range",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "sorghum",
+      "rank": 20,
       "fit": 74,
       "fit_band": "medium",
       "trend": "flat",
       "limits": [],
       "why": [
         "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "copes with sandy soil"
+        "temperature (~26 C) is in its range"
       ],
-      "common_locally": true,
+      "common_locally": false,
       "parts": {
         "climate": 1,
         "water": 0.99,
         "soil": 1,
-        "risk": 1,
-        "benefit": 0.37
+        "risk": 0.99,
+        "benefit": 0.3
       },
       "label": "Possible fit",
       "planting_window": "May-Jun",
-      "harvest": "~Mar (rough)",
-      "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
-    },
-    {
-      "crop": "sesame",
-      "rank": 12,
-      "fit": 73,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 0.99,
-        "soil": 0.88,
-        "risk": 0.99,
-        "benefit": 0.34
-      },
-      "label": "Possible fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Aug (rough)",
-      "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
-    },
-    {
-      "crop": "pineapple",
-      "rank": 13,
-      "fit": 72,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 0.99,
-        "soil": 0.88,
-        "risk": 0.99,
-        "benefit": 0.34
-      },
-      "label": "Possible fit",
-      "planting_window": "May-Jun (start of wet season)",
       "harvest": "~Sep (rough)",
-      "sow_month": 6,
+      "sow_month": 5,
       "yield_outlook": "middle of range",
-      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
     },
     {
       "crop": "watermelon",
-      "rank": 14,
+      "rank": 21,
       "fit": 71,
       "fit_band": "medium",
       "trend": "flat",
       "limits": [],
       "why": [
-        "temperature (~26 C) is in its range",
-        "copes with sandy soil"
+        "temperature (~26 C) is in its range"
       ],
       "common_locally": false,
       "parts": {
@@ -4083,176 +4268,16 @@
       "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
     },
     {
-      "crop": "sorghum",
-      "rank": 15,
-      "fit": 70,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 0.99,
-        "soil": 0.88,
-        "risk": 0.99,
-        "benefit": 0.3
-      },
-      "label": "Possible fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Sep (rough)",
-      "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
-    },
-    {
-      "crop": "sunflower",
-      "rank": 16,
-      "fit": 68,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 0.99,
-        "soil": 0.76,
-        "risk": 0.99,
-        "benefit": 0.34
-      },
-      "label": "Possible fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Aug (rough)",
-      "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
-    },
-    {
-      "crop": "vegetables",
-      "rank": 17,
-      "fit": 67,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "temperature (~26 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
-        "risk": 0.99,
-        "benefit": 0.3
-      },
-      "label": "Possible fit",
-      "planting_window": "Nov-Dec (dry season; needs irrigation or residual moisture)",
-      "harvest": "~Jan (rough)",
-      "sow_month": 11,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
-    },
-    {
-      "crop": "maize",
-      "rank": 18,
-      "fit": 66,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "already grown locally (farmer know-how, market)"
-      ],
-      "common_locally": true,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
-        "risk": 0.99,
-        "benefit": 0.38
-      },
-      "label": "Possible fit",
-      "planting_window": "wet season May-Jun; or dry season Nov-Dec if moisture allows",
-      "harvest": "~Sep (rough)",
-      "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
-    },
-    {
-      "crop": "rice",
-      "rank": 19,
-      "fit": 63,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [
-        "sandy, low-water-holding soil"
-      ],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.64,
-        "risk": 0.99,
-        "benefit": 0.34
-      },
-      "label": "Possible fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Sep (rough)",
-      "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
-    },
-    {
-      "crop": "salt_rice",
-      "rank": 20,
-      "fit": 61,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [
-        "sandy, low-water-holding soil"
-      ],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.64,
-        "risk": 0.99,
-        "benefit": 0.3
-      },
-      "label": "Possible fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Sep (rough)",
-      "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
-    },
-    {
       "crop": "sunn_hemp",
-      "rank": 21,
-      "fit": 61,
+      "rank": 22,
+      "fit": 59,
       "fit_band": "medium",
       "trend": "flat",
       "limits": [],
       "why": [
         "rainfall (~2185 mm in season) covers its water need",
         "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "fixes nitrogen for the next crop"
       ],
       "common_locally": false,
       "parts": {
@@ -4260,7 +4285,7 @@
         "water": 0.99,
         "soil": 1,
         "risk": 1,
-        "benefit": 0.72
+        "benefit": 0.64
       },
       "label": "Possible fit",
       "planting_window": "May-Jun",
@@ -4270,36 +4295,10 @@
       "rotation_tip": "Soil-building crop with no direct income; plough in or use as ground cover."
     },
     {
-      "crop": "sugarcane",
-      "rank": 22,
-      "fit": 58,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "rainfall (~2185 mm in season) covers its water need",
-        "temperature (~26 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
-        "risk": 1,
-        "benefit": 0.41
-      },
-      "label": "Possible fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Apr (rough)",
-      "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
-    },
-    {
       "crop": "potato",
       "rank": 23,
-      "fit": 51,
-      "fit_band": "low",
+      "fit": 59,
+      "fit_band": "medium",
       "trend": "flat",
       "limits": [],
       "why": [
@@ -4309,21 +4308,21 @@
       "parts": {
         "climate": 0.7,
         "water": 1,
-        "soil": 0.76,
+        "soil": 1,
         "risk": 0.99,
         "benefit": 0.3
       },
-      "label": "Poor fit",
+      "label": "Possible fit",
       "planting_window": "Nov-Dec (dry season; needs irrigation or residual moisture)",
       "harvest": "~Feb (rough)",
       "sow_month": 11,
-      "yield_outlook": "lower end or at risk",
+      "yield_outlook": "middle of range",
       "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
     },
     {
       "crop": "oil_palm",
       "rank": 24,
-      "fit": 32,
+      "fit": 38,
       "fit_band": "low",
       "trend": "flat",
       "limits": [],
@@ -4335,7 +4334,7 @@
       "parts": {
         "climate": 1,
         "water": 1,
-        "soil": 0.76,
+        "soil": 1,
         "risk": 1,
         "benefit": 0.49
       },
@@ -4349,22 +4348,22 @@
     {
       "crop": "cover_legume",
       "rank": 25,
-      "fit": 28,
+      "fit": 29,
       "fit_band": "low",
       "trend": "flat",
       "limits": [],
       "why": [
         "rainfall (~2185 mm in season) covers its water need",
         "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "fixes nitrogen for the next crop"
       ],
       "common_locally": false,
       "parts": {
         "climate": 1,
         "water": 0.99,
-        "soil": 0.88,
+        "soil": 1,
         "risk": 1,
-        "benefit": 0.75
+        "benefit": 0.67
       },
       "label": "Poor fit",
       "planting_window": "May-Jun (start of wet season)",

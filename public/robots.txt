@@ -1,0 +1,6 @@
+# Sowcast: let search engines index the landing and skill pages, but not the printable plan views or raw data files.
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /*?view=
+# After deploying, add:  Sitemap: https://<your-domain>/sitemap.xml

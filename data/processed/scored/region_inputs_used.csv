@@ -101,7 +101,7 @@ th-west,irrigation_access_0_3,1,,draft,no measured data yet
 th-south,rain_mm_approx,1800,1770,measured,CHIRPS (ClimateSERV)
 th-south,mean_temp_c_approx,27.5,26.5,measured,NASA POWER
 th-south,dry_months_approx,2,2,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-th-south,soil_texture,sandy_loam,sandy,measured,ISRIC SoilGrids 0-30 cm
+th-south,soil_texture,sandy_loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
 th-south,slope_pct_approx,4.0,0.4,measured,"NASA SRTM, mean within ~1.5 km"
 th-south,drainage,moderate,,draft,no measured data yet
 th-south,flood_risk_0_3,2,,draft,no measured data yet
@@ -119,7 +119,7 @@ vn-northern-mtn,irrigation_access_0_3,1,,draft,no measured data yet
 vn-red-river,rain_mm_approx,1700,1772,measured,CHIRPS (ClimateSERV)
 vn-red-river,mean_temp_c_approx,24.0,24.0,measured,NASA POWER
 vn-red-river,dry_months_approx,3,3,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-vn-red-river,soil_texture,silty_clay_loam,sandy,measured,ISRIC SoilGrids 0-30 cm
+vn-red-river,soil_texture,silty_clay_loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
 vn-red-river,slope_pct_approx,0.3,0.3,measured,"NASA SRTM, mean within ~1.5 km"
 vn-red-river,drainage,moderate,,draft,no measured data yet
 vn-red-river,flood_risk_0_3,2,,draft,no measured data yet
@@ -128,7 +128,7 @@ vn-red-river,irrigation_access_0_3,3,,draft,no measured data yet
 vn-north-central,rain_mm_approx,1900,1870,measured,CHIRPS (ClimateSERV)
 vn-north-central,mean_temp_c_approx,24.5,24.9,measured,NASA POWER
 vn-north-central,dry_months_approx,3,3,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-vn-north-central,soil_texture,sandy_loam,sandy,measured,ISRIC SoilGrids 0-30 cm
+vn-north-central,soil_texture,sandy_loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
 vn-north-central,slope_pct_approx,3.0,0.2,measured,"NASA SRTM, mean within ~1.5 km"
 vn-north-central,drainage,good,,draft,no measured data yet
 vn-north-central,flood_risk_0_3,2,,draft,no measured data yet
@@ -146,7 +146,7 @@ vn-south-central,irrigation_access_0_3,1,,draft,no measured data yet
 vn-central-highlands,rain_mm_approx,1900,1762,measured,CHIRPS (ClimateSERV)
 vn-central-highlands,mean_temp_c_approx,23.5,24.5,measured,ERA5 (Open-Meteo)
 vn-central-highlands,dry_months_approx,4,4,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-vn-central-highlands,soil_texture,clay_loam,sandy,measured,ISRIC SoilGrids 0-30 cm
+vn-central-highlands,soil_texture,clay_loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
 vn-central-highlands,slope_pct_approx,6.0,1.8,measured,"NASA SRTM, mean within ~1.5 km"
 vn-central-highlands,drainage,good,,draft,no measured data yet
 vn-central-highlands,flood_risk_0_3,0,,draft,no measured data yet
@@ -155,7 +155,7 @@ vn-central-highlands,irrigation_access_0_3,1,,draft,no measured data yet
 vn-southeast,rain_mm_approx,1800,2047,measured,CHIRPS (ClimateSERV)
 vn-southeast,mean_temp_c_approx,27.5,28.0,measured,NASA POWER
 vn-southeast,dry_months_approx,4,4,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-vn-southeast,soil_texture,sandy_loam,sandy,measured,ISRIC SoilGrids 0-30 cm
+vn-southeast,soil_texture,sandy_loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
 vn-southeast,slope_pct_approx,2.0,0.7,measured,"NASA SRTM, mean within ~1.5 km"
 vn-southeast,drainage,good,,draft,no measured data yet
 vn-southeast,flood_risk_0_3,1,,draft,no measured data yet
@@ -164,7 +164,7 @@ vn-southeast,irrigation_access_0_3,2,,draft,no measured data yet
 vn-mekong,rain_mm_approx,1700,1853,measured,CHIRPS (ClimateSERV)
 vn-mekong,mean_temp_c_approx,27.5,27.4,measured,NASA POWER
 vn-mekong,dry_months_approx,4,3,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-vn-mekong,soil_texture,clay,sandy,measured,ISRIC SoilGrids 0-30 cm
+vn-mekong,soil_texture,clay,clay,measured,ISRIC SoilGrids 0-30 cm
 vn-mekong,slope_pct_approx,0.1,0.3,measured,"NASA SRTM, mean within ~1.5 km"
 vn-mekong,drainage,poor,,draft,no measured data yet
 vn-mekong,flood_risk_0_3,3,,draft,no measured data yet
@@ -173,7 +173,7 @@ vn-mekong,irrigation_access_0_3,3,,draft,no measured data yet
 kh-tonle-sap,rain_mm_approx,1400,1357,measured,CHIRPS (ClimateSERV)
 kh-tonle-sap,mean_temp_c_approx,27.5,27.3,measured,NASA POWER
 kh-tonle-sap,dry_months_approx,5,4,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-kh-tonle-sap,soil_texture,sandy_loam,sandy,measured,ISRIC SoilGrids 0-30 cm
+kh-tonle-sap,soil_texture,sandy_loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
 kh-tonle-sap,slope_pct_approx,1.0,0.3,measured,"NASA SRTM, mean within ~1.5 km"
 kh-tonle-sap,drainage,moderate,,draft,no measured data yet
 kh-tonle-sap,flood_risk_0_3,2,,draft,no measured data yet
@@ -191,7 +191,7 @@ kh-mekong-plain,irrigation_access_0_3,2,,draft,no measured data yet
 kh-plateau,rain_mm_approx,2200,2571,measured,CHIRPS (ClimateSERV)
 kh-plateau,mean_temp_c_approx,25.0,25.8,measured,ERA5 (Open-Meteo)
 kh-plateau,dry_months_approx,4,6,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-kh-plateau,soil_texture,clay_loam,sandy,measured,ISRIC SoilGrids 0-30 cm
+kh-plateau,soil_texture,clay_loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
 kh-plateau,slope_pct_approx,6.0,2.2,measured,"NASA SRTM, mean within ~1.5 km"
 kh-plateau,drainage,good,,draft,no measured data yet
 kh-plateau,flood_risk_0_3,0,,draft,no measured data yet
@@ -200,7 +200,7 @@ kh-plateau,irrigation_access_0_3,0,,draft,no measured data yet
 kh-coastal,rain_mm_approx,2000,2103,measured,CHIRPS (ClimateSERV)
 kh-coastal,mean_temp_c_approx,27.5,27.6,measured,NASA POWER
 kh-coastal,dry_months_approx,4,3,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-kh-coastal,soil_texture,clay,sandy,measured,ISRIC SoilGrids 0-30 cm
+kh-coastal,soil_texture,clay,clay_loam,measured,ISRIC SoilGrids 0-30 cm
 kh-coastal,slope_pct_approx,0.5,0.2,measured,"NASA SRTM, mean within ~1.5 km"
 kh-coastal,drainage,poor,,draft,no measured data yet
 kh-coastal,flood_risk_0_3,1,,draft,no measured data yet
@@ -209,7 +209,7 @@ kh-coastal,irrigation_access_0_3,1,,draft,no measured data yet
 my-kedah-perlis,rain_mm_approx,2200,2554,measured,CHIRPS (ClimateSERV)
 my-kedah-perlis,mean_temp_c_approx,27.5,27.4,measured,NASA POWER
 my-kedah-perlis,dry_months_approx,3,0,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-my-kedah-perlis,soil_texture,clay,sandy,measured,ISRIC SoilGrids 0-30 cm
+my-kedah-perlis,soil_texture,clay,clay_loam,measured,ISRIC SoilGrids 0-30 cm
 my-kedah-perlis,slope_pct_approx,0.5,0.2,measured,"NASA SRTM, mean within ~1.5 km"
 my-kedah-perlis,drainage,poor,,draft,no measured data yet
 my-kedah-perlis,flood_risk_0_3,2,,draft,no measured data yet
@@ -218,7 +218,7 @@ my-kedah-perlis,irrigation_access_0_3,3,,draft,no measured data yet
 my-kelantan,rain_mm_approx,2500,3036,measured,CHIRPS (ClimateSERV)
 my-kelantan,mean_temp_c_approx,27.0,27.4,measured,NASA POWER
 my-kelantan,dry_months_approx,3,0,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-my-kelantan,soil_texture,sandy_loam,sandy,measured,ISRIC SoilGrids 0-30 cm
+my-kelantan,soil_texture,sandy_loam,clay,measured,ISRIC SoilGrids 0-30 cm
 my-kelantan,slope_pct_approx,1.0,0.3,measured,"NASA SRTM, mean within ~1.5 km"
 my-kelantan,drainage,moderate,,draft,no measured data yet
 my-kelantan,flood_risk_0_3,3,,draft,no measured data yet
@@ -227,7 +227,7 @@ my-kelantan,irrigation_access_0_3,2,,draft,no measured data yet
 my-selangor,rain_mm_approx,2400,2616,measured,CHIRPS (ClimateSERV)
 my-selangor,mean_temp_c_approx,27.5,27.1,measured,NASA POWER
 my-selangor,dry_months_approx,2,0,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-my-selangor,soil_texture,clay,sandy,measured,ISRIC SoilGrids 0-30 cm
+my-selangor,soil_texture,clay,clay,measured,ISRIC SoilGrids 0-30 cm
 my-selangor,slope_pct_approx,0.3,0.4,measured,"NASA SRTM, mean within ~1.5 km"
 my-selangor,drainage,poor,,draft,no measured data yet
 my-selangor,flood_risk_0_3,2,,draft,no measured data yet
@@ -236,7 +236,7 @@ my-selangor,irrigation_access_0_3,3,,draft,no measured data yet
 my-cameron,rain_mm_approx,2700,2829,measured,CHIRPS (ClimateSERV)
 my-cameron,mean_temp_c_approx,18.0,18.1,measured,NASA POWER
 my-cameron,dry_months_approx,2,0,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-my-cameron,soil_texture,clay_loam,sandy,measured,ISRIC SoilGrids 0-30 cm
+my-cameron,soil_texture,clay_loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
 my-cameron,slope_pct_approx,25.0,8,measured,"NASA SRTM, mean within ~1.5 km"
 my-cameron,drainage,good,,draft,no measured data yet
 my-cameron,flood_risk_0_3,0,,draft,no measured data yet
@@ -245,7 +245,7 @@ my-cameron,irrigation_access_0_3,2,,draft,no measured data yet
 my-johor,rain_mm_approx,2400,2423,measured,CHIRPS (ClimateSERV)
 my-johor,mean_temp_c_approx,27.0,26.7,measured,NASA POWER
 my-johor,dry_months_approx,2,0,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-my-johor,soil_texture,sandy_loam,sandy,measured,ISRIC SoilGrids 0-30 cm
+my-johor,soil_texture,sandy_loam,clay,measured,ISRIC SoilGrids 0-30 cm
 my-johor,slope_pct_approx,3.0,1.6,measured,"NASA SRTM, mean within ~1.5 km"
 my-johor,drainage,good,,draft,no measured data yet
 my-johor,flood_risk_0_3,1,,draft,no measured data yet
@@ -263,7 +263,7 @@ my-pahang,irrigation_access_0_3,1,,draft,no measured data yet
 my-sarawak,rain_mm_approx,3000,3610,measured,CHIRPS (ClimateSERV)
 my-sarawak,mean_temp_c_approx,27.0,26.0,measured,NASA POWER
 my-sarawak,dry_months_approx,1,0,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-my-sarawak,soil_texture,clay,sandy,measured,ISRIC SoilGrids 0-30 cm
+my-sarawak,soil_texture,clay,clay,measured,ISRIC SoilGrids 0-30 cm
 my-sarawak,slope_pct_approx,1.0,0.7,measured,"NASA SRTM, mean within ~1.5 km"
 my-sarawak,drainage,poor,,draft,no measured data yet
 my-sarawak,flood_risk_0_3,2,,draft,no measured data yet
@@ -272,7 +272,7 @@ my-sarawak,irrigation_access_0_3,1,,draft,no measured data yet
 my-sabah,rain_mm_approx,2000,2125,measured,CHIRPS (ClimateSERV)
 my-sabah,mean_temp_c_approx,26.5,25.4,measured,NASA POWER
 my-sabah,dry_months_approx,3,0,measured,CHIRPS (ClimateSERV) rain vs crop water demand
-my-sabah,soil_texture,clay_loam,sandy,measured,ISRIC SoilGrids 0-30 cm
+my-sabah,soil_texture,clay_loam,clay_loam,measured,ISRIC SoilGrids 0-30 cm
 my-sabah,slope_pct_approx,3.0,2.0,measured,"NASA SRTM, mean within ~1.5 km"
 my-sabah,drainage,moderate,,draft,no measured data yet
 my-sabah,flood_risk_0_3,2,,draft,no measured data yet

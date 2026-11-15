@@ -4,7 +4,7 @@
   "installCommand": "npm ci",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "rewrites": [{ "source": "/((?!assets/|data/|landing/|brand/|favicon.svg).*)", "destination": "/index.html" }],
+  "rewrites": [{ "source": "/((?!assets/|data/|landing/|brand/|favicon.svg|robots.txt|manifest.webmanifest).*)", "destination": "/index.html" }],
   "headers": [
     {
       "source": "/(.*)",

@@ -57,7 +57,7 @@ export function SiteNav({ onHome, onOpenApp, onSkill, current, overHero }: SiteN
 }
 
 /** A product screenshot set in a frosted-glass pane with a browser-style top bar. */
-export function GlassShot({ src, alt, caption, className, tilt = 0 }: { src: string; alt: string; caption?: ReactNode; className?: string; tilt?: number }) {
+export function GlassShot({ src, alt, caption, className, tilt = 0, priority = false }: { src: string; alt: string; caption?: ReactNode; className?: string; tilt?: number; priority?: boolean }) {
   return (
     <figure className={cn('group relative', className)} style={{ transform: tilt ? `perspective(1600px) rotateY(${tilt}deg)` : undefined }}>
       <div className="rounded-[22px] border border-white/50 bg-white/30 p-2 shadow-[0_30px_80px_-30px_rgba(20,40,20,0.55),inset_0_1px_0_rgba(255,255,255,0.7)] backdrop-blur-xl transition-transform duration-500 group-hover:-translate-y-1">
@@ -66,7 +66,7 @@ export function GlassShot({ src, alt, caption, className, tilt = 0 }: { src: str
           <span className="h-2.5 w-2.5 rounded-full bg-white/60" />
           <span className="h-2.5 w-2.5 rounded-full bg-white/40" />
         </div>
-        <img src={src} alt={alt} width={1920} height={1200} loading="lazy" decoding="async" className="block h-auto w-full rounded-[14px] border border-stone-900/10" />
+        <img src={src} alt={alt} width={1920} height={1200} loading={priority ? 'eager' : 'lazy'} decoding="async" className="block h-auto w-full rounded-[14px] border border-stone-900/10" />
       </div>
       {caption && <figcaption className="mt-3 px-1 text-sm font-medium text-stone-700">{caption}</figcaption>}
     </figure>

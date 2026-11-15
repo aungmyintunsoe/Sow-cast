@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#2c8742" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
     <title>Sowcast: crop rotations from satellite data</title>
     <meta name="description" content="Sowcast turns NASA and open satellite records into a rain calendar, a 2035 outlook and crop rotations for farms in Southeast Asia, with a printable plan." />
     <!-- Link previews (Slack, WhatsApp, X). Replace with the absolute URL once the Vercel domain is set. -->
@@ -14,6 +15,17 @@
     <meta property="og:description" content="24 years of satellite weather, greenness and soil data, turned into crop rotations and a printable plan." />
     <meta property="og:image" content="/brand/og-image.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Sowcast",
+        "description": "Crop rotations from NASA and open satellite data for farms in Southeast Asia: rain calendar, 2035 outlook and a printable plan.",
+        "applicationCategory": "AgricultureApplication",
+        "operatingSystem": "Any (web browser)",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
     <!-- Start the two core data files downloading in parallel with the app code -->
     <link rel="preload" href="/data/regions/index.json" as="fetch" crossorigin />
     <link rel="preload" href="/data/crops.json" as="fetch" crossorigin />
@@ -26,6 +38,13 @@
   </head>
   <body class="bg-stone-50 text-stone-900 antialiased selection:bg-brand-500 selection:text-white">
     <div id="root"></div>
+    <noscript>
+      <main style="max-width:40rem;margin:4rem auto;padding:0 1rem;font-family:system-ui,sans-serif;line-height:1.6">
+        <h1>Sowcast: know what your land can grow before you plant it</h1>
+        <p>Sowcast turns 24 years of NASA and open satellite data into a rain calendar, a 2035 outlook and crop rotations for 31 farming regions in Myanmar, Thailand, Vietnam, Cambodia and Malaysia, with a printable plan.</p>
+        <p>This app needs JavaScript. Please enable it and reload.</p>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

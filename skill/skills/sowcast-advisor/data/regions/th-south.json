@@ -386,13 +386,13 @@
     "note": null
   },
   "soil": {
-    "texture": "sand",
-    "organic_matter": "very low",
-    "drainage": "well",
-    "water_holding": "low",
+    "texture": "clay loam",
+    "organic_matter": "high",
+    "drainage": "moderate",
+    "water_holding": "moderate",
     "slope_pct": 2.02,
     "erosion_risk": "medium",
-    "sampled_km_from_town": 0,
+    "sampled_km_from_town": 3,
     "source": "ISRIC SoilGrids + NASA SRTM"
   },
   "priors": {
@@ -439,7 +439,7 @@
     {
       "input": "soil_texture",
       "draft": "sandy_loam",
-      "measured": "sandy",
+      "measured": "clay_loam",
       "used": "measured",
       "source": "ISRIC SoilGrids 0-30 cm"
     },
@@ -560,81 +560,10 @@
     "by_goal": {
       "balanced": [
         {
-          "id": "plan:perennial_tree+cover_legume",
-          "kind": "recommended",
-          "goal": "balanced",
-          "rank": 1,
-          "name": "Tree crops with Legume cover crop",
-          "tagline": null,
-          "plan_type": "Young-tree intercrop plan",
-          "sequence": [
-            "perennial_tree+cover_legume"
-          ],
-          "goal_match": 69,
-          "change_vs_current": null,
-          "scores": {
-            "soil": 75,
-            "market": 29,
-            "water": 76,
-            "resilience": 73,
-            "low_cost": 66,
-            "suitability": 65
-          },
-          "why": [
-            "Legume cover crop fix nitrogen (~80-150 kg N/ha in biomass (rough))",
-            "Average ground-cover score 5.0/5",
-            "Average income score 1.0/5 (rough)",
-            "Sold as soil"
-          ],
-          "cautions": [],
-          "evidence": [],
-          "calendar": {
-            "rows": [
-              {
-                "label": "Trees",
-                "cells": [
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree"
-                ]
-              },
-              {
-                "label": "Between rows",
-                "cells": [
-                  "cover_legume",
-                  "cover_legume",
-                  "cover_legume",
-                  "cover_legume",
-                  "cover_legume",
-                  "cover_legume",
-                  "cover_legume",
-                  "cover_legume",
-                  "cover_legume",
-                  "cover_legume",
-                  "cover_legume",
-                  "cover_legume"
-                ]
-              }
-            ],
-            "approximate": true
-          },
-          "confidence": "low",
-          "basis": "Team recommender (rec.py) on measured data"
-        },
-        {
           "id": "plan:perennial_tree+green_gram",
           "kind": "recommended",
           "goal": "balanced",
-          "rank": 2,
+          "rank": 1,
           "name": "Tree crops with Green gram",
           "tagline": null,
           "plan_type": "Young-tree intercrop plan",
@@ -649,7 +578,7 @@
             "water": 84,
             "resilience": 59,
             "low_cost": 58,
-            "suitability": 52
+            "suitability": 54
           },
           "why": [
             "Green gram fix nitrogen (~30-60 kg N/ha (rough))",
@@ -704,6 +633,77 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
+          "id": "plan:perennial_tree+cover_legume",
+          "kind": "recommended",
+          "goal": "balanced",
+          "rank": 2,
+          "name": "Tree crops with Legume cover crop",
+          "tagline": null,
+          "plan_type": "Young-tree intercrop plan",
+          "sequence": [
+            "perennial_tree+cover_legume"
+          ],
+          "goal_match": 69,
+          "change_vs_current": null,
+          "scores": {
+            "soil": 75,
+            "market": 29,
+            "water": 76,
+            "resilience": 73,
+            "low_cost": 66,
+            "suitability": 67
+          },
+          "why": [
+            "Legume cover crop fix nitrogen (~80-150 kg N/ha in biomass (rough))",
+            "Average ground-cover score 5.0/5",
+            "Average income score 1.0/5 (rough)",
+            "Sold as soil"
+          ],
+          "cautions": [],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Trees",
+                "cells": [
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree"
+                ]
+              },
+              {
+                "label": "Between rows",
+                "cells": [
+                  "cover_legume",
+                  "cover_legume",
+                  "cover_legume",
+                  "cover_legume",
+                  "cover_legume",
+                  "cover_legume",
+                  "cover_legume",
+                  "cover_legume",
+                  "cover_legume",
+                  "cover_legume",
+                  "cover_legume",
+                  "cover_legume"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
           "id": "plan:perennial_tree+cowpea",
           "kind": "recommended",
           "goal": "balanced",
@@ -714,7 +714,7 @@
           "sequence": [
             "perennial_tree+cowpea"
           ],
-          "goal_match": 66,
+          "goal_match": 64,
           "change_vs_current": null,
           "scores": {
             "soil": 68,
@@ -722,7 +722,7 @@
             "water": 84,
             "resilience": 59,
             "low_cost": 58,
-            "suitability": 56
+            "suitability": 54
           },
           "why": [
             "Cowpea fix nitrogen (~40-80 kg N/ha (rough))",
@@ -797,7 +797,7 @@
             "water": 76,
             "resilience": 73,
             "low_cost": 66,
-            "suitability": 65
+            "suitability": 67
           },
           "why": [
             "Legume cover crop fix nitrogen (~80-150 kg N/ha in biomass (rough))",
@@ -858,7 +858,7 @@
           "sequence": [
             "perennial_tree+cowpea"
           ],
-          "goal_match": 72,
+          "goal_match": 71,
           "change_vs_current": null,
           "scores": {
             "soil": 68,
@@ -866,7 +866,7 @@
             "water": 84,
             "resilience": 59,
             "low_cost": 58,
-            "suitability": 56
+            "suitability": 54
           },
           "why": [
             "Cowpea fix nitrogen (~40-80 kg N/ha (rough))",
@@ -919,32 +919,32 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:perennial_tree+groundnut",
+          "id": "plan:perennial_tree+green_gram",
           "kind": "recommended",
           "goal": "soil_health",
           "rank": 3,
-          "name": "Tree crops with Groundnut",
+          "name": "Tree crops with Green gram",
           "tagline": null,
           "plan_type": "Young-tree intercrop plan",
           "sequence": [
-            "perennial_tree+groundnut"
+            "perennial_tree+green_gram"
           ],
-          "goal_match": 70,
+          "goal_match": 69,
           "change_vs_current": null,
           "scores": {
             "soil": 64,
-            "market": 65,
-            "water": 76,
-            "resilience": 64,
-            "low_cost": 37,
-            "suitability": 59
+            "market": 62,
+            "water": 84,
+            "resilience": 59,
+            "low_cost": 58,
+            "suitability": 54
           },
           "why": [
-            "Groundnut fix nitrogen (~40-100 kg N/ha (rough))",
+            "Green gram fix nitrogen (~30-60 kg N/ha (rough))",
             "Average ground-cover score 3.0/5"
           ],
           "cautions": [
-            "Groundnut: flood risk"
+            "Green gram: flood risk"
           ],
           "evidence": [],
           "calendar": {
@@ -973,9 +973,9 @@
                   null,
                   null,
                   null,
-                  "groundnut",
-                  "groundnut",
-                  "groundnut",
+                  "green_gram",
+                  "green_gram",
+                  null,
                   null,
                   null,
                   null,
@@ -1002,7 +1002,7 @@
           "sequence": [
             "perennial_tree+groundnut"
           ],
-          "goal_match": 76,
+          "goal_match": 74,
           "change_vs_current": null,
           "scores": {
             "soil": 64,
@@ -1010,7 +1010,7 @@
             "water": 76,
             "resilience": 64,
             "low_cost": 37,
-            "suitability": 59
+            "suitability": 57
           },
           "why": [
             "Average income score 4.0/5 (rough)",
@@ -1074,7 +1074,7 @@
           "sequence": [
             "perennial_tree+green_gram"
           ],
-          "goal_match": 69,
+          "goal_match": 70,
           "change_vs_current": null,
           "scores": {
             "soil": 64,
@@ -1082,7 +1082,7 @@
             "water": 84,
             "resilience": 59,
             "low_cost": 58,
-            "suitability": 52
+            "suitability": 54
           },
           "why": [
             "Average income score 3.0/5 (rough)",
@@ -1145,7 +1145,7 @@
           "sequence": [
             "perennial_tree+cowpea"
           ],
-          "goal_match": 57,
+          "goal_match": 55,
           "change_vs_current": null,
           "scores": {
             "soil": 68,
@@ -1153,7 +1153,7 @@
             "water": 84,
             "resilience": 59,
             "low_cost": 58,
-            "suitability": 56
+            "suitability": 54
           },
           "why": [
             "Average income score 2.0/5 (rough)",
@@ -1208,89 +1208,17 @@
       ],
       "water_saving": [
         {
-          "id": "plan:perennial_tree+cowpea",
-          "kind": "recommended",
-          "goal": "water_saving",
-          "rank": 1,
-          "name": "Tree crops with Cowpea",
-          "tagline": null,
-          "plan_type": "Young-tree intercrop plan",
-          "sequence": [
-            "perennial_tree+cowpea"
-          ],
-          "goal_match": 78,
-          "change_vs_current": null,
-          "scores": {
-            "soil": 68,
-            "market": 47,
-            "water": 84,
-            "resilience": 59,
-            "low_cost": 58,
-            "suitability": 56
-          },
-          "why": [
-            "Average water need 2.0/5 (lower is better)",
-            "Season rain ~1504 mm",
-            "Water source: limited water (well or small pump)"
-          ],
-          "cautions": [
-            "Cowpea: flood risk"
-          ],
-          "evidence": [],
-          "calendar": {
-            "rows": [
-              {
-                "label": "Trees",
-                "cells": [
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree",
-                  "perennial_tree"
-                ]
-              },
-              {
-                "label": "Between rows",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "cowpea",
-                  "cowpea",
-                  "cowpea",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              }
-            ],
-            "approximate": true
-          },
-          "confidence": "low",
-          "basis": "Team recommender (rec.py) on measured data"
-        },
-        {
           "id": "plan:perennial_tree+green_gram",
           "kind": "recommended",
           "goal": "water_saving",
-          "rank": 2,
+          "rank": 1,
           "name": "Tree crops with Green gram",
           "tagline": null,
           "plan_type": "Young-tree intercrop plan",
           "sequence": [
             "perennial_tree+green_gram"
           ],
-          "goal_match": 76,
+          "goal_match": 77,
           "change_vs_current": null,
           "scores": {
             "soil": 64,
@@ -1298,7 +1226,7 @@
             "water": 84,
             "resilience": 59,
             "low_cost": 58,
-            "suitability": 52
+            "suitability": 54
           },
           "why": [
             "Average water need 2.0/5 (lower is better)",
@@ -1352,6 +1280,78 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
+          "id": "plan:perennial_tree+cowpea",
+          "kind": "recommended",
+          "goal": "water_saving",
+          "rank": 2,
+          "name": "Tree crops with Cowpea",
+          "tagline": null,
+          "plan_type": "Young-tree intercrop plan",
+          "sequence": [
+            "perennial_tree+cowpea"
+          ],
+          "goal_match": 76,
+          "change_vs_current": null,
+          "scores": {
+            "soil": 68,
+            "market": 47,
+            "water": 84,
+            "resilience": 59,
+            "low_cost": 58,
+            "suitability": 54
+          },
+          "why": [
+            "Average water need 2.0/5 (lower is better)",
+            "Season rain ~1504 mm",
+            "Water source: limited water (well or small pump)"
+          ],
+          "cautions": [
+            "Cowpea: flood risk"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Trees",
+                "cells": [
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree",
+                  "perennial_tree"
+                ]
+              },
+              {
+                "label": "Between rows",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "cowpea",
+                  "cowpea",
+                  "cowpea",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
           "id": "plan:perennial_tree+sweet_potato",
           "kind": "recommended",
           "goal": "water_saving",
@@ -1362,7 +1362,7 @@
           "sequence": [
             "perennial_tree+sweet_potato"
           ],
-          "goal_match": 72,
+          "goal_match": 71,
           "change_vs_current": null,
           "scores": {
             "soil": 35,
@@ -1444,7 +1444,7 @@
             "water": 76,
             "resilience": 73,
             "low_cost": 66,
-            "suitability": 65
+            "suitability": 67
           },
           "why": [
             "Tolerates flooding common here",
@@ -1566,32 +1566,32 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:perennial_tree+groundnut",
+          "id": "plan:perennial_tree+green_gram",
           "kind": "recommended",
           "goal": "low_risk",
           "rank": 3,
-          "name": "Tree crops with Groundnut",
+          "name": "Tree crops with Green gram",
           "tagline": null,
           "plan_type": "Young-tree intercrop plan",
           "sequence": [
-            "perennial_tree+groundnut"
+            "perennial_tree+green_gram"
           ],
-          "goal_match": 56,
+          "goal_match": 54,
           "change_vs_current": null,
           "scores": {
             "soil": 64,
-            "market": 65,
-            "water": 76,
-            "resilience": 64,
-            "low_cost": 37,
-            "suitability": 59
+            "market": 62,
+            "water": 84,
+            "resilience": 59,
+            "low_cost": 58,
+            "suitability": 54
           },
           "why": [
             "Tolerates flooding common here",
             "1 different crop(s) spread the risk"
           ],
           "cautions": [
-            "Groundnut: flood risk"
+            "Green gram: flood risk"
           ],
           "evidence": [],
           "calendar": {
@@ -1620,9 +1620,9 @@
                   null,
                   null,
                   null,
-                  "groundnut",
-                  "groundnut",
-                  "groundnut",
+                  "green_gram",
+                  "green_gram",
+                  null,
                   null,
                   null,
                   null,
@@ -1657,7 +1657,7 @@
             "water": 76,
             "resilience": 73,
             "low_cost": 66,
-            "suitability": 65
+            "suitability": 67
           },
           "why": [
             "Mean labour need 2.0/5, fertiliser need 1.0/5 (legumes reduce fertiliser need)"
@@ -1717,7 +1717,7 @@
           "sequence": [
             "perennial_tree+green_gram"
           ],
-          "goal_match": 72,
+          "goal_match": 73,
           "change_vs_current": null,
           "scores": {
             "soil": 64,
@@ -1725,7 +1725,7 @@
             "water": 84,
             "resilience": 59,
             "low_cost": 58,
-            "suitability": 52
+            "suitability": 54
           },
           "why": [
             "Mean labour need 3.0/5, fertiliser need 1.0/5 (legumes reduce fertiliser need)"
@@ -1787,7 +1787,7 @@
           "sequence": [
             "perennial_tree+cowpea"
           ],
-          "goal_match": 70,
+          "goal_match": 69,
           "change_vs_current": null,
           "scores": {
             "soil": 68,
@@ -1795,7 +1795,7 @@
             "water": 84,
             "resilience": 59,
             "low_cost": 58,
-            "suitability": 56
+            "suitability": 54
           },
           "why": [
             "Mean labour need 3.0/5, fertiliser need 1.0/5 (legumes reduce fertiliser need)"
@@ -3188,15 +3188,31 @@
     },
     "crop_outlook": [
       {
-        "crop": "groundnut",
-        "fit_now": 56,
-        "fit_trend_2035": 56,
-        "fit_bad_year_2035": 56,
+        "crop": "soybean",
+        "fit_now": 54,
+        "fit_trend_2035": 54,
+        "fit_bad_year_2035": 54,
         "water_now": 1,
         "water_bad_year": 1
       },
       {
-        "crop": "cowpea",
+        "crop": "groundnut",
+        "fit_now": 54,
+        "fit_trend_2035": 54,
+        "fit_bad_year_2035": 54,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "black_gram",
+        "fit_now": 54,
+        "fit_trend_2035": 54,
+        "fit_bad_year_2035": 54,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "pigeon_pea",
         "fit_now": 53,
         "fit_trend_2035": 53,
         "fit_bad_year_2035": 53,
@@ -3204,7 +3220,23 @@
         "water_bad_year": 1
       },
       {
-        "crop": "pigeon_pea",
+        "crop": "green_gram",
+        "fit_now": 52,
+        "fit_trend_2035": 52,
+        "fit_bad_year_2035": 52,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "cowpea",
+        "fit_now": 52,
+        "fit_trend_2035": 52,
+        "fit_bad_year_2035": 52,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "chickpea",
         "fit_now": 51,
         "fit_trend_2035": 51,
         "fit_bad_year_2035": 51,
@@ -3212,26 +3244,42 @@
         "water_bad_year": 1
       },
       {
-        "crop": "green_gram",
-        "fit_now": 50,
-        "fit_trend_2035": 50,
-        "fit_bad_year_2035": 50,
+        "crop": "rice",
+        "fit_now": 51,
+        "fit_trend_2035": 51,
+        "fit_bad_year_2035": 51,
         "water_now": 1,
         "water_bad_year": 1
       },
       {
-        "crop": "soybean",
-        "fit_now": 48,
-        "fit_trend_2035": 48,
-        "fit_bad_year_2035": 48,
+        "crop": "salt_rice",
+        "fit_now": 49,
+        "fit_trend_2035": 49,
+        "fit_bad_year_2035": 49,
         "water_now": 1,
         "water_bad_year": 1
       },
       {
-        "crop": "black_gram",
-        "fit_now": 48,
-        "fit_trend_2035": 48,
-        "fit_bad_year_2035": 48,
+        "crop": "sugarcane",
+        "fit_now": 47,
+        "fit_trend_2035": 47,
+        "fit_bad_year_2035": 45,
+        "water_now": 1,
+        "water_bad_year": 0.95
+      },
+      {
+        "crop": "maize",
+        "fit_now": 46,
+        "fit_trend_2035": 46,
+        "fit_bad_year_2035": 46,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "cassava",
+        "fit_now": 46,
+        "fit_trend_2035": 46,
+        "fit_bad_year_2035": 46,
         "water_now": 1,
         "water_bad_year": 1
       },
@@ -3244,42 +3292,42 @@
         "water_bad_year": 1
       },
       {
-        "crop": "chickpea",
-        "fit_now": 45,
-        "fit_trend_2035": 45,
-        "fit_bad_year_2035": 45,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
         "crop": "sorghum",
-        "fit_now": 40,
-        "fit_trend_2035": 40,
-        "fit_bad_year_2035": 40,
+        "fit_now": 43,
+        "fit_trend_2035": 43,
+        "fit_bad_year_2035": 43,
         "water_now": 1,
         "water_bad_year": 1
       },
       {
         "crop": "sesame",
-        "fit_now": 40,
-        "fit_trend_2035": 40,
-        "fit_bad_year_2035": 40,
+        "fit_now": 43,
+        "fit_trend_2035": 43,
+        "fit_bad_year_2035": 43,
         "water_now": 1,
         "water_bad_year": 1
       },
       {
-        "crop": "rice",
-        "fit_now": 39,
-        "fit_trend_2035": 39,
-        "fit_bad_year_2035": 39,
+        "crop": "sunflower",
+        "fit_now": 42,
+        "fit_trend_2035": 42,
+        "fit_bad_year_2035": 42,
         "water_now": 1,
         "water_bad_year": 1
       },
       {
         "crop": "pineapple",
-        "fit_now": 39,
-        "fit_trend_2035": 39,
-        "fit_bad_year_2035": 39,
+        "fit_now": 42,
+        "fit_trend_2035": 42,
+        "fit_bad_year_2035": 42,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "vegetables",
+        "fit_now": 41,
+        "fit_trend_2035": 41,
+        "fit_bad_year_2035": 41,
         "water_now": 1,
         "water_bad_year": 1
       },
@@ -3292,66 +3340,18 @@
         "water_bad_year": 1
       },
       {
-        "crop": "salt_rice",
-        "fit_now": 38,
-        "fit_trend_2035": 38,
-        "fit_bad_year_2035": 38,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "sunflower",
-        "fit_now": 35,
-        "fit_trend_2035": 35,
-        "fit_bad_year_2035": 35,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "vegetables",
-        "fit_now": 34,
-        "fit_trend_2035": 34,
-        "fit_bad_year_2035": 34,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "cassava",
-        "fit_now": 34,
-        "fit_trend_2035": 34,
-        "fit_bad_year_2035": 34,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
         "crop": "sunn_hemp",
-        "fit_now": 30,
-        "fit_trend_2035": 30,
-        "fit_bad_year_2035": 30,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "sugarcane",
         "fit_now": 29,
         "fit_trend_2035": 29,
-        "fit_bad_year_2035": 27,
-        "water_now": 1,
-        "water_bad_year": 0.95
-      },
-      {
-        "crop": "maize",
-        "fit_now": 28,
-        "fit_trend_2035": 28,
-        "fit_bad_year_2035": 28,
+        "fit_bad_year_2035": 29,
         "water_now": 1,
         "water_bad_year": 1
       },
       {
         "crop": "potato",
-        "fit_now": 16,
-        "fit_trend_2035": 10,
-        "fit_bad_year_2035": 5,
+        "fit_now": 22,
+        "fit_trend_2035": 15,
+        "fit_bad_year_2035": 11,
         "water_now": 1,
         "water_bad_year": 1
       }
@@ -3383,7 +3383,7 @@
     {
       "crop": "oil_palm",
       "rank": 1,
-      "fit": 85,
+      "fit": 94,
       "fit_band": "high",
       "trend": "flat",
       "limits": [],
@@ -3396,7 +3396,7 @@
       "parts": {
         "climate": 1,
         "water": 0.98,
-        "soil": 0.76,
+        "soil": 1,
         "risk": 0.83,
         "benefit": 0.47
       },
@@ -3410,7 +3410,7 @@
     {
       "crop": "rubber",
       "rank": 2,
-      "fit": 81,
+      "fit": 89,
       "fit_band": "high",
       "trend": "flat",
       "limits": [
@@ -3425,11 +3425,11 @@
       "parts": {
         "climate": 1,
         "water": 1,
-        "soil": 0.76,
+        "soil": 1,
         "risk": 0.75,
         "benefit": 0.39
       },
-      "label": "Good fit",
+      "label": "Very good fit",
       "planting_window": "May-Jun (start of wet season)",
       "harvest": "multi-year",
       "sow_month": 6,
@@ -3447,8 +3447,7 @@
       ],
       "why": [
         "rainfall (~1504 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "copes with sandy soil"
+        "temperature (~26 C) is in its range"
       ],
       "common_locally": false,
       "parts": {
@@ -3468,22 +3467,22 @@
     {
       "crop": "cover_legume",
       "rank": 4,
-      "fit": 62,
+      "fit": 63,
       "fit_band": "medium",
       "trend": "flat",
       "limits": [],
       "why": [
         "rainfall (~1504 mm in season) covers its water need",
         "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "fixes nitrogen for the next crop"
       ],
       "common_locally": false,
       "parts": {
         "climate": 1,
         "water": 1,
-        "soil": 0.88,
+        "soil": 1,
         "risk": 0.83,
-        "benefit": 0.72
+        "benefit": 0.64
       },
       "label": "Possible fit",
       "planting_window": "May-Jun (start of wet season)",
@@ -3493,10 +3492,10 @@
       "rotation_tip": "Soil-building crop with no direct income; plough in or use as ground cover."
     },
     {
-      "crop": "groundnut",
+      "crop": "soybean",
       "rank": 5,
-      "fit": 56,
-      "fit_band": "medium",
+      "fit": 54,
+      "fit_band": "low",
       "trend": "flat",
       "limits": [
         "flood risk"
@@ -3504,7 +3503,7 @@
       "why": [
         "rainfall (~1504 mm in season) covers its water need",
         "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "fixes nitrogen for the next crop"
       ],
       "common_locally": false,
       "parts": {
@@ -3512,18 +3511,76 @@
         "water": 1,
         "soil": 1,
         "risk": 0.75,
-        "benefit": 0.75
+        "benefit": 0.67
       },
-      "label": "Possible fit",
+      "label": "Poor fit",
       "planting_window": "May-Jun",
       "harvest": "~Aug (rough)",
       "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
     },
     {
-      "crop": "cowpea",
+      "crop": "groundnut",
       "rank": 6,
+      "fit": 54,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~1504 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.75,
+        "benefit": 0.67
+      },
+      "label": "Poor fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Aug (rough)",
+      "sow_month": 5,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "black_gram",
+      "rank": 7,
+      "fit": 54,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~1504 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.75,
+        "benefit": 0.67
+      },
+      "label": "Poor fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Aug (rough)",
+      "sow_month": 5,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "pigeon_pea",
+      "rank": 8,
       "fit": 53,
       "fit_band": "low",
       "trend": "flat",
@@ -3533,7 +3590,7 @@
       "why": [
         "rainfall (~1504 mm in season) covers its water need",
         "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "fixes nitrogen for the next crop"
       ],
       "common_locally": false,
       "parts": {
@@ -3541,18 +3598,76 @@
         "water": 1,
         "soil": 1,
         "risk": 0.67,
-        "benefit": 0.74
+        "benefit": 0.73
+      },
+      "label": "Poor fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Nov (rough)",
+      "sow_month": 5,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "green_gram",
+      "rank": 9,
+      "fit": 52,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~1504 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.67,
+        "benefit": 0.67
       },
       "label": "Poor fit",
       "planting_window": "May-Jun",
       "harvest": "~Jul (rough)",
       "sow_month": 5,
       "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
     },
     {
-      "crop": "pigeon_pea",
-      "rank": 7,
+      "crop": "cowpea",
+      "rank": 10,
+      "fit": 52,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~1504 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.67,
+        "benefit": 0.65
+      },
+      "label": "Poor fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Jul (rough)",
+      "sow_month": 5,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "chickpea",
+      "rank": 11,
       "fit": 51,
       "fit_band": "low",
       "trend": "flat",
@@ -3560,29 +3675,82 @@
         "flood risk"
       ],
       "why": [
-        "rainfall (~1504 mm in season) covers its water need",
         "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "fixes nitrogen for the next crop"
       ],
       "common_locally": false,
       "parts": {
         "climate": 1,
         "water": 1,
-        "soil": 0.88,
-        "risk": 0.67,
-        "benefit": 0.82
+        "soil": 1,
+        "risk": 0.66,
+        "benefit": 0.64
+      },
+      "label": "Poor fit",
+      "planting_window": "Dec-Jan (after monsoon, on residual moisture)",
+      "harvest": "~Mar (rough)",
+      "sow_month": 12,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "rice",
+      "rank": 12,
+      "fit": 51,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1504 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "tolerates standing water and flooding"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.33
       },
       "label": "Poor fit",
       "planting_window": "May-Jun",
-      "harvest": "~Nov (rough)",
+      "harvest": "~Sep (rough)",
       "sow_month": 5,
       "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
     },
     {
-      "crop": "green_gram",
-      "rank": 8,
-      "fit": 50,
+      "crop": "salt_rice",
+      "rank": 13,
+      "fit": 49,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1504 mm in season) covers its water need",
+        "temperature (~26 C) is in its range",
+        "tolerates standing water and flooding"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.29
+      },
+      "label": "Poor fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Sep (rough)",
+      "sow_month": 5,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "sugarcane",
+      "rank": 14,
+      "fit": 47,
       "fit_band": "low",
       "trend": "flat",
       "limits": [
@@ -3590,85 +3758,26 @@
       ],
       "why": [
         "rainfall (~1504 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "temperature (~26 C) is in its range"
       ],
       "common_locally": false,
       "parts": {
         "climate": 1,
         "water": 1,
-        "soil": 0.88,
-        "risk": 0.67,
-        "benefit": 0.75
-      },
-      "label": "Poor fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Jul (rough)",
-      "sow_month": 5,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
-      "crop": "soybean",
-      "rank": 9,
-      "fit": 48,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "flood risk"
-      ],
-      "why": [
-        "rainfall (~1504 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
+        "soil": 1,
         "risk": 0.75,
-        "benefit": 0.75
+        "benefit": 0.39
       },
       "label": "Poor fit",
       "planting_window": "May-Jun",
-      "harvest": "~Aug (rough)",
+      "harvest": "~Apr (rough)",
       "sow_month": 5,
       "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
     },
     {
-      "crop": "black_gram",
-      "rank": 10,
-      "fit": 48,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "flood risk"
-      ],
-      "why": [
-        "rainfall (~1504 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
-        "risk": 0.75,
-        "benefit": 0.75
-      },
-      "label": "Poor fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Aug (rough)",
-      "sow_month": 5,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
-      "crop": "sweet_potato",
-      "rank": 11,
+      "crop": "maize",
+      "rank": 15,
       "fit": 46,
       "fit_band": "low",
       "trend": "flat",
@@ -3677,8 +3786,63 @@
       ],
       "why": [
         "rainfall (~1504 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "copes with sandy soil"
+        "temperature (~26 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.75,
+        "benefit": 0.36
+      },
+      "label": "Poor fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Sep (rough)",
+      "sow_month": 5,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "cassava",
+      "rank": 16,
+      "fit": 46,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~1504 mm in season) covers its water need",
+        "temperature (~26 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.75,
+        "benefit": 0.35
+      },
+      "label": "Poor fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Mar (rough)",
+      "sow_month": 5,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "sweet_potato",
+      "rank": 17,
+      "fit": 46,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~1504 mm in season) covers its water need",
+        "temperature (~26 C) is in its range"
       ],
       "common_locally": false,
       "parts": {
@@ -3696,37 +3860,9 @@
       "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
     },
     {
-      "crop": "chickpea",
-      "rank": 12,
-      "fit": 45,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "flood risk"
-      ],
-      "why": [
-        "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
-        "risk": 0.66,
-        "benefit": 0.72
-      },
-      "label": "Poor fit",
-      "planting_window": "Dec-Jan (after monsoon, on residual moisture)",
-      "harvest": "~Mar (rough)",
-      "sow_month": 12,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
       "crop": "sorghum",
-      "rank": 13,
-      "fit": 40,
+      "rank": 18,
+      "fit": 43,
       "fit_band": "low",
       "trend": "flat",
       "limits": [
@@ -3740,7 +3876,7 @@
       "parts": {
         "climate": 1,
         "water": 1,
-        "soil": 0.88,
+        "soil": 1,
         "risk": 0.75,
         "benefit": 0.28
       },
@@ -3753,8 +3889,8 @@
     },
     {
       "crop": "sesame",
-      "rank": 14,
-      "fit": 40,
+      "rank": 19,
+      "fit": 43,
       "fit_band": "low",
       "trend": "flat",
       "limits": [
@@ -3768,7 +3904,7 @@
       "parts": {
         "climate": 1,
         "water": 1,
-        "soil": 0.88,
+        "soil": 1,
         "risk": 0.66,
         "benefit": 0.33
       },
@@ -3780,38 +3916,9 @@
       "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
     },
     {
-      "crop": "rice",
-      "rank": 15,
-      "fit": 39,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "sandy, low-water-holding soil"
-      ],
-      "why": [
-        "rainfall (~1504 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "tolerates standing water and flooding"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.64,
-        "risk": 1,
-        "benefit": 0.33
-      },
-      "label": "Poor fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Sep (rough)",
-      "sow_month": 5,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
-    },
-    {
-      "crop": "pineapple",
-      "rank": 16,
-      "fit": 39,
+      "crop": "sunflower",
+      "rank": 20,
+      "fit": 42,
       "fit_band": "low",
       "trend": "flat",
       "limits": [
@@ -3825,7 +3932,35 @@
       "parts": {
         "climate": 1,
         "water": 1,
-        "soil": 0.88,
+        "soil": 1,
+        "risk": 0.67,
+        "benefit": 0.32
+      },
+      "label": "Poor fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Aug (rough)",
+      "sow_month": 5,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "pineapple",
+      "rank": 21,
+      "fit": 42,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~1504 mm in season) covers its water need",
+        "temperature (~26 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
         "risk": 0.67,
         "benefit": 0.32
       },
@@ -3837,8 +3972,35 @@
       "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
     },
     {
+      "crop": "vegetables",
+      "rank": 22,
+      "fit": 41,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "temperature (~26 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.66,
+        "benefit": 0.29
+      },
+      "label": "Poor fit",
+      "planting_window": "year-round; avoid the heaviest rain weeks",
+      "harvest": "~Jul (rough)",
+      "sow_month": 5,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
       "crop": "watermelon",
-      "rank": 17,
+      "rank": 23,
       "fit": 38,
       "fit_band": "low",
       "trend": "flat",
@@ -3846,8 +4008,7 @@
         "flood risk"
       ],
       "why": [
-        "temperature (~26 C) is in its range",
-        "copes with sandy soil"
+        "temperature (~26 C) is in its range"
       ],
       "common_locally": false,
       "parts": {
@@ -3865,122 +4026,9 @@
       "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
     },
     {
-      "crop": "salt_rice",
-      "rank": 18,
-      "fit": 38,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "sandy, low-water-holding soil"
-      ],
-      "why": [
-        "rainfall (~1504 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "tolerates standing water and flooding"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.64,
-        "risk": 1,
-        "benefit": 0.29
-      },
-      "label": "Poor fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Sep (rough)",
-      "sow_month": 5,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
-    },
-    {
-      "crop": "sunflower",
-      "rank": 19,
-      "fit": 35,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "flood risk"
-      ],
-      "why": [
-        "rainfall (~1504 mm in season) covers its water need",
-        "temperature (~26 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
-        "risk": 0.67,
-        "benefit": 0.32
-      },
-      "label": "Poor fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Aug (rough)",
-      "sow_month": 5,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
-    },
-    {
-      "crop": "vegetables",
-      "rank": 20,
-      "fit": 34,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "flood risk"
-      ],
-      "why": [
-        "temperature (~26 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
-        "risk": 0.66,
-        "benefit": 0.29
-      },
-      "label": "Poor fit",
-      "planting_window": "year-round; avoid the heaviest rain weeks",
-      "harvest": "~Jul (rough)",
-      "sow_month": 5,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
-    },
-    {
-      "crop": "cassava",
-      "rank": 21,
-      "fit": 34,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "flood risk"
-      ],
-      "why": [
-        "rainfall (~1504 mm in season) covers its water need",
-        "temperature (~26 C) is in its range",
-        "copes with sandy soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 1,
-        "risk": 0.75,
-        "benefit": 0.35
-      },
-      "label": "Poor fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Mar (rough)",
-      "sow_month": 5,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
-    },
-    {
       "crop": "sunn_hemp",
-      "rank": 22,
-      "fit": 30,
+      "rank": 24,
+      "fit": 29,
       "fit_band": "low",
       "trend": "flat",
       "limits": [
@@ -3989,7 +4037,7 @@
       "why": [
         "rainfall (~1504 mm in season) covers its water need",
         "temperature (~26 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "fixes nitrogen for the next crop"
       ],
       "common_locally": false,
       "parts": {
@@ -3997,7 +4045,7 @@
         "water": 1,
         "soil": 1,
         "risk": 0.67,
-        "benefit": 0.7
+        "benefit": 0.61
       },
       "label": "Poor fit",
       "planting_window": "May-Jun",
@@ -4007,65 +4055,9 @@
       "rotation_tip": "Soil-building crop with no direct income; plough in or use as ground cover."
     },
     {
-      "crop": "sugarcane",
-      "rank": 23,
-      "fit": 29,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "flood risk"
-      ],
-      "why": [
-        "rainfall (~1504 mm in season) covers its water need",
-        "temperature (~26 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
-        "risk": 0.75,
-        "benefit": 0.39
-      },
-      "label": "Poor fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Apr (rough)",
-      "sow_month": 5,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
-    },
-    {
-      "crop": "maize",
-      "rank": 24,
-      "fit": 28,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "flood risk"
-      ],
-      "why": [
-        "rainfall (~1504 mm in season) covers its water need",
-        "temperature (~26 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
-        "risk": 0.75,
-        "benefit": 0.36
-      },
-      "label": "Poor fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Sep (rough)",
-      "sow_month": 5,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
-    },
-    {
       "crop": "potato",
       "rank": 25,
-      "fit": 16,
+      "fit": 22,
       "fit_band": "low",
       "trend": "declining",
       "limits": [
@@ -4079,7 +4071,7 @@
       "parts": {
         "climate": 0.58,
         "water": 1,
-        "soil": 0.76,
+        "soil": 1,
         "risk": 0.66,
         "benefit": 0.29
       },

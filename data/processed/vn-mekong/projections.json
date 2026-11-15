@@ -1338,41 +1338,57 @@
  "crop_outlook": [
   {
    "crop": "rice",
-   "fit_now": 67,
-   "fit_trend_2035": 67,
-   "fit_bad_year_2035": 67,
+   "fit_now": 80,
+   "fit_trend_2035": 80,
+   "fit_bad_year_2035": 80,
    "water_now": 1.0,
    "water_bad_year": 1.0
   },
   {
    "crop": "salt_rice",
-   "fit_now": 59,
-   "fit_trend_2035": 59,
-   "fit_bad_year_2035": 59,
+   "fit_now": 73,
+   "fit_trend_2035": 73,
+   "fit_bad_year_2035": 73,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "maize",
+   "fit_now": 51,
+   "fit_trend_2035": 51,
+   "fit_bad_year_2035": 51,
    "water_now": 1.0,
    "water_bad_year": 1.0
   },
   {
    "crop": "soybean",
-   "fit_now": 51,
-   "fit_trend_2035": 51,
-   "fit_bad_year_2035": 51,
+   "fit_now": 49,
+   "fit_trend_2035": 49,
+   "fit_bad_year_2035": 49,
    "water_now": 1.0,
    "water_bad_year": 1.0
   },
   {
    "crop": "groundnut",
-   "fit_now": 51,
-   "fit_trend_2035": 51,
-   "fit_bad_year_2035": 51,
+   "fit_now": 49,
+   "fit_trend_2035": 49,
+   "fit_bad_year_2035": 49,
    "water_now": 1.0,
    "water_bad_year": 1.0
   },
   {
    "crop": "black_gram",
-   "fit_now": 51,
-   "fit_trend_2035": 51,
-   "fit_bad_year_2035": 51,
+   "fit_now": 49,
+   "fit_trend_2035": 49,
+   "fit_bad_year_2035": 49,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "sugarcane",
+   "fit_now": 46,
+   "fit_trend_2035": 46,
+   "fit_bad_year_2035": 46,
    "water_now": 1.0,
    "water_bad_year": 1.0
   },
@@ -1393,18 +1409,10 @@
    "water_bad_year": 1.0
   },
   {
-   "crop": "maize",
-   "fit_now": 40,
-   "fit_trend_2035": 40,
-   "fit_bad_year_2035": 40,
-   "water_now": 1.0,
-   "water_bad_year": 1.0
-  },
-  {
-   "crop": "pigeon_pea",
-   "fit_now": 38,
-   "fit_trend_2035": 38,
-   "fit_bad_year_2035": 38,
+   "crop": "cassava",
+   "fit_now": 41,
+   "fit_trend_2035": 41,
+   "fit_bad_year_2035": 41,
    "water_now": 1.0,
    "water_bad_year": 1.0
   },
@@ -1417,26 +1425,10 @@
    "water_bad_year": 1.0
   },
   {
-   "crop": "green_gram",
+   "crop": "pigeon_pea",
    "fit_now": 37,
    "fit_trend_2035": 37,
    "fit_bad_year_2035": 37,
-   "water_now": 1.0,
-   "water_bad_year": 1.0
-  },
-  {
-   "crop": "cowpea",
-   "fit_now": 37,
-   "fit_trend_2035": 37,
-   "fit_bad_year_2035": 37,
-   "water_now": 1.0,
-   "water_bad_year": 1.0
-  },
-  {
-   "crop": "chickpea",
-   "fit_now": 36,
-   "fit_trend_2035": 36,
-   "fit_bad_year_2035": 36,
    "water_now": 1.0,
    "water_bad_year": 1.0
   },
@@ -1449,10 +1441,26 @@
    "water_bad_year": 1.0
   },
   {
-   "crop": "sugarcane",
-   "fit_now": 34,
-   "fit_trend_2035": 34,
-   "fit_bad_year_2035": 34,
+   "crop": "green_gram",
+   "fit_now": 35,
+   "fit_trend_2035": 35,
+   "fit_bad_year_2035": 35,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "cowpea",
+   "fit_now": 35,
+   "fit_trend_2035": 35,
+   "fit_bad_year_2035": 35,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "chickpea",
+   "fit_now": 35,
+   "fit_trend_2035": 35,
+   "fit_bad_year_2035": 35,
    "water_now": 1.0,
    "water_bad_year": 1.0
   },
@@ -1461,14 +1469,6 @@
    "fit_now": 32,
    "fit_trend_2035": 32,
    "fit_bad_year_2035": 32,
-   "water_now": 1.0,
-   "water_bad_year": 1.0
-  },
-  {
-   "crop": "cassava",
-   "fit_now": 30,
-   "fit_trend_2035": 30,
-   "fit_bad_year_2035": 30,
    "water_now": 1.0,
    "water_bad_year": 1.0
   },
@@ -1490,9 +1490,9 @@
   },
   {
    "crop": "sunn_hemp",
-   "fit_now": 16,
-   "fit_trend_2035": 16,
-   "fit_bad_year_2035": 16,
+   "fit_now": 15,
+   "fit_trend_2035": 15,
+   "fit_bad_year_2035": 15,
    "water_now": 1.0,
    "water_bad_year": 1.0
   },

@@ -103,7 +103,7 @@ export function LandingPage({ onOpenApp, onSkill, onHome }: LandingPageProps) {
             animate={{ opacity: 1, x: 0, rotateY: 0 }}
             transition={{ ...SPRING, delay: 0.35 }}
           >
-            <GlassShot src="/landing/outlook.jpg" alt="Sowcast satellite brief: what the trends mean for a farm by 2035" tilt={-8} className="translate-x-6" />
+            <GlassShot priority src="/landing/outlook.jpg" alt="Sowcast satellite brief: what the trends mean for a farm by 2035" tilt={-8} className="translate-x-6" />
           </motion.div>
         </div>
       </section>

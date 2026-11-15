@@ -386,13 +386,13 @@
     "note": null
   },
   "soil": {
-    "texture": "sand",
-    "organic_matter": "very low",
-    "drainage": "well",
-    "water_holding": "low",
+    "texture": "clay loam",
+    "organic_matter": "high",
+    "drainage": "moderate",
+    "water_holding": "moderate",
     "slope_pct": 1.24,
     "erosion_risk": "low",
-    "sampled_km_from_town": 0,
+    "sampled_km_from_town": 3,
     "source": "ISRIC SoilGrids + NASA SRTM"
   },
   "priors": {
@@ -439,7 +439,7 @@
     {
       "input": "soil_texture",
       "draft": "clay",
-      "measured": "sandy",
+      "measured": "clay_loam",
       "used": "measured",
       "source": "ISRIC SoilGrids 0-30 cm"
     },
@@ -496,7 +496,7 @@
     },
     {
       "title": "Best-matched crops for this area",
-      "body": "Rice, Soybean and Groundnut score highest on climate, water and soil fit.",
+      "body": "Rice, Salt-tolerant rice and Soybean score highest on climate, water and soil fit.",
       "source": "Sowcast crop-fit score using measured climate and soil",
       "confidence": "medium",
       "badgeType": "opportunity"
@@ -529,13 +529,13 @@
         "water": 60,
         "resilience": 69,
         "low_cost": 28,
-        "suitability": 63
+        "suitability": 77
       },
       "why": [
         "The usual pattern in Coastal, based on general knowledge."
       ],
       "cautions": [
-        "Salt-tolerant rice: sandy, low-water-holding soil"
+        "None flagged by the crop-fit score; still check pests, prices and labour locally"
       ],
       "evidence": [
         "Not yet verified"
@@ -580,7 +580,7 @@
             "pigeon_pea",
             "rice"
           ],
-          "goal_match": 77,
+          "goal_match": 83,
           "change_vs_current": 26,
           "scores": {
             "soil": 88,
@@ -588,7 +588,7 @@
             "water": 76,
             "resilience": 72,
             "low_cost": 52,
-            "suitability": 68
+            "suitability": 72
           },
           "why": [
             "Black gram and Pigeon pea fix nitrogen (~30-60 kg N/ha (rough))",
@@ -598,7 +598,7 @@
             "Includes crops already grown locally (existing know-how and buyers)"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
+            "Black gram: waterlogged/heavy soil",
             "Black gram: salinity risk",
             "Pigeon pea: waterlogged/heavy soil",
             "Pigeon pea: salinity risk"
@@ -664,40 +664,39 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:black_gram|groundnut|rice",
+          "id": "plan:black_gram|pigeon_pea|salt_rice",
           "kind": "recommended",
           "goal": "balanced",
           "rank": 2,
-          "name": "Black gram then Groundnut then Rice",
+          "name": "Black gram then Pigeon pea then Salt-tolerant rice",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "black_gram",
-            "groundnut",
-            "rice"
+            "pigeon_pea",
+            "salt_rice"
           ],
-          "goal_match": 76,
-          "change_vs_current": 23.8,
+          "goal_match": 81,
+          "change_vs_current": 26.2,
           "scores": {
-            "soil": 86,
-            "market": 67,
-            "water": 73,
-            "resilience": 71,
-            "low_cost": 45,
-            "suitability": 70
+            "soil": 88,
+            "market": 62,
+            "water": 76,
+            "resilience": 76,
+            "low_cost": 53,
+            "suitability": 69
           },
           "why": [
-            "Black gram and Groundnut fix nitrogen (~30-60 kg N/ha (rough))",
+            "Black gram and Pigeon pea fix nitrogen (~30-60 kg N/ha (rough))",
             "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
-            "Average income score 3.3/5 (rough)",
-            "Sold as pulse / oilseed, staple",
-            "Hard to store (Groundnut): arrange a buyer before planting"
+            "Average income score 3.0/5 (rough)",
+            "Sold as pulse / oilseed, staple"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
+            "Black gram: waterlogged/heavy soil",
             "Black gram: salinity risk",
-            "Groundnut: waterlogged/heavy soil",
-            "Groundnut: salinity risk"
+            "Pigeon pea: waterlogged/heavy soil",
+            "Pigeon pea: salinity risk"
           ],
           "evidence": [],
           "calendar": {
@@ -726,12 +725,12 @@
                   null,
                   null,
                   null,
-                  "groundnut",
-                  "groundnut",
-                  "groundnut",
-                  null,
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -743,10 +742,10 @@
                   null,
                   null,
                   null,
-                  "rice",
-                  "rice",
-                  "rice",
-                  "rice",
+                  "salt_rice",
+                  "salt_rice",
+                  "salt_rice",
+                  "salt_rice",
                   null,
                   null,
                   null,
@@ -760,40 +759,40 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:black_gram|rice|soybean",
+          "id": "plan:green_gram|pigeon_pea|rice",
           "kind": "recommended",
           "goal": "balanced",
           "rank": 3,
-          "name": "Black gram then Rice then Soybean",
+          "name": "Green gram then Pigeon pea then Rice",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
-            "black_gram",
-            "rice",
-            "soybean"
+            "green_gram",
+            "pigeon_pea",
+            "rice"
           ],
-          "goal_match": 76,
-          "change_vs_current": 23.9,
+          "goal_match": 80,
+          "change_vs_current": 26,
           "scores": {
-            "soil": 86,
+            "soil": 88,
             "market": 66,
-            "water": 73,
+            "water": 76,
             "resilience": 71,
-            "low_cost": 47,
-            "suitability": 70
+            "low_cost": 52,
+            "suitability": 69
           },
           "why": [
-            "Black gram and Soybean fix nitrogen (~30-60 kg N/ha (rough))",
+            "Green gram and Pigeon pea fix nitrogen (~30-60 kg N/ha (rough))",
             "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
             "Average income score 3.0/5 (rough)",
             "Sold as pulse / oilseed, staple",
             "Includes crops already grown locally (existing know-how and buyers)"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
-            "Black gram: salinity risk",
-            "Rice: sandy, low-water-holding soil",
-            "Soybean: sandy, low-water-holding soil"
+            "Green gram: waterlogged/heavy soil",
+            "Green gram: salinity risk",
+            "Pigeon pea: waterlogged/heavy soil",
+            "Pigeon pea: salinity risk"
           ],
           "evidence": [],
           "calendar": {
@@ -805,9 +804,9 @@
                   null,
                   null,
                   null,
-                  "black_gram",
-                  "black_gram",
-                  "black_gram",
+                  "green_gram",
+                  "green_gram",
+                  null,
                   null,
                   null,
                   null,
@@ -822,12 +821,12 @@
                   null,
                   null,
                   null,
-                  "rice",
-                  "rice",
-                  "rice",
-                  "rice",
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -839,10 +838,10 @@
                   null,
                   null,
                   null,
-                  "soybean",
-                  "soybean",
-                  "soybean",
-                  null,
+                  "rice",
+                  "rice",
+                  "rice",
+                  "rice",
                   null,
                   null,
                   null,
@@ -858,10 +857,104 @@
       ],
       "soil_health": [
         {
-          "id": "plan:black_gram|pigeon_pea|rice",
+          "id": "plan:black_gram|pigeon_pea|salt_rice",
           "kind": "recommended",
           "goal": "soil_health",
           "rank": 1,
+          "name": "Black gram then Pigeon pea then Salt-tolerant rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "pigeon_pea",
+            "salt_rice"
+          ],
+          "goal_match": 89,
+          "change_vs_current": 84,
+          "scores": {
+            "soil": 88,
+            "market": 62,
+            "water": 76,
+            "resilience": 76,
+            "low_cost": 53,
+            "suitability": 69
+          },
+          "why": [
+            "Black gram and Pigeon pea fix nitrogen (~30-60 kg N/ha (rough))",
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "No crop repeats back-to-back on the same plot"
+          ],
+          "cautions": [
+            "Black gram: waterlogged/heavy soil",
+            "Black gram: salinity risk",
+            "Pigeon pea: waterlogged/heavy soil",
+            "Pigeon pea: salinity risk"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "salt_rice",
+                  "salt_rice",
+                  "salt_rice",
+                  "salt_rice",
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:black_gram|pigeon_pea|rice",
+          "kind": "recommended",
+          "goal": "soil_health",
+          "rank": 2,
           "name": "Black gram then Pigeon pea then Rice",
           "tagline": null,
           "plan_type": "3-year rotation",
@@ -870,7 +963,7 @@
             "pigeon_pea",
             "rice"
           ],
-          "goal_match": 85,
+          "goal_match": 88,
           "change_vs_current": 84,
           "scores": {
             "soil": 88,
@@ -878,7 +971,7 @@
             "water": 76,
             "resilience": 72,
             "low_cost": 52,
-            "suitability": 68
+            "suitability": 72
           },
           "why": [
             "Black gram and Pigeon pea fix nitrogen (~30-60 kg N/ha (rough))",
@@ -886,7 +979,7 @@
             "No crop repeats back-to-back on the same plot"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
+            "Black gram: waterlogged/heavy soil",
             "Black gram: salinity risk",
             "Pigeon pea: waterlogged/heavy soil",
             "Pigeon pea: salinity risk"
@@ -952,132 +1045,38 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:black_gram|groundnut|rice",
-          "kind": "recommended",
-          "goal": "soil_health",
-          "rank": 2,
-          "name": "Black gram then Groundnut then Rice",
-          "tagline": null,
-          "plan_type": "3-year rotation",
-          "sequence": [
-            "black_gram",
-            "groundnut",
-            "rice"
-          ],
-          "goal_match": 85,
-          "change_vs_current": 81.7,
-          "scores": {
-            "soil": 86,
-            "market": 67,
-            "water": 73,
-            "resilience": 71,
-            "low_cost": 45,
-            "suitability": 70
-          },
-          "why": [
-            "Black gram and Groundnut fix nitrogen (~30-60 kg N/ha (rough))",
-            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
-            "No crop repeats back-to-back on the same plot"
-          ],
-          "cautions": [
-            "Black gram: sandy, low-water-holding soil",
-            "Black gram: salinity risk",
-            "Groundnut: waterlogged/heavy soil",
-            "Groundnut: salinity risk"
-          ],
-          "evidence": [],
-          "calendar": {
-            "rows": [
-              {
-                "label": "Year 1",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "black_gram",
-                  "black_gram",
-                  "black_gram",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 2",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "groundnut",
-                  "groundnut",
-                  "groundnut",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 3",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "rice",
-                  "rice",
-                  "rice",
-                  "rice",
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              }
-            ],
-            "approximate": true
-          },
-          "confidence": "low",
-          "basis": "Team recommender (rec.py) on measured data"
-        },
-        {
-          "id": "plan:black_gram|rice|soybean",
+          "id": "plan:cowpea|pigeon_pea|salt_rice",
           "kind": "recommended",
           "goal": "soil_health",
           "rank": 3,
-          "name": "Black gram then Rice then Soybean",
+          "name": "Cowpea then Pigeon pea then Salt-tolerant rice",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
-            "black_gram",
-            "rice",
-            "soybean"
+            "cowpea",
+            "pigeon_pea",
+            "salt_rice"
           ],
-          "goal_match": 84,
-          "change_vs_current": 81.7,
+          "goal_match": 87,
+          "change_vs_current": 85.3,
           "scores": {
-            "soil": 86,
-            "market": 66,
-            "water": 73,
-            "resilience": 71,
-            "low_cost": 47,
-            "suitability": 70
+            "soil": 89,
+            "market": 57,
+            "water": 76,
+            "resilience": 75,
+            "low_cost": 53,
+            "suitability": 66
           },
           "why": [
-            "Black gram and Soybean fix nitrogen (~30-60 kg N/ha (rough))",
+            "Cowpea and Pigeon pea fix nitrogen (~40-80 kg N/ha (rough))",
             "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
             "No crop repeats back-to-back on the same plot"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
-            "Black gram: salinity risk",
-            "Rice: sandy, low-water-holding soil",
-            "Soybean: sandy, low-water-holding soil"
+            "Cowpea: waterlogged/heavy soil",
+            "Cowpea: salinity risk",
+            "Pigeon pea: waterlogged/heavy soil",
+            "Pigeon pea: salinity risk"
           ],
           "evidence": [],
           "calendar": {
@@ -1089,9 +1088,9 @@
                   null,
                   null,
                   null,
-                  "black_gram",
-                  "black_gram",
-                  "black_gram",
+                  "cowpea",
+                  "cowpea",
+                  "cowpea",
                   null,
                   null,
                   null,
@@ -1106,12 +1105,12 @@
                   null,
                   null,
                   null,
-                  "rice",
-                  "rice",
-                  "rice",
-                  "rice",
-                  null,
-                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -1123,10 +1122,10 @@
                   null,
                   null,
                   null,
-                  "soybean",
-                  "soybean",
-                  "soybean",
-                  null,
+                  "salt_rice",
+                  "salt_rice",
+                  "salt_rice",
+                  "salt_rice",
                   null,
                   null,
                   null,
@@ -1142,10 +1141,104 @@
       ],
       "market_income": [
         {
-          "id": "plan:black_gram|groundnut|rice",
+          "id": "plan:black_gram|pigeon_pea|rice",
           "kind": "recommended",
           "goal": "market_income",
           "rank": 1,
+          "name": "Black gram then Pigeon pea then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "pigeon_pea",
+            "rice"
+          ],
+          "goal_match": 86,
+          "change_vs_current": 3.7,
+          "scores": {
+            "soil": 88,
+            "market": 66,
+            "water": 76,
+            "resilience": 72,
+            "low_cost": 52,
+            "suitability": 72
+          },
+          "why": [
+            "Average income score 3.0/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Includes crops already grown locally (existing know-how and buyers)"
+          ],
+          "cautions": [
+            "Black gram: waterlogged/heavy soil",
+            "Black gram: salinity risk",
+            "Pigeon pea: waterlogged/heavy soil",
+            "Pigeon pea: salinity risk"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice",
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:black_gram|groundnut|rice",
+          "kind": "recommended",
+          "goal": "market_income",
+          "rank": 2,
           "name": "Black gram then Groundnut then Rice",
           "tagline": null,
           "plan_type": "3-year rotation",
@@ -1154,7 +1247,7 @@
             "groundnut",
             "rice"
           ],
-          "goal_match": 79,
+          "goal_match": 86,
           "change_vs_current": 4.7,
           "scores": {
             "soil": 86,
@@ -1162,7 +1255,7 @@
             "water": 73,
             "resilience": 71,
             "low_cost": 45,
-            "suitability": 70
+            "suitability": 74
           },
           "why": [
             "Average income score 3.3/5 (rough)",
@@ -1171,7 +1264,7 @@
             "Includes crops already grown locally (existing know-how and buyers)"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
+            "Black gram: waterlogged/heavy soil",
             "Black gram: salinity risk",
             "Groundnut: waterlogged/heavy soil",
             "Groundnut: salinity risk"
@@ -1240,7 +1333,7 @@
           "id": "plan:black_gram|rice|soybean",
           "kind": "recommended",
           "goal": "market_income",
-          "rank": 2,
+          "rank": 3,
           "name": "Black gram then Rice then Soybean",
           "tagline": null,
           "plan_type": "3-year rotation",
@@ -1249,7 +1342,7 @@
             "rice",
             "soybean"
           ],
-          "goal_match": 78,
+          "goal_match": 85,
           "change_vs_current": 3.7,
           "scores": {
             "soil": 86,
@@ -1257,7 +1350,7 @@
             "water": 73,
             "resilience": 71,
             "low_cost": 47,
-            "suitability": 70
+            "suitability": 74
           },
           "why": [
             "Average income score 3.0/5 (rough)",
@@ -1265,104 +1358,9 @@
             "Includes crops already grown locally (existing know-how and buyers)"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
+            "Black gram: waterlogged/heavy soil",
             "Black gram: salinity risk",
-            "Rice: sandy, low-water-holding soil",
-            "Soybean: sandy, low-water-holding soil"
-          ],
-          "evidence": [],
-          "calendar": {
-            "rows": [
-              {
-                "label": "Year 1",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "black_gram",
-                  "black_gram",
-                  "black_gram",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 2",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "rice",
-                  "rice",
-                  "rice",
-                  "rice",
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 3",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "soybean",
-                  "soybean",
-                  "soybean",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              }
-            ],
-            "approximate": true
-          },
-          "confidence": "low",
-          "basis": "Team recommender (rec.py) on measured data"
-        },
-        {
-          "id": "plan:groundnut|soybean|rice",
-          "kind": "recommended",
-          "goal": "market_income",
-          "rank": 3,
-          "name": "Groundnut then Soybean then Rice",
-          "tagline": null,
-          "plan_type": "3-year rotation",
-          "sequence": [
-            "groundnut",
-            "soybean",
-            "rice"
-          ],
-          "goal_match": 76,
-          "change_vs_current": 4.7,
-          "scores": {
-            "soil": 86,
-            "market": 67,
-            "water": 71,
-            "resilience": 71,
-            "low_cost": 40,
-            "suitability": 70
-          },
-          "why": [
-            "Average income score 3.3/5 (rough)",
-            "Sold as pulse / oilseed, staple",
-            "Hard to store (Groundnut): arrange a buyer before planting",
-            "Includes crops already grown locally (existing know-how and buyers)"
-          ],
-          "cautions": [
-            "Groundnut: waterlogged/heavy soil",
-            "Groundnut: salinity risk",
-            "Soybean: sandy, low-water-holding soil",
+            "Soybean: waterlogged/heavy soil",
             "Soybean: salinity risk"
           ],
           "evidence": [],
@@ -1375,9 +1373,9 @@
                   null,
                   null,
                   null,
-                  "groundnut",
-                  "groundnut",
-                  "groundnut",
+                  "black_gram",
+                  "black_gram",
+                  "black_gram",
                   null,
                   null,
                   null,
@@ -1392,10 +1390,10 @@
                   null,
                   null,
                   null,
-                  "soybean",
-                  "soybean",
-                  "soybean",
-                  null,
+                  "rice",
+                  "rice",
+                  "rice",
+                  "rice",
                   null,
                   null,
                   null,
@@ -1409,10 +1407,10 @@
                   null,
                   null,
                   null,
-                  "rice",
-                  "rice",
-                  "rice",
-                  "rice",
+                  "soybean",
+                  "soybean",
+                  "soybean",
+                  null,
                   null,
                   null,
                   null,
@@ -1428,104 +1426,10 @@
       ],
       "water_saving": [
         {
-          "id": "plan:black_gram|pigeon_pea|rice",
-          "kind": "recommended",
-          "goal": "water_saving",
-          "rank": 1,
-          "name": "Black gram then Pigeon pea then Rice",
-          "tagline": null,
-          "plan_type": "3-year rotation",
-          "sequence": [
-            "black_gram",
-            "pigeon_pea",
-            "rice"
-          ],
-          "goal_match": 66,
-          "change_vs_current": 16,
-          "scores": {
-            "soil": 88,
-            "market": 66,
-            "water": 76,
-            "resilience": 72,
-            "low_cost": 52,
-            "suitability": 68
-          },
-          "why": [
-            "Average water need 3.0/5 (lower is better)",
-            "Season rain ~1788 mm",
-            "Water source: limited water (well or small pump)"
-          ],
-          "cautions": [
-            "Black gram: sandy, low-water-holding soil",
-            "Black gram: salinity risk",
-            "Pigeon pea: waterlogged/heavy soil",
-            "Pigeon pea: salinity risk"
-          ],
-          "evidence": [],
-          "calendar": {
-            "rows": [
-              {
-                "label": "Year 1",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "black_gram",
-                  "black_gram",
-                  "black_gram",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 2",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  "pigeon_pea",
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 3",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "rice",
-                  "rice",
-                  "rice",
-                  "rice",
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              }
-            ],
-            "approximate": true
-          },
-          "confidence": "low",
-          "basis": "Team recommender (rec.py) on measured data"
-        },
-        {
           "id": "plan:black_gram|sweet_potato",
           "kind": "recommended",
           "goal": "water_saving",
-          "rank": 2,
+          "rank": 1,
           "name": "Black gram then Sweet potato",
           "tagline": null,
           "plan_type": "1-year double crop (wet season, then dry season)",
@@ -1533,7 +1437,7 @@
             "black_gram",
             "sweet_potato"
           ],
-          "goal_match": 63,
+          "goal_match": 69,
           "change_vs_current": 24,
           "scores": {
             "soil": 64,
@@ -1541,7 +1445,7 @@
             "water": 84,
             "resilience": 61,
             "low_cost": 56,
-            "suitability": 64
+            "suitability": 63
           },
           "why": [
             "Average water need 2.0/5 (lower is better)",
@@ -1549,7 +1453,7 @@
             "Water source: limited water (well or small pump)"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
+            "Black gram: waterlogged/heavy soil",
             "Black gram: salinity risk",
             "Sweet potato: waterlogged/heavy soil",
             "Sweet potato: salinity risk"
@@ -1581,38 +1485,38 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:black_gram|groundnut|rice",
+          "id": "plan:black_gram|pigeon_pea|salt_rice",
           "kind": "recommended",
           "goal": "water_saving",
-          "rank": 3,
-          "name": "Black gram then Groundnut then Rice",
+          "rank": 2,
+          "name": "Black gram then Pigeon pea then Salt-tolerant rice",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
             "black_gram",
-            "groundnut",
-            "rice"
+            "pigeon_pea",
+            "salt_rice"
           ],
-          "goal_match": 63,
-          "change_vs_current": 13.3,
+          "goal_match": 69,
+          "change_vs_current": 16,
           "scores": {
-            "soil": 86,
-            "market": 67,
-            "water": 73,
-            "resilience": 71,
-            "low_cost": 45,
-            "suitability": 70
+            "soil": 88,
+            "market": 62,
+            "water": 76,
+            "resilience": 76,
+            "low_cost": 53,
+            "suitability": 69
           },
           "why": [
-            "Average water need 3.3/5 (lower is better)",
+            "Average water need 3.0/5 (lower is better)",
             "Season rain ~1788 mm",
             "Water source: limited water (well or small pump)"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
+            "Black gram: waterlogged/heavy soil",
             "Black gram: salinity risk",
-            "Groundnut: waterlogged/heavy soil",
-            "Groundnut: salinity risk"
+            "Pigeon pea: waterlogged/heavy soil",
+            "Pigeon pea: salinity risk"
           ],
           "evidence": [],
           "calendar": {
@@ -1641,12 +1545,106 @@
                   null,
                   null,
                   null,
-                  "groundnut",
-                  "groundnut",
-                  "groundnut",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
                   null,
                   null,
                   null,
+                  null,
+                  "salt_rice",
+                  "salt_rice",
+                  "salt_rice",
+                  "salt_rice",
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:black_gram|pigeon_pea|rice",
+          "kind": "recommended",
+          "goal": "water_saving",
+          "rank": 3,
+          "name": "Black gram then Pigeon pea then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "pigeon_pea",
+            "rice"
+          ],
+          "goal_match": 69,
+          "change_vs_current": 16,
+          "scores": {
+            "soil": 88,
+            "market": 66,
+            "water": 76,
+            "resilience": 72,
+            "low_cost": 52,
+            "suitability": 72
+          },
+          "why": [
+            "Average water need 3.0/5 (lower is better)",
+            "Season rain ~1788 mm",
+            "Water source: limited water (well or small pump)"
+          ],
+          "cautions": [
+            "Black gram: waterlogged/heavy soil",
+            "Black gram: salinity risk",
+            "Pigeon pea: waterlogged/heavy soil",
+            "Pigeon pea: salinity risk"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
                   null,
                   null
                 ]
@@ -1677,10 +1675,103 @@
       ],
       "low_risk": [
         {
-          "id": "plan:black_gram|groundnut|salt_rice",
+          "id": "plan:black_gram|pigeon_pea|salt_rice",
           "kind": "recommended",
           "goal": "low_risk",
           "rank": 1,
+          "name": "Black gram then Pigeon pea then Salt-tolerant rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "pigeon_pea",
+            "salt_rice"
+          ],
+          "goal_match": 84,
+          "change_vs_current": 6.2,
+          "scores": {
+            "soil": 88,
+            "market": 62,
+            "water": 76,
+            "resilience": 76,
+            "low_cost": 53,
+            "suitability": 69
+          },
+          "why": [
+            "Tolerates salinity common here",
+            "3 different crop(s) spread the risk"
+          ],
+          "cautions": [
+            "Black gram: waterlogged/heavy soil",
+            "Black gram: salinity risk",
+            "Pigeon pea: waterlogged/heavy soil",
+            "Pigeon pea: salinity risk"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "salt_rice",
+                  "salt_rice",
+                  "salt_rice",
+                  "salt_rice",
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:black_gram|groundnut|salt_rice",
+          "kind": "recommended",
+          "goal": "low_risk",
+          "rank": 2,
           "name": "Black gram then Groundnut then Salt-tolerant rice",
           "tagline": null,
           "plan_type": "3-year rotation",
@@ -1689,7 +1780,7 @@
             "groundnut",
             "salt_rice"
           ],
-          "goal_match": 78,
+          "goal_match": 82,
           "change_vs_current": 5.9,
           "scores": {
             "soil": 86,
@@ -1697,14 +1788,14 @@
             "water": 73,
             "resilience": 75,
             "low_cost": 46,
-            "suitability": 67
+            "suitability": 71
           },
           "why": [
             "Tolerates salinity common here",
             "3 different crop(s) spread the risk"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
+            "Black gram: waterlogged/heavy soil",
             "Black gram: salinity risk",
             "Groundnut: waterlogged/heavy soil",
             "Groundnut: salinity risk"
@@ -1770,35 +1861,35 @@
           "basis": "Team recommender (rec.py) on measured data"
         },
         {
-          "id": "plan:black_gram|pigeon_pea|salt_rice",
+          "id": "plan:groundnut|pigeon_pea|salt_rice",
           "kind": "recommended",
           "goal": "low_risk",
-          "rank": 2,
-          "name": "Black gram then Pigeon pea then Salt-tolerant rice",
+          "rank": 3,
+          "name": "Groundnut then Pigeon pea then Salt-tolerant rice",
           "tagline": null,
           "plan_type": "3-year rotation",
           "sequence": [
-            "black_gram",
+            "groundnut",
             "pigeon_pea",
             "salt_rice"
           ],
-          "goal_match": 77,
+          "goal_match": 82,
           "change_vs_current": 6.2,
           "scores": {
             "soil": 88,
-            "market": 62,
-            "water": 76,
+            "market": 64,
+            "water": 73,
             "resilience": 76,
-            "low_cost": 53,
-            "suitability": 65
+            "low_cost": 46,
+            "suitability": 69
           },
           "why": [
             "Tolerates salinity common here",
             "3 different crop(s) spread the risk"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
-            "Black gram: salinity risk",
+            "Groundnut: waterlogged/heavy soil",
+            "Groundnut: salinity risk",
             "Pigeon pea: waterlogged/heavy soil",
             "Pigeon pea: salinity risk"
           ],
@@ -1812,9 +1903,9 @@
                   null,
                   null,
                   null,
-                  "black_gram",
-                  "black_gram",
-                  "black_gram",
+                  "groundnut",
+                  "groundnut",
+                  "groundnut",
                   null,
                   null,
                   null,
@@ -1850,99 +1941,6 @@
                   "salt_rice",
                   "salt_rice",
                   "salt_rice",
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              }
-            ],
-            "approximate": true
-          },
-          "confidence": "low",
-          "basis": "Team recommender (rec.py) on measured data"
-        },
-        {
-          "id": "plan:black_gram|salt_rice|soybean",
-          "kind": "recommended",
-          "goal": "low_risk",
-          "rank": 3,
-          "name": "Black gram then Salt-tolerant rice then Soybean",
-          "tagline": null,
-          "plan_type": "3-year rotation",
-          "sequence": [
-            "black_gram",
-            "salt_rice",
-            "soybean"
-          ],
-          "goal_match": 76,
-          "change_vs_current": 5.2,
-          "scores": {
-            "soil": 86,
-            "market": 62,
-            "water": 73,
-            "resilience": 75,
-            "low_cost": 48,
-            "suitability": 67
-          },
-          "why": [
-            "Tolerates salinity common here",
-            "3 different crop(s) spread the risk"
-          ],
-          "cautions": [
-            "Black gram: sandy, low-water-holding soil",
-            "Black gram: salinity risk",
-            "Salt-tolerant rice: sandy, low-water-holding soil",
-            "Soybean: sandy, low-water-holding soil"
-          ],
-          "evidence": [],
-          "calendar": {
-            "rows": [
-              {
-                "label": "Year 1",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "black_gram",
-                  "black_gram",
-                  "black_gram",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 2",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "salt_rice",
-                  "salt_rice",
-                  "salt_rice",
-                  "salt_rice",
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 3",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "soybean",
-                  "soybean",
-                  "soybean",
-                  null,
                   null,
                   null,
                   null,
@@ -1970,7 +1968,7 @@
             "pigeon_pea",
             "rice"
           ],
-          "goal_match": 79,
+          "goal_match": 85,
           "change_vs_current": 24,
           "scores": {
             "soil": 88,
@@ -1978,13 +1976,13 @@
             "water": 76,
             "resilience": 72,
             "low_cost": 52,
-            "suitability": 68
+            "suitability": 72
           },
           "why": [
             "Mean labour need 3.7/5, fertiliser need 2.0/5 (legumes reduce fertiliser need)"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
+            "Black gram: waterlogged/heavy soil",
             "Black gram: salinity risk",
             "Pigeon pea: waterlogged/heavy soil",
             "Pigeon pea: salinity risk"
@@ -2022,98 +2020,6 @@
                   "pigeon_pea",
                   "pigeon_pea",
                   "pigeon_pea",
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 3",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "rice",
-                  "rice",
-                  "rice",
-                  "rice",
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              }
-            ],
-            "approximate": true
-          },
-          "confidence": "low",
-          "basis": "Team recommender (rec.py) on measured data"
-        },
-        {
-          "id": "plan:black_gram|cowpea|rice",
-          "kind": "recommended",
-          "goal": "low_cost_labour",
-          "rank": 2,
-          "name": "Black gram then Cowpea then Rice",
-          "tagline": null,
-          "plan_type": "3-year rotation",
-          "sequence": [
-            "black_gram",
-            "cowpea",
-            "rice"
-          ],
-          "goal_match": 74,
-          "change_vs_current": 24,
-          "scores": {
-            "soil": 87,
-            "market": 61,
-            "water": 76,
-            "resilience": 71,
-            "low_cost": 52,
-            "suitability": 68
-          },
-          "why": [
-            "Mean labour need 3.7/5, fertiliser need 2.0/5 (legumes reduce fertiliser need)"
-          ],
-          "cautions": [
-            "Black gram: sandy, low-water-holding soil",
-            "Black gram: salinity risk",
-            "Cowpea: waterlogged/heavy soil",
-            "Cowpea: salinity risk"
-          ],
-          "evidence": [],
-          "calendar": {
-            "rows": [
-              {
-                "label": "Year 1",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "black_gram",
-                  "black_gram",
-                  "black_gram",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
-                ]
-              },
-              {
-                "label": "Year 2",
-                "cells": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "cowpea",
-                  "cowpea",
-                  "cowpea",
-                  null,
-                  null,
-                  null,
                   null,
                   null
                 ]
@@ -2145,7 +2051,7 @@
           "id": "plan:black_gram|pigeon_pea|salt_rice",
           "kind": "recommended",
           "goal": "low_cost_labour",
-          "rank": 3,
+          "rank": 2,
           "name": "Black gram then Pigeon pea then Salt-tolerant rice",
           "tagline": null,
           "plan_type": "3-year rotation",
@@ -2154,7 +2060,7 @@
             "pigeon_pea",
             "salt_rice"
           ],
-          "goal_match": 73,
+          "goal_match": 83,
           "change_vs_current": 25,
           "scores": {
             "soil": 88,
@@ -2162,13 +2068,13 @@
             "water": 76,
             "resilience": 76,
             "low_cost": 53,
-            "suitability": 65
+            "suitability": 69
           },
           "why": [
             "Mean labour need 3.7/5, fertiliser need 1.7/5 (legumes reduce fertiliser need)"
           ],
           "cautions": [
-            "Black gram: sandy, low-water-holding soil",
+            "Black gram: waterlogged/heavy soil",
             "Black gram: salinity risk",
             "Pigeon pea: waterlogged/heavy soil",
             "Pigeon pea: salinity risk"
@@ -2221,6 +2127,98 @@
                   "salt_rice",
                   "salt_rice",
                   "salt_rice",
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:green_gram|pigeon_pea|rice",
+          "kind": "recommended",
+          "goal": "low_cost_labour",
+          "rank": 3,
+          "name": "Green gram then Pigeon pea then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "green_gram",
+            "pigeon_pea",
+            "rice"
+          ],
+          "goal_match": 83,
+          "change_vs_current": 24,
+          "scores": {
+            "soil": 88,
+            "market": 66,
+            "water": 76,
+            "resilience": 71,
+            "low_cost": 52,
+            "suitability": 69
+          },
+          "why": [
+            "Mean labour need 3.7/5, fertiliser need 2.0/5 (legumes reduce fertiliser need)"
+          ],
+          "cautions": [
+            "Green gram: waterlogged/heavy soil",
+            "Green gram: salinity risk",
+            "Pigeon pea: waterlogged/heavy soil",
+            "Pigeon pea: salinity risk"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "green_gram",
+                  "green_gram",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  null,
+                  null
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice",
+                  "rice",
                   null,
                   null,
                   null,
@@ -3576,73 +3574,73 @@
     "crop_outlook": [
       {
         "crop": "rice",
-        "fit_now": 69,
-        "fit_trend_2035": 69,
-        "fit_bad_year_2035": 69,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "soybean",
-        "fit_now": 66,
-        "fit_trend_2035": 66,
-        "fit_bad_year_2035": 66,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "groundnut",
-        "fit_now": 66,
-        "fit_trend_2035": 66,
-        "fit_bad_year_2035": 66,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "black_gram",
-        "fit_now": 66,
-        "fit_trend_2035": 66,
-        "fit_bad_year_2035": 66,
+        "fit_now": 82,
+        "fit_trend_2035": 82,
+        "fit_bad_year_2035": 82,
         "water_now": 1,
         "water_bad_year": 1
       },
       {
         "crop": "salt_rice",
-        "fit_now": 60,
-        "fit_trend_2035": 60,
-        "fit_bad_year_2035": 60,
+        "fit_now": 74,
+        "fit_trend_2035": 74,
+        "fit_bad_year_2035": 74,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "soybean",
+        "fit_now": 64,
+        "fit_trend_2035": 64,
+        "fit_bad_year_2035": 64,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "groundnut",
+        "fit_now": 64,
+        "fit_trend_2035": 64,
+        "fit_bad_year_2035": 64,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "black_gram",
+        "fit_now": 64,
+        "fit_trend_2035": 64,
+        "fit_bad_year_2035": 64,
         "water_now": 1,
         "water_bad_year": 1
       },
       {
         "crop": "pigeon_pea",
-        "fit_now": 60,
-        "fit_trend_2035": 60,
-        "fit_bad_year_2035": 60,
+        "fit_now": 58,
+        "fit_trend_2035": 58,
+        "fit_bad_year_2035": 58,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "sugarcane",
+        "fit_now": 58,
+        "fit_trend_2035": 58,
+        "fit_bad_year_2035": 58,
         "water_now": 1,
         "water_bad_year": 1
       },
       {
         "crop": "green_gram",
-        "fit_now": 58,
-        "fit_trend_2035": 58,
-        "fit_bad_year_2035": 58,
+        "fit_now": 57,
+        "fit_trend_2035": 57,
+        "fit_bad_year_2035": 57,
         "water_now": 1,
         "water_bad_year": 1
       },
       {
         "crop": "cowpea",
-        "fit_now": 58,
-        "fit_trend_2035": 58,
-        "fit_bad_year_2035": 58,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "chickpea",
-        "fit_now": 58,
-        "fit_trend_2035": 58,
-        "fit_bad_year_2035": 58,
+        "fit_now": 56,
+        "fit_trend_2035": 56,
+        "fit_bad_year_2035": 56,
         "water_now": 1,
         "water_bad_year": 1
       },
@@ -3655,7 +3653,31 @@
         "water_bad_year": 1
       },
       {
+        "crop": "chickpea",
+        "fit_now": 56,
+        "fit_trend_2035": 56,
+        "fit_bad_year_2035": 56,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
         "crop": "vegetables",
+        "fit_now": 55,
+        "fit_trend_2035": 55,
+        "fit_bad_year_2035": 55,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "maize",
+        "fit_now": 55,
+        "fit_trend_2035": 55,
+        "fit_bad_year_2035": 55,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "cassava",
         "fit_now": 55,
         "fit_trend_2035": 55,
         "fit_bad_year_2035": 55,
@@ -3695,14 +3717,6 @@
         "water_bad_year": 1
       },
       {
-        "crop": "sugarcane",
-        "fit_now": 46,
-        "fit_trend_2035": 46,
-        "fit_bad_year_2035": 46,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
         "crop": "watermelon",
         "fit_now": 44,
         "fit_trend_2035": 44,
@@ -3711,26 +3725,10 @@
         "water_bad_year": 1
       },
       {
-        "crop": "maize",
-        "fit_now": 43,
-        "fit_trend_2035": 43,
-        "fit_bad_year_2035": 43,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
-        "crop": "cassava",
-        "fit_now": 43,
-        "fit_trend_2035": 43,
-        "fit_bad_year_2035": 43,
-        "water_now": 1,
-        "water_bad_year": 1
-      },
-      {
         "crop": "sunn_hemp",
-        "fit_now": 34,
-        "fit_trend_2035": 34,
-        "fit_bad_year_2035": 34,
+        "fit_now": 33,
+        "fit_trend_2035": 33,
+        "fit_bad_year_2035": 33,
         "water_now": 1,
         "water_bad_year": 1
       },
@@ -3760,12 +3758,10 @@
     {
       "crop": "rice",
       "rank": 1,
-      "fit": 69,
-      "fit_band": "medium",
+      "fit": 82,
+      "fit_band": "high",
       "trend": "flat",
-      "limits": [
-        "sandy, low-water-holding soil"
-      ],
+      "limits": [],
       "why": [
         "rainfall (~1788 mm in season) covers its water need",
         "temperature (~28 C) is in its range",
@@ -3775,116 +3771,24 @@
       "parts": {
         "climate": 1,
         "water": 1,
-        "soil": 0.64,
+        "soil": 1,
         "risk": 0.85,
         "benefit": 0.33
       },
-      "label": "Possible fit",
+      "label": "Good fit",
       "planting_window": "May-Jun",
       "harvest": "~Sep (rough)",
       "sow_month": 5,
-      "yield_outlook": "middle of range",
+      "yield_outlook": "upper half of typical range",
       "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
     },
     {
-      "crop": "soybean",
-      "rank": 2,
-      "fit": 66,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [
-        "sandy, low-water-holding soil",
-        "salinity risk"
-      ],
-      "why": [
-        "rainfall (~1788 mm in season) covers its water need",
-        "temperature (~28 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.64,
-        "risk": 0.67,
-        "benefit": 0.75
-      },
-      "label": "Possible fit",
-      "planting_window": "wet season May-Jun; or dry season Dec-Jan if moisture allows",
-      "harvest": "~Aug (rough)",
-      "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
-      "crop": "groundnut",
-      "rank": 3,
-      "fit": 66,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [
-        "waterlogged/heavy soil",
-        "salinity risk"
-      ],
-      "why": [
-        "rainfall (~1788 mm in season) covers its water need",
-        "temperature (~28 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.64,
-        "risk": 0.67,
-        "benefit": 0.75
-      },
-      "label": "Possible fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Aug (rough)",
-      "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
-      "crop": "black_gram",
-      "rank": 4,
-      "fit": 66,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [
-        "sandy, low-water-holding soil",
-        "salinity risk"
-      ],
-      "why": [
-        "rainfall (~1788 mm in season) covers its water need",
-        "temperature (~28 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.64,
-        "risk": 0.67,
-        "benefit": 0.75
-      },
-      "label": "Possible fit",
-      "planting_window": "wet season May-Jun; or dry season Dec-Jan if moisture allows",
-      "harvest": "~Aug (rough)",
-      "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
       "crop": "salt_rice",
-      "rank": 5,
-      "fit": 60,
+      "rank": 2,
+      "fit": 74,
       "fit_band": "medium",
       "trend": "flat",
-      "limits": [
-        "sandy, low-water-holding soil"
-      ],
+      "limits": [],
       "why": [
         "rainfall (~1788 mm in season) covers its water need",
         "temperature (~28 C) is in its range",
@@ -3894,7 +3798,7 @@
       "parts": {
         "climate": 1,
         "water": 1,
-        "soil": 0.64,
+        "soil": 1,
         "risk": 0.95,
         "benefit": 0.29
       },
@@ -3906,9 +3810,9 @@
       "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
     },
     {
-      "crop": "pigeon_pea",
-      "rank": 6,
-      "fit": 60,
+      "crop": "soybean",
+      "rank": 3,
+      "fit": 64,
       "fit_band": "medium",
       "trend": "flat",
       "limits": [
@@ -3918,56 +3822,86 @@
       "why": [
         "rainfall (~1788 mm in season) covers its water need",
         "temperature (~28 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "fixes nitrogen for the next crop"
       ],
       "common_locally": false,
       "parts": {
         "climate": 1,
         "water": 1,
-        "soil": 0.52,
-        "risk": 0.63,
-        "benefit": 0.81
-      },
-      "label": "Possible fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Nov (rough)",
-      "sow_month": 5,
-      "yield_outlook": "middle of range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
-    },
-    {
-      "crop": "green_gram",
-      "rank": 7,
-      "fit": 58,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [
-        "waterlogged/heavy soil",
-        "salinity risk"
-      ],
-      "why": [
-        "rainfall (~1788 mm in season) covers its water need",
-        "temperature (~28 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.52,
-        "risk": 0.63,
-        "benefit": 0.75
+        "soil": 0.64,
+        "risk": 0.67,
+        "benefit": 0.66
       },
       "label": "Possible fit",
       "planting_window": "wet season May-Jun; or dry season Dec-Jan if moisture allows",
-      "harvest": "~Jul (rough)",
+      "harvest": "~Aug (rough)",
       "sow_month": 5,
       "yield_outlook": "middle of range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
     },
     {
-      "crop": "cowpea",
-      "rank": 8,
+      "crop": "groundnut",
+      "rank": 4,
+      "fit": 64,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [
+        "waterlogged/heavy soil",
+        "salinity risk"
+      ],
+      "why": [
+        "rainfall (~1788 mm in season) covers its water need",
+        "temperature (~28 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.64,
+        "risk": 0.67,
+        "benefit": 0.66
+      },
+      "label": "Possible fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Aug (rough)",
+      "sow_month": 5,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "black_gram",
+      "rank": 5,
+      "fit": 64,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [
+        "waterlogged/heavy soil",
+        "salinity risk"
+      ],
+      "why": [
+        "rainfall (~1788 mm in season) covers its water need",
+        "temperature (~28 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.64,
+        "risk": 0.67,
+        "benefit": 0.66
+      },
+      "label": "Possible fit",
+      "planting_window": "wet season May-Jun; or dry season Dec-Jan if moisture allows",
+      "harvest": "~Aug (rough)",
+      "sow_month": 5,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "pigeon_pea",
+      "rank": 6,
       "fit": 58,
       "fit_band": "medium",
       "trend": "flat",
@@ -3978,7 +3912,7 @@
       "why": [
         "rainfall (~1788 mm in season) covers its water need",
         "temperature (~28 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "fixes nitrogen for the next crop"
       ],
       "common_locally": false,
       "parts": {
@@ -3990,24 +3924,54 @@
       },
       "label": "Possible fit",
       "planting_window": "May-Jun",
-      "harvest": "~Jul (rough)",
+      "harvest": "~Nov (rough)",
       "sow_month": 5,
       "yield_outlook": "middle of range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
     },
     {
-      "crop": "chickpea",
-      "rank": 9,
+      "crop": "sugarcane",
+      "rank": 7,
       "fit": 58,
       "fit_band": "medium",
       "trend": "flat",
       "limits": [
-        "sandy, low-water-holding soil",
+        "waterlogged/heavy soil",
         "salinity risk"
       ],
       "why": [
+        "rainfall (~1788 mm in season) covers its water need",
+        "temperature (~28 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.64,
+        "risk": 0.72,
+        "benefit": 0.38
+      },
+      "label": "Possible fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Apr (rough)",
+      "sow_month": 5,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "green_gram",
+      "rank": 8,
+      "fit": 57,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [
+        "waterlogged/heavy soil",
+        "salinity risk"
+      ],
+      "why": [
+        "rainfall (~1788 mm in season) covers its water need",
         "temperature (~28 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "fixes nitrogen for the next crop"
       ],
       "common_locally": false,
       "parts": {
@@ -4015,14 +3979,44 @@
         "water": 1,
         "soil": 0.52,
         "risk": 0.63,
-        "benefit": 0.72
+        "benefit": 0.66
       },
       "label": "Possible fit",
-      "planting_window": "Nov-Dec (after monsoon, on residual moisture)",
-      "harvest": "~Feb (rough)",
-      "sow_month": 11,
+      "planting_window": "wet season May-Jun; or dry season Dec-Jan if moisture allows",
+      "harvest": "~Jul (rough)",
+      "sow_month": 5,
       "yield_outlook": "middle of range",
-      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "cowpea",
+      "rank": 9,
+      "fit": 56,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [
+        "waterlogged/heavy soil",
+        "salinity risk"
+      ],
+      "why": [
+        "rainfall (~1788 mm in season) covers its water need",
+        "temperature (~28 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.52,
+        "risk": 0.63,
+        "benefit": 0.65
+      },
+      "label": "Possible fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Jul (rough)",
+      "sow_month": 5,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
     },
     {
       "crop": "sweet_potato",
@@ -4054,13 +4048,42 @@
       "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
     },
     {
-      "crop": "vegetables",
+      "crop": "chickpea",
       "rank": 11,
+      "fit": 56,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [
+        "waterlogged/heavy soil",
+        "salinity risk"
+      ],
+      "why": [
+        "temperature (~28 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.52,
+        "risk": 0.63,
+        "benefit": 0.64
+      },
+      "label": "Possible fit",
+      "planting_window": "Nov-Dec (after monsoon, on residual moisture)",
+      "harvest": "~Feb (rough)",
+      "sow_month": 11,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+    },
+    {
+      "crop": "vegetables",
+      "rank": 12,
       "fit": 55,
       "fit_band": "medium",
       "trend": "flat",
       "limits": [
-        "sandy, low-water-holding soil",
+        "waterlogged/heavy soil",
         "salinity risk"
       ],
       "why": [
@@ -4083,8 +4106,66 @@
       "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
     },
     {
+      "crop": "maize",
+      "rank": 13,
+      "fit": 55,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [
+        "waterlogged/heavy soil",
+        "salinity risk"
+      ],
+      "why": [
+        "rainfall (~1788 mm in season) covers its water need",
+        "temperature (~28 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.64,
+        "risk": 0.67,
+        "benefit": 0.36
+      },
+      "label": "Possible fit",
+      "planting_window": "wet season May-Jun; or dry season Dec-Jan if moisture allows",
+      "harvest": "~Sep (rough)",
+      "sow_month": 5,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "cassava",
+      "rank": 14,
+      "fit": 55,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "waterlogged/heavy soil",
+        "salinity risk"
+      ],
+      "why": [
+        "rainfall (~1788 mm in season) covers its water need",
+        "temperature (~28 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.64,
+        "risk": 0.67,
+        "benefit": 0.34
+      },
+      "label": "Poor fit",
+      "planting_window": "May-Jun",
+      "harvest": "~Mar (rough)",
+      "sow_month": 5,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
       "crop": "sorghum",
-      "rank": 12,
+      "rank": 15,
       "fit": 54,
       "fit_band": "low",
       "trend": "flat",
@@ -4113,12 +4194,12 @@
     },
     {
       "crop": "sunflower",
-      "rank": 13,
+      "rank": 16,
       "fit": 48,
       "fit_band": "low",
       "trend": "flat",
       "limits": [
-        "sandy, low-water-holding soil",
+        "waterlogged/heavy soil",
         "salinity risk"
       ],
       "why": [
@@ -4142,7 +4223,7 @@
     },
     {
       "crop": "sesame",
-      "rank": 14,
+      "rank": 17,
       "fit": 47,
       "fit_band": "low",
       "trend": "flat",
@@ -4171,7 +4252,7 @@
     },
     {
       "crop": "pineapple",
-      "rank": 15,
+      "rank": 18,
       "fit": 47,
       "fit_band": "low",
       "trend": "flat",
@@ -4199,37 +4280,8 @@
       "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
     },
     {
-      "crop": "sugarcane",
-      "rank": 16,
-      "fit": 46,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "sandy, low-water-holding soil",
-        "salinity risk"
-      ],
-      "why": [
-        "rainfall (~1788 mm in season) covers its water need",
-        "temperature (~28 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.64,
-        "risk": 0.72,
-        "benefit": 0.38
-      },
-      "label": "Poor fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Apr (rough)",
-      "sow_month": 5,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
-    },
-    {
       "crop": "watermelon",
-      "rank": 17,
+      "rank": 19,
       "fit": 44,
       "fit_band": "low",
       "trend": "flat",
@@ -4256,67 +4308,9 @@
       "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
     },
     {
-      "crop": "maize",
-      "rank": 18,
-      "fit": 43,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "sandy, low-water-holding soil",
-        "salinity risk"
-      ],
-      "why": [
-        "rainfall (~1788 mm in season) covers its water need",
-        "temperature (~28 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.64,
-        "risk": 0.67,
-        "benefit": 0.36
-      },
-      "label": "Poor fit",
-      "planting_window": "wet season May-Jun; or dry season Dec-Jan if moisture allows",
-      "harvest": "~Sep (rough)",
-      "sow_month": 5,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
-    },
-    {
-      "crop": "cassava",
-      "rank": 19,
-      "fit": 43,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "waterlogged/heavy soil",
-        "salinity risk"
-      ],
-      "why": [
-        "rainfall (~1788 mm in season) covers its water need",
-        "temperature (~28 C) is in its range"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.64,
-        "risk": 0.67,
-        "benefit": 0.34
-      },
-      "label": "Poor fit",
-      "planting_window": "May-Jun",
-      "harvest": "~Mar (rough)",
-      "sow_month": 5,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
-    },
-    {
       "crop": "sunn_hemp",
       "rank": 20,
-      "fit": 34,
+      "fit": 33,
       "fit_band": "low",
       "trend": "flat",
       "limits": [
@@ -4326,7 +4320,7 @@
       "why": [
         "rainfall (~1788 mm in season) covers its water need",
         "temperature (~28 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
+        "fixes nitrogen for the next crop"
       ],
       "common_locally": false,
       "parts": {
@@ -4334,7 +4328,7 @@
         "water": 1,
         "soil": 0.52,
         "risk": 0.63,
-        "benefit": 0.69
+        "benefit": 0.61
       },
       "label": "Poor fit",
       "planting_window": "May-Jun",
@@ -4372,42 +4366,13 @@
       "rotation_tip": "Perennial tree crop, not a rotation crop; use a legume cover between young rows."
     },
     {
-      "crop": "cover_legume",
+      "crop": "rubber",
       "rank": 22,
       "fit": 18,
       "fit_band": "low",
       "trend": "flat",
       "limits": [
-        "salinity risk"
-      ],
-      "why": [
-        "rainfall (~1788 mm in season) covers its water need",
-        "temperature (~28 C) is in its range",
-        "fixes nitrogen on low-fertility soil"
-      ],
-      "common_locally": false,
-      "parts": {
-        "climate": 1,
-        "water": 1,
-        "soil": 0.76,
-        "risk": 0.72,
-        "benefit": 0.72
-      },
-      "label": "Poor fit",
-      "planting_window": "May-Jun (start of wet season)",
-      "harvest": "multi-year",
-      "sow_month": 6,
-      "yield_outlook": "lower end or at risk",
-      "rotation_tip": "Soil-building crop with no direct income; plough in or use as ground cover."
-    },
-    {
-      "crop": "rubber",
-      "rank": 23,
-      "fit": 18,
-      "fit_band": "low",
-      "trend": "flat",
-      "limits": [
-        "sandy, low-water-holding soil",
+        "waterlogged/heavy soil",
         "salinity risk"
       ],
       "why": [
@@ -4428,6 +4393,35 @@
       "sow_month": 6,
       "yield_outlook": "lower end or at risk",
       "rotation_tip": "Perennial tree crop, not a rotation crop; use a legume cover between young rows."
+    },
+    {
+      "crop": "cover_legume",
+      "rank": 23,
+      "fit": 17,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "salinity risk"
+      ],
+      "why": [
+        "rainfall (~1788 mm in season) covers its water need",
+        "temperature (~28 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.76,
+        "risk": 0.72,
+        "benefit": 0.63
+      },
+      "label": "Poor fit",
+      "planting_window": "May-Jun (start of wet season)",
+      "harvest": "multi-year",
+      "sow_month": 6,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Soil-building crop with no direct income; plough in or use as ground cover."
     },
     {
       "crop": "cashew",
@@ -4466,7 +4460,7 @@
       "trend": "declining",
       "limits": [
         "temperature (area ~28 C, crop prefers 12-24 C)",
-        "sandy, low-water-holding soil",
+        "waterlogged/heavy soil",
         "salinity risk"
       ],
       "why": [

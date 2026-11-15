@@ -1,5 +1,5 @@
 # Not needed to build the site (Vercel only needs src/, public/ and the config files)
-data/
-skill/
-graphify-out/
+/data/
+/skill/
+/graphify-out/
 *.mp4

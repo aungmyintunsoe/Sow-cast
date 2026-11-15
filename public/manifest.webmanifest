@@ -1,0 +1,14 @@
+{
+  "name": "Sowcast",
+  "short_name": "Sowcast",
+  "description": "Crop rotations from satellite data for farms in Southeast Asia.",
+  "start_url": "/?step=map",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fafaf9",
+  "theme_color": "#2c8742",
+  "icons": [
+    { "src": "/brand/sowcast-mark-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/brand/sowcast-mark-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

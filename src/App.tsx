@@ -53,6 +53,20 @@ function MainApp() {
   const [planGoal, setPlanGoal] = useState<PlanGoal>('balanced');
   const { regions, cropsMap, selectedRegionId, setSelectedRegionId, regionDetail, loadingInit, loadingRegion, error, retry } = useSowcastData();
 
+  useEffect(() => {
+    const TITLES: Record<PageId, string> = {
+      home: 'Sowcast: crop rotations from satellite data',
+      skill: 'Sowcast advisor for Claude',
+      map: 'Pick your field | Sowcast',
+      brief: 'Satellite brief | Sowcast',
+      rotations: 'Compare rotations | Sowcast',
+      crops: 'Best crops | Sowcast',
+      build: 'Build your own rotation | Sowcast',
+      methods: 'How the data was analysed | Sowcast',
+    };
+    document.title = TITLES[step];
+  }, [step]);
+
   // Pages live in the browser history, so the Back button / back gesture returns to the previous page.
   const stepRef = useRef(step);
   stepRef.current = step;
