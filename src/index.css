@@ -2,13 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts are defined once in tailwind.config.js (sans = body, display = headings). */
 @layer base {
-  body {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  }
-
-  h1, h2, h3, .font-display {
-    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  h1, h2, h3 {
+    @apply font-display;
   }
 }
 
@@ -18,14 +15,6 @@
   height: 100%;
   font-family: inherit;
   z-index: 1;
-}
-
-/* Card outline kept from the old "Sun Mode": a crisp dark border and no shadow.
-   Card background colours (amber warnings, green opportunities, soil) are left alone.
-   Selected cards opt out so their highlight border and ring stay visible. */
-.card-surface:not([aria-pressed="true"]):not([data-selected="true"]) {
-  border: 1.5px solid #1c1917 !important;
-  box-shadow: none !important;
 }
 
 /* Visible keyboard focus everywhere (mouse clicks don't trigger it) */

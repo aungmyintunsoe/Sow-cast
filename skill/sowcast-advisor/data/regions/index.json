@@ -1,0 +1,232 @@
+[
+  {
+    "id": "mm-dry-zone",
+    "name": "Central Dry Zone",
+    "place": "Magway",
+    "country": "Myanmar",
+    "lat": 20.15,
+    "lon": 94.93,
+    "tagline": "Grows groundnut, sesame and green gram; about 850 mm of rain a year",
+    "confidence": "medium"
+  },
+  {
+    "id": "mm-ayeyarwady",
+    "name": "Ayeyarwady Delta",
+    "place": "Pathein",
+    "country": "Myanmar",
+    "lat": 16.78,
+    "lon": 94.73,
+    "tagline": "Grows rice, black gram and green gram; about 2,900 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "mm-shan",
+    "name": "Shan Plateau",
+    "place": "Taunggyi",
+    "country": "Myanmar",
+    "lat": 20.78,
+    "lon": 97.04,
+    "tagline": "Grows maize, potato and mixed vegetables; about 1,750 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "mm-kachin",
+    "name": "Kachin Hills",
+    "place": "Myitkyina",
+    "country": "Myanmar",
+    "lat": 25.38,
+    "lon": 97.4,
+    "tagline": "Grows rice and maize; about 2,100 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "mm-rakhine",
+    "name": "Rakhine Coast",
+    "place": "Sittwe",
+    "country": "Myanmar",
+    "lat": 20.15,
+    "lon": 92.9,
+    "tagline": "Grows rice; about 4,300 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "mm-tanintharyi",
+    "name": "Tanintharyi",
+    "place": "Dawei",
+    "country": "Myanmar",
+    "lat": 14.08,
+    "lon": 98.2,
+    "tagline": "Grows cashew; about 4,500 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "th-north",
+    "name": "North",
+    "place": "Chiang Mai",
+    "country": "Thailand",
+    "lat": 18.79,
+    "lon": 98.98,
+    "tagline": "Grows maize, rice and mixed vegetables; about 1,200 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "th-isan",
+    "name": "Northeast (Isan)",
+    "place": "Khon Kaen",
+    "country": "Thailand",
+    "lat": 16.43,
+    "lon": 102.83,
+    "tagline": "Grows rice, cassava and sugarcane; about 1,250 mm of rain a year",
+    "confidence": "medium"
+  },
+  {
+    "id": "th-central",
+    "name": "Central Plain",
+    "place": "Suphan Buri",
+    "country": "Thailand",
+    "lat": 14.47,
+    "lon": 100.12,
+    "tagline": "Grows rice and sugarcane; about 1,150 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "th-east",
+    "name": "East",
+    "place": "Chanthaburi",
+    "country": "Thailand",
+    "lat": 12.61,
+    "lon": 102.1,
+    "tagline": "Grows cassava; about 3,150 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "th-west",
+    "name": "West",
+    "place": "Kanchanaburi",
+    "country": "Thailand",
+    "lat": 14.02,
+    "lon": 99.53,
+    "tagline": "Grows sugarcane, cassava and maize; about 1,150 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "th-south",
+    "name": "South",
+    "place": "Surat Thani",
+    "country": "Thailand",
+    "lat": 9.14,
+    "lon": 99.33,
+    "tagline": "Mostly tree crops, about 1,750 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "vn-northern-mtn",
+    "name": "Northern Midlands and Mountains",
+    "place": "Son La",
+    "country": "Vietnam",
+    "lat": 21.33,
+    "lon": 103.91,
+    "tagline": "Grows maize and rice; about 1,400 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "vn-red-river",
+    "name": "Red River Delta",
+    "place": "Thai Binh",
+    "country": "Vietnam",
+    "lat": 20.45,
+    "lon": 106.34,
+    "tagline": "Grows rice, mixed vegetables and maize; about 1,750 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "vn-north-central",
+    "name": "North Central Coast",
+    "place": "Vinh",
+    "country": "Vietnam",
+    "lat": 18.68,
+    "lon": 105.68,
+    "tagline": "Grows rice, groundnut and maize; about 1,850 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "vn-south-central",
+    "name": "South Central Coast",
+    "place": "Ninh Thuan",
+    "country": "Vietnam",
+    "lat": 11.57,
+    "lon": 108.99,
+    "tagline": "Grows rice, maize and mixed vegetables; about 1,000 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "vn-central-highlands",
+    "name": "Central Highlands",
+    "place": "Buon Ma Thuot",
+    "country": "Vietnam",
+    "lat": 12.67,
+    "lon": 108.04,
+    "tagline": "Grows maize and mixed vegetables; about 1,750 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "vn-southeast",
+    "name": "Southeast",
+    "place": "Tay Ninh",
+    "country": "Vietnam",
+    "lat": 11.31,
+    "lon": 106.1,
+    "tagline": "Grows cassava and sugarcane; about 2,050 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "vn-mekong",
+    "name": "Mekong Delta",
+    "place": "Soc Trang",
+    "country": "Vietnam",
+    "lat": 9.6,
+    "lon": 105.97,
+    "tagline": "Grows rice, watermelon and mixed vegetables; about 1,850 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "kh-tonle-sap",
+    "name": "Tonle Sap Plain",
+    "place": "Battambang",
+    "country": "Cambodia",
+    "lat": 13.1,
+    "lon": 103.2,
+    "tagline": "Grows rice, cassava and soybean; about 1,350 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "kh-mekong-plain",
+    "name": "Mekong Plain",
+    "place": "Prey Veng",
+    "country": "Cambodia",
+    "lat": 11.49,
+    "lon": 105.32,
+    "tagline": "Grows rice, mixed vegetables and maize; about 1,450 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "kh-plateau",
+    "name": "Plateau and Mountains",
+    "place": "Banlung",
+    "country": "Cambodia",
+    "lat": 13.74,
+    "lon": 106.99,
+    "tagline": "Grows cassava, cashew and maize; about 2,550 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "kh-coastal",
+    "name": "Coastal",
+    "place": "Kampot",
+    "country": "Cambodia",
+    "lat": 10.61,
+    "lon": 104.18,
+    "tagline": "Grows rice and mixed vegetables; about 2,100 mm of rain a year",
+    "confidence": "low"
+  }
+]

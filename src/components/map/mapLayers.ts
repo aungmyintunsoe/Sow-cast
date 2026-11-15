@@ -5,6 +5,7 @@
 const GIBS = 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best';
 const gibs = (layer: string, level: number, ext: 'png' | 'jpg' = 'png') =>
   `${GIBS}/${layer}/default/default/GoogleMapsCompatible_Level${level}/{z}/{y}/{x}.${ext}`;
+export const OSM_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const legend = (name: string) => `https://gibs.earthdata.nasa.gov/legends/${name}_H.svg`;
 
 export interface MapLayer {
@@ -30,7 +31,7 @@ export const MAP_LAYERS: MapLayer[] = [
   },
   {
     id: 'street', label: 'Street map', description: 'Towns, roads and place names (OpenStreetMap)',
-    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', maxNativeZoom: 19, opacity: 1,
+    url: OSM_URL, maxNativeZoom: 19, opacity: 1,
     attribution: '&copy; OpenStreetMap contributors', streetBase: false, placeNames: false,
   },
   {

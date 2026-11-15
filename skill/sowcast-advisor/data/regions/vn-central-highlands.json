@@ -1,0 +1,1032 @@
+{
+  "region": {
+    "id": "vn-central-highlands",
+    "name": "Central Highlands",
+    "place": "Buon Ma Thuot",
+    "country": "Vietnam",
+    "lat": 12.67,
+    "lon": 108.04
+  },
+  "monthly": [
+    {
+      "month": 1,
+      "tmax_c": 27.1,
+      "tmin_c": 18.4,
+      "precip_mm": 4.7,
+      "et0_mm": 106.4,
+      "soil_moisture": 0.549,
+      "ndvi": 0.612,
+      "heat_days": 0,
+      "heavy_rain_days": 0,
+      "typically_bare": false
+    },
+    {
+      "month": 2,
+      "tmax_c": 30,
+      "tmin_c": 19,
+      "precip_mm": 3,
+      "et0_mm": 124.2,
+      "soil_moisture": 0.487,
+      "ndvi": 0.556,
+      "heat_days": 0.4,
+      "heavy_rain_days": 0,
+      "typically_bare": false
+    },
+    {
+      "month": 3,
+      "tmax_c": 32.4,
+      "tmin_c": 20.9,
+      "precip_mm": 21.9,
+      "et0_mm": 159.2,
+      "soil_moisture": 0.439,
+      "ndvi": 0.519,
+      "heat_days": 3.8,
+      "heavy_rain_days": 0.1,
+      "typically_bare": false
+    },
+    {
+      "month": 4,
+      "tmax_c": 33.4,
+      "tmin_c": 22.4,
+      "precip_mm": 88.5,
+      "et0_mm": 161.9,
+      "soil_moisture": 0.417,
+      "ndvi": 0.52,
+      "heat_days": 8.2,
+      "heavy_rain_days": 0.8,
+      "typically_bare": false
+    },
+    {
+      "month": 5,
+      "tmax_c": 31.6,
+      "tmin_c": 22.8,
+      "precip_mm": 278.6,
+      "et0_mm": 147.4,
+      "soil_moisture": 0.49,
+      "ndvi": 0.591,
+      "heat_days": 2.5,
+      "heavy_rain_days": 4.1,
+      "typically_bare": false
+    },
+    {
+      "month": 6,
+      "tmax_c": 29.7,
+      "tmin_c": 22.3,
+      "precip_mm": 203.3,
+      "et0_mm": 126.1,
+      "soil_moisture": 0.53,
+      "ndvi": 0.662,
+      "heat_days": 0,
+      "heavy_rain_days": 2.5,
+      "typically_bare": false
+    },
+    {
+      "month": 7,
+      "tmax_c": 28.7,
+      "tmin_c": 21.9,
+      "precip_mm": 232.5,
+      "et0_mm": 122.1,
+      "soil_moisture": 0.553,
+      "ndvi": 0.676,
+      "heat_days": 0,
+      "heavy_rain_days": 3.7,
+      "typically_bare": false
+    },
+    {
+      "month": 8,
+      "tmax_c": 28.4,
+      "tmin_c": 21.8,
+      "precip_mm": 351.2,
+      "et0_mm": 119.8,
+      "soil_moisture": 0.586,
+      "ndvi": 0.705,
+      "heat_days": 0,
+      "heavy_rain_days": 6.5,
+      "typically_bare": false
+    },
+    {
+      "month": 9,
+      "tmax_c": 28,
+      "tmin_c": 21.3,
+      "precip_mm": 280,
+      "et0_mm": 112.2,
+      "soil_moisture": 0.629,
+      "ndvi": 0.696,
+      "heat_days": 0,
+      "heavy_rain_days": 4.3,
+      "typically_bare": false
+    },
+    {
+      "month": 10,
+      "tmax_c": 27.9,
+      "tmin_c": 20.9,
+      "precip_mm": 170,
+      "et0_mm": 110.2,
+      "soil_moisture": 0.655,
+      "ndvi": 0.701,
+      "heat_days": 0,
+      "heavy_rain_days": 2.5,
+      "typically_bare": false
+    },
+    {
+      "month": 11,
+      "tmax_c": 27.5,
+      "tmin_c": 20.6,
+      "precip_mm": 98.8,
+      "et0_mm": 95.7,
+      "soil_moisture": 0.644,
+      "ndvi": 0.69,
+      "heat_days": 0,
+      "heavy_rain_days": 1.9,
+      "typically_bare": false
+    },
+    {
+      "month": 12,
+      "tmax_c": 26.2,
+      "tmin_c": 19.2,
+      "precip_mm": 29.1,
+      "et0_mm": 91.8,
+      "soil_moisture": 0.605,
+      "ndvi": 0.656,
+      "heat_days": 0,
+      "heavy_rain_days": 0.1,
+      "typically_bare": false
+    }
+  ],
+  "annual": [
+    {
+      "year": 2001,
+      "heat_days": 10,
+      "precip_mm": 1661,
+      "heavy_rain_days": 30,
+      "max_dry_spell_days": 29,
+      "water_balance_mm": 190
+    },
+    {
+      "year": 2002,
+      "heat_days": 35,
+      "precip_mm": 1986,
+      "heavy_rain_days": 31,
+      "max_dry_spell_days": 45,
+      "water_balance_mm": 472
+    },
+    {
+      "year": 2003,
+      "heat_days": 23,
+      "precip_mm": 1806,
+      "heavy_rain_days": 26,
+      "max_dry_spell_days": 63,
+      "water_balance_mm": 302
+    },
+    {
+      "year": 2004,
+      "heat_days": 16,
+      "precip_mm": 1551,
+      "heavy_rain_days": 29,
+      "max_dry_spell_days": 61,
+      "water_balance_mm": -21
+    },
+    {
+      "year": 2005,
+      "heat_days": 27,
+      "precip_mm": 1732,
+      "heavy_rain_days": 28,
+      "max_dry_spell_days": 81,
+      "water_balance_mm": 217
+    },
+    {
+      "year": 2006,
+      "heat_days": 1,
+      "precip_mm": 1468,
+      "heavy_rain_days": 19,
+      "max_dry_spell_days": 36,
+      "water_balance_mm": 4
+    },
+    {
+      "year": 2007,
+      "heat_days": 14,
+      "precip_mm": 2296,
+      "heavy_rain_days": 34,
+      "max_dry_spell_days": 45,
+      "water_balance_mm": 848
+    },
+    {
+      "year": 2008,
+      "heat_days": 0,
+      "precip_mm": 1799,
+      "heavy_rain_days": 22,
+      "max_dry_spell_days": 37,
+      "water_balance_mm": 388
+    },
+    {
+      "year": 2009,
+      "heat_days": 1,
+      "precip_mm": 2083,
+      "heavy_rain_days": 40,
+      "max_dry_spell_days": 21,
+      "water_balance_mm": 677
+    },
+    {
+      "year": 2010,
+      "heat_days": 38,
+      "precip_mm": 2248,
+      "heavy_rain_days": 37,
+      "max_dry_spell_days": 38,
+      "water_balance_mm": 724
+    },
+    {
+      "year": 2011,
+      "heat_days": 1,
+      "precip_mm": 2048,
+      "heavy_rain_days": 41,
+      "max_dry_spell_days": 66,
+      "water_balance_mm": 687
+    },
+    {
+      "year": 2012,
+      "heat_days": 0,
+      "precip_mm": 2013,
+      "heavy_rain_days": 39,
+      "max_dry_spell_days": 36,
+      "water_balance_mm": 573
+    },
+    {
+      "year": 2013,
+      "heat_days": 7,
+      "precip_mm": 1933,
+      "heavy_rain_days": 26,
+      "max_dry_spell_days": 45,
+      "water_balance_mm": 501
+    },
+    {
+      "year": 2014,
+      "heat_days": 2,
+      "precip_mm": 1444,
+      "heavy_rain_days": 20,
+      "max_dry_spell_days": 89,
+      "water_balance_mm": -32
+    },
+    {
+      "year": 2015,
+      "heat_days": 8,
+      "precip_mm": 1297,
+      "heavy_rain_days": 16,
+      "max_dry_spell_days": 52,
+      "water_balance_mm": -217
+    },
+    {
+      "year": 2016,
+      "heat_days": 34,
+      "precip_mm": 1715,
+      "heavy_rain_days": 23,
+      "max_dry_spell_days": 67,
+      "water_balance_mm": 228
+    },
+    {
+      "year": 2017,
+      "heat_days": 4,
+      "precip_mm": 1664,
+      "heavy_rain_days": 18,
+      "max_dry_spell_days": 21,
+      "water_balance_mm": 267
+    },
+    {
+      "year": 2018,
+      "heat_days": 11,
+      "precip_mm": 1455,
+      "heavy_rain_days": 21,
+      "max_dry_spell_days": 60,
+      "water_balance_mm": -23
+    },
+    {
+      "year": 2019,
+      "heat_days": 11,
+      "precip_mm": 1164,
+      "heavy_rain_days": 17,
+      "max_dry_spell_days": 68,
+      "water_balance_mm": -336
+    },
+    {
+      "year": 2020,
+      "heat_days": 31,
+      "precip_mm": 1578,
+      "heavy_rain_days": 10,
+      "max_dry_spell_days": 67,
+      "water_balance_mm": 54
+    },
+    {
+      "year": 2021,
+      "heat_days": 11,
+      "precip_mm": 1805,
+      "heavy_rain_days": 29,
+      "max_dry_spell_days": 73,
+      "water_balance_mm": 344
+    },
+    {
+      "year": 2022,
+      "heat_days": 4,
+      "precip_mm": 2104,
+      "heavy_rain_days": 31,
+      "max_dry_spell_days": 42,
+      "water_balance_mm": 617
+    },
+    {
+      "year": 2023,
+      "heat_days": 20,
+      "precip_mm": 1927,
+      "heavy_rain_days": 28,
+      "max_dry_spell_days": 48,
+      "water_balance_mm": 424
+    },
+    {
+      "year": 2024,
+      "heat_days": 47,
+      "precip_mm": 1501,
+      "heavy_rain_days": 17,
+      "max_dry_spell_days": 87,
+      "water_balance_mm": -60
+    }
+  ],
+  "trends": {
+    "period": "2001-2024",
+    "heat_days": {
+      "per_decade": 1.626,
+      "first_10y_mean": 16.5,
+      "last_10y_mean": 18.1,
+      "p": 0.5683
+    },
+    "precip_mm": {
+      "per_decade": -90.826,
+      "first_10y_mean": 1863,
+      "last_10y_mean": 1621,
+      "p": 0.3092
+    },
+    "heavy_rain_days": {
+      "per_decade": -4.53,
+      "first_10y_mean": 29.6,
+      "last_10y_mean": 21,
+      "p": 0.0664
+    },
+    "max_dry_spell_days": {
+      "per_decade": 8.257,
+      "first_10y_mean": 45.6,
+      "last_10y_mean": 58.5,
+      "p": 0.087
+    },
+    "mean_water_balance_mm": 285
+  },
+  "data_quality": {
+    "weather": "ok",
+    "sources": {
+      "rain": "CHIRPS (ClimateSERV)",
+      "temperature": "ERA5 (Open-Meteo)",
+      "greenness": "NASA GIBS VIIRS NDVI (cropland pixels)",
+      "power_replaced": true
+    },
+    "note": null
+  },
+  "soil": null,
+  "priors": {
+    "rain_mm": 1900,
+    "mean_temp_c": 23.5,
+    "dry_months": 4,
+    "soil_texture": "clay_loam",
+    "drainage": "good",
+    "slope_pct": 6,
+    "flood_risk": 0,
+    "salinity_risk": 0,
+    "irrigation_access": 1,
+    "tree_crop_dominated": true,
+    "soil_degraded": false,
+    "common_crops": [
+      "maize",
+      "vegetables"
+    ],
+    "evidence": "General agronomy knowledge only - not yet verified; check FAO GIEWS, USDA FAS crop calendars, national statistics",
+    "confidence": "low"
+  },
+  "scoring_inputs": [
+    {
+      "input": "rain_mm_approx",
+      "draft": 1900,
+      "measured": 1762,
+      "used": "measured",
+      "source": "CHIRPS (ClimateSERV)"
+    },
+    {
+      "input": "mean_temp_c_approx",
+      "draft": 23.5,
+      "measured": 24.5,
+      "used": "measured",
+      "source": "ERA5 (Open-Meteo)"
+    },
+    {
+      "input": "dry_months_approx",
+      "draft": 4,
+      "measured": 4,
+      "used": "measured",
+      "source": "CHIRPS (ClimateSERV) rain vs crop water demand"
+    },
+    {
+      "input": "soil_texture",
+      "draft": "clay_loam",
+      "measured": null,
+      "used": "draft",
+      "source": "no measured data yet"
+    },
+    {
+      "input": "slope_pct_approx",
+      "draft": 6,
+      "measured": 1.8,
+      "used": "measured",
+      "source": "NASA SRTM, mean within ~1.5 km"
+    },
+    {
+      "input": "drainage",
+      "draft": "good",
+      "measured": null,
+      "used": "draft",
+      "source": "no measured data yet"
+    },
+    {
+      "input": "flood_risk_0_3",
+      "draft": 0,
+      "measured": null,
+      "used": "draft",
+      "source": "no measured data yet"
+    },
+    {
+      "input": "salinity_risk_0_3",
+      "draft": 0,
+      "measured": null,
+      "used": "draft",
+      "source": "no measured data yet"
+    },
+    {
+      "input": "irrigation_access_0_3",
+      "draft": 1,
+      "measured": null,
+      "used": "draft",
+      "source": "no measured data yet"
+    }
+  ],
+  "insights": [
+    {
+      "title": "Fewer downpours than before",
+      "body": "Days with 20 mm or more of rain went from about 30 to 21 a year (first vs last 10 years).",
+      "source": "CHIRPS, 2001–2024",
+      "confidence": "medium",
+      "badgeType": "neutral"
+    },
+    {
+      "title": "Dry spells are getting longer",
+      "body": "The longest run of days without rain went from about 46 to 59 days. Short, drought-tolerant crops lower the risk.",
+      "source": "CHIRPS, 2001–2024",
+      "confidence": "medium",
+      "badgeType": "warning"
+    },
+    {
+      "title": "Best-matched crops for this area",
+      "body": "Cashew, Legume cover crop and Pigeon pea score highest on climate, water and soil fit.",
+      "source": "Sowcast crop-fit score using measured climate and soil",
+      "confidence": "medium",
+      "badgeType": "opportunity"
+    }
+  ],
+  "rotations": [
+    {
+      "id": "current",
+      "label": "Current",
+      "name": "Tree crops (coffee, pepper) with some maize",
+      "sequence": [
+        "perennial_tree+maize"
+      ],
+      "cover_by_month": null,
+      "scores": {
+        "soil": 3,
+        "water": 3,
+        "erosion": 4,
+        "income": 4,
+        "pest_break": 3
+      },
+      "why": "The usual pattern in Central Highlands, based on general knowledge.",
+      "evidence": [
+        "Not yet verified"
+      ],
+      "benefits": [
+        "Spreads risk across 2 crops"
+      ],
+      "gaps": [
+        "Sowing and harvest months are not collected yet, so ground cover by month is not shown",
+        "Based on general agronomy knowledge; check with local farmers or extension staff"
+      ],
+      "risks": [
+        "None flagged by the crop-fit score; still check pests, prices and labour locally"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "alt_a",
+      "label": "Option A",
+      "name": "Annual land: maize then soybean",
+      "sequence": [
+        "maize",
+        "soybean"
+      ],
+      "cover_by_month": null,
+      "scores": {
+        "soil": 5,
+        "water": 3,
+        "erosion": 3,
+        "income": 4,
+        "pest_break": 4
+      },
+      "why": "A common option in similar areas. Not yet checked for this region.",
+      "evidence": [
+        "Not yet verified"
+      ],
+      "benefits": [
+        "A legume in the sequence adds nitrogen for the next crop",
+        "Switching between a cereal and a legume breaks pest and disease cycles",
+        "Spreads risk across 2 crops",
+        "Average crop match here: 60.5/100"
+      ],
+      "gaps": [
+        "Sowing and harvest months are not collected yet, so ground cover by month is not shown",
+        "Based on general agronomy knowledge; check with local farmers or extension staff"
+      ],
+      "risks": [
+        "None flagged by the crop-fit score; still check pests, prices and labour locally"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "alt_b",
+      "label": "Option B",
+      "name": "Legume cover when replanting coffee",
+      "sequence": [
+        "perennial_tree+cover_legume"
+      ],
+      "cover_by_month": null,
+      "scores": {
+        "soil": 5,
+        "water": 3,
+        "erosion": 5,
+        "income": 3,
+        "pest_break": 3
+      },
+      "why": "A common option in similar areas. Not yet checked for this region.",
+      "evidence": [
+        "Not yet verified"
+      ],
+      "benefits": [
+        "A legume in the sequence adds nitrogen for the next crop",
+        "Spreads risk across 2 crops"
+      ],
+      "gaps": [
+        "Sowing and harvest months are not collected yet, so ground cover by month is not shown",
+        "Based on general agronomy knowledge; check with local farmers or extension staff"
+      ],
+      "risks": [
+        "None flagged by the crop-fit score; still check pests, prices and labour locally"
+      ],
+      "confidence": "low"
+    }
+  ],
+  "crop_fit": [
+    {
+      "crop": "cashew",
+      "rank": 1,
+      "fit": 87,
+      "fit_band": "high",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.4
+      }
+    },
+    {
+      "crop": "cover_legume",
+      "rank": 2,
+      "fit": 68,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.66
+      }
+    },
+    {
+      "crop": "pigeon_pea",
+      "rank": 3,
+      "fit": 62,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.75
+      }
+    },
+    {
+      "crop": "soybean",
+      "rank": 4,
+      "fit": 61,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.68
+      }
+    },
+    {
+      "crop": "groundnut",
+      "rank": 5,
+      "fit": 61,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.68
+      }
+    },
+    {
+      "crop": "green_gram",
+      "rank": 6,
+      "fit": 61,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.68
+      }
+    },
+    {
+      "crop": "black_gram",
+      "rank": 7,
+      "fit": 61,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.68
+      }
+    },
+    {
+      "crop": "maize",
+      "rank": 8,
+      "fit": 60,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range",
+        "already grown locally (farmer know-how, market)"
+      ],
+      "common_locally": true,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.37
+      }
+    },
+    {
+      "crop": "cowpea",
+      "rank": 9,
+      "fit": 60,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.67
+      }
+    },
+    {
+      "crop": "chickpea",
+      "rank": 10,
+      "fit": 60,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "temperature (~24 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.65
+      }
+    },
+    {
+      "crop": "vegetables",
+      "rank": 11,
+      "fit": 58,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "temperature (~24 C) is in its range",
+        "already grown locally (farmer know-how, market)"
+      ],
+      "common_locally": true,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.3
+      }
+    },
+    {
+      "crop": "sugarcane",
+      "rank": 12,
+      "fit": 53,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "drought tolerance suits the rainfall",
+        "temperature (~24 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.4
+      }
+    },
+    {
+      "crop": "cassava",
+      "rank": 13,
+      "fit": 52,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.36
+      }
+    },
+    {
+      "crop": "rice",
+      "rank": 14,
+      "fit": 51,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.34
+      }
+    },
+    {
+      "crop": "sesame",
+      "rank": 15,
+      "fit": 51,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.34
+      }
+    },
+    {
+      "crop": "sunflower",
+      "rank": 16,
+      "fit": 51,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.33
+      }
+    },
+    {
+      "crop": "salt_rice",
+      "rank": 17,
+      "fit": 50,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.3
+      }
+    },
+    {
+      "crop": "sorghum",
+      "rank": 18,
+      "fit": 49,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.29
+      }
+    },
+    {
+      "crop": "watermelon",
+      "rank": 19,
+      "fit": 46,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "temperature (~24 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.23
+      }
+    },
+    {
+      "crop": "potato",
+      "rank": 20,
+      "fit": 46,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "moderate match on climate, water and soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 0.92,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.99,
+        "benefit": 0.3
+      }
+    },
+    {
+      "crop": "sunn_hemp",
+      "rank": 21,
+      "fit": 36,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~1498 mm in season) covers its water need",
+        "temperature (~24 C) is in its range",
+        "fixes nitrogen for the next crop"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 1,
+        "benefit": 0.63
+      }
+    }
+  ],
+  "sources": [
+    "rain from CHIRPS",
+    "temperature from ERA5",
+    "greenness from NASA VIIRS",
+    "NASA SRTM elevation",
+    "crop scores from the team rules applied to measured data"
+  ]
+}

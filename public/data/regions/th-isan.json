@@ -12,7 +12,7 @@
       "month": 1,
       "tmax_c": 31.2,
       "tmin_c": 16.9,
-      "precip_mm": 7.2,
+      "precip_mm": 2.6,
       "et0_mm": 132.3,
       "soil_moisture": 0.33,
       "ndvi": 0.43,
@@ -24,115 +24,115 @@
       "month": 2,
       "tmax_c": 34.1,
       "tmin_c": 19.9,
-      "precip_mm": 16.2,
+      "precip_mm": 16.5,
       "et0_mm": 143.3,
       "soil_moisture": 0.291,
       "ndvi": 0.405,
       "heat_days": 12.7,
-      "heavy_rain_days": 0.1,
+      "heavy_rain_days": 0.2,
       "typically_bare": false
     },
     {
       "month": 3,
       "tmax_c": 36,
       "tmin_c": 23.2,
-      "precip_mm": 47.2,
+      "precip_mm": 51.6,
       "et0_mm": 174.9,
       "soil_moisture": 0.351,
       "ndvi": 0.422,
       "heat_days": 21,
-      "heavy_rain_days": 0.3,
+      "heavy_rain_days": 0.7,
       "typically_bare": false
     },
     {
       "month": 4,
       "tmax_c": 36.9,
       "tmin_c": 25.3,
-      "precip_mm": 79.4,
+      "precip_mm": 65.9,
       "et0_mm": 177.4,
       "soil_moisture": 0.441,
       "ndvi": 0.457,
       "heat_days": 21.5,
-      "heavy_rain_days": 0.8,
+      "heavy_rain_days": 0.6,
       "typically_bare": false
     },
     {
       "month": 5,
       "tmax_c": 33.7,
       "tmin_c": 25,
-      "precip_mm": 179.6,
+      "precip_mm": 189.7,
       "et0_mm": 155.9,
       "soil_moisture": 0.611,
       "ndvi": 0.503,
       "heat_days": 9.5,
-      "heavy_rain_days": 1.6,
+      "heavy_rain_days": 1.9,
       "typically_bare": false
     },
     {
       "month": 6,
       "tmax_c": 31.4,
       "tmin_c": 24.4,
-      "precip_mm": 179.8,
+      "precip_mm": 153.2,
       "et0_mm": 130.7,
       "soil_moisture": 0.73,
       "ndvi": 0.523,
       "heat_days": 1.5,
-      "heavy_rain_days": 1.7,
+      "heavy_rain_days": 1,
       "typically_bare": false
     },
     {
       "month": 7,
       "tmax_c": 30.4,
       "tmin_c": 24,
-      "precip_mm": 227.9,
+      "precip_mm": 189.5,
       "et0_mm": 127.2,
       "soil_moisture": 0.787,
       "ndvi": 0.545,
       "heat_days": 0.3,
-      "heavy_rain_days": 2.5,
+      "heavy_rain_days": 1.6,
       "typically_bare": false
     },
     {
       "month": 8,
       "tmax_c": 29.9,
       "tmin_c": 23.9,
-      "precip_mm": 258.1,
+      "precip_mm": 225.3,
       "et0_mm": 121,
       "soil_moisture": 0.851,
       "ndvi": 0.589,
       "heat_days": 0,
-      "heavy_rain_days": 3.2,
+      "heavy_rain_days": 2.7,
       "typically_bare": false
     },
     {
       "month": 9,
       "tmax_c": 29.6,
       "tmin_c": 23.6,
-      "precip_mm": 273.4,
+      "precip_mm": 253.5,
       "et0_mm": 109.7,
       "soil_moisture": 0.902,
       "ndvi": 0.64,
       "heat_days": 0,
-      "heavy_rain_days": 3.3,
+      "heavy_rain_days": 3.6,
       "typically_bare": false
     },
     {
       "month": 10,
       "tmax_c": 29.3,
       "tmin_c": 21.7,
-      "precip_mm": 104.8,
+      "precip_mm": 110.2,
       "et0_mm": 113.6,
       "soil_moisture": 0.843,
       "ndvi": 0.634,
       "heat_days": 0,
-      "heavy_rain_days": 1.2,
+      "heavy_rain_days": 1.9,
       "typically_bare": false
     },
     {
       "month": 11,
       "tmax_c": 29.5,
       "tmin_c": 19.3,
-      "precip_mm": 16.8,
+      "precip_mm": 8.7,
       "et0_mm": 110.8,
       "soil_moisture": 0.67,
       "ndvi": 0.543,
@@ -144,7 +144,7 @@
       "month": 12,
       "tmax_c": 29.5,
       "tmin_c": 16.6,
-      "precip_mm": 3.4,
+      "precip_mm": 0.9,
       "et0_mm": 118.1,
       "soil_moisture": 0.474,
       "ndvi": 0.476,
@@ -157,194 +157,194 @@
     {
       "year": 2001,
       "heat_days": 70,
-      "precip_mm": 1566,
-      "heavy_rain_days": 21,
-      "max_dry_spell_days": 53,
-      "water_balance_mm": -10
+      "precip_mm": 1159,
+      "heavy_rain_days": 6,
+      "max_dry_spell_days": 47,
+      "water_balance_mm": -418
     },
     {
       "year": 2002,
       "heat_days": 66,
-      "precip_mm": 1465,
-      "heavy_rain_days": 22,
-      "max_dry_spell_days": 42,
-      "water_balance_mm": -129
+      "precip_mm": 1354,
+      "heavy_rain_days": 18,
+      "max_dry_spell_days": 56,
+      "water_balance_mm": -240
     },
     {
       "year": 2003,
       "heat_days": 72,
-      "precip_mm": 1322,
-      "heavy_rain_days": 15,
+      "precip_mm": 1219,
+      "heavy_rain_days": 12,
       "max_dry_spell_days": 78,
-      "water_balance_mm": -324
+      "water_balance_mm": -426
     },
     {
       "year": 2004,
       "heat_days": 63,
-      "precip_mm": 1396,
-      "heavy_rain_days": 15,
-      "max_dry_spell_days": 101,
-      "water_balance_mm": -262
+      "precip_mm": 1202,
+      "heavy_rain_days": 13,
+      "max_dry_spell_days": 65,
+      "water_balance_mm": -455
     },
     {
       "year": 2005,
       "heat_days": 89,
-      "precip_mm": 1279,
+      "precip_mm": 1245,
       "heavy_rain_days": 14,
-      "max_dry_spell_days": 48,
-      "water_balance_mm": -374
+      "max_dry_spell_days": 47,
+      "water_balance_mm": -409
     },
     {
       "year": 2006,
       "heat_days": 76,
-      "precip_mm": 1323,
-      "heavy_rain_days": 16,
-      "max_dry_spell_days": 42,
-      "water_balance_mm": -334
+      "precip_mm": 1330,
+      "heavy_rain_days": 18,
+      "max_dry_spell_days": 41,
+      "water_balance_mm": -327
     },
     {
       "year": 2007,
       "heat_days": 69,
-      "precip_mm": 1389,
-      "heavy_rain_days": 11,
-      "max_dry_spell_days": 55,
-      "water_balance_mm": -254
+      "precip_mm": 1401,
+      "heavy_rain_days": 19,
+      "max_dry_spell_days": 57,
+      "water_balance_mm": -242
     },
     {
       "year": 2008,
       "heat_days": 36,
-      "precip_mm": 1607,
-      "heavy_rain_days": 19,
-      "max_dry_spell_days": 49,
-      "water_balance_mm": 74
+      "precip_mm": 1591,
+      "heavy_rain_days": 15,
+      "max_dry_spell_days": 55,
+      "water_balance_mm": 57
     },
     {
       "year": 2009,
       "heat_days": 68,
-      "precip_mm": 1238,
-      "heavy_rain_days": 10,
-      "max_dry_spell_days": 58,
-      "water_balance_mm": -404
+      "precip_mm": 1174,
+      "heavy_rain_days": 11,
+      "max_dry_spell_days": 71,
+      "water_balance_mm": -468
     },
     {
       "year": 2010,
       "heat_days": 95,
-      "precip_mm": 1293,
-      "heavy_rain_days": 11,
-      "max_dry_spell_days": 57,
-      "water_balance_mm": -326
+      "precip_mm": 1222,
+      "heavy_rain_days": 12,
+      "max_dry_spell_days": 73,
+      "water_balance_mm": -397
     },
     {
       "year": 2011,
       "heat_days": 49,
-      "precip_mm": 1520,
-      "heavy_rain_days": 17,
-      "max_dry_spell_days": 51,
-      "water_balance_mm": -16
+      "precip_mm": 1463,
+      "heavy_rain_days": 19,
+      "max_dry_spell_days": 77,
+      "water_balance_mm": -72
     },
     {
       "year": 2012,
       "heat_days": 67,
-      "precip_mm": 1130,
-      "heavy_rain_days": 8,
-      "max_dry_spell_days": 35,
-      "water_balance_mm": -515
+      "precip_mm": 1119,
+      "heavy_rain_days": 15,
+      "max_dry_spell_days": 37,
+      "water_balance_mm": -526
     },
     {
       "year": 2013,
       "heat_days": 87,
-      "precip_mm": 1364,
-      "heavy_rain_days": 18,
-      "max_dry_spell_days": 57,
-      "water_balance_mm": -271
+      "precip_mm": 1096,
+      "heavy_rain_days": 8,
+      "max_dry_spell_days": 52,
+      "water_balance_mm": -539
     },
     {
       "year": 2014,
       "heat_days": 88,
-      "precip_mm": 1230,
-      "heavy_rain_days": 9,
-      "max_dry_spell_days": 68,
-      "water_balance_mm": -413
+      "precip_mm": 1156,
+      "heavy_rain_days": 16,
+      "max_dry_spell_days": 54,
+      "water_balance_mm": -487
     },
     {
       "year": 2015,
       "heat_days": 101,
-      "precip_mm": 1058,
-      "heavy_rain_days": 6,
-      "max_dry_spell_days": 46,
-      "water_balance_mm": -633
+      "precip_mm": 980,
+      "heavy_rain_days": 12,
+      "max_dry_spell_days": 82,
+      "water_balance_mm": -711
     },
     {
       "year": 2016,
       "heat_days": 90,
-      "precip_mm": 1383,
-      "heavy_rain_days": 14,
-      "max_dry_spell_days": 60,
-      "water_balance_mm": -279
+      "precip_mm": 1341,
+      "heavy_rain_days": 17,
+      "max_dry_spell_days": 52,
+      "water_balance_mm": -321
     },
     {
       "year": 2017,
       "heat_days": 50,
-      "precip_mm": 1678,
-      "heavy_rain_days": 15,
-      "max_dry_spell_days": 54,
-      "water_balance_mm": 164
+      "precip_mm": 1708,
+      "heavy_rain_days": 24,
+      "max_dry_spell_days": 50,
+      "water_balance_mm": 194
     },
     {
       "year": 2018,
       "heat_days": 49,
-      "precip_mm": 1317,
-      "heavy_rain_days": 10,
-      "max_dry_spell_days": 50,
-      "water_balance_mm": -248
+      "precip_mm": 1177,
+      "heavy_rain_days": 7,
+      "max_dry_spell_days": 49,
+      "water_balance_mm": -389
     },
     {
       "year": 2019,
       "heat_days": 91,
-      "precip_mm": 1278,
-      "heavy_rain_days": 12,
-      "max_dry_spell_days": 60,
-      "water_balance_mm": -420
+      "precip_mm": 1053,
+      "heavy_rain_days": 14,
+      "max_dry_spell_days": 48,
+      "water_balance_mm": -645
     },
     {
       "year": 2020,
       "heat_days": 80,
-      "precip_mm": 1445,
-      "heavy_rain_days": 17,
-      "max_dry_spell_days": 49,
-      "water_balance_mm": -139
+      "precip_mm": 1355,
+      "heavy_rain_days": 13,
+      "max_dry_spell_days": 61,
+      "water_balance_mm": -229
     },
     {
       "year": 2021,
       "heat_days": 47,
-      "precip_mm": 1456,
-      "heavy_rain_days": 21,
-      "max_dry_spell_days": 62,
-      "water_balance_mm": -99
+      "precip_mm": 1266,
+      "heavy_rain_days": 13,
+      "max_dry_spell_days": 64,
+      "water_balance_mm": -289
     },
     {
       "year": 2022,
       "heat_days": 41,
-      "precip_mm": 1855,
-      "heavy_rain_days": 20,
-      "max_dry_spell_days": 31,
-      "water_balance_mm": 344
+      "precip_mm": 1517,
+      "heavy_rain_days": 19,
+      "max_dry_spell_days": 50,
+      "water_balance_mm": 5
     },
     {
       "year": 2023,
       "heat_days": 78,
-      "precip_mm": 1401,
-      "heavy_rain_days": 16,
-      "max_dry_spell_days": 61,
-      "water_balance_mm": -237
+      "precip_mm": 1119,
+      "heavy_rain_days": 13,
+      "max_dry_spell_days": 62,
+      "water_balance_mm": -519
     },
     {
       "year": 2024,
       "heat_days": 94,
-      "precip_mm": 1456,
-      "heavy_rain_days": 17,
-      "max_dry_spell_days": 62,
-      "water_balance_mm": -199
+      "precip_mm": 1173,
+      "heavy_rain_days": 13,
+      "max_dry_spell_days": 71,
+      "water_balance_mm": -482
     }
   ],
   "trends": {
@@ -356,36 +356,45 @@
       "p": 0.7284
     },
     "precip_mm": {
-      "per_decade": 35.778,
-      "first_10y_mean": 1387.8,
-      "last_10y_mean": 1432.7,
-      "p": 0.7284
+      "per_decade": -9.609,
+      "first_10y_mean": 1289.7,
+      "last_10y_mean": 1268.9,
+      "p": 0.6915
     },
     "heavy_rain_days": {
-      "per_decade": -0.374,
-      "first_10y_mean": 15.4,
-      "last_10y_mean": 14.8,
-      "p": 0.8817
+      "per_decade": 0.422,
+      "first_10y_mean": 13.8,
+      "last_10y_mean": 14.5,
+      "p": 0.8041
     },
     "max_dry_spell_days": {
-      "per_decade": -2.952,
-      "first_10y_mean": 58.3,
-      "last_10y_mean": 53.5,
-      "p": 0.4874
+      "per_decade": 0.674,
+      "first_10y_mean": 59,
+      "last_10y_mean": 58.9,
+      "p": 0.8233
     },
-    "mean_water_balance_mm": -221
+    "mean_water_balance_mm": -347
   },
   "data_quality": {
     "weather": "ok",
     "sources": {
-      "rain": "NASA POWER",
+      "rain": "CHIRPS (ClimateSERV)",
       "temperature": "NASA POWER",
       "greenness": "NASA GIBS VIIRS NDVI (cropland pixels)",
       "power_replaced": false
     },
     "note": null
   },
-  "soil": null,
+  "soil": {
+    "texture": "sandy clay loam",
+    "organic_matter": "good",
+    "drainage": "well",
+    "water_holding": "moderate",
+    "slope_pct": 1.91,
+    "erosion_risk": "low",
+    "sampled_km_from_town": 3,
+    "source": "ISRIC SoilGrids + NASA SRTM"
+  },
   "priors": {
     "rain_mm": 1190,
     "mean_temp_c": 27.4,
@@ -411,9 +420,9 @@
     {
       "input": "rain_mm_approx",
       "draft": 1190,
-      "measured": 1394,
+      "measured": 1268,
       "used": "measured",
-      "source": "NASA POWER"
+      "source": "CHIRPS (ClimateSERV)"
     },
     {
       "input": "mean_temp_c_approx",
@@ -427,14 +436,14 @@
       "draft": 5,
       "measured": 6,
       "used": "measured",
-      "source": "NASA POWER rain vs crop water demand"
+      "source": "CHIRPS (ClimateSERV) rain vs crop water demand"
     },
     {
       "input": "soil_texture",
       "draft": "sandy",
-      "measured": null,
+      "measured": "clay_loam",
       "used": "draft",
-      "source": "no measured data yet"
+      "source": "kept literature value; ISRIC SoilGrids 0-30 cm shown for comparison"
     },
     {
       "input": "slope_pct_approx",
@@ -474,11 +483,11 @@
   ],
   "insights": [
     {
-      "title": "Rain roughly matches crop needs",
-      "body": "Yearly rain and crop water demand are within about 221 mm of each other. Timing within the year matters more than the total.",
-      "source": "NASA POWER rain, NASA POWER temperature, 2001–2024",
+      "title": "Rain does not cover crop water needs",
+      "body": "On average, crops here need about 347 mm more water each year than rain provides. Irrigation or drought-tolerant crops matter.",
+      "source": "CHIRPS rain, NASA POWER temperature, 2001–2024",
       "confidence": "medium",
-      "badgeType": "neutral"
+      "badgeType": "warning"
     },
     {
       "title": "Fields are greenest in September, barest in February",
@@ -606,7 +615,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range",
         "fixes nitrogen on low-fertility soil"
       ],
@@ -627,7 +636,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range",
         "fixes nitrogen on low-fertility soil"
       ],
@@ -648,7 +657,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range",
         "fixes nitrogen on low-fertility soil"
       ],
@@ -669,7 +678,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range",
         "fixes nitrogen on low-fertility soil"
       ],
@@ -690,7 +699,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range",
         "fixes nitrogen on low-fertility soil"
       ],
@@ -711,7 +720,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range",
         "fixes nitrogen on low-fertility soil"
       ],
@@ -732,7 +741,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range",
         "copes with sandy soil"
       ],
@@ -796,7 +805,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range",
         "copes with sandy soil"
       ],
@@ -817,7 +826,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range"
       ],
       "common_locally": false,
@@ -837,7 +846,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range"
       ],
       "common_locally": false,
@@ -877,7 +886,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range"
       ],
       "common_locally": false,
@@ -899,7 +908,7 @@
         "sandy, low-water-holding soil"
       ],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "drought tolerance suits the rainfall",
         "temperature (~27 C) is in its range"
       ],
       "common_locally": false,
@@ -919,7 +928,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range",
         "already grown locally (farmer know-how, market)"
       ],
@@ -933,29 +942,8 @@
       }
     },
     {
-      "crop": "sugarcane",
-      "rank": 17,
-      "fit": 60,
-      "fit_band": "medium",
-      "trend": "flat",
-      "limits": [],
-      "why": [
-        "drought tolerance suits the rainfall",
-        "temperature (~27 C) is in its range",
-        "already grown locally (farmer know-how, market)"
-      ],
-      "common_locally": true,
-      "parts": {
-        "climate": 1,
-        "water": 0.94,
-        "soil": 0.76,
-        "risk": 0.8,
-        "benefit": 0.39
-      }
-    },
-    {
       "crop": "vegetables",
-      "rank": 18,
+      "rank": 17,
       "fit": 59,
       "fit_band": "medium",
       "trend": "flat",
@@ -973,6 +961,26 @@
       }
     },
     {
+      "crop": "sugarcane",
+      "rank": 18,
+      "fit": 57,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "temperature (~27 C) is in its range",
+        "already grown locally (farmer know-how, market)"
+      ],
+      "common_locally": true,
+      "parts": {
+        "climate": 1,
+        "water": 0.86,
+        "soil": 0.76,
+        "risk": 0.8,
+        "benefit": 0.39
+      }
+    },
+    {
       "crop": "sunn_hemp",
       "rank": 19,
       "fit": 54,
@@ -980,7 +988,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range",
         "fixes nitrogen on low-fertility soil"
       ],
@@ -1022,7 +1030,7 @@
       "trend": "flat",
       "limits": [],
       "why": [
-        "rainfall (~1185 mm in season) covers its water need",
+        "rainfall (~1078 mm in season) covers its water need",
         "temperature (~27 C) is in its range",
         "fixes nitrogen on low-fertility soil"
       ],
@@ -1037,9 +1045,10 @@
     }
   ],
   "sources": [
-    "rain from NASA POWER",
+    "rain from CHIRPS",
     "temperature from NASA POWER",
     "greenness from NASA VIIRS",
+    "ISRIC SoilGrids",
     "NASA SRTM elevation",
     "crop scores from the team rules applied to measured data"
   ]

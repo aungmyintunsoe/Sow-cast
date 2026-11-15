@@ -4,7 +4,7 @@
   "note": "Mann-Kendall p<0.05 = significant monotonic trend. With 24 years, treat p 0.05-0.15 as \"possible\", not proven.",
   "quality": {
     "weather": "ok",
-    "rain_source": "ERA5 (Open-Meteo)",
+    "rain_source": "CHIRPS (ClimateSERV)",
     "temp_source": "ERA5 (Open-Meteo)",
     "ndvi_source": "NASA GIBS VIIRS NDVI (cropland pixels)",
     "power_check": {
@@ -15,10 +15,10 @@
     },
     "final_check": {
       "broken": false,
-      "rain_step_ratio_2008_vs_before": 0.95,
+      "rain_step_ratio_2008_vs_before": 0.93,
       "tmean_step_c_2008_vs_before": 0.26
     },
-    "note": "POWER weather is broken here (2008 step change), so rain comes from ERA5 (Open-Meteo) and temperature from ERA5 (Open-Meteo)."
+    "note": "POWER weather is broken here (2008 step change), so rain comes from CHIRPS (ClimateSERV) and temperature from ERA5 (Open-Meteo)."
   },
   "trends": {
     "tmean_c": {
@@ -70,50 +70,50 @@
       }
     },
     "precip_mm": {
-      "per_decade": -49.839,
-      "first_10y_mean": 3127.1,
-      "last_10y_mean": 3104.2,
-      "change_pct_over_period": -3.7,
+      "per_decade": -221.1,
+      "first_10y_mean": 4349.5,
+      "last_10y_mean": 4152.1,
+      "change_pct_over_period": -11.9,
       "mann_kendall": {
-        "S": -22,
-        "z": -0.521,
-        "p": 0.6024,
+        "S": -58,
+        "z": -1.414,
+        "p": 0.1574,
         "trend": "no significant trend"
       }
     },
     "heavy_rain_days": {
-      "per_decade": 0.552,
-      "first_10y_mean": 52.6,
-      "last_10y_mean": 54.1,
-      "change_pct_over_period": 2.4,
+      "per_decade": -6.561,
+      "first_10y_mean": 74.4,
+      "last_10y_mean": 64.7,
+      "change_pct_over_period": -21.5,
       "mann_kendall": {
-        "S": 17,
-        "z": 0.397,
-        "p": 0.6915,
-        "trend": "no significant trend"
+        "S": -100,
+        "z": -2.456,
+        "p": 0.0141,
+        "trend": "decreasing"
       }
     },
     "max_dry_spell_days": {
-      "per_decade": -10.217,
-      "first_10y_mean": 92,
-      "last_10y_mean": 78.4,
-      "change_pct_over_period": -28.1,
+      "per_decade": -1.404,
+      "first_10y_mean": 47,
+      "last_10y_mean": 47.3,
+      "change_pct_over_period": -7,
       "mann_kendall": {
-        "S": -48,
-        "z": -1.166,
-        "p": 0.2437,
+        "S": -18,
+        "z": -0.422,
+        "p": 0.6733,
         "trend": "no significant trend"
       }
     },
     "precip_p95_day_mm": {
-      "per_decade": 5.165,
-      "first_10y_mean": 51.75,
-      "last_10y_mean": 60.49,
-      "change_pct_over_period": 21.6,
+      "per_decade": 2.027,
+      "first_10y_mean": 94.99,
+      "last_10y_mean": 101.59,
+      "change_pct_over_period": 4.7,
       "mann_kendall": {
-        "S": 69,
-        "z": 1.687,
-        "p": 0.0917,
+        "S": 34,
+        "z": 0.819,
+        "p": 0.413,
         "trend": "no significant trend"
       }
     },
@@ -142,14 +142,14 @@
       }
     },
     "water_balance_mm": {
-      "per_decade": -93.413,
-      "first_10y_mean": 2014,
-      "last_10y_mean": 1944.7,
-      "change_pct_over_period": -11,
+      "per_decade": -264.709,
+      "first_10y_mean": 3236.3,
+      "last_10y_mean": 2992.4,
+      "change_pct_over_period": -19.3,
       "mann_kendall": {
-        "S": -42,
-        "z": -1.017,
-        "p": 0.3092,
+        "S": -62,
+        "z": -1.513,
+        "p": 0.1303,
         "trend": "no significant trend"
       }
     },
