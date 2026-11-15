@@ -1,5 +1,7 @@
 # Sowcast advisor: a Claude skill for farmers
 
+Part of [Sowcast](https://sow-cast.vercel.app), the satellite-backed crop rotation app.
+
 Ask Claude about the land you farm and your crop rotation, and it answers from measured satellite data instead of guesswork.
 
 - **Learn your area:** rain month by month, the rainy season, heat and dry spells, soil, and what is changing (with 2035 projections).

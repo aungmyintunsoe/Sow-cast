@@ -2,7 +2,7 @@
   <img src="public/brand/sowcast-logo.png" alt="Sowcast" width="320" />
 </p>
 
-<p align="center"><strong>Know what your land can grow before you plant it.</strong></p>
+<p align="center"><strong>Know what your land can grow before you plant it.</strong><br /><a href="https://sow-cast.vercel.app">https://sow-cast.vercel.app</a></p>
 
 <p align="center">
   Sowcast turns 24 years of NASA and open satellite data into a rain calendar, a 2035 outlook and crop rotations
@@ -63,7 +63,7 @@ Node 18 or later. The app is a static site: all data is pre-built JSON in `publi
 
 ## Deploy
 
-Vercel picks up `vercel.json`: `npm ci`, `npm run build`, output `dist/`, with security and caching headers. No environment variables are needed. After the first deploy, set the `og:image` URL in `index.html` to the absolute domain so link previews work everywhere.
+Vercel picks up `vercel.json`: `npm ci`, `npm run build`, output `dist/`, with security and caching headers. No environment variables are needed. Live at https://sow-cast.vercel.app. If the domain changes, update the URLs in `index.html`, `public/robots.txt` and `public/sitemap.xml`.
 
 ## Project structure
 

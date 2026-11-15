@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 Disallow: /data/
 Disallow: /*?view=
-# After deploying, add:  Sitemap: https://<your-domain>/sitemap.xml
+Sitemap: https://sow-cast.vercel.app/sitemap.xml
