@@ -3,7 +3,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, BookOpenText, CloudRain, Layers, Map, Mountain, Satellite, Sprout, Terminal, Thermometer, TrendingUp } from 'lucide-react';
 import { cn } from '../../lib/format';
 import { SPRING } from '../../lib/motion';
-import { ClawdGarden } from './ClawdGarden';
+import { SeedGarden } from './SeedGarden';
 import { FieldMosaic } from './FieldMosaic';
 import { CopyBlock, GlassShot, SiteNav } from './shared';
 
@@ -214,7 +214,7 @@ export function LandingPage({ onOpenApp, onSkill, onHome }: LandingPageProps) {
           <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:repeating-linear-gradient(-14deg,#fff_0_2px,transparent_2px_26px)]" aria-hidden="true" />
           <div className="relative grid items-center gap-10 lg:grid-cols-2">
             <div>
-              <ClawdGarden className="mb-6 h-auto w-56 [image-rendering:pixelated] sm:w-64" />
+              <SeedGarden className="mb-6 h-auto w-56 [image-rendering:pixelated] sm:w-64" />
               <h2 id="skill-title" className="font-display text-4xl font-bold tracking-tight sm:text-5xl">Ask Claude about your farm.</h2>
               <p className="mt-4 max-w-[52ch] text-lg text-brand-100">
                 The Sowcast advisor skill gives Claude the same data and methods, plus live lookups for any location. It explains your climate, checks your own rotation month by month, and helps you put a new one into practice.

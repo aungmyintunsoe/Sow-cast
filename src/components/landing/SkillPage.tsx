@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ClipboardCheck, Download, FileCode2, Globe2, Hammer, MessagesSquare, Monitor, Sprout, Terminal, type LucideIcon } from 'lucide-react';
 import { cn } from '../../lib/format';
 import { SPRING } from '../../lib/motion';
-import { ClawdGarden } from './ClawdGarden';
+import { SeedGarden } from './SeedGarden';
 import { CopyBlock, SiteNav } from './shared';
 
 const REPO = 'https://github.com/aungmyintunsoe/Sow-cast';
@@ -53,7 +53,7 @@ export function SkillPage({ onHome, onOpenApp }: { onHome: () => void; onOpenApp
         <div className="pointer-events-none absolute inset-0 opacity-[0.5] [background-image:repeating-linear-gradient(-14deg,#e1f6e6_0_2px,transparent_2px_24px)]" aria-hidden="true" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-[max(1rem,env(safe-area-inset-left))] py-14 sm:py-20 lg:grid-cols-2">
           <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={SPRING}>
-            <ClawdGarden className="mb-5 h-auto w-48 sm:w-56" />
+            <SeedGarden className="mb-5 h-auto w-48 sm:w-56" />
             <h1 className="font-display text-[clamp(2.3rem,5vw,3.6rem)] font-bold leading-[1.05] tracking-[-0.03em] text-stone-950">Sowcast advisor for Claude</h1>
             <p className="mt-5 max-w-[54ch] text-lg leading-relaxed text-stone-700">
               A free skill that teaches Claude to read satellite weather and soil for any farm, judge a crop rotation month by month, and explain it in plain words. It carries the
