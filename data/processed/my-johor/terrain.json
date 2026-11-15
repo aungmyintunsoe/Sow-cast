@@ -1,0 +1,12 @@
+{
+  "site": "my-johor",
+  "lat": 2.03,
+  "lon": 103.32,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 36,
+  "slope_pct_field": 2.22,
+  "slope_pct_landscape_mean": 1.61,
+  "relief_m_within_1500m": 55,
+  "erosion_risk_from_slope": "medium",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

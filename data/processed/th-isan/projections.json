@@ -1,0 +1,1530 @@
+{
+ "method": "Theil-Sen trend + Mann-Kendall test on 2001-2024 yearly data, extended to 2035 with an 80% prediction range. Where there is no clear trend, the 2001-2024 average is projected. Statistical extrapolation, not a climate-model forecast.",
+ "base_period": "2001-2024",
+ "horizon": 2035,
+ "interval": 0.8,
+ "series": {
+  "precip_mm": {
+   "per_decade": -24.952,
+   "p": 0.6914,
+   "significance": "none",
+   "model": "average",
+   "baseline": 1268,
+   "recent_5y": 1286,
+   "fitted_last_year": 1268,
+   "at_horizon": {
+    "year": 2035,
+    "mid": 1268,
+    "lo": 1032,
+    "hi": 1503
+   },
+   "projection": [
+    {
+     "year": 2024,
+     "mid": 1268,
+     "lo": 1032,
+     "hi": 1503
+    },
+    {
+     "year": 2025,
+     "mid": 1268,
+     "lo": 1032,
+     "hi": 1503
+    },
+    {
+     "year": 2026,
+     "mid": 1268,
+     "lo": 1032,
+     "hi": 1503
+    },
+    {
+     "year": 2027,
+     "mid": 1268,
+     "lo": 1032,
+     "hi": 1503
+    },
+    {
+     "year": 2028,
+     "mid": 1268,
+     "lo": 1032,
+     "hi": 1503
+    },
+    {
+     "year": 2029,
+     "mid": 1268,
+     "lo": 1032,
+     "hi": 1503
+    },
+    {
+     "year": 2030,
+     "mid": 1268,
+     "lo": 1032,
+     "hi": 1503
+    },
+    {
+     "year": 2031,
+     "mid": 1268,
+     "lo": 1032,
+     "hi": 1503
+    },
+    {
+     "year": 2032,
+     "mid": 1268,
+     "lo": 1032,
+     "hi": 1503
+    },
+    {
+     "year": 2033,
+     "mid": 1268,
+     "lo": 1032,
+     "hi": 1503
+    },
+    {
+     "year": 2034,
+     "mid": 1268,
+     "lo": 1032,
+     "hi": 1503
+    },
+    {
+     "year": 2035,
+     "mid": 1268,
+     "lo": 1032,
+     "hi": 1503
+    }
+   ],
+   "label": "Yearly rain",
+   "unit": "mm",
+   "bad_edge": "low",
+   "history": [
+    {
+     "year": 2001,
+     "value": 1159
+    },
+    {
+     "year": 2002,
+     "value": 1354
+    },
+    {
+     "year": 2003,
+     "value": 1219
+    },
+    {
+     "year": 2004,
+     "value": 1202
+    },
+    {
+     "year": 2005,
+     "value": 1245
+    },
+    {
+     "year": 2006,
+     "value": 1330
+    },
+    {
+     "year": 2007,
+     "value": 1401
+    },
+    {
+     "year": 2008,
+     "value": 1591
+    },
+    {
+     "year": 2009,
+     "value": 1174
+    },
+    {
+     "year": 2010,
+     "value": 1222
+    },
+    {
+     "year": 2011,
+     "value": 1463
+    },
+    {
+     "year": 2012,
+     "value": 1119
+    },
+    {
+     "year": 2013,
+     "value": 1096
+    },
+    {
+     "year": 2014,
+     "value": 1156
+    },
+    {
+     "year": 2015,
+     "value": 980
+    },
+    {
+     "year": 2016,
+     "value": 1341
+    },
+    {
+     "year": 2017,
+     "value": 1708
+    },
+    {
+     "year": 2018,
+     "value": 1177
+    },
+    {
+     "year": 2019,
+     "value": 1053
+    },
+    {
+     "year": 2020,
+     "value": 1355
+    },
+    {
+     "year": 2021,
+     "value": 1266
+    },
+    {
+     "year": 2022,
+     "value": 1517
+    },
+    {
+     "year": 2023,
+     "value": 1119
+    },
+    {
+     "year": 2024,
+     "value": 1173
+    }
+   ]
+  },
+  "tmean_c": {
+   "per_decade": 0.292,
+   "p": 0.1574,
+   "significance": "none",
+   "model": "average",
+   "baseline": 26.6,
+   "recent_5y": 26.6,
+   "fitted_last_year": 26.6,
+   "at_horizon": {
+    "year": 2035,
+    "mid": 26.6,
+    "lo": 25.7,
+    "hi": 27.4
+   },
+   "projection": [
+    {
+     "year": 2024,
+     "mid": 26.6,
+     "lo": 25.7,
+     "hi": 27.4
+    },
+    {
+     "year": 2025,
+     "mid": 26.6,
+     "lo": 25.7,
+     "hi": 27.4
+    },
+    {
+     "year": 2026,
+     "mid": 26.6,
+     "lo": 25.7,
+     "hi": 27.4
+    },
+    {
+     "year": 2027,
+     "mid": 26.6,
+     "lo": 25.7,
+     "hi": 27.4
+    },
+    {
+     "year": 2028,
+     "mid": 26.6,
+     "lo": 25.7,
+     "hi": 27.4
+    },
+    {
+     "year": 2029,
+     "mid": 26.6,
+     "lo": 25.7,
+     "hi": 27.4
+    },
+    {
+     "year": 2030,
+     "mid": 26.6,
+     "lo": 25.7,
+     "hi": 27.4
+    },
+    {
+     "year": 2031,
+     "mid": 26.6,
+     "lo": 25.7,
+     "hi": 27.4
+    },
+    {
+     "year": 2032,
+     "mid": 26.6,
+     "lo": 25.7,
+     "hi": 27.4
+    },
+    {
+     "year": 2033,
+     "mid": 26.6,
+     "lo": 25.7,
+     "hi": 27.4
+    },
+    {
+     "year": 2034,
+     "mid": 26.6,
+     "lo": 25.7,
+     "hi": 27.4
+    },
+    {
+     "year": 2035,
+     "mid": 26.6,
+     "lo": 25.7,
+     "hi": 27.4
+    }
+   ],
+   "label": "Average temperature",
+   "unit": "°C",
+   "bad_edge": "high",
+   "history": [
+    {
+     "year": 2001,
+     "value": 26.3
+    },
+    {
+     "year": 2002,
+     "value": 26.4
+    },
+    {
+     "year": 2003,
+     "value": 26.6
+    },
+    {
+     "year": 2004,
+     "value": 26.2
+    },
+    {
+     "year": 2005,
+     "value": 26.8
+    },
+    {
+     "year": 2006,
+     "value": 26.6
+    },
+    {
+     "year": 2007,
+     "value": 26.4
+    },
+    {
+     "year": 2008,
+     "value": 25.3
+    },
+    {
+     "year": 2009,
+     "value": 26.6
+    },
+    {
+     "year": 2010,
+     "value": 27.1
+    },
+    {
+     "year": 2011,
+     "value": 25.4
+    },
+    {
+     "year": 2012,
+     "value": 27.0
+    },
+    {
+     "year": 2013,
+     "value": 26.7
+    },
+    {
+     "year": 2014,
+     "value": 26.8
+    },
+    {
+     "year": 2015,
+     "value": 27.4
+    },
+    {
+     "year": 2016,
+     "value": 27.0
+    },
+    {
+     "year": 2017,
+     "value": 26.0
+    },
+    {
+     "year": 2018,
+     "value": 26.3
+    },
+    {
+     "year": 2019,
+     "value": 27.6
+    },
+    {
+     "year": 2020,
+     "value": 26.6
+    },
+    {
+     "year": 2021,
+     "value": 25.9
+    },
+    {
+     "year": 2022,
+     "value": 25.7
+    },
+    {
+     "year": 2023,
+     "value": 27.1
+    },
+    {
+     "year": 2024,
+     "value": 27.7
+    }
+   ]
+  },
+  "heat_days": {
+   "per_decade": 2.857,
+   "p": 0.7283,
+   "significance": "none",
+   "model": "average",
+   "baseline": 72,
+   "recent_5y": 68,
+   "fitted_last_year": 72,
+   "at_horizon": {
+    "year": 2035,
+    "mid": 72,
+    "lo": 46,
+    "hi": 97
+   },
+   "projection": [
+    {
+     "year": 2024,
+     "mid": 72,
+     "lo": 46,
+     "hi": 97
+    },
+    {
+     "year": 2025,
+     "mid": 72,
+     "lo": 46,
+     "hi": 97
+    },
+    {
+     "year": 2026,
+     "mid": 72,
+     "lo": 46,
+     "hi": 97
+    },
+    {
+     "year": 2027,
+     "mid": 72,
+     "lo": 46,
+     "hi": 97
+    },
+    {
+     "year": 2028,
+     "mid": 72,
+     "lo": 46,
+     "hi": 97
+    },
+    {
+     "year": 2029,
+     "mid": 72,
+     "lo": 46,
+     "hi": 97
+    },
+    {
+     "year": 2030,
+     "mid": 72,
+     "lo": 46,
+     "hi": 97
+    },
+    {
+     "year": 2031,
+     "mid": 72,
+     "lo": 46,
+     "hi": 97
+    },
+    {
+     "year": 2032,
+     "mid": 72,
+     "lo": 46,
+     "hi": 97
+    },
+    {
+     "year": 2033,
+     "mid": 72,
+     "lo": 46,
+     "hi": 97
+    },
+    {
+     "year": 2034,
+     "mid": 72,
+     "lo": 46,
+     "hi": 97
+    },
+    {
+     "year": 2035,
+     "mid": 72,
+     "lo": 46,
+     "hi": 97
+    }
+   ],
+   "label": "Days at 35 °C or hotter",
+   "unit": "days",
+   "bad_edge": "high",
+   "history": [
+    {
+     "year": 2001,
+     "value": 70
+    },
+    {
+     "year": 2002,
+     "value": 66
+    },
+    {
+     "year": 2003,
+     "value": 72
+    },
+    {
+     "year": 2004,
+     "value": 63
+    },
+    {
+     "year": 2005,
+     "value": 89
+    },
+    {
+     "year": 2006,
+     "value": 76
+    },
+    {
+     "year": 2007,
+     "value": 69
+    },
+    {
+     "year": 2008,
+     "value": 36
+    },
+    {
+     "year": 2009,
+     "value": 68
+    },
+    {
+     "year": 2010,
+     "value": 95
+    },
+    {
+     "year": 2011,
+     "value": 49
+    },
+    {
+     "year": 2012,
+     "value": 67
+    },
+    {
+     "year": 2013,
+     "value": 87
+    },
+    {
+     "year": 2014,
+     "value": 88
+    },
+    {
+     "year": 2015,
+     "value": 101
+    },
+    {
+     "year": 2016,
+     "value": 90
+    },
+    {
+     "year": 2017,
+     "value": 50
+    },
+    {
+     "year": 2018,
+     "value": 49
+    },
+    {
+     "year": 2019,
+     "value": 91
+    },
+    {
+     "year": 2020,
+     "value": 80
+    },
+    {
+     "year": 2021,
+     "value": 47
+    },
+    {
+     "year": 2022,
+     "value": 41
+    },
+    {
+     "year": 2023,
+     "value": 78
+    },
+    {
+     "year": 2024,
+     "value": 94
+    }
+   ]
+  },
+  "heavy_rain_days": {
+   "per_decade": 0.0,
+   "p": 0.8025,
+   "significance": "none",
+   "model": "average",
+   "baseline": 14,
+   "recent_5y": 14,
+   "fitted_last_year": 14,
+   "at_horizon": {
+    "year": 2035,
+    "mid": 14,
+    "lo": 9,
+    "hi": 20
+   },
+   "projection": [
+    {
+     "year": 2024,
+     "mid": 14,
+     "lo": 9,
+     "hi": 20
+    },
+    {
+     "year": 2025,
+     "mid": 14,
+     "lo": 9,
+     "hi": 20
+    },
+    {
+     "year": 2026,
+     "mid": 14,
+     "lo": 9,
+     "hi": 20
+    },
+    {
+     "year": 2027,
+     "mid": 14,
+     "lo": 9,
+     "hi": 20
+    },
+    {
+     "year": 2028,
+     "mid": 14,
+     "lo": 9,
+     "hi": 20
+    },
+    {
+     "year": 2029,
+     "mid": 14,
+     "lo": 9,
+     "hi": 20
+    },
+    {
+     "year": 2030,
+     "mid": 14,
+     "lo": 9,
+     "hi": 20
+    },
+    {
+     "year": 2031,
+     "mid": 14,
+     "lo": 9,
+     "hi": 20
+    },
+    {
+     "year": 2032,
+     "mid": 14,
+     "lo": 9,
+     "hi": 20
+    },
+    {
+     "year": 2033,
+     "mid": 14,
+     "lo": 9,
+     "hi": 20
+    },
+    {
+     "year": 2034,
+     "mid": 14,
+     "lo": 9,
+     "hi": 20
+    },
+    {
+     "year": 2035,
+     "mid": 14,
+     "lo": 9,
+     "hi": 20
+    }
+   ],
+   "label": "Downpour days (20 mm or more)",
+   "unit": "days",
+   "bad_edge": "high",
+   "history": [
+    {
+     "year": 2001,
+     "value": 6
+    },
+    {
+     "year": 2002,
+     "value": 18
+    },
+    {
+     "year": 2003,
+     "value": 12
+    },
+    {
+     "year": 2004,
+     "value": 13
+    },
+    {
+     "year": 2005,
+     "value": 14
+    },
+    {
+     "year": 2006,
+     "value": 18
+    },
+    {
+     "year": 2007,
+     "value": 19
+    },
+    {
+     "year": 2008,
+     "value": 15
+    },
+    {
+     "year": 2009,
+     "value": 11
+    },
+    {
+     "year": 2010,
+     "value": 12
+    },
+    {
+     "year": 2011,
+     "value": 19
+    },
+    {
+     "year": 2012,
+     "value": 15
+    },
+    {
+     "year": 2013,
+     "value": 8
+    },
+    {
+     "year": 2014,
+     "value": 16
+    },
+    {
+     "year": 2015,
+     "value": 12
+    },
+    {
+     "year": 2016,
+     "value": 17
+    },
+    {
+     "year": 2017,
+     "value": 24
+    },
+    {
+     "year": 2018,
+     "value": 7
+    },
+    {
+     "year": 2019,
+     "value": 14
+    },
+    {
+     "year": 2020,
+     "value": 13
+    },
+    {
+     "year": 2021,
+     "value": 13
+    },
+    {
+     "year": 2022,
+     "value": 19
+    },
+    {
+     "year": 2023,
+     "value": 13
+    },
+    {
+     "year": 2024,
+     "value": 13
+    }
+   ]
+  },
+  "max_dry_spell_days": {
+   "per_decade": 1.303,
+   "p": 0.8231,
+   "significance": "none",
+   "model": "average",
+   "baseline": 58,
+   "recent_5y": 62,
+   "fitted_last_year": 58,
+   "at_horizon": {
+    "year": 2035,
+    "mid": 58,
+    "lo": 42,
+    "hi": 75
+   },
+   "projection": [
+    {
+     "year": 2024,
+     "mid": 58,
+     "lo": 42,
+     "hi": 75
+    },
+    {
+     "year": 2025,
+     "mid": 58,
+     "lo": 42,
+     "hi": 75
+    },
+    {
+     "year": 2026,
+     "mid": 58,
+     "lo": 42,
+     "hi": 75
+    },
+    {
+     "year": 2027,
+     "mid": 58,
+     "lo": 42,
+     "hi": 75
+    },
+    {
+     "year": 2028,
+     "mid": 58,
+     "lo": 42,
+     "hi": 75
+    },
+    {
+     "year": 2029,
+     "mid": 58,
+     "lo": 42,
+     "hi": 75
+    },
+    {
+     "year": 2030,
+     "mid": 58,
+     "lo": 42,
+     "hi": 75
+    },
+    {
+     "year": 2031,
+     "mid": 58,
+     "lo": 42,
+     "hi": 75
+    },
+    {
+     "year": 2032,
+     "mid": 58,
+     "lo": 42,
+     "hi": 75
+    },
+    {
+     "year": 2033,
+     "mid": 58,
+     "lo": 42,
+     "hi": 75
+    },
+    {
+     "year": 2034,
+     "mid": 58,
+     "lo": 42,
+     "hi": 75
+    },
+    {
+     "year": 2035,
+     "mid": 58,
+     "lo": 42,
+     "hi": 75
+    }
+   ],
+   "label": "Longest dry spell",
+   "unit": "days",
+   "bad_edge": "high",
+   "history": [
+    {
+     "year": 2001,
+     "value": 47
+    },
+    {
+     "year": 2002,
+     "value": 56
+    },
+    {
+     "year": 2003,
+     "value": 78
+    },
+    {
+     "year": 2004,
+     "value": 65
+    },
+    {
+     "year": 2005,
+     "value": 47
+    },
+    {
+     "year": 2006,
+     "value": 41
+    },
+    {
+     "year": 2007,
+     "value": 57
+    },
+    {
+     "year": 2008,
+     "value": 55
+    },
+    {
+     "year": 2009,
+     "value": 71
+    },
+    {
+     "year": 2010,
+     "value": 73
+    },
+    {
+     "year": 2011,
+     "value": 77
+    },
+    {
+     "year": 2012,
+     "value": 37
+    },
+    {
+     "year": 2013,
+     "value": 52
+    },
+    {
+     "year": 2014,
+     "value": 54
+    },
+    {
+     "year": 2015,
+     "value": 82
+    },
+    {
+     "year": 2016,
+     "value": 52
+    },
+    {
+     "year": 2017,
+     "value": 50
+    },
+    {
+     "year": 2018,
+     "value": 49
+    },
+    {
+     "year": 2019,
+     "value": 48
+    },
+    {
+     "year": 2020,
+     "value": 61
+    },
+    {
+     "year": 2021,
+     "value": 64
+    },
+    {
+     "year": 2022,
+     "value": 50
+    },
+    {
+     "year": 2023,
+     "value": 62
+    },
+    {
+     "year": 2024,
+     "value": 71
+    }
+   ]
+  },
+  "water_balance_mm": {
+   "per_decade": -26.333,
+   "p": 0.8233,
+   "significance": "none",
+   "model": "average",
+   "baseline": -347,
+   "recent_5y": -303,
+   "fitted_last_year": -347,
+   "at_horizon": {
+    "year": 2035,
+    "mid": -347,
+    "lo": -642,
+    "hi": -52
+   },
+   "projection": [
+    {
+     "year": 2024,
+     "mid": -347,
+     "lo": -642,
+     "hi": -52
+    },
+    {
+     "year": 2025,
+     "mid": -347,
+     "lo": -642,
+     "hi": -52
+    },
+    {
+     "year": 2026,
+     "mid": -347,
+     "lo": -642,
+     "hi": -52
+    },
+    {
+     "year": 2027,
+     "mid": -347,
+     "lo": -642,
+     "hi": -52
+    },
+    {
+     "year": 2028,
+     "mid": -347,
+     "lo": -642,
+     "hi": -52
+    },
+    {
+     "year": 2029,
+     "mid": -347,
+     "lo": -642,
+     "hi": -52
+    },
+    {
+     "year": 2030,
+     "mid": -347,
+     "lo": -642,
+     "hi": -52
+    },
+    {
+     "year": 2031,
+     "mid": -347,
+     "lo": -642,
+     "hi": -52
+    },
+    {
+     "year": 2032,
+     "mid": -347,
+     "lo": -642,
+     "hi": -52
+    },
+    {
+     "year": 2033,
+     "mid": -347,
+     "lo": -642,
+     "hi": -52
+    },
+    {
+     "year": 2034,
+     "mid": -347,
+     "lo": -642,
+     "hi": -52
+    },
+    {
+     "year": 2035,
+     "mid": -347,
+     "lo": -642,
+     "hi": -52
+    }
+   ],
+   "label": "Rain minus crop water demand",
+   "unit": "mm",
+   "bad_edge": "low",
+   "history": [
+    {
+     "year": 2001,
+     "value": -418
+    },
+    {
+     "year": 2002,
+     "value": -240
+    },
+    {
+     "year": 2003,
+     "value": -426
+    },
+    {
+     "year": 2004,
+     "value": -455
+    },
+    {
+     "year": 2005,
+     "value": -409
+    },
+    {
+     "year": 2006,
+     "value": -327
+    },
+    {
+     "year": 2007,
+     "value": -242
+    },
+    {
+     "year": 2008,
+     "value": 57
+    },
+    {
+     "year": 2009,
+     "value": -468
+    },
+    {
+     "year": 2010,
+     "value": -397
+    },
+    {
+     "year": 2011,
+     "value": -72
+    },
+    {
+     "year": 2012,
+     "value": -526
+    },
+    {
+     "year": 2013,
+     "value": -539
+    },
+    {
+     "year": 2014,
+     "value": -487
+    },
+    {
+     "year": 2015,
+     "value": -711
+    },
+    {
+     "year": 2016,
+     "value": -321
+    },
+    {
+     "year": 2017,
+     "value": 194
+    },
+    {
+     "year": 2018,
+     "value": -389
+    },
+    {
+     "year": 2019,
+     "value": -645
+    },
+    {
+     "year": 2020,
+     "value": -229
+    },
+    {
+     "year": 2021,
+     "value": -289
+    },
+    {
+     "year": 2022,
+     "value": 5
+    },
+    {
+     "year": 2023,
+     "value": -519
+    },
+    {
+     "year": 2024,
+     "value": -482
+    }
+   ]
+  },
+  "dry_months": {
+   "per_decade": 0.0,
+   "p": 0.875,
+   "significance": "none",
+   "model": "average",
+   "baseline": 6.0,
+   "recent_5y": 5.8,
+   "fitted_last_year": 6.0,
+   "at_horizon": {
+    "year": 2035,
+    "mid": 6.0,
+    "lo": 4.6,
+    "hi": 7.3
+   },
+   "projection": [
+    {
+     "year": 2024,
+     "mid": 6.0,
+     "lo": 4.6,
+     "hi": 7.3
+    },
+    {
+     "year": 2025,
+     "mid": 6.0,
+     "lo": 4.6,
+     "hi": 7.3
+    },
+    {
+     "year": 2026,
+     "mid": 6.0,
+     "lo": 4.6,
+     "hi": 7.3
+    },
+    {
+     "year": 2027,
+     "mid": 6.0,
+     "lo": 4.6,
+     "hi": 7.3
+    },
+    {
+     "year": 2028,
+     "mid": 6.0,
+     "lo": 4.6,
+     "hi": 7.3
+    },
+    {
+     "year": 2029,
+     "mid": 6.0,
+     "lo": 4.6,
+     "hi": 7.3
+    },
+    {
+     "year": 2030,
+     "mid": 6.0,
+     "lo": 4.6,
+     "hi": 7.3
+    },
+    {
+     "year": 2031,
+     "mid": 6.0,
+     "lo": 4.6,
+     "hi": 7.3
+    },
+    {
+     "year": 2032,
+     "mid": 6.0,
+     "lo": 4.6,
+     "hi": 7.3
+    },
+    {
+     "year": 2033,
+     "mid": 6.0,
+     "lo": 4.6,
+     "hi": 7.3
+    },
+    {
+     "year": 2034,
+     "mid": 6.0,
+     "lo": 4.6,
+     "hi": 7.3
+    },
+    {
+     "year": 2035,
+     "mid": 6.0,
+     "lo": 4.6,
+     "hi": 7.3
+    }
+   ],
+   "label": "Dry months",
+   "unit": "months",
+   "bad_edge": "high",
+   "history": [
+    {
+     "year": 2001,
+     "value": 6
+    },
+    {
+     "year": 2002,
+     "value": 6
+    },
+    {
+     "year": 2003,
+     "value": 6
+    },
+    {
+     "year": 2004,
+     "value": 7
+    },
+    {
+     "year": 2005,
+     "value": 7
+    },
+    {
+     "year": 2006,
+     "value": 4
+    },
+    {
+     "year": 2007,
+     "value": 6
+    },
+    {
+     "year": 2008,
+     "value": 4
+    },
+    {
+     "year": 2009,
+     "value": 7
+    },
+    {
+     "year": 2010,
+     "value": 6
+    },
+    {
+     "year": 2011,
+     "value": 6
+    },
+    {
+     "year": 2012,
+     "value": 6
+    },
+    {
+     "year": 2013,
+     "value": 7
+    },
+    {
+     "year": 2014,
+     "value": 6
+    },
+    {
+     "year": 2015,
+     "value": 7
+    },
+    {
+     "year": 2016,
+     "value": 5
+    },
+    {
+     "year": 2017,
+     "value": 5
+    },
+    {
+     "year": 2018,
+     "value": 5
+    },
+    {
+     "year": 2019,
+     "value": 8
+    },
+    {
+     "year": 2020,
+     "value": 5
+    },
+    {
+     "year": 2021,
+     "value": 5
+    },
+    {
+     "year": 2022,
+     "value": 6
+    },
+    {
+     "year": 2023,
+     "value": 6
+    },
+    {
+     "year": 2024,
+     "value": 7
+    }
+   ]
+  }
+ },
+ "crop_outlook": [
+  {
+   "crop": "groundnut",
+   "fit_now": 83,
+   "fit_trend_2035": 83,
+   "fit_bad_year_2035": 83,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "cowpea",
+   "fit_now": 82,
+   "fit_trend_2035": 82,
+   "fit_bad_year_2035": 82,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "pigeon_pea",
+   "fit_now": 79,
+   "fit_trend_2035": 79,
+   "fit_bad_year_2035": 79,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "green_gram",
+   "fit_now": 78,
+   "fit_trend_2035": 78,
+   "fit_bad_year_2035": 78,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "soybean",
+   "fit_now": 74,
+   "fit_trend_2035": 74,
+   "fit_bad_year_2035": 74,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "black_gram",
+   "fit_now": 74,
+   "fit_trend_2035": 74,
+   "fit_bad_year_2035": 74,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "chickpea",
+   "fit_now": 72,
+   "fit_trend_2035": 72,
+   "fit_bad_year_2035": 72,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "sweet_potato",
+   "fit_now": 72,
+   "fit_trend_2035": 72,
+   "fit_bad_year_2035": 72,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "rice",
+   "fit_now": 71,
+   "fit_trend_2035": 71,
+   "fit_bad_year_2035": 63,
+   "water_now": 1.0,
+   "water_bad_year": 0.82
+  },
+  {
+   "crop": "cassava",
+   "fit_now": 68,
+   "fit_trend_2035": 68,
+   "fit_bad_year_2035": 68,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "sesame",
+   "fit_now": 65,
+   "fit_trend_2035": 65,
+   "fit_bad_year_2035": 65,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "sorghum",
+   "fit_now": 65,
+   "fit_trend_2035": 65,
+   "fit_bad_year_2035": 65,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "pineapple",
+   "fit_now": 65,
+   "fit_trend_2035": 65,
+   "fit_bad_year_2035": 65,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "watermelon",
+   "fit_now": 65,
+   "fit_trend_2035": 65,
+   "fit_bad_year_2035": 65,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "sunflower",
+   "fit_now": 61,
+   "fit_trend_2035": 61,
+   "fit_bad_year_2035": 61,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "salt_rice",
+   "fit_now": 61,
+   "fit_trend_2035": 61,
+   "fit_bad_year_2035": 58,
+   "water_now": 1.0,
+   "water_bad_year": 0.93
+  },
+  {
+   "crop": "maize",
+   "fit_now": 60,
+   "fit_trend_2035": 60,
+   "fit_bad_year_2035": 60,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "vegetables",
+   "fit_now": 59,
+   "fit_trend_2035": 59,
+   "fit_bad_year_2035": 59,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "sugarcane",
+   "fit_now": 57,
+   "fit_trend_2035": 57,
+   "fit_bad_year_2035": 51,
+   "water_now": 0.86,
+   "water_bad_year": 0.72
+  },
+  {
+   "crop": "sunn_hemp",
+   "fit_now": 54,
+   "fit_trend_2035": 54,
+   "fit_bad_year_2035": 54,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  },
+  {
+   "crop": "potato",
+   "fit_now": 36,
+   "fit_trend_2035": 36,
+   "fit_bad_year_2035": 27,
+   "water_now": 1.0,
+   "water_bad_year": 1.0
+  }
+ ],
+ "consequences": [
+  {
+   "kind": "bad_year",
+   "severity": "medium",
+   "metric": "precip_mm",
+   "headline": "In a dry year, rain can drop to about 1,032 mm",
+   "detail": "That is 19% below the 1,268 mm average; about 1 year in 10 is this dry or worse.",
+   "action": "Keep a drought-tolerant crop in the plan as insurance.",
+   "crops": [],
+   "significance": "variability"
+  },
+  {
+   "kind": "stable",
+   "severity": "low",
+   "metric": null,
+   "headline": "No clear long-term change since 2001",
+   "detail": "Rain, heat and dry spells show no reliable trend here. The bigger risk is the swing from one year to the next.",
+   "action": "Plan for a bad year rather than a changing average.",
+   "crops": [],
+   "significance": "none"
+  }
+ ]
+}

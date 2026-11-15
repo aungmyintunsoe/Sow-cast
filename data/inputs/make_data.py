@@ -1,8 +1,4 @@
-import pandas as pd, math, sys, re
-from pathlib import Path
-
-# Output folder: this script's own folder by default (was /mnt/user-data/outputs), or the first CLI argument.
-OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent
+import pandas as pd, math
 
 # ---------------- REGIONS (approximate priors; see climate_values_source) ----------------
 # id,country,region,place,lat,lon,rain_mm,temp_c,dry_months,soil,drainage,slope_pct,flood,salinity,irrigation,tree_dom,soil_degraded,tier
@@ -30,6 +26,16 @@ R = [
 ("kh-mekong-plain","Cambodia","Mekong Plain","Prey Veng",11.49,105.32,1400,27.5,5,"clay","poor",0.2,3,0,2,0,0,"auto"),
 ("kh-plateau","Cambodia","Plateau and Mountains","Banlung",13.74,106.99,2200,25,4,"clay_loam","good",6,0,0,0,0,0,"auto"),
 ("kh-coastal","Cambodia","Coastal","Kampot",10.61,104.18,2000,27.5,4,"clay","poor",0.5,1,2,1,0,0,"auto"),
+]
+R += [
+("my-kedah-perlis","Malaysia","Kedah-Perlis (Muda rice area)","Alor Setar",6.12,100.37,2200,27.5,3,"clay","poor",0.5,2,1,3,0,0,"auto"),
+("my-kelantan","Malaysia","Kelantan Plain","Kota Bharu",6.13,102.24,2500,27,3,"sandy_loam","moderate",1,3,1,2,0,1,"auto"),
+("my-selangor","Malaysia","Selangor Coastal Plain (Sekinchan)","Sekinchan",3.50,101.10,2400,27.5,2,"clay","poor",0.3,2,1,3,0,0,"auto"),
+("my-cameron","Malaysia","Cameron Highlands","Tanah Rata",4.47,101.38,2700,18,2,"clay_loam","good",25,0,0,2,0,0,"auto"),
+("my-johor","Malaysia","Johor (Kluang-Pontian)","Kluang",2.03,103.32,2400,27,2,"sandy_loam","good",3,1,0,1,1,0,"auto"),
+("my-pahang","Malaysia","Pahang Interior","Jerantut",3.94,102.36,2000,27,3,"clay_loam","good",5,2,0,1,1,0,"auto"),
+("my-sarawak","Malaysia","Sarawak Lowlands (Borneo)","Sibu",2.29,111.83,3000,27,1,"clay","poor",1,2,0,1,1,0,"auto"),
+("my-sabah","Malaysia","Sabah Interior (Borneo)","Keningau",5.34,116.16,2000,26.5,3,"clay_loam","moderate",3,2,0,1,0,0,"auto"),
 ]
 RC = ["id","country","region","place","lat","lon","rain_mm_approx","mean_temp_c_approx","dry_months_approx","soil_texture","drainage","slope_pct_approx","flood_risk_0_3","salinity_risk_0_3","irrigation_access_0_3","tree_crop_dominated","soil_degraded","data_tier"]
 reg = pd.DataFrame(R, columns=RC)
@@ -59,10 +65,25 @@ COMMON = {
 "kh-plateau":["cassava","cashew","maize"],
 "kh-coastal":["rice","vegetables"],
 }
+COMMON.update({
+"my-kedah-perlis":["rice","watermelon"],"my-kelantan":["rice","vegetables"],"my-selangor":["rice"],
+"my-cameron":["vegetables"],"my-johor":["pineapple","oil_palm","rubber"],"my-pahang":["oil_palm","rubber"],
+"my-sarawak":["oil_palm"],"my-sabah":["rice","vegetables"]})
+for k,v in {"mm-tanintharyi":["rubber","oil_palm"],"th-south":["rubber","oil_palm"],"th-east":["rubber"],
+            "vn-southeast":["rubber"],"vn-central-highlands":["rubber"],"kh-plateau":["rubber"]}.items(): COMMON[k]+=v
 EVID = {
 "mm-dry-zone":("Cornish et al. 2018 Agric. Syst. 164:47-57 (rain 754 mm, 180-day season, 1951-2016); Herridge et al. 2019 Agric. Syst. 169:31-40; Denton et al.; ICRISAT 2004 IJAS 2(2):98-108; FAO Yezin soil science slides","medium"),
 "th-isan":("Khon Kaen mean 1190 mm / 27.4 C (FAO ag125e, 1951-75 means); Toomsan et al. (legumes in NE Thailand, ICRISAT); Vityakon 2007 sandy soil review; Rambo 2017 SEAS 6(2); Mahasarakham Univ. 2020 rice economy","medium"),
 }
+
+WET={"mm-dry-zone":(5,10),"mm-ayeyarwady":(5,10),"mm-shan":(5,10),"mm-kachin":(5,10),"mm-rakhine":(5,10),"mm-tanintharyi":(5,11),
+"th-north":(5,10),"th-isan":(5,10),"th-central":(5,10),"th-east":(5,11),"th-west":(5,10),"th-south":(5,12),
+"vn-northern-mtn":(5,9),"vn-red-river":(5,10),"vn-north-central":(8,12),"vn-south-central":(9,12),"vn-central-highlands":(5,10),"vn-southeast":(5,11),"vn-mekong":(5,11),
+"kh-tonle-sap":(5,10),"kh-mekong-plain":(5,10),"kh-plateau":(5,10),"kh-coastal":(5,11),
+"my-kedah-perlis":(4,11),"my-kelantan":(10,1),"my-selangor":(3,11),"my-cameron":(3,11),"my-johor":(10,1),"my-pahang":(10,1),"my-sarawak":(10,3),"my-sabah":(10,2)}
+reg["wet_season_start_month_approx"]=[WET[i][0] for i in reg.id]
+reg["wet_season_end_month_approx"]=[WET[i][1] for i in reg.id]
+reg["calendar_confidence"]=["medium (monsoon May-Oct per Cornish 2018)" if i=="mm-dry-zone" else "low - rough monsoon pattern, check local calendar" for i in reg.id]
 reg["climate_values_source"]=[("sourced from literature (see evidence_sources)" if i in EVID else "approximate general knowledge - verify with POWER/IMERG") for i in reg.id]
 reg["evidence_sources"]=[EVID.get(i,("General agronomy knowledge only - not yet verified; check FAO GIEWS, USDA FAS crop calendars, national statistics",""))[0] for i in reg.id]
 reg["confidence"]=[EVID.get(i,("","low"))[1] for i in reg.id]
@@ -94,12 +115,49 @@ C = [
 ("sunn_hemp","Sunn hemp (green manure)","legume","wet season",2,True,"deep",4,1,22,35,60,4,5,1,3,1,1,5,400,False,False,"green manure","Few pests; seed supply can be hard","A fast legume grown to be ploughed in, to rebuild poor sandy soil."),
 ("cover_legume","Legume cover crop (e.g. Pueraria)","legume","perennial",3,True,"deep",4,1,22,35,365,5,5,1,3,3,1,4,800,False,False,"cover crop","Can smother young trees if unmanaged","A ground-cover legume between young tree crops. Fixes nitrogen and stops erosion."),
 ]
+C += [
+("pineapple","Pineapple","bromeliad","12-18 months",2,False,"shallow",4,1,22,32,450,3,2,4,1,1,1,4,800,False,False,"cash crop","Mealybug wilt, heart rot in waterlogged soil","A hardy fruit grown on well-drained sandy or peat-edge soils, mainly for cash."),
+("sweet_potato","Sweet potato","root crop","wet or dry season",2,False,"medium",4,1,20,30,120,4,3,3,3,2,2,5,500,False,False,"cash crop","Weevil, vine borer; rots in waterlogged soil","A hardy root crop with ground-covering vines. Tolerates poor sandy soil."),
+("oil_palm","Oil palm","tree","perennial",4,False,"deep",2,1,22,33,365,4,4,5,1,3,2,3,1800,False,False,"perennial","Basal stem rot, rhinoceros beetle; needs steady rain","The main plantation tree crop in humid lowlands. Not a rotation crop."),
+("rubber","Rubber","tree","perennial",4,False,"deep",2,1,22,34,365,4,4,3,1,2,1,3,1500,False,False,"perennial","Leaf fall disease, root disease; low latex price risk","A plantation tree crop in humid lowlands. Not a rotation crop."),
+]
 CC=["id","name","family","season","water_need","nitrogen_fixing","root_depth","drought_tolerance","frost_tolerance","temp_min_c","temp_max_c","season_days","erosion_cover","organic_matter","market","forage_value","flood_tolerance","salinity_tolerance","sandy_soil_ok","seasonal_rain_need_mm","needs_flat_land","dry_season_crop","role","pest_notes","plain_description"]
 crops = pd.DataFrame(C, columns=CC)
 
+
+ROUGH={ # yield_low,yield_high,unit,n_fixed,fert,labour,seed,pest,storage,income,good_after,avoid_after,tip
+"rice":(3,5,"t/ha paddy","none",4,5,2,3,2,3,"green_gram|black_gram|cowpea|soybean","","Level the field and keep 3-5 cm of water in early growth; use certified seed."),
+"salt_rice":(2.5,4,"t/ha paddy","none",3,5,3,3,2,3,"green_gram|black_gram","","Check salinity before planting and sow when river salinity is low."),
+"maize":(3,6,"t/ha grain","none",5,3,3,4,2,3,"soybean|groundnut|green_gram|cowpea|sunn_hemp","maize","Split nitrogen into 2-3 doses and scout for fall armyworm early."),
+"soybean":(1.2,2.2,"t/ha","~50-100 kg N/ha (rough)",2,3,3,4,2,3,"maize|rice|sorghum|sugarcane","soybean","Inoculate seed with rhizobium on fields new to soybean; watch for rust."),
+"groundnut":(1.2,2.5,"t/ha dry pods","~40-100 kg N/ha (rough)",2,4,4,3,4,4,"maize|sorghum|rice|cassava","groundnut|soybean","Add phosphorus and lime or gypsum on sandy soil; dry pods fully to avoid aflatoxin."),
+"green_gram":(0.6,1.2,"t/ha","~30-60 kg N/ha (rough)",1,3,2,3,2,3,"rice|maize|sorghum","green_gram|black_gram|cowpea","Sow evenly so pods ripen together and harvest before heavy rain."),
+"black_gram":(0.6,1.0,"t/ha","~30-60 kg N/ha (rough)",1,3,2,3,2,3,"rice|maize|sorghum","black_gram|green_gram","Good after rice on leftover moisture; control yellow mosaic virus carriers (whitefly)."),
+"cowpea":(0.8,1.5,"t/ha dry seed","~40-80 kg N/ha (rough)",1,3,2,3,2,2,"maize|sorghum|cassava|rice","cowpea|green_gram","Cut green stems as fodder or green manure after harvesting the seed."),
+"pigeon_pea":(0.8,1.5,"t/ha","~40-80 kg N/ha (rough)",1,3,2,3,2,3,"maize|sorghum|rice","pigeon_pea","Slow early growth, so intercrop with sesame or groundnut and weed early."),
+"chickpea":(0.8,1.5,"t/ha","~30-70 kg N/ha (rough)",1,3,3,3,2,4,"rice|sorghum|maize","chickpea","Sow soon after the monsoon while soil is moist; treat seed against wilt."),
+"sesame":(0.4,0.8,"t/ha","none",2,3,2,3,2,4,"groundnut|pigeon_pea|green_gram|sorghum","sesame","Thin early, avoid waterlogging, harvest when lower capsules turn yellow."),
+"sunflower":(1.0,2.0,"t/ha","none",3,3,3,3,2,3,"green_gram|cowpea|rice|sorghum","sunflower","Protect heads from birds and avoid flowering in the wettest weeks."),
+"sorghum":(1.5,3.0,"t/ha grain","none",3,3,2,3,2,2,"groundnut|green_gram|pigeon_pea|soybean","sorghum","A good cereal break after legumes; scare birds near harvest."),
+"cassava":(15,30,"t/ha fresh roots","none",3,4,3,3,5,3,"groundnut|green_gram|cowpea|sunn_hemp","cassava","Use disease-free stakes, add organic matter, and sell roots within 1-2 days of harvest."),
+"sugarcane":(50,80,"t/ha cane","none",4,5,4,3,5,3,"soybean|groundnut|green_gram|cowpea","","Only worthwhile within reach of a mill; legumes between cycles rebuild soil."),
+"potato":(15,25,"t/ha tubers","none",5,5,5,5,4,4,"maize|green_gram|cowpea","potato|vegetables","Use certified seed tubers, hill the soil, and watch for late blight."),
+"watermelon":(15,30,"t/ha fruit","none",3,4,4,4,4,4,"rice|green_gram|cowpea","watermelon","Mulch and use drip irrigation; do not repeat on the same bed."),
+"vegetables":(10,25,"t/ha (varies by vegetable)","none",4,5,4,5,5,5,"green_gram|cowpea|maize","vegetables","Choose short crops near a market and rotate plant families."),
+"cashew":(0.5,1.0,"t/ha raw nuts (mature trees)","none",2,3,3,3,2,4,"","","Slow to bear (3+ years); intercrop young trees with legumes."),
+"sunn_hemp":(5,8,"t/ha dry biomass (ploughed in)","~80-150 kg N/ha in biomass (rough)",1,2,2,1,1,1,"","","Plough in at flowering (about 45-60 days) to build organic matter."),
+"cover_legume":(4,8,"t/ha biomass","~80-150 kg N/ha in biomass (rough)",1,2,3,1,1,1,"","","Keep a strip clear around young trees so the cover does not smother them."),
+"pineapple":(30,50,"t/ha fruit","none",4,4,4,3,4,4,"","pineapple","Needs well-drained soil; plant on raised beds and mulch."),
+"sweet_potato":(10,20,"t/ha tubers","none",2,3,2,2,3,3,"rice|maize|green_gram","sweet_potato","Use cuttings from healthy vines; avoid waterlogged soil."),
+"oil_palm":(15,25,"t/ha fresh fruit bunches","none",4,4,5,3,2,5,"","","Plantation crop with about 3 years to first harvest; cover-crop young rows."),
+"rubber":(1.2,1.8,"t/ha dry rubber","none",3,5,5,3,2,3,"","","Tapping needs skilled labour and prices swing."),
+}
+RK=["rough_yield_low","rough_yield_high","yield_unit","n_fixed_kg_ha_rough","fertiliser_need_1_5","labour_need_1_5","seed_cost_1_5","pest_difficulty_1_5","storage_difficulty_1_5","relative_income_1_5","good_after","avoid_after","farmer_tip"]
+for j,k in enumerate(RK): crops[k]=[ROUGH[i][j] for i in crops.id]
+
 # ---------------- SCORING ----------------
 clamp=lambda x,a=0.0,b=1.0:max(a,min(b,x))
-PERENN={"cashew","cover_legume"}
+PERENN={"cashew","cover_legume","oil_palm","rubber"}
 def score(r,c):
     wet_days=(12-r.dry_months_approx)*30
     # climate
@@ -141,6 +199,7 @@ def score(r,c):
     # soil-draining crops on already degraded soil; no-income soil-improvement crops
     if c.id in("cassava","sugarcane","maize") and (r.soil_degraded or r.soil_texture=="sandy"): fit*=0.92
     if c.role in("green manure","cover crop"): fit*=0.85
+    if c.id in("oil_palm","rubber","cashew") and not r.tree_crop_dominated and c.id not in COMMON[r.id]: fit*=0.75
     common = c.id in COMMON[r.id]
     if common: fit+=5
     if r.tree_crop_dominated and c.id not in PERENN: fit*=0.85
@@ -174,8 +233,10 @@ def limits_and_why(r,c,s):
     if not why: why.append("moderate match on climate, water and soil")
     return "; ".join(lim), "; ".join(why[:3])
 
+
+# ---- Wrapped into functions for the Sowcast data pipeline (data/scripts/05b_score_measured.py imports this).
+# The scoring rules and data above/below are the team's, unchanged; only the file I/O moved into main().
 def build_fit(reg):
-    """Score every crop in every region (reg: a regions table like `reg` above)."""
     rows=[]
     for _,r in reg.iterrows():
         tmp=[]
@@ -190,9 +251,59 @@ def build_fit(reg):
                 risk_part=round(s["risk"],2),benefit_part=round(s["benefit"],2),common_locally=s["common"],trend="tbd (needs NDVI/IMERG/POWER trends)",
                 limits=lim,why=why,confidence=r.confidence if r.confidence else "low",
                 basis="rule-based score from approximate region priors + crop traits; NOT yet computed from NASA time series"))
-    return pd.DataFrame(rows)
+    fit=pd.DataFrame(rows)
 
-# ---------------- ROTATIONS ----------------
+
+    MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+    mn=lambda m:MN[(int(m)-1)%12]
+    global regd, crd, window, harvest, rtip, lab
+    regd=reg.set_index("id"); crd=crops.set_index("id")
+    def window(rid,cid):
+        r=regd.loc[rid]; c=crd.loc[cid]; st=int(r.wet_season_start_month_approx); en=int(r.wet_season_end_month_approx)
+        if cid in("cashew","oil_palm","rubber","cover_legume","pineapple"): return f"{mn(st)}-{mn(st+1)} (start of wet season)",(st+1)
+        if cid=="chickpea": return f"{mn(en)}-{mn(en+1)} (after monsoon, on residual moisture)",en
+        if c.dry_season_crop:
+            if r.dry_months_approx<=2: return "year-round; avoid the heaviest rain weeks",st
+            return f"{mn(en+1)}-{mn(en+2)} (dry season; needs irrigation or residual moisture)",en+1
+        if "wet or dry" in c.season and r.dry_months_approx>=3: return f"wet season {mn(st)}-{mn(st+1)}; or dry season {mn(en+1)}-{mn(en+2)} if moisture allows",st
+        return f"{mn(st)}-{mn(st+1)}",st
+    def harvest(start,days): return mn(start+max(1,round(days/30)))
+    lab=lambda f:"Very good fit" if f>=85 else("Good fit" if f>=75 else("Possible fit" if f>=55 else "Poor fit"))
+    def rtip(rid,cid):
+        r=regd.loc[rid]; c=crd.loc[cid]
+        if cid in("sunn_hemp","cover_legume"): return "Soil-building crop with no direct income; plough in or use as ground cover."
+        if cid in("cashew","oil_palm","rubber"): return "Perennial tree crop, not a rotation crop; use a legume cover between young rows."
+        if c.nitrogen_fixing:
+            t="Good before cereals, maize or cassava because it leaves nitrogen in the soil."
+            if r.soil_degraded or r.soil_texture in("sandy","sandy_loam"): t+=" Especially useful on this area's low-fertility soil."
+            return t
+        if c.family=="grass": return "Plant after a legume to cut fertiliser need and break disease cycles."
+        return "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    W,H,YR,SL,RT,AD=[],[],[],[],[],[]
+    for _,x in fit.iterrows():
+        c=crd.loc[x.crop_id]; w,st=window(x.region_id,x.crop_id)
+        W.append(w); H.append("~"+harvest(st,c.season_days)+" (rough)" if x.crop_id not in("cashew","oil_palm","rubber","cover_legume") else "multi-year")
+        YR.append(f"{c.rough_yield_low:g}-{c.rough_yield_high:g} {c.yield_unit}")
+        RT.append(rtip(x.region_id,x.crop_id))
+    fit["fit_label"]=[lab(f) for f in fit.fit]
+    fit["suggested_planting_window"]=W
+    fit["approx_harvest_month"]=H
+    fit["rough_typical_yield"]=YR
+    fit["yield_outlook_here"]=["upper half of typical range" if f>=75 else("middle of range" if f>=55 else "lower end or at risk") for f in fit.fit]
+    fit["n_fixed_kg_ha_rough"]=[crd.loc[i].n_fixed_kg_ha_rough for i in fit.crop_id]
+    for k,col in [("fertiliser_need_1_5","fertiliser_need_1_5"),("labour_need_1_5","labour_need_1_5"),("seed_cost_1_5","seed_cost_1_5"),("pest_difficulty_1_5","pest_difficulty_1_5"),("storage_difficulty_1_5","storage_difficulty_1_5"),("relative_income_1_5","relative_income_1_5")]:
+        fit[col]=[crd.loc[i][k] for i in fit.crop_id]
+    fit["rotation_tip_here"]=RT
+    fit["good_after"]=[crd.loc[i].good_after for i in fit.crop_id]
+    fit["avoid_after"]=[crd.loc[i].avoid_after for i in fit.crop_id]
+    fit["farmer_tip"]=[crd.loc[i].farmer_tip for i in fit.crop_id]
+    fit["calendar_confidence"]=[regd.loc[i].calendar_confidence for i in fit.region_id]
+    fit["summary_line"]=[f"#{x['rank']} {x.crop_name}: {x.fit_label} ({x.fit:g}/95). Plant {x.suggested_planting_window.split(' (')[0]}; harvest {x.approx_harvest_month}. Rough yield {x.rough_typical_yield}." for _,x in fit.iterrows()]
+    front=["region_id","country","region","rank","crop_id","crop_name","fit","fit_label","summary_line","role","suggested_planting_window","approx_harvest_month","rough_typical_yield","yield_outlook_here","limits","why","rotation_tip_here","good_after","avoid_after","farmer_tip","n_fixed_kg_ha_rough","fertiliser_need_1_5","labour_need_1_5","seed_cost_1_5","pest_difficulty_1_5","storage_difficulty_1_5","relative_income_1_5","fit_band","climate_part","water_part","soil_part","risk_part","benefit_part","common_locally","trend","confidence","calendar_confidence","basis"]
+    fit=fit[front]
+    return fit
+
+
 RO = [
 ("mm-dry-zone","current","Groundnut, repeated (sole groundnut is the dominant pattern)","groundnut|groundnut","ICRISAT 2004; Herridge 2019 on narrow legume-heavy systems"),
 ("mm-dry-zone","alt_a","Groundnut then sorghum (cereal break for legume disease)","groundnut|sorghum","Herridge 2019: lack of broadleaf/cereal balance causes disease and yield loss"),
@@ -264,11 +375,38 @@ RO = [
 ("kh-coastal","alt_a","Salt-tolerant rice then green gram","salt_rice|green_gram","general knowledge - verify"),
 ("kh-coastal","alt_b","Pepper / fruit trees with legume cover","perennial_tree+cover_legume","general knowledge - verify"),
 ]
+RO += [
+("my-kedah-perlis","current","Rice, rice (main season and off-season)","rice|rice","general knowledge - verify with MADA/DOA"),
+("my-kedah-perlis","alt_a","Rice then green gram in the dry spell","rice|green_gram","general knowledge - verify"),
+("my-kedah-perlis","alt_b","Rice then sweet corn / maize","rice|maize","general knowledge - verify"),
+("my-kelantan","current","Rice then fallow","rice|fallow","general knowledge - verify"),
+("my-kelantan","alt_a","Rice then groundnut on sandy coastal soil","rice|groundnut","general knowledge - verify"),
+("my-kelantan","alt_b","Rice then watermelon","rice|watermelon","general knowledge - verify"),
+("my-selangor","current","Rice, rice","rice|rice","general knowledge - verify"),
+("my-selangor","alt_a","Rice then green gram","rice|green_gram","general knowledge - verify"),
+("my-selangor","alt_b","Rice then vegetables","rice|vegetables","general knowledge - verify"),
+("my-cameron","current","Vegetables, repeated","vegetables|vegetables","general knowledge - verify"),
+("my-cameron","alt_a","Vegetables then maize (cereal break)","vegetables|maize","general knowledge - verify"),
+("my-cameron","alt_b","Potato then vegetables, on terraces","potato|vegetables","general knowledge - verify"),
+("my-johor","current","Oil palm / rubber / pineapple (plantation)","perennial_tree","general knowledge - verify"),
+("my-johor","alt_a","Young palms with legume cover","perennial_tree+cover_legume","general knowledge - verify"),
+("my-johor","alt_b","Pineapple then cowpea","pineapple|cowpea","general knowledge - verify"),
+("my-pahang","current","Oil palm / rubber (plantation)","perennial_tree","general knowledge - verify"),
+("my-pahang","alt_a","Young trees with legume cover","perennial_tree+cover_legume","general knowledge - verify"),
+("my-pahang","alt_b","Young trees with vegetables between rows","perennial_tree+vegetables","general knowledge - verify"),
+("my-sarawak","current","Oil palm / sago plantation","perennial_tree","general knowledge - verify"),
+("my-sarawak","alt_a","Young palms with legume cover","perennial_tree+cover_legume","general knowledge - verify"),
+("my-sarawak","alt_b","Rice then cowpea on mineral soil","rice|cowpea","general knowledge - verify"),
+("my-sabah","current","Rice then fallow","rice|fallow","general knowledge - verify"),
+("my-sabah","alt_a","Rice then green gram","rice|green_gram","general knowledge - verify"),
+("my-sabah","alt_b","Maize then soybean","maize|soybean","general knowledge - verify"),
+]
+
 def build_rotations(fit):
-    """Rotation table for a crop-fit table from build_fit()."""
     fitidx=fit.set_index(["region_id","crop_id"])["fit"].to_dict()
     cropidx=crops.set_index("id")
     out=[]
+    import re
     for rid,opt,label,seq,src in RO:
         ids=[x for x in re.split(r"[|+]",seq) if x in cropidx.index]
         distinct=list(dict.fromkeys(ids))
@@ -279,28 +417,21 @@ def build_rotations(fit):
         out.append(dict(region_id=rid,option=opt,label=label,sequence=seq,n_distinct_crops=len(distinct),has_fallow=("fallow" in seq),avg_crop_suitability=avg,
             has_nitrogen_fixer=nfix,has_cereal=cereal,cereal_legume_break=bool(nfix and cereal),
             note=("tree crop not scored in the table; suitability shown blank" if has_tree else "avg_crop_suitability = mean single-crop fit; it does not measure soil-health benefit of the sequence"),source_or_basis=src,confidence=("medium" if rid in EVID and src!="general knowledge - verify" else "low")))
-    return pd.DataFrame(out)
+    rot=pd.DataFrame(out)
+    return rot
 
+from pathlib import Path
+OUT = Path(__file__).resolve().parent / "out"
 def main(out_dir=OUT):
-    fit = build_fit(reg)
-    rot = build_rotations(fit)
-    reg.to_csv(out_dir / "sowcast_regions.csv",index=False)
-    crops.to_csv(out_dir / "sowcast_crops.csv",index=False)
-    fit.to_csv(out_dir / "sowcast_region_crop_fit.csv",index=False)
-    rot.to_csv(out_dir / "sowcast_rotations.csv",index=False)
+    out_dir = Path(out_dir); out_dir.mkdir(parents=True, exist_ok=True)
+    fit = build_fit(reg); rot = build_rotations(fit)
+    top5=fit[fit["rank"]<=5][["region_id","country","region","rank","crop_name","fit","fit_label","suggested_planting_window","rough_typical_yield","why"]]
+    top5.to_csv(out_dir/"sowcast_top5_by_region.csv",index=False)
+    reg.to_csv(out_dir/"sowcast_regions.csv",index=False)
+    crops.to_csv(out_dir/"sowcast_crops.csv",index=False)
+    fit.to_csv(out_dir/"sowcast_region_crop_fit.csv",index=False)
+    rot.to_csv(out_dir/"sowcast_rotations.csv",index=False)
     print(len(reg),len(crops),len(fit),len(rot))
-
-    for rid in reg.id:
-        t=fit[fit.region_id==rid].head(5)
-        print(rid," | ".join(f"{a}:{b}" for a,b in zip(t.crop_id,t.fit)), "| worst:",fit[fit.region_id==rid].tail(2).crop_id.tolist())
-
-    print(fit.fit.describe()); print(fit.fit_band.value_counts())
-
-    pd.set_option("display.width",250); pd.set_option("display.max_colwidth",90)
-    for rid in ["th-isan","mm-dry-zone"]:
-        print("\n",rid); print(fit[fit.region_id==rid][["rank","crop_id","fit","fit_band","limits","why"]].to_string(index=False))
-
-
 
 if __name__ == "__main__":
     main()

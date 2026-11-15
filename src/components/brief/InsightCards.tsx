@@ -24,12 +24,12 @@ export function InsightCards({ insights }: { insights: PlainInsight[] }) {
                   <kind.Icon className="w-3.5 h-3.5" />
                   {kind.label}
                 </Pill>
-                <span className="text-[11px] font-medium text-stone-500">Confidence: {insight.confidence}</span>
+                <span className="text-xs font-medium text-stone-500">Confidence: {insight.confidence}</span>
               </div>
               <h3 className="font-bold text-stone-900 text-base leading-snug">{insight.title}</h3>
               <p className="text-sm text-stone-700 mt-2 leading-relaxed">{insight.body}</p>
             </div>
-            <div className="mt-3 pt-2 border-t border-stone-200/70 text-[11px] font-semibold text-stone-500">Source: {insight.source}</div>
+            <div className="mt-3 pt-2 border-t border-stone-200/70 text-xs font-semibold text-stone-500">Source: {insight.source}</div>
           </Card>
         );
       })}

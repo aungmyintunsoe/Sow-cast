@@ -30,6 +30,16 @@ export interface Crop {
   forage_value: number;
   pest_notes: string;
   plain_description: string;
+  /** Farming details from the team's crop table (rough regional averages). Scores 1 (low) to 5 (high). */
+  yield_low: number | null;
+  yield_high: number | null;
+  yield_unit: string | null;
+  n_fixed: string | null; // e.g. "~40-100 kg N/ha (rough)"; null for crops that don't fix nitrogen
+  needs: { fertiliser: number | null; labour: number | null; seed_cost: number | null; pest_difficulty: number | null; storage_difficulty: number | null };
+  relative_income: number | null;
+  good_after: string[]; // crop ids
+  avoid_after: string[]; // crop ids
+  farmer_tip: string;
 }
 
 export interface RegionSummary {
@@ -118,30 +128,76 @@ export interface PlainInsight {
   badgeType?: 'warning' | 'opportunity' | 'neutral';
 }
 
-export interface RotationScores {
-  soil: number; // 1-5
-  water: number;
-  erosion: number;
-  income: number;
-  pest_break: number;
+/** One month-by-month row of a plan's calendar. Each cell is a crop id (or "perennial_tree") or null for bare soil. */
+export interface CalendarRow {
+  label: string; // "Every year", "Year 1", "Trees", "Between rows"
+  cells: (string | null)[]; // 12 entries, January first
 }
 
-export interface RotationOption {
-  id: string; // current | alt_a | alt_b
-  label: string; // "Current", "Option A", "Option B"
+export type PlanGoal = 'balanced' | 'soil_health' | 'market_income' | 'water_saving' | 'low_risk' | 'low_cost_labour';
+
+/** A rotation: what farmers do now ('current') or one of the team recommender's top 3 for a goal. Scores 0-100. */
+export interface RotationPlan {
+  id: string; // stable across goals: the same sequence has the same id
+  kind: 'current' | 'recommended';
+  goal: PlanGoal | null;
+  rank: number | null;
   name: string;
-  tagline?: string;
-  /** Steps in order. A step can combine crops grown together: "perennial_tree+cover_legume".
-   *  Non-crop tokens: "fallow", "perennial_tree". */
+  tagline: string | null;
+  plan_type: string; // e.g. "3-year rotation", "1-year double crop (wet season, then dry season)"
+  /** Steps in order. A step can combine crops grown together ("perennial_tree+cover_legume"). Non-crop tokens: "fallow", "perennial_tree". */
   sequence: string[];
-  cover_by_month: number[] | null; // null until crop calendars are collected
-  scores: RotationScores;
-  why: string;
+  goal_match: number | null;
+  change_vs_current: number | null; // points better (+) or worse (-) than current practice on the goal's key score
+  scores: { soil: number; market: number; water: number; resilience: number; low_cost: number; suitability: number } | null;
+  why: string[];
+  cautions: string[];
   evidence: string[];
-  benefits: string[];
-  gaps: string[];
-  risks: string[];
+  calendar: { rows: CalendarRow[]; approximate: boolean } | null;
   confidence: 'medium' | 'low';
+  basis: string;
+}
+
+export interface RegionPlans {
+  current: RotationPlan | null;
+  by_goal: Record<PlanGoal, RotationPlan[]>;
+}
+
+/** One projected series: 2001-2024 history plus the 2035 projection with an 80% range. */
+export interface ProjectedSeries {
+  label: string;
+  unit: string;
+  per_decade: number;
+  p: number;
+  significance: 'likely' | 'possible' | 'none';
+  model: 'theil_sen' | 'average';
+  baseline: number; // 2001-2024 average
+  recent_5y: number;
+  bad_edge: 'low' | 'high';
+  at_horizon: { year: number; mid: number; lo: number; hi: number };
+  projection: { year: number; mid: number; lo: number; hi: number }[];
+  history: { year: number; value: number }[];
+}
+
+export interface Consequence {
+  kind: string;
+  severity: 'high' | 'medium' | 'low';
+  metric: string | null;
+  headline: string;
+  detail: string;
+  action: string;
+  crops: string[];
+  significance: 'likely' | 'possible' | 'none' | 'variability' | 'projection';
+}
+
+export interface RegionOutlook {
+  method: string;
+  base_period: string;
+  horizon: number;
+  interval: number;
+  series: Partial<Record<'precip_mm' | 'tmean_c' | 'heat_days' | 'heavy_rain_days' | 'max_dry_spell_days' | 'water_balance_mm' | 'dry_months', ProjectedSeries>>;
+  crop_outlook: { crop: string; fit_now: number; fit_trend_2035: number; fit_bad_year_2035: number; water_now: number; water_bad_year: number }[];
+  consequences: Consequence[];
 }
 
 export interface CropFitResult {
@@ -154,6 +210,12 @@ export interface CropFitResult {
   why: string[];
   common_locally: boolean;
   parts: { climate: number; water: number; soil: number; risk: number; benefit: number };
+  label: string | null; // "Very good fit" ...
+  planting_window: string | null;
+  harvest: string | null;
+  sow_month: number | null;
+  yield_outlook: string | null;
+  rotation_tip: string | null;
 }
 
 export interface RegionDetail {
@@ -172,7 +234,12 @@ export interface RegionDetail {
   soil: SoilProfile | null;
   priors: RegionPriors;
   insights: PlainInsight[];
-  rotations: RotationOption[];
+  /** Rough wet-season months (team data) used for planting windows. */
+  calendar: { wet_start: number | null; wet_end: number | null; confidence: string | null };
+  rotation_relevance: string;
+  plans: RegionPlans;
+  /** Trends extended to 2035 and what they mean; null where the weather series is not reliable. */
+  outlook: RegionOutlook | null;
   crop_fit: CropFitResult[];
   sources: string[];
 }

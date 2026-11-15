@@ -4,8 +4,27 @@
 
 /* Fonts are defined once in tailwind.config.js (sans = body, display = headings). */
 @layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    line-height: 1.55;
+    font-kerning: normal;
+    font-feature-settings: 'kern', 'liga', 'calt';
+    text-rendering: optimizeLegibility;
+  }
   h1, h2, h3 {
-    @apply font-display;
+    @apply font-display tracking-tight;
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty; /* avoids one-word last lines (widows) */
+  }
+  /* Numbers in tables line up in columns */
+  table {
+    font-variant-numeric: tabular-nums;
   }
 }
 
@@ -21,4 +40,21 @@
 :focus-visible {
   outline: 2px solid #2c8742;
   outline-offset: 2px;
+}
+
+/* Printed plan (PlanDocument): A4, keep colours (calendar, highlights) when printing */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 14mm 16mm;
+  }
+  html,
+  body {
+    background: #fff !important;
+  }
+  .plan-doc {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 11pt;
+  }
 }

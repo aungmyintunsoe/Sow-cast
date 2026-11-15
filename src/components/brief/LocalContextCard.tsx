@@ -1,4 +1,5 @@
 import type { Crop, RegionDetail } from '../../types';
+import { CropPeek } from '../crops/CropPeek';
 import { Card } from '../ui/Card';
 import { LabelValue } from '../ui/LabelValue';
 
@@ -63,7 +64,7 @@ export function LocalContextCard({ priors, scoringInputs, cropsMap }: LocalConte
                     <td className={`py-1.5 pr-2 ${cellTone(u.used === 'draft')}`}>{fmt(u.draft)}</td>
                     <td className={`py-1.5 ${cellTone(u.used === 'measured')}`}>
                       {isBlank(u.measured) ? 'Not measured yet' : fmt(u.measured)}
-                      {!isBlank(u.measured) && <span className="block text-[11px] font-normal text-stone-500">{u.source}</span>}
+                      {!isBlank(u.measured) && <span className="block text-xs font-normal text-stone-500">{u.source}</span>}
                     </td>
                   </tr>
                 );
@@ -74,9 +75,17 @@ export function LocalContextCard({ priors, scoringInputs, cropsMap }: LocalConte
       )}
 
       <p className="text-sm text-stone-700 mt-3">
-        {priors.common_crops.length
-          ? `Commonly grown: ${priors.common_crops.map((id) => cropsMap[id]?.name ?? id).join(', ')}.`
-          : priors.tree_crop_dominated
+        {priors.common_crops.length ? (
+          <>
+            Commonly grown:{' '}
+            {priors.common_crops.map((id, i) => (
+              <span key={id}>
+                <CropPeek id={id}>{cropsMap[id]?.name ?? id}</CropPeek>
+                {i < priors.common_crops.length - 1 ? ', ' : '.'}
+              </span>
+            ))}
+          </>
+        ) : priors.tree_crop_dominated
             ? 'Mostly tree crops such as rubber and oil palm.'
             : ''}
       </p>

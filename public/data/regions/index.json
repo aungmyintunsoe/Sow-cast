@@ -56,7 +56,7 @@
     "country": "Myanmar",
     "lat": 14.08,
     "lon": 98.2,
-    "tagline": "Grows cashew; about 4,500 mm of rain a year",
+    "tagline": "Grows cashew, rubber and oil palm; about 4,500 mm of rain a year",
     "confidence": "low"
   },
   {
@@ -96,7 +96,7 @@
     "country": "Thailand",
     "lat": 12.61,
     "lon": 102.1,
-    "tagline": "Grows cassava; about 3,150 mm of rain a year",
+    "tagline": "Grows cassava and rubber; about 3,150 mm of rain a year",
     "confidence": "low"
   },
   {
@@ -116,7 +116,7 @@
     "country": "Thailand",
     "lat": 9.14,
     "lon": 99.33,
-    "tagline": "Mostly tree crops, about 1,750 mm of rain a year",
+    "tagline": "Grows rubber and oil palm; about 1,750 mm of rain a year",
     "confidence": "low"
   },
   {
@@ -166,7 +166,7 @@
     "country": "Vietnam",
     "lat": 12.67,
     "lon": 108.04,
-    "tagline": "Grows maize and mixed vegetables; about 1,750 mm of rain a year",
+    "tagline": "Grows maize, mixed vegetables and rubber; about 1,750 mm of rain a year",
     "confidence": "low"
   },
   {
@@ -176,7 +176,7 @@
     "country": "Vietnam",
     "lat": 11.31,
     "lon": 106.1,
-    "tagline": "Grows cassava and sugarcane; about 2,050 mm of rain a year",
+    "tagline": "Grows cassava, sugarcane and rubber; about 2,050 mm of rain a year",
     "confidence": "low"
   },
   {
@@ -226,6 +226,86 @@
     "country": "Cambodia",
     "lat": 10.61,
     "lon": 104.18,
+    "tagline": "Grows rice and mixed vegetables; about 2,100 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "my-kedah-perlis",
+    "name": "Kedah-Perlis (Muda rice area)",
+    "place": "Alor Setar",
+    "country": "Malaysia",
+    "lat": 6.12,
+    "lon": 100.37,
+    "tagline": "Grows rice and watermelon; about 2,550 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "my-kelantan",
+    "name": "Kelantan Plain",
+    "place": "Kota Bharu",
+    "country": "Malaysia",
+    "lat": 6.13,
+    "lon": 102.24,
+    "tagline": "Grows rice and mixed vegetables; about 3,050 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "my-selangor",
+    "name": "Selangor Coastal Plain (Sekinchan)",
+    "place": "Sekinchan",
+    "country": "Malaysia",
+    "lat": 3.5,
+    "lon": 101.1,
+    "tagline": "Grows rice; about 2,600 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "my-cameron",
+    "name": "Cameron Highlands",
+    "place": "Tanah Rata",
+    "country": "Malaysia",
+    "lat": 4.47,
+    "lon": 101.38,
+    "tagline": "Grows mixed vegetables; about 2,850 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "my-johor",
+    "name": "Johor (Kluang-Pontian)",
+    "place": "Kluang",
+    "country": "Malaysia",
+    "lat": 2.03,
+    "lon": 103.32,
+    "tagline": "Grows pineapple, oil palm and rubber; about 2,400 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "my-pahang",
+    "name": "Pahang Interior",
+    "place": "Jerantut",
+    "country": "Malaysia",
+    "lat": 3.94,
+    "lon": 102.36,
+    "tagline": "Grows oil palm and rubber; about 2,500 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "my-sarawak",
+    "name": "Sarawak Lowlands (Borneo)",
+    "place": "Sibu",
+    "country": "Malaysia",
+    "lat": 2.29,
+    "lon": 111.83,
+    "tagline": "Grows oil palm; about 3,600 mm of rain a year",
+    "confidence": "low"
+  },
+  {
+    "id": "my-sabah",
+    "name": "Sabah Interior (Borneo)",
+    "place": "Keningau",
+    "country": "Malaysia",
+    "lat": 5.34,
+    "lon": 116.16,
     "tagline": "Grows rice and mixed vegetables; about 2,100 mm of rain a year",
     "confidence": "low"
   }

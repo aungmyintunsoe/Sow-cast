@@ -257,6 +257,94 @@
         "lon": 104.18
       },
       "hemisphere": "N"
+    },
+    {
+      "id": "my-kedah-perlis",
+      "name": "Kedah-Perlis (Muda rice area)",
+      "place": "Alor Setar",
+      "country": "Malaysia",
+      "location": {
+        "lat": 6.12,
+        "lon": 100.37
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "my-kelantan",
+      "name": "Kelantan Plain",
+      "place": "Kota Bharu",
+      "country": "Malaysia",
+      "location": {
+        "lat": 6.13,
+        "lon": 102.24
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "my-selangor",
+      "name": "Selangor Coastal Plain (Sekinchan)",
+      "place": "Sekinchan",
+      "country": "Malaysia",
+      "location": {
+        "lat": 3.5,
+        "lon": 101.1
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "my-cameron",
+      "name": "Cameron Highlands",
+      "place": "Tanah Rata",
+      "country": "Malaysia",
+      "location": {
+        "lat": 4.47,
+        "lon": 101.38
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "my-johor",
+      "name": "Johor (Kluang-Pontian)",
+      "place": "Kluang",
+      "country": "Malaysia",
+      "location": {
+        "lat": 2.03,
+        "lon": 103.32
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "my-pahang",
+      "name": "Pahang Interior",
+      "place": "Jerantut",
+      "country": "Malaysia",
+      "location": {
+        "lat": 3.94,
+        "lon": 102.36
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "my-sarawak",
+      "name": "Sarawak Lowlands (Borneo)",
+      "place": "Sibu",
+      "country": "Malaysia",
+      "location": {
+        "lat": 2.29,
+        "lon": 111.83
+      },
+      "hemisphere": "N"
+    },
+    {
+      "id": "my-sabah",
+      "name": "Sabah Interior (Borneo)",
+      "place": "Keningau",
+      "country": "Malaysia",
+      "location": {
+        "lat": 5.34,
+        "lon": 116.16
+      },
+      "hemisphere": "N"
     }
   ]
 }

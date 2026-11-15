@@ -1,10 +1,13 @@
-import { AlertTriangle, ArrowRight } from 'lucide-react';
+import { AlertTriangle, ArrowRight, BookOpenText } from 'lucide-react';
 import type { Crop, RegionDetail } from '../../types';
-import { PrimaryButton } from '../ui/Button';
+import { Button, PrimaryButton } from '../ui/Button';
 import { PageHeader } from '../ui/Card';
 import { ClimateCharts } from './ClimateCharts';
 import { InsightCards } from './InsightCards';
 import { LocalContextCard } from './LocalContextCard';
+import { MoreTrends } from './MoreTrends';
+import { OutlookPanel } from './OutlookPanel';
+import { SatelliteView } from './SatelliteView';
 import { SoilCard } from './SoilCard';
 import { StatCards } from './StatCards';
 
@@ -12,10 +15,11 @@ interface FieldBriefProps {
   data: RegionDetail;
   cropsMap: Record<string, Crop>;
   onContinue: () => void;
+  onOpenMethods: () => void;
 }
 
 /** Step 2: what the measured weather, greenness and soil say about the chosen region. */
-export function FieldBrief({ data, cropsMap, onContinue }: FieldBriefProps) {
+export function FieldBrief({ data, cropsMap, onContinue, onOpenMethods }: FieldBriefProps) {
   const hasWeather = data.monthly.length > 0;
   // Weather numbers are hidden when the series failed the pipeline's quality check (see data_quality.note).
   const weatherOk = hasWeather && data.data_quality.weather === 'ok';
@@ -24,12 +28,19 @@ export function FieldBrief({ data, cropsMap, onContinue }: FieldBriefProps) {
     <div className="space-y-6">
       <PageHeader
         title={`What the weather and soil say about ${data.region.name}`}
-        description={`Sources: ${data.sources.join(', ')}. Weather is for the area around ${data.region.place}.`}
+        description={`Measured 2001–2024 for the farmland around ${data.region.place}.`}
+        note={`Sources: ${data.sources.join(', ')}.`}
         action={
-          <PrimaryButton onClick={onContinue}>
-            <span>Compare rotations</span>
-            <ArrowRight className="w-4 h-4" />
-          </PrimaryButton>
+          <div className="flex flex-col gap-2 sm:items-end">
+            <PrimaryButton onClick={onContinue}>
+              <span>Compare rotations</span>
+              <ArrowRight className="w-4 h-4" />
+            </PrimaryButton>
+            <Button variant="ghost" size="sm" onClick={onOpenMethods}>
+              <BookOpenText className="w-4 h-4" />
+              How we analysed this
+            </Button>
+          </div>
         }
       />
 
@@ -49,9 +60,12 @@ export function FieldBrief({ data, cropsMap, onContinue }: FieldBriefProps) {
         </div>
       )}
 
-      {weatherOk && <StatCards trends={data.trends} />}
+      {weatherOk && data.outlook && <OutlookPanel outlook={data.outlook} />}
+      <SatelliteView lat={data.region.lat} lon={data.region.lon} place={data.region.place} monthly={data.monthly} wetEnd={data.calendar.wet_end} />
+      {weatherOk && <StatCards trends={data.trends} outlook={data.outlook} />}
       <InsightCards insights={data.insights} />
-      {weatherOk && <ClimateCharts monthly={data.monthly} annual={data.annual} trends={data.trends} />}
+      {weatherOk && <ClimateCharts monthly={data.monthly} annual={data.annual} trends={data.trends} outlook={data.outlook} />}
+      {weatherOk && <MoreTrends annual={data.annual} monthly={data.monthly} outlook={data.outlook} />}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         <SoilCard soil={data.soil} place={data.region.place} />

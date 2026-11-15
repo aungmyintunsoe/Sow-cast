@@ -6,6 +6,7 @@
     "weather": "ok",
     "rain_source": "CHIRPS (ClimateSERV)",
     "temp_source": "NASA POWER",
+    "temp_elevation_adjust_c": 2.17,
     "ndvi_source": "NASA GIBS VIIRS NDVI (cropland pixels)",
     "power_check": {
       "broken": false,
@@ -23,8 +24,8 @@
   "trends": {
     "tmean_c": {
       "per_decade": -0.042,
-      "first_10y_mean": 25.02,
-      "last_10y_mean": 24.93,
+      "first_10y_mean": 27.19,
+      "last_10y_mean": 27.11,
       "change_pct_over_period": -0.4,
       "mann_kendall": {
         "S": -8,
@@ -34,14 +35,14 @@
       }
     },
     "heat_days": {
-      "per_decade": 0.209,
-      "first_10y_mean": 0.1,
-      "last_10y_mean": 0.3,
-      "change_pct_over_period": 288,
+      "per_decade": 0.709,
+      "first_10y_mean": 8.2,
+      "last_10y_mean": 10.3,
+      "change_pct_over_period": 18.2,
       "mann_kendall": {
-        "S": 27,
-        "z": 0.645,
-        "p": 0.519,
+        "S": -11,
+        "z": -0.248,
+        "p": 0.8041,
         "trend": "no significant trend"
       }
     },
@@ -118,38 +119,38 @@
       }
     },
     "gdd": {
-      "per_decade": -20.17,
-      "first_10y_mean": 5625.9,
-      "last_10y_mean": 5587.1,
-      "change_pct_over_period": -0.8,
+      "per_decade": 4.987,
+      "first_10y_mean": 6234,
+      "last_10y_mean": 6234.7,
+      "change_pct_over_period": 0.2,
       "mann_kendall": {
-        "S": -17,
-        "z": -0.397,
-        "p": 0.6915,
+        "S": 23,
+        "z": 0.546,
+        "p": 0.5853,
         "trend": "no significant trend"
       }
     },
     "et0_mm": {
-      "per_decade": -40.165,
-      "first_10y_mean": 1307.7,
-      "last_10y_mean": 1252.8,
+      "per_decade": -41.943,
+      "first_10y_mean": 1372.7,
+      "last_10y_mean": 1315.5,
       "change_pct_over_period": -7.2,
       "mann_kendall": {
-        "S": -81,
-        "z": -1.984,
-        "p": 0.0472,
+        "S": -84,
+        "z": -2.059,
+        "p": 0.0395,
         "trend": "decreasing"
       }
     },
     "water_balance_mm": {
-      "per_decade": -15.039,
-      "first_10y_mean": -173.4,
-      "last_10y_mean": -293.5,
-      "change_pct_over_period": 12.8,
+      "per_decade": -13.17,
+      "first_10y_mean": -238.6,
+      "last_10y_mean": -356.2,
+      "change_pct_over_period": 9,
       "mann_kendall": {
-        "S": -16,
-        "z": -0.372,
-        "p": 0.7098,
+        "S": -14,
+        "z": -0.322,
+        "p": 0.7471,
         "trend": "no significant trend"
       }
     },

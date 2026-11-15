@@ -19,6 +19,7 @@ Node 18+ runs the fetch scripts with no install. Python steps use `data/.venv` (
 | [DATA_DICTIONARY.md](DATA_DICTIONARY.md) | Every file and column |
 | [API_CALLS.md](API_CALLS.md) | Which open APIs we call (pipeline and app map), and their gotchas |
 | [resources.txt](resources.txt) | Sources in use and sources still worth getting |
+| [ANALYSIS.md](ANALYSIS.md) | **Methods and sources behind the app:** trend tests, 2035 projections, crop re-scoring, consequences, rotation recommender, limits |
 | [VISUALIZATIONS.md](VISUALIZATIONS.md) / [ANALYSIS_TIPS.md](ANALYSIS_TIPS.md) | Charts to build; how to analyse the data well |
 
 ## How data flows

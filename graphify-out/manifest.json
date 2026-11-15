@@ -1,0 +1,1190 @@
+{
+  "data/config/sites.json": {
+    "mtime": 1794666242.204336,
+    "seen": 1794728049.247883,
+    "ast_hash": "a524f3401f103921ab74384ae54eee27",
+    "semantic_hash": "a524f3401f103921ab74384ae54eee27"
+  },
+  "data/inputs/make_data.py": {
+    "mtime": 1794668762.437697,
+    "seen": 1794728049.2478976,
+    "ast_hash": "3e55002dd29e8458bd08fa2e43bc7764",
+    "semantic_hash": "3e55002dd29e8458bd08fa2e43bc7764"
+  },
+  "data/processed/kh-coastal/ndvi_mask.json": {
+    "mtime": 1794668720.7614024,
+    "seen": 1794728049.2479026,
+    "ast_hash": "8d00abf51017785d5897369349609164",
+    "semantic_hash": "8d00abf51017785d5897369349609164"
+  },
+  "data/processed/kh-coastal/terrain.json": {
+    "mtime": 1794666525.2799432,
+    "seen": 1794728049.2479053,
+    "ast_hash": "e7acd73959dd67678ab0bbf0d1cf8cc3",
+    "semantic_hash": "e7acd73959dd67678ab0bbf0d1cf8cc3"
+  },
+  "data/processed/kh-coastal/trends.json": {
+    "mtime": 1794718024.37821,
+    "seen": 1794728049.2479072,
+    "ast_hash": "efcf5634bea582de2919ad3d5c5ef61f",
+    "semantic_hash": "efcf5634bea582de2919ad3d5c5ef61f"
+  },
+  "data/processed/kh-mekong-plain/ndvi_mask.json": {
+    "mtime": 1794668719.7800474,
+    "seen": 1794728049.2479262,
+    "ast_hash": "8d4bec8fbeba52810e2d5975f4777e9d",
+    "semantic_hash": "8d4bec8fbeba52810e2d5975f4777e9d"
+  },
+  "data/processed/kh-mekong-plain/terrain.json": {
+    "mtime": 1794666519.8508685,
+    "seen": 1794728049.2479453,
+    "ast_hash": "0c46e3ecf636c5c39ef6bc05a60f9aa3",
+    "semantic_hash": "0c46e3ecf636c5c39ef6bc05a60f9aa3"
+  },
+  "data/processed/kh-mekong-plain/trends.json": {
+    "mtime": 1794718024.1010826,
+    "seen": 1794728049.2479498,
+    "ast_hash": "3109c15f8f4e1b9378db147282d54c65",
+    "semantic_hash": "3109c15f8f4e1b9378db147282d54c65"
+  },
+  "data/processed/kh-plateau/ndvi_mask.json": {
+    "mtime": 1794668719.873646,
+    "seen": 1794728049.2479522,
+    "ast_hash": "9fec81d0099e684a621a3b86d97284b8",
+    "semantic_hash": "9fec81d0099e684a621a3b86d97284b8"
+  },
+  "data/processed/kh-plateau/terrain.json": {
+    "mtime": 1794666522.5731852,
+    "seen": 1794728049.2479544,
+    "ast_hash": "657753507e3276d4038248068b300dab",
+    "semantic_hash": "657753507e3276d4038248068b300dab"
+  },
+  "data/processed/kh-plateau/trends.json": {
+    "mtime": 1794718024.2637665,
+    "seen": 1794728049.2479568,
+    "ast_hash": "749b65485a09f727db268dc789823b20",
+    "semantic_hash": "749b65485a09f727db268dc789823b20"
+  },
+  "data/processed/kh-tonle-sap/ndvi_mask.json": {
+    "mtime": 1794668718.8760328,
+    "seen": 1794728049.2479596,
+    "ast_hash": "b1a6952f2ef0710a17f43ca57ceb4315",
+    "semantic_hash": "b1a6952f2ef0710a17f43ca57ceb4315"
+  },
+  "data/processed/kh-tonle-sap/terrain.json": {
+    "mtime": 1794666517.1750422,
+    "seen": 1794728049.2479618,
+    "ast_hash": "69c29b8f20c123b962ab3a0d54c73604",
+    "semantic_hash": "69c29b8f20c123b962ab3a0d54c73604"
+  },
+  "data/processed/kh-tonle-sap/trends.json": {
+    "mtime": 1794718023.9570744,
+    "seen": 1794728049.247964,
+    "ast_hash": "3b9fdfc8adab5b26426e0a05e74d93c4",
+    "semantic_hash": "3b9fdfc8adab5b26426e0a05e74d93c4"
+  },
+  "data/processed/mm-ayeyarwady/ndvi_mask.json": {
+    "mtime": 1794668432.544751,
+    "seen": 1794728049.247966,
+    "ast_hash": "897e52058662002bb4a23f064f8ffd5e",
+    "semantic_hash": "897e52058662002bb4a23f064f8ffd5e"
+  },
+  "data/processed/mm-ayeyarwady/soil_summary.json": {
+    "mtime": 1794727981.4033694,
+    "seen": 1794728049.2479682,
+    "ast_hash": "0eec20708cb38807cf567be1b83c332c",
+    "semantic_hash": "0eec20708cb38807cf567be1b83c332c"
+  },
+  "data/processed/mm-ayeyarwady/terrain.json": {
+    "mtime": 1794666466.7956247,
+    "seen": 1794728049.2479703,
+    "ast_hash": "92979645cad1da81ca4d4d8330619f91",
+    "semantic_hash": "92979645cad1da81ca4d4d8330619f91"
+  },
+  "data/processed/mm-ayeyarwady/trends.json": {
+    "mtime": 1794718021.694174,
+    "seen": 1794728049.2479727,
+    "ast_hash": "366c7f27d52dd92b3d419c8595aedfcb",
+    "semantic_hash": "366c7f27d52dd92b3d419c8595aedfcb"
+  },
+  "data/processed/mm-dry-zone/ndvi_mask.json": {
+    "mtime": 1794668410.5881138,
+    "seen": 1794728049.2479746,
+    "ast_hash": "1baa2b90b23b0fcc02e0814e26700085",
+    "semantic_hash": "1baa2b90b23b0fcc02e0814e26700085"
+  },
+  "data/processed/mm-dry-zone/soil_summary.json": {
+    "mtime": 1794727981.3903694,
+    "seen": 1794728049.247977,
+    "ast_hash": "3206d70e873f530cc1e9e9a1e51eb0af",
+    "semantic_hash": "3206d70e873f530cc1e9e9a1e51eb0af"
+  },
+  "data/processed/mm-dry-zone/terrain.json": {
+    "mtime": 1794666464.07563,
+    "seen": 1794728049.2479787,
+    "ast_hash": "e27c238ffd4d85f93cb5d0845179fd0e",
+    "semantic_hash": "e27c238ffd4d85f93cb5d0845179fd0e"
+  },
+  "data/processed/mm-dry-zone/trends.json": {
+    "mtime": 1794718021.5079722,
+    "seen": 1794728049.2479808,
+    "ast_hash": "354f51a44e2ab099f1ee22ff13caed9a",
+    "semantic_hash": "354f51a44e2ab099f1ee22ff13caed9a"
+  },
+  "data/processed/mm-kachin/ndvi_mask.json": {
+    "mtime": 1794668476.6246881,
+    "seen": 1794728049.2479851,
+    "ast_hash": "a8c62f7f60380c0f3ab636a14b7f4736",
+    "semantic_hash": "a8c62f7f60380c0f3ab636a14b7f4736"
+  },
+  "data/processed/mm-kachin/soil_summary.json": {
+    "mtime": 1794727981.420396,
+    "seen": 1794728049.247996,
+    "ast_hash": "887702010b60e502a77e6837f3abcc76",
+    "semantic_hash": "887702010b60e502a77e6837f3abcc76"
+  },
+  "data/processed/mm-kachin/terrain.json": {
+    "mtime": 1794666472.3208375,
+    "seen": 1794728049.2479982,
+    "ast_hash": "e38720e5148245a715541100aa9b3dbe",
+    "semantic_hash": "e38720e5148245a715541100aa9b3dbe"
+  },
+  "data/processed/mm-kachin/trends.json": {
+    "mtime": 1794718021.976163,
+    "seen": 1794728049.2480001,
+    "ast_hash": "09b25e669ca7a5d3f5da5069c7e941cb",
+    "semantic_hash": "09b25e669ca7a5d3f5da5069c7e941cb"
+  },
+  "data/processed/mm-rakhine/ndvi_mask.json": {
+    "mtime": 1794668477.5689006,
+    "seen": 1794728049.2480023,
+    "ast_hash": "5c09b8e0ed82283e509d8dc7ef707932",
+    "semantic_hash": "5c09b8e0ed82283e509d8dc7ef707932"
+  },
+  "data/processed/mm-rakhine/soil_summary.json": {
+    "mtime": 1794727981.4243958,
+    "seen": 1794728049.2480044,
+    "ast_hash": "d91a4cc7c84935a5dfaf230ced2f7051",
+    "semantic_hash": "d91a4cc7c84935a5dfaf230ced2f7051"
+  },
+  "data/processed/mm-rakhine/terrain.json": {
+    "mtime": 1794666475.034871,
+    "seen": 1794728049.2480063,
+    "ast_hash": "62049c20d5132481c0e51f517b2adffb",
+    "semantic_hash": "62049c20d5132481c0e51f517b2adffb"
+  },
+  "data/processed/mm-rakhine/trends.json": {
+    "mtime": 1794718022.120309,
+    "seen": 1794728049.2480085,
+    "ast_hash": "dbc5ed4f75e7cc78d3ac029084387106",
+    "semantic_hash": "dbc5ed4f75e7cc78d3ac029084387106"
+  },
+  "data/processed/mm-shan/ndvi_mask.json": {
+    "mtime": 1794668454.1518185,
+    "seen": 1794728049.2480106,
+    "ast_hash": "e48a4cd6b1b184fa7cea1aa609d6709e",
+    "semantic_hash": "e48a4cd6b1b184fa7cea1aa609d6709e"
+  },
+  "data/processed/mm-shan/soil_summary.json": {
+    "mtime": 1794727981.412396,
+    "seen": 1794728049.2480128,
+    "ast_hash": "08c3621a4742404d0248884439d634f3",
+    "semantic_hash": "08c3621a4742404d0248884439d634f3"
+  },
+  "data/processed/mm-shan/terrain.json": {
+    "mtime": 1794666469.5489404,
+    "seen": 1794728049.248015,
+    "ast_hash": "b33135dd202fe0d35161fc95e35e4283",
+    "semantic_hash": "b33135dd202fe0d35161fc95e35e4283"
+  },
+  "data/processed/mm-shan/trends.json": {
+    "mtime": 1794718021.8378508,
+    "seen": 1794728049.2480168,
+    "ast_hash": "0689174f809480f081cefbd3c5375d08",
+    "semantic_hash": "0689174f809480f081cefbd3c5375d08"
+  },
+  "data/processed/mm-tanintharyi/ndvi_mask.json": {
+    "mtime": 1794668496.4566667,
+    "seen": 1794728049.248019,
+    "ast_hash": "03b3c23ff5089f63d29ab3b96e2e8245",
+    "semantic_hash": "03b3c23ff5089f63d29ab3b96e2e8245"
+  },
+  "data/processed/mm-tanintharyi/soil_summary.json": {
+    "mtime": 1794727981.430949,
+    "seen": 1794728049.2480214,
+    "ast_hash": "bbf85372d70315bfc042bb31408d27a7",
+    "semantic_hash": "bbf85372d70315bfc042bb31408d27a7"
+  },
+  "data/processed/mm-tanintharyi/terrain.json": {
+    "mtime": 1794666477.7460344,
+    "seen": 1794728049.2480235,
+    "ast_hash": "004103f2d3472547a442f0fdff2850fa",
+    "semantic_hash": "004103f2d3472547a442f0fdff2850fa"
+  },
+  "data/processed/mm-tanintharyi/trends.json": {
+    "mtime": 1794718022.2462878,
+    "seen": 1794728049.2480257,
+    "ast_hash": "85ff01282c3531bb98e810ec4792b385",
+    "semantic_hash": "85ff01282c3531bb98e810ec4792b385"
+  },
+  "data/processed/th-central/ndvi_mask.json": {
+    "mtime": 1794668543.633654,
+    "seen": 1794728049.2480283,
+    "ast_hash": "f191c696a7247fc8339aefda9923c905",
+    "semantic_hash": "f191c696a7247fc8339aefda9923c905"
+  },
+  "data/processed/th-central/soil_summary.json": {
+    "mtime": 1794727981.46595,
+    "seen": 1794728049.2480302,
+    "ast_hash": "5a2bda09db74d55f5a2e11e9f0759d1b",
+    "semantic_hash": "5a2bda09db74d55f5a2e11e9f0759d1b"
+  },
+  "data/processed/th-central/terrain.json": {
+    "mtime": 1794666486.20384,
+    "seen": 1794728049.2480326,
+    "ast_hash": "87409f3797ebf39efbda04a9fceeca18",
+    "semantic_hash": "87409f3797ebf39efbda04a9fceeca18"
+  },
+  "data/processed/th-central/trends.json": {
+    "mtime": 1794718022.6335697,
+    "seen": 1794728049.2480416,
+    "ast_hash": "4c43196c3e1d959167b08d97bb960397",
+    "semantic_hash": "4c43196c3e1d959167b08d97bb960397"
+  },
+  "data/processed/th-east/ndvi_mask.json": {
+    "mtime": 1794668565.969199,
+    "seen": 1794728049.2480438,
+    "ast_hash": "5db57ec9863876051589369d01dabd68",
+    "semantic_hash": "5db57ec9863876051589369d01dabd68"
+  },
+  "data/processed/th-east/soil_summary.json": {
+    "mtime": 1794727981.4729495,
+    "seen": 1794728049.2480474,
+    "ast_hash": "5e34491e92b0c8d9c3a06f6683c33853",
+    "semantic_hash": "5e34491e92b0c8d9c3a06f6683c33853"
+  },
+  "data/processed/th-east/terrain.json": {
+    "mtime": 1794666488.947639,
+    "seen": 1794728049.2480497,
+    "ast_hash": "36b8194c4cac5df6d4160776d57e216a",
+    "semantic_hash": "36b8194c4cac5df6d4160776d57e216a"
+  },
+  "data/processed/th-east/trends.json": {
+    "mtime": 1794718022.747902,
+    "seen": 1794728049.2480514,
+    "ast_hash": "eb449c4d303566a067b1b8e279e6ca99",
+    "semantic_hash": "eb449c4d303566a067b1b8e279e6ca99"
+  },
+  "data/processed/th-isan/ndvi_mask.json": {
+    "mtime": 1794668520.985116,
+    "seen": 1794728049.248054,
+    "ast_hash": "a68ff0da0fe28cbdc85283430c5650f5",
+    "semantic_hash": "a68ff0da0fe28cbdc85283430c5650f5"
+  },
+  "data/processed/th-isan/soil_summary.json": {
+    "mtime": 1794727981.4589493,
+    "seen": 1794728049.2480564,
+    "ast_hash": "252b495fa863183b2dcb2ee8d7f13523",
+    "semantic_hash": "252b495fa863183b2dcb2ee8d7f13523"
+  },
+  "data/processed/th-isan/terrain.json": {
+    "mtime": 1794666483.4761271,
+    "seen": 1794728049.2480583,
+    "ast_hash": "66811f439d6c6cba762c69355f882d3c",
+    "semantic_hash": "66811f439d6c6cba762c69355f882d3c"
+  },
+  "data/processed/th-isan/trends.json": {
+    "mtime": 1794718022.500458,
+    "seen": 1794728049.2480605,
+    "ast_hash": "fa473db68d39663ba4057641a652aa08",
+    "semantic_hash": "fa473db68d39663ba4057641a652aa08"
+  },
+  "data/processed/th-north/ndvi_mask.json": {
+    "mtime": 1794668520.8026912,
+    "seen": 1794728049.2480624,
+    "ast_hash": "503a13e42f31a746fa0342069f1cee0c",
+    "semantic_hash": "503a13e42f31a746fa0342069f1cee0c"
+  },
+  "data/processed/th-north/soil_summary.json": {
+    "mtime": 1794727981.4469495,
+    "seen": 1794728049.248065,
+    "ast_hash": "d4755d1df35f1236b8ff24a072c4688f",
+    "semantic_hash": "d4755d1df35f1236b8ff24a072c4688f"
+  },
+  "data/processed/th-north/terrain.json": {
+    "mtime": 1794666480.700174,
+    "seen": 1794728049.2480674,
+    "ast_hash": "9d1e82c5b2e3d585d0258d0e8a575b33",
+    "semantic_hash": "9d1e82c5b2e3d585d0258d0e8a575b33"
+  },
+  "data/processed/th-north/trends.json": {
+    "mtime": 1794718022.3572395,
+    "seen": 1794728049.2480695,
+    "ast_hash": "60a615451948b4353168dde2db4a752e",
+    "semantic_hash": "60a615451948b4353168dde2db4a752e"
+  },
+  "data/processed/th-south/ndvi_mask.json": {
+    "mtime": 1794668588.2301712,
+    "seen": 1794728049.2480717,
+    "ast_hash": "a060c1b0cb3b74c0f61d7ff881044bea",
+    "semantic_hash": "a060c1b0cb3b74c0f61d7ff881044bea"
+  },
+  "data/processed/th-south/terrain.json": {
+    "mtime": 1794666494.766613,
+    "seen": 1794728049.248074,
+    "ast_hash": "e929e2528cd48ab0409eb9de8c6d67f7",
+    "semantic_hash": "e929e2528cd48ab0409eb9de8c6d67f7"
+  },
+  "data/processed/th-south/trends.json": {
+    "mtime": 1794718022.968209,
+    "seen": 1794728049.2480762,
+    "ast_hash": "3e7fe8a65476d5993048c3f21bd3595f",
+    "semantic_hash": "3e7fe8a65476d5993048c3f21bd3595f"
+  },
+  "data/processed/th-west/ndvi_mask.json": {
+    "mtime": 1794668566.9013803,
+    "seen": 1794728049.248078,
+    "ast_hash": "3769192f7df899891f952d84e36d8af4",
+    "semantic_hash": "3769192f7df899891f952d84e36d8af4"
+  },
+  "data/processed/th-west/soil_summary.json": {
+    "mtime": 1794727981.4789498,
+    "seen": 1794728049.2480798,
+    "ast_hash": "206d57faa6298709ff8dab9b80c079ae",
+    "semantic_hash": "206d57faa6298709ff8dab9b80c079ae"
+  },
+  "data/processed/th-west/terrain.json": {
+    "mtime": 1794666492.027886,
+    "seen": 1794728049.248082,
+    "ast_hash": "d79edc14a0a5b4f791ba4cbc45301504",
+    "semantic_hash": "d79edc14a0a5b4f791ba4cbc45301504"
+  },
+  "data/processed/th-west/trends.json": {
+    "mtime": 1794718022.8574827,
+    "seen": 1794728049.2480843,
+    "ast_hash": "dcd5a314a66205f52619919d0602adfe",
+    "semantic_hash": "dcd5a314a66205f52619919d0602adfe"
+  },
+  "data/processed/vn-central-highlands/ndvi_mask.json": {
+    "mtime": 1794668675.503886,
+    "seen": 1794728049.2480862,
+    "ast_hash": "f5ca6288518ce687857292969cc47aab",
+    "semantic_hash": "f5ca6288518ce687857292969cc47aab"
+  },
+  "data/processed/vn-central-highlands/terrain.json": {
+    "mtime": 1794666508.8120694,
+    "seen": 1794728049.2480884,
+    "ast_hash": "b8a7df5cf84facfb3412fc1c408d9f6b",
+    "semantic_hash": "b8a7df5cf84facfb3412fc1c408d9f6b"
+  },
+  "data/processed/vn-central-highlands/trends.json": {
+    "mtime": 1794718023.5893402,
+    "seen": 1794728049.2480905,
+    "ast_hash": "513b92dd9f01186b0d5a0978e0a6bf94",
+    "semantic_hash": "513b92dd9f01186b0d5a0978e0a6bf94"
+  },
+  "data/processed/vn-mekong/ndvi_mask.json": {
+    "mtime": 1794668717.8792417,
+    "seen": 1794728049.2480927,
+    "ast_hash": "a4e5f0418b95634d503366ee18f98222",
+    "semantic_hash": "a4e5f0418b95634d503366ee18f98222"
+  },
+  "data/processed/vn-mekong/terrain.json": {
+    "mtime": 1794666514.4878893,
+    "seen": 1794728049.2480948,
+    "ast_hash": "f578606211009aa8ae13966489a5f322",
+    "semantic_hash": "f578606211009aa8ae13966489a5f322"
+  },
+  "data/processed/vn-mekong/trends.json": {
+    "mtime": 1794718023.8116248,
+    "seen": 1794728049.2480965,
+    "ast_hash": "aeb60d6703d2b2ed699ff6c645aea8fb",
+    "semantic_hash": "aeb60d6703d2b2ed699ff6c645aea8fb"
+  },
+  "data/processed/vn-north-central/ndvi_mask.json": {
+    "mtime": 1794668651.3920224,
+    "seen": 1794728049.2480989,
+    "ast_hash": "681b306099040bcc09ec2fe005bf9fd4",
+    "semantic_hash": "681b306099040bcc09ec2fe005bf9fd4"
+  },
+  "data/processed/vn-north-central/terrain.json": {
+    "mtime": 1794666503.3854797,
+    "seen": 1794728049.2481012,
+    "ast_hash": "05307a7eb22157787f185ddb575fa79d",
+    "semantic_hash": "05307a7eb22157787f185ddb575fa79d"
+  },
+  "data/processed/vn-north-central/trends.json": {
+    "mtime": 1794718023.3294122,
+    "seen": 1794728049.2481031,
+    "ast_hash": "515b842fd44909f0ae2c967d3d568c1a",
+    "semantic_hash": "515b842fd44909f0ae2c967d3d568c1a"
+  },
+  "data/processed/vn-northern-mtn/ndvi_mask.json": {
+    "mtime": 1794668610.0069954,
+    "seen": 1794728049.2481055,
+    "ast_hash": "942817a4fdea34044a859697ab738f4b",
+    "semantic_hash": "942817a4fdea34044a859697ab738f4b"
+  },
+  "data/processed/vn-northern-mtn/terrain.json": {
+    "mtime": 1794666497.5957196,
+    "seen": 1794728049.2481077,
+    "ast_hash": "ee9d84f3d84f0fb4a9dc13fc436cae99",
+    "semantic_hash": "ee9d84f3d84f0fb4a9dc13fc436cae99"
+  },
+  "data/processed/vn-northern-mtn/trends.json": {
+    "mtime": 1794718023.097979,
+    "seen": 1794728049.2481096,
+    "ast_hash": "ef0774c1a09a3d8fae7c2b49a7450f24",
+    "semantic_hash": "ef0774c1a09a3d8fae7c2b49a7450f24"
+  },
+  "data/processed/vn-red-river/ndvi_mask.json": {
+    "mtime": 1794668630.9352672,
+    "seen": 1794728049.248112,
+    "ast_hash": "b51292123a96219cc4e59c30d36666e4",
+    "semantic_hash": "b51292123a96219cc4e59c30d36666e4"
+  },
+  "data/processed/vn-red-river/terrain.json": {
+    "mtime": 1794666500.6517503,
+    "seen": 1794728049.2481139,
+    "ast_hash": "a83ee2538913fb805f338f3ca052b2ba",
+    "semantic_hash": "a83ee2538913fb805f338f3ca052b2ba"
+  },
+  "data/processed/vn-red-river/trends.json": {
+    "mtime": 1794718023.22111,
+    "seen": 1794728049.2481165,
+    "ast_hash": "fbc4ce50082e42d2971c66ae3fa5d857",
+    "semantic_hash": "fbc4ce50082e42d2971c66ae3fa5d857"
+  },
+  "data/processed/vn-south-central/ndvi_mask.json": {
+    "mtime": 1794668674.5054195,
+    "seen": 1794728049.248119,
+    "ast_hash": "6bd52a74910bf50c64b0274b86a56edd",
+    "semantic_hash": "6bd52a74910bf50c64b0274b86a56edd"
+  },
+  "data/processed/vn-south-central/terrain.json": {
+    "mtime": 1794666506.0903323,
+    "seen": 1794728049.248121,
+    "ast_hash": "4830d904a119219102a3812ac7ea9ca9",
+    "semantic_hash": "4830d904a119219102a3812ac7ea9ca9"
+  },
+  "data/processed/vn-south-central/trends.json": {
+    "mtime": 1794718023.4751513,
+    "seen": 1794728049.2481234,
+    "ast_hash": "cffa4ca0c9e2deb8d5b03165b6a888c7",
+    "semantic_hash": "cffa4ca0c9e2deb8d5b03165b6a888c7"
+  },
+  "data/processed/vn-southeast/ndvi_mask.json": {
+    "mtime": 1794668697.361237,
+    "seen": 1794728049.2481258,
+    "ast_hash": "651c2c43064b6457b076e65e743bde22",
+    "semantic_hash": "651c2c43064b6457b076e65e743bde22"
+  },
+  "data/processed/vn-southeast/terrain.json": {
+    "mtime": 1794666511.7542784,
+    "seen": 1794728049.2481282,
+    "ast_hash": "70dd80cedd0d248ed64e1aab2c6215b9",
+    "semantic_hash": "70dd80cedd0d248ed64e1aab2c6215b9"
+  },
+  "data/processed/vn-southeast/trends.json": {
+    "mtime": 1794718023.6964576,
+    "seen": 1794728049.2481303,
+    "ast_hash": "472271d60a11222f3b2d1c2536f299c2",
+    "semantic_hash": "472271d60a11222f3b2d1c2536f299c2"
+  },
+  "data/scripts/00_sites_from_inputs.mjs": {
+    "mtime": 1794666240.8005655,
+    "seen": 1794728049.2481325,
+    "ast_hash": "26869e81a1d9ab070c07cec5441584fd",
+    "semantic_hash": "26869e81a1d9ab070c07cec5441584fd"
+  },
+  "data/scripts/01_fetch_power.mjs": {
+    "mtime": 1794668675.8582702,
+    "seen": 1794728049.2481344,
+    "ast_hash": "8ac2e144d9161f6887ec3f21c027635c",
+    "semantic_hash": "8ac2e144d9161f6887ec3f21c027635c"
+  },
+  "data/scripts/01b_fetch_chirps.mjs": {
+    "mtime": 1794668405.7097416,
+    "seen": 1794728049.2481368,
+    "ast_hash": "78e30626f6d4210d6cec9f6d5109729a",
+    "semantic_hash": "78e30626f6d4210d6cec9f6d5109729a"
+  },
+  "data/scripts/01c_fetch_era5.mjs": {
+    "mtime": 1794668596.5035012,
+    "seen": 1794728049.248139,
+    "ast_hash": "119ab085813005c405dd970d87ad53ec",
+    "semantic_hash": "119ab085813005c405dd970d87ad53ec"
+  },
+  "data/scripts/02_fetch_modis.mjs": {
+    "mtime": 1794661805.0621288,
+    "seen": 1794728049.2481432,
+    "ast_hash": "dae495fee34f91f9c48b239ff7ceb33d",
+    "semantic_hash": "dae495fee34f91f9c48b239ff7ceb33d"
+  },
+  "data/scripts/02b_fetch_ndvi_gibs.py": {
+    "mtime": 1794668386.6560633,
+    "seen": 1794728049.2481456,
+    "ast_hash": "aa7e543960423274ed2f5364aab91e41",
+    "semantic_hash": "aa7e543960423274ed2f5364aab91e41"
+  },
+  "data/scripts/03_fetch_soil.mjs": {
+    "mtime": 1794666262.9810586,
+    "seen": 1794728049.2481477,
+    "ast_hash": "f0b889ae26eb23e0c225676f28d577bf",
+    "semantic_hash": "f0b889ae26eb23e0c225676f28d577bf"
+  },
+  "data/scripts/04_fetch_terrain.mjs": {
+    "mtime": 1794661805.067124,
+    "seen": 1794728049.24815,
+    "ast_hash": "04e321fba9d5d642a226e50527d69662",
+    "semantic_hash": "04e321fba9d5d642a226e50527d69662"
+  },
+  "data/scripts/05_build_summaries.mjs": {
+    "mtime": 1794668718.35077,
+    "seen": 1794728049.2481523,
+    "ast_hash": "ab4d847e8fb512a132d09b8dc666f819",
+    "semantic_hash": "ab4d847e8fb512a132d09b8dc666f819"
+  },
+  "data/scripts/05b_score_measured.py": {
+    "mtime": 1794669102.6654313,
+    "seen": 1794728049.2481549,
+    "ast_hash": "c24c2e226296aeb67986901a0790aa9b",
+    "semantic_hash": "c24c2e226296aeb67986901a0790aa9b"
+  },
+  "data/scripts/06_build_app_data.mjs": {
+    "mtime": 1794669102.5659504,
+    "seen": 1794728049.248157,
+    "ast_hash": "b6ac65aebdd4240323e5e67222f20a80",
+    "semantic_hash": "b6ac65aebdd4240323e5e67222f20a80"
+  },
+  "data/scripts/lib.mjs": {
+    "mtime": 1794668661.888363,
+    "seen": 1794728049.248159,
+    "ast_hash": "c64d43ef01cda8820d64c26f8318e94c",
+    "semantic_hash": "c64d43ef01cda8820d64c26f8318e94c"
+  },
+  "data/scripts/run_all.mjs": {
+    "mtime": 1794669102.5864623,
+    "seen": 1794728049.2481613,
+    "ast_hash": "0f74305f13a4e6292b8f27ab8f709720",
+    "semantic_hash": "0f74305f13a4e6292b8f27ab8f709720"
+  },
+  "data/scripts/status.mjs": {
+    "mtime": 1794717303.661346,
+    "seen": 1794728049.2481637,
+    "ast_hash": "7e6d08774b6fb45f9941deee7296d946",
+    "semantic_hash": "7e6d08774b6fb45f9941deee7296d946"
+  },
+  "package.json": {
+    "mtime": 1794717304.6853876,
+    "seen": 1794728049.2481658,
+    "ast_hash": "adfe20dc7a0a00d0c6dcaa602a0d7fad",
+    "semantic_hash": "adfe20dc7a0a00d0c6dcaa602a0d7fad"
+  },
+  "postcss.config.js": {
+    "mtime": 1794652504.1811366,
+    "seen": 1794728049.2481682,
+    "ast_hash": "33fad9c02cb0ec6d6030369ef6347d57",
+    "semantic_hash": "33fad9c02cb0ec6d6030369ef6347d57"
+  },
+  "public/data/crops.json": {
+    "mtime": 1794718043.1173494,
+    "seen": 1794728049.2481701,
+    "ast_hash": "2f020014506e374cc5345463bcfd76f6",
+    "semantic_hash": "2f020014506e374cc5345463bcfd76f6"
+  },
+  "public/data/regions/index.json": {
+    "mtime": 1794718043.2044294,
+    "seen": 1794728049.2481725,
+    "ast_hash": "7cc44d3ecdbb2e592930daae4029427b",
+    "semantic_hash": "7cc44d3ecdbb2e592930daae4029427b"
+  },
+  "public/data/regions/kh-coastal.json": {
+    "mtime": 1794718043.203421,
+    "seen": 1794728049.2481751,
+    "ast_hash": "ac6fd17483f0c245ccf653bf5439a164",
+    "semantic_hash": "ac6fd17483f0c245ccf653bf5439a164"
+  },
+  "public/data/regions/kh-mekong-plain.json": {
+    "mtime": 1794718043.1996005,
+    "seen": 1794728049.2481773,
+    "ast_hash": "1724da5fcb3eae4bc8391ee29896eed8",
+    "semantic_hash": "1724da5fcb3eae4bc8391ee29896eed8"
+  },
+  "public/data/regions/kh-plateau.json": {
+    "mtime": 1794718043.2018218,
+    "seen": 1794728049.2481794,
+    "ast_hash": "7455277bf030bc312bcf5affb12af7ec",
+    "semantic_hash": "7455277bf030bc312bcf5affb12af7ec"
+  },
+  "public/data/regions/kh-tonle-sap.json": {
+    "mtime": 1794718043.1965187,
+    "seen": 1794728049.2481818,
+    "ast_hash": "44726e52fd5dd9b803826bc906ad9979",
+    "semantic_hash": "44726e52fd5dd9b803826bc906ad9979"
+  },
+  "public/data/regions/mm-ayeyarwady.json": {
+    "mtime": 1794718043.1439035,
+    "seen": 1794728049.2481837,
+    "ast_hash": "518c556e34279f3a671bf2e73a68416e",
+    "semantic_hash": "518c556e34279f3a671bf2e73a68416e"
+  },
+  "public/data/regions/mm-dry-zone.json": {
+    "mtime": 1794718043.1233802,
+    "seen": 1794728049.2481859,
+    "ast_hash": "e0eb229b7804179e7707f849b2573eef",
+    "semantic_hash": "e0eb229b7804179e7707f849b2573eef"
+  },
+  "public/data/regions/mm-kachin.json": {
+    "mtime": 1794718043.1503644,
+    "seen": 1794728049.248188,
+    "ast_hash": "80ec2b1f88f90c9d2857b7ed3b18038d",
+    "semantic_hash": "80ec2b1f88f90c9d2857b7ed3b18038d"
+  },
+  "public/data/regions/mm-rakhine.json": {
+    "mtime": 1794718043.1523633,
+    "seen": 1794728049.24819,
+    "ast_hash": "17f05c04450abd5d1d7b556c3af6654c",
+    "semantic_hash": "17f05c04450abd5d1d7b556c3af6654c"
+  },
+  "public/data/regions/mm-shan.json": {
+    "mtime": 1794718043.1482074,
+    "seen": 1794728049.2481923,
+    "ast_hash": "97fa7ea55850c71641affe53fab486c0",
+    "semantic_hash": "97fa7ea55850c71641affe53fab486c0"
+  },
+  "public/data/regions/mm-tanintharyi.json": {
+    "mtime": 1794718043.155364,
+    "seen": 1794728049.2481942,
+    "ast_hash": "d79bd66ce263edacf30fa644061dcf9a",
+    "semantic_hash": "d79bd66ce263edacf30fa644061dcf9a"
+  },
+  "public/data/regions/th-central.json": {
+    "mtime": 1794718043.1627884,
+    "seen": 1794728049.2481964,
+    "ast_hash": "17adf36c2f1cbbd2f7912b1308ad12c2",
+    "semantic_hash": "17adf36c2f1cbbd2f7912b1308ad12c2"
+  },
+  "public/data/regions/th-east.json": {
+    "mtime": 1794718043.1662652,
+    "seen": 1794728049.2481985,
+    "ast_hash": "6c18708c6ef49de303cb7ea18e6f4699",
+    "semantic_hash": "6c18708c6ef49de303cb7ea18e6f4699"
+  },
+  "public/data/regions/th-isan.json": {
+    "mtime": 1794718043.160183,
+    "seen": 1794728049.2482004,
+    "ast_hash": "77a87bda86ce24cbfa2149b9df292ec8",
+    "semantic_hash": "77a87bda86ce24cbfa2149b9df292ec8"
+  },
+  "public/data/regions/th-north.json": {
+    "mtime": 1794718043.1577723,
+    "seen": 1794728049.2482028,
+    "ast_hash": "7dbffd33e7a272fe82992f66bdca30a4",
+    "semantic_hash": "7dbffd33e7a272fe82992f66bdca30a4"
+  },
+  "public/data/regions/th-south.json": {
+    "mtime": 1794718043.1717246,
+    "seen": 1794728049.2482047,
+    "ast_hash": "0155d88c2e58167a625e829e4f49fc24",
+    "semantic_hash": "0155d88c2e58167a625e829e4f49fc24"
+  },
+  "public/data/regions/th-west.json": {
+    "mtime": 1794718043.1682675,
+    "seen": 1794728049.2482073,
+    "ast_hash": "71fd9e9c77c853d4a386cf44067cce43",
+    "semantic_hash": "71fd9e9c77c853d4a386cf44067cce43"
+  },
+  "public/data/regions/vn-central-highlands.json": {
+    "mtime": 1794718043.1848657,
+    "seen": 1794728049.24821,
+    "ast_hash": "6a405542a13c40d04c03460b0a702c65",
+    "semantic_hash": "6a405542a13c40d04c03460b0a702c65"
+  },
+  "public/data/regions/vn-mekong.json": {
+    "mtime": 1794718043.1945174,
+    "seen": 1794728049.2482123,
+    "ast_hash": "d0acb17d70079bd9f673301a69d94442",
+    "semantic_hash": "d0acb17d70079bd9f673301a69d94442"
+  },
+  "public/data/regions/vn-north-central.json": {
+    "mtime": 1794718043.1801078,
+    "seen": 1794728049.248214,
+    "ast_hash": "2eaf0b5171bff6b04dc31c025b9415ca",
+    "semantic_hash": "2eaf0b5171bff6b04dc31c025b9415ca"
+  },
+  "public/data/regions/vn-northern-mtn.json": {
+    "mtime": 1794718043.1742039,
+    "seen": 1794728049.2482162,
+    "ast_hash": "1579c8f72462408964c1d37075dbca60",
+    "semantic_hash": "1579c8f72462408964c1d37075dbca60"
+  },
+  "public/data/regions/vn-red-river.json": {
+    "mtime": 1794718043.176648,
+    "seen": 1794728049.248218,
+    "ast_hash": "0ec55c326c8ab53b3b14bda81e26161f",
+    "semantic_hash": "0ec55c326c8ab53b3b14bda81e26161f"
+  },
+  "public/data/regions/vn-south-central.json": {
+    "mtime": 1794718043.1811924,
+    "seen": 1794728049.2482202,
+    "ast_hash": "09df9d529ced3f3dbcd3066861f018e2",
+    "semantic_hash": "09df9d529ced3f3dbcd3066861f018e2"
+  },
+  "public/data/regions/vn-southeast.json": {
+    "mtime": 1794718043.1914537,
+    "seen": 1794728049.248222,
+    "ast_hash": "0ea830b1b5a8ab12e21cf19f5c4503c3",
+    "semantic_hash": "0ea830b1b5a8ab12e21cf19f5c4503c3"
+  },
+  "skill/sowcast-advisor/data/MANIFEST.json": {
+    "mtime": 1794718043.4022048,
+    "seen": 1794728049.2482245,
+    "ast_hash": "7db16ba3e0cca6df79c15e1be943a7f2",
+    "semantic_hash": "7db16ba3e0cca6df79c15e1be943a7f2"
+  },
+  "skill/sowcast-advisor/data/crops.json": {
+    "mtime": 1794718043.1173494,
+    "seen": 1794728049.248227,
+    "ast_hash": "2f020014506e374cc5345463bcfd76f6",
+    "semantic_hash": "2f020014506e374cc5345463bcfd76f6"
+  },
+  "skill/sowcast-advisor/data/regions/index.json": {
+    "mtime": 1794718043.2044294,
+    "seen": 1794728049.2482293,
+    "ast_hash": "7cc44d3ecdbb2e592930daae4029427b",
+    "semantic_hash": "7cc44d3ecdbb2e592930daae4029427b"
+  },
+  "skill/sowcast-advisor/data/regions/kh-coastal.json": {
+    "mtime": 1794718043.203421,
+    "seen": 1794728049.2482314,
+    "ast_hash": "ac6fd17483f0c245ccf653bf5439a164",
+    "semantic_hash": "ac6fd17483f0c245ccf653bf5439a164"
+  },
+  "skill/sowcast-advisor/data/regions/kh-mekong-plain.json": {
+    "mtime": 1794718043.1996005,
+    "seen": 1794728049.2482336,
+    "ast_hash": "1724da5fcb3eae4bc8391ee29896eed8",
+    "semantic_hash": "1724da5fcb3eae4bc8391ee29896eed8"
+  },
+  "skill/sowcast-advisor/data/regions/kh-plateau.json": {
+    "mtime": 1794718043.2018218,
+    "seen": 1794728049.2482383,
+    "ast_hash": "7455277bf030bc312bcf5affb12af7ec",
+    "semantic_hash": "7455277bf030bc312bcf5affb12af7ec"
+  },
+  "skill/sowcast-advisor/data/regions/kh-tonle-sap.json": {
+    "mtime": 1794718043.1965187,
+    "seen": 1794728049.2482412,
+    "ast_hash": "44726e52fd5dd9b803826bc906ad9979",
+    "semantic_hash": "44726e52fd5dd9b803826bc906ad9979"
+  },
+  "skill/sowcast-advisor/data/regions/mm-ayeyarwady.json": {
+    "mtime": 1794718043.1439035,
+    "seen": 1794728049.2482438,
+    "ast_hash": "518c556e34279f3a671bf2e73a68416e",
+    "semantic_hash": "518c556e34279f3a671bf2e73a68416e"
+  },
+  "skill/sowcast-advisor/data/regions/mm-dry-zone.json": {
+    "mtime": 1794718043.1233802,
+    "seen": 1794728049.2482462,
+    "ast_hash": "e0eb229b7804179e7707f849b2573eef",
+    "semantic_hash": "e0eb229b7804179e7707f849b2573eef"
+  },
+  "skill/sowcast-advisor/data/regions/mm-kachin.json": {
+    "mtime": 1794718043.1503644,
+    "seen": 1794728049.248249,
+    "ast_hash": "80ec2b1f88f90c9d2857b7ed3b18038d",
+    "semantic_hash": "80ec2b1f88f90c9d2857b7ed3b18038d"
+  },
+  "skill/sowcast-advisor/data/regions/mm-rakhine.json": {
+    "mtime": 1794718043.1523633,
+    "seen": 1794728049.2482517,
+    "ast_hash": "17f05c04450abd5d1d7b556c3af6654c",
+    "semantic_hash": "17f05c04450abd5d1d7b556c3af6654c"
+  },
+  "skill/sowcast-advisor/data/regions/mm-shan.json": {
+    "mtime": 1794718043.1482074,
+    "seen": 1794728049.2482548,
+    "ast_hash": "97fa7ea55850c71641affe53fab486c0",
+    "semantic_hash": "97fa7ea55850c71641affe53fab486c0"
+  },
+  "skill/sowcast-advisor/data/regions/mm-tanintharyi.json": {
+    "mtime": 1794718043.155364,
+    "seen": 1794728049.248257,
+    "ast_hash": "d79bd66ce263edacf30fa644061dcf9a",
+    "semantic_hash": "d79bd66ce263edacf30fa644061dcf9a"
+  },
+  "skill/sowcast-advisor/data/regions/th-central.json": {
+    "mtime": 1794718043.1627884,
+    "seen": 1794728049.2482593,
+    "ast_hash": "17adf36c2f1cbbd2f7912b1308ad12c2",
+    "semantic_hash": "17adf36c2f1cbbd2f7912b1308ad12c2"
+  },
+  "skill/sowcast-advisor/data/regions/th-east.json": {
+    "mtime": 1794718043.1662652,
+    "seen": 1794728049.248262,
+    "ast_hash": "6c18708c6ef49de303cb7ea18e6f4699",
+    "semantic_hash": "6c18708c6ef49de303cb7ea18e6f4699"
+  },
+  "skill/sowcast-advisor/data/regions/th-isan.json": {
+    "mtime": 1794718043.160183,
+    "seen": 1794728049.248264,
+    "ast_hash": "77a87bda86ce24cbfa2149b9df292ec8",
+    "semantic_hash": "77a87bda86ce24cbfa2149b9df292ec8"
+  },
+  "skill/sowcast-advisor/data/regions/th-north.json": {
+    "mtime": 1794718043.1577723,
+    "seen": 1794728049.2482665,
+    "ast_hash": "7dbffd33e7a272fe82992f66bdca30a4",
+    "semantic_hash": "7dbffd33e7a272fe82992f66bdca30a4"
+  },
+  "skill/sowcast-advisor/data/regions/th-south.json": {
+    "mtime": 1794718043.1717246,
+    "seen": 1794728049.2482693,
+    "ast_hash": "0155d88c2e58167a625e829e4f49fc24",
+    "semantic_hash": "0155d88c2e58167a625e829e4f49fc24"
+  },
+  "skill/sowcast-advisor/data/regions/th-west.json": {
+    "mtime": 1794718043.1682675,
+    "seen": 1794728049.2482717,
+    "ast_hash": "71fd9e9c77c853d4a386cf44067cce43",
+    "semantic_hash": "71fd9e9c77c853d4a386cf44067cce43"
+  },
+  "skill/sowcast-advisor/data/regions/vn-central-highlands.json": {
+    "mtime": 1794718043.1848657,
+    "seen": 1794728049.2482738,
+    "ast_hash": "6a405542a13c40d04c03460b0a702c65",
+    "semantic_hash": "6a405542a13c40d04c03460b0a702c65"
+  },
+  "skill/sowcast-advisor/data/regions/vn-mekong.json": {
+    "mtime": 1794718043.1945174,
+    "seen": 1794728049.248276,
+    "ast_hash": "d0acb17d70079bd9f673301a69d94442",
+    "semantic_hash": "d0acb17d70079bd9f673301a69d94442"
+  },
+  "skill/sowcast-advisor/data/regions/vn-north-central.json": {
+    "mtime": 1794718043.1801078,
+    "seen": 1794728049.248278,
+    "ast_hash": "2eaf0b5171bff6b04dc31c025b9415ca",
+    "semantic_hash": "2eaf0b5171bff6b04dc31c025b9415ca"
+  },
+  "skill/sowcast-advisor/data/regions/vn-northern-mtn.json": {
+    "mtime": 1794718043.1742039,
+    "seen": 1794728049.2482798,
+    "ast_hash": "1579c8f72462408964c1d37075dbca60",
+    "semantic_hash": "1579c8f72462408964c1d37075dbca60"
+  },
+  "skill/sowcast-advisor/data/regions/vn-red-river.json": {
+    "mtime": 1794718043.176648,
+    "seen": 1794728049.248282,
+    "ast_hash": "0ec55c326c8ab53b3b14bda81e26161f",
+    "semantic_hash": "0ec55c326c8ab53b3b14bda81e26161f"
+  },
+  "skill/sowcast-advisor/data/regions/vn-south-central.json": {
+    "mtime": 1794718043.1811924,
+    "seen": 1794728049.248284,
+    "ast_hash": "09df9d529ced3f3dbcd3066861f018e2",
+    "semantic_hash": "09df9d529ced3f3dbcd3066861f018e2"
+  },
+  "skill/sowcast-advisor/data/regions/vn-southeast.json": {
+    "mtime": 1794718043.1914537,
+    "seen": 1794728049.2482865,
+    "ast_hash": "0ea830b1b5a8ab12e21cf19f5c4503c3",
+    "semantic_hash": "0ea830b1b5a8ab12e21cf19f5c4503c3"
+  },
+  "skill/sowcast-advisor/scripts/lookup.py": {
+    "mtime": 1794717988.4190993,
+    "seen": 1794728049.2482948,
+    "ast_hash": "84378cc8dddbc464062bf0cefa090110",
+    "semantic_hash": "84378cc8dddbc464062bf0cefa090110"
+  },
+  "skill/sowcast-advisor/scripts/make_data.py": {
+    "mtime": 1794668762.437697,
+    "seen": 1794728049.248302,
+    "ast_hash": "3e55002dd29e8458bd08fa2e43bc7764",
+    "semantic_hash": "3e55002dd29e8458bd08fa2e43bc7764"
+  },
+  "skill/sowcast-advisor/scripts/whatif.py": {
+    "mtime": 1794717989.320048,
+    "seen": 1794728049.2483048,
+    "ast_hash": "242a2a009189b4e7841b7d88fe6fc754",
+    "semantic_hash": "242a2a009189b4e7841b7d88fe6fc754"
+  },
+  "skill/sync_skill_data.mjs": {
+    "mtime": 1794717990.1902401,
+    "seen": 1794728049.2483077,
+    "ast_hash": "30676f72eab7fe2fe355793f4afbb7f4",
+    "semantic_hash": "30676f72eab7fe2fe355793f4afbb7f4"
+  },
+  "src/App.tsx": {
+    "mtime": 1794717845.9784915,
+    "seen": 1794728049.2483103,
+    "ast_hash": "dab73ab5ddb8ca2940af09aa3af1f993",
+    "semantic_hash": "dab73ab5ddb8ca2940af09aa3af1f993"
+  },
+  "src/components/brief/ClimateCharts.tsx": {
+    "mtime": 1794717577.2786248,
+    "seen": 1794728049.2483122,
+    "ast_hash": "5983b08e295ac2780fa1466bc04c6a78",
+    "semantic_hash": "5983b08e295ac2780fa1466bc04c6a78"
+  },
+  "src/components/brief/FieldBrief.tsx": {
+    "mtime": 1794717611.1076605,
+    "seen": 1794728049.2483149,
+    "ast_hash": "e3a8dc48b4384b7900748ef6222f0eaf",
+    "semantic_hash": "e3a8dc48b4384b7900748ef6222f0eaf"
+  },
+  "src/components/brief/InsightCards.tsx": {
+    "mtime": 1794717576.4233491,
+    "seen": 1794728049.2483172,
+    "ast_hash": "ad3904de7393fce184a92eaf5c08e270",
+    "semantic_hash": "ad3904de7393fce184a92eaf5c08e270"
+  },
+  "src/components/brief/LocalContextCard.tsx": {
+    "mtime": 1794717610.2471192,
+    "seen": 1794728049.2483194,
+    "ast_hash": "b46108f6b9b4c032014f3e46c52a9d81",
+    "semantic_hash": "b46108f6b9b4c032014f3e46c52a9d81"
+  },
+  "src/components/brief/SoilCard.tsx": {
+    "mtime": 1794717620.4626987,
+    "seen": 1794728049.2483218,
+    "ast_hash": "74dc7b3f68919dc7000cd1557171998f",
+    "semantic_hash": "74dc7b3f68919dc7000cd1557171998f"
+  },
+  "src/components/brief/StatCards.tsx": {
+    "mtime": 1794717575.5036304,
+    "seen": 1794728049.2483242,
+    "ast_hash": "cdc29f65ca9f0ae8221812cb6b096923",
+    "semantic_hash": "cdc29f65ca9f0ae8221812cb6b096923"
+  },
+  "src/components/brief/trendWords.ts": {
+    "mtime": 1794717574.6288753,
+    "seen": 1794728049.2483323,
+    "ast_hash": "99b44d04648e090d0c37ac2dd44d2d41",
+    "semantic_hash": "99b44d04648e090d0c37ac2dd44d2d41"
+  },
+  "src/components/crops/CropFitList.tsx": {
+    "mtime": 1794717688.902721,
+    "seen": 1794728049.248335,
+    "ast_hash": "a6deb1652f6f9e7c72de754adbea27b8",
+    "semantic_hash": "a6deb1652f6f9e7c72de754adbea27b8"
+  },
+  "src/components/crops/CropRow.tsx": {
+    "mtime": 1794717688.0378966,
+    "seen": 1794728049.2483373,
+    "ast_hash": "fceb36bef06d5b8d7d63ce29653bcbe4",
+    "semantic_hash": "fceb36bef06d5b8d7d63ce29653bcbe4"
+  },
+  "src/components/layout/AppHeader.tsx": {
+    "mtime": 1794717765.6319816,
+    "seen": 1794728049.2483401,
+    "ast_hash": "8649ed1aacf76d5dd217fc950c8127d7",
+    "semantic_hash": "8649ed1aacf76d5dd217fc950c8127d7"
+  },
+  "src/components/map/FieldMap.tsx": {
+    "mtime": 1794717735.3218105,
+    "seen": 1794728049.248343,
+    "ast_hash": "0e2affc8616331a293c0beca6b147cec",
+    "semantic_hash": "0e2affc8616331a293c0beca6b147cec"
+  },
+  "src/components/map/LayerPanel.tsx": {
+    "mtime": 1794717734.5095766,
+    "seen": 1794728049.2483459,
+    "ast_hash": "f715704881fcb810073efd2071aa7658",
+    "semantic_hash": "f715704881fcb810073efd2071aa7658"
+  },
+  "src/components/map/RegionAccordion.tsx": {
+    "mtime": 1794717733.6684077,
+    "seen": 1794728049.2483482,
+    "ast_hash": "d3f3a50c1147783a493128a329b6577f",
+    "semantic_hash": "d3f3a50c1147783a493128a329b6577f"
+  },
+  "src/components/map/mapLayers.ts": {
+    "mtime": 1794717742.9750228,
+    "seen": 1794728049.2483513,
+    "ast_hash": "0fb6400c4e0663134c8d3772edc00638",
+    "semantic_hash": "0fb6400c4e0663134c8d3772edc00638"
+  },
+  "src/components/rotations/RotationCard.tsx": {
+    "mtime": 1794717653.314573,
+    "seen": 1794728049.2483535,
+    "ast_hash": "a4c055a808e281045c8e7169f3809711",
+    "semantic_hash": "a4c055a808e281045c8e7169f3809711"
+  },
+  "src/components/rotations/RotationCompare.tsx": {
+    "mtime": 1794717654.1448205,
+    "seen": 1794728049.2483585,
+    "ast_hash": "3d0ee155cf4c6928d7dfdcd5247d95a7",
+    "semantic_hash": "3d0ee155cf4c6928d7dfdcd5247d95a7"
+  },
+  "src/components/ui/Button.tsx": {
+    "mtime": 1794717531.0754943,
+    "seen": 1794728049.2483602,
+    "ast_hash": "c79ec289b417b3dbf3bc1c9f29ff0b31",
+    "semantic_hash": "c79ec289b417b3dbf3bc1c9f29ff0b31"
+  },
+  "src/components/ui/Card.tsx": {
+    "mtime": 1794717530.1759253,
+    "seen": 1794728049.2483776,
+    "ast_hash": "3d1c5989b9fd245d453193591ae19c38",
+    "semantic_hash": "3d1c5989b9fd245d453193591ae19c38"
+  },
+  "src/components/ui/LabelValue.tsx": {
+    "mtime": 1794717532.8808665,
+    "seen": 1794728049.24838,
+    "ast_hash": "bae6b9d234a28d785d0237fb88b0bab4",
+    "semantic_hash": "bae6b9d234a28d785d0237fb88b0bab4"
+  },
+  "src/components/ui/Pill.tsx": {
+    "mtime": 1794717532.0101619,
+    "seen": 1794728049.248382,
+    "ast_hash": "7f5ecd80ea31b46faed693cab3839997",
+    "semantic_hash": "7f5ecd80ea31b46faed693cab3839997"
+  },
+  "src/hooks/useSowcastData.ts": {
+    "mtime": 1794717490.9230702,
+    "seen": 1794728049.2483845,
+    "ast_hash": "9361ae9477b23d4531dc2dba5c76235b",
+    "semantic_hash": "9361ae9477b23d4531dc2dba5c76235b"
+  },
+  "src/lib/cropScoring.ts": {
+    "mtime": 1794717490.031597,
+    "seen": 1794728049.2483866,
+    "ast_hash": "8b6d220ac1bd6fe87d4e4dd0c52d4553",
+    "semantic_hash": "8b6d220ac1bd6fe87d4e4dd0c52d4553"
+  },
+  "src/lib/format.ts": {
+    "mtime": 1794717488.292301,
+    "seen": 1794728049.2483885,
+    "ast_hash": "4063e02e01f3f63d3f0e9cddfc7da574",
+    "semantic_hash": "4063e02e01f3f63d3f0e9cddfc7da574"
+  },
+  "src/lib/geo.ts": {
+    "mtime": 1794717489.14824,
+    "seen": 1794728049.248391,
+    "ast_hash": "87d0055ed3109b97991c7dabdb5f841e",
+    "semantic_hash": "87d0055ed3109b97991c7dabdb5f841e"
+  },
+  "src/main.tsx": {
+    "mtime": 1794664086.3699093,
+    "seen": 1794728049.2483933,
+    "ast_hash": "5539db94cfd8fad79e48b35f3ea25429",
+    "semantic_hash": "5539db94cfd8fad79e48b35f3ea25429"
+  },
+  "src/types/index.ts": {
+    "mtime": 1794668953.433873,
+    "seen": 1794728049.2483954,
+    "ast_hash": "de7637670f6e3cb9bc67758e1d99299b",
+    "semantic_hash": "de7637670f6e3cb9bc67758e1d99299b"
+  },
+  "tailwind.config.js": {
+    "mtime": 1794664397.9479394,
+    "seen": 1794728049.2483985,
+    "ast_hash": "dc509d7eab71294d2e626e90d4f16f36",
+    "semantic_hash": "dc509d7eab71294d2e626e90d4f16f36"
+  },
+  "tsconfig.json": {
+    "mtime": 1794717775.1386724,
+    "seen": 1794728049.248401,
+    "ast_hash": "32b1ccb5e123d519f96029df0bdc7848",
+    "semantic_hash": "32b1ccb5e123d519f96029df0bdc7848"
+  },
+  "vercel.json": {
+    "mtime": 1794652504.1891341,
+    "seen": 1794728049.2484028,
+    "ast_hash": "5f9ff10a01139f0ae2031af612d252b7",
+    "semantic_hash": "5f9ff10a01139f0ae2031af612d252b7"
+  },
+  "vite.config.ts": {
+    "mtime": 1794652504.1891341,
+    "seen": 1794728049.2484055,
+    "ast_hash": "fc4e2af6b71ba70f377e3f6a800abf3e",
+    "semantic_hash": "fc4e2af6b71ba70f377e3f6a800abf3e"
+  },
+  "README.md": {
+    "mtime": 1794652504.1791346,
+    "seen": 1794728049.2484074,
+    "ast_hash": "4a779e1da234102d19bfc4625b2ead7b",
+    "semantic_hash": "4a779e1da234102d19bfc4625b2ead7b"
+  },
+  "data/ANALYSIS_TIPS.md": {
+    "mtime": 1794667332.0898876,
+    "seen": 1794728049.2484097,
+    "ast_hash": "e6d85ac6476fecbdde489b3fa24c7277",
+    "semantic_hash": "e6d85ac6476fecbdde489b3fa24c7277"
+  },
+  "data/API_CALLS.md": {
+    "mtime": 1794669160.2639341,
+    "seen": 1794728049.248412,
+    "ast_hash": "64d88349e02c0c8d0db4fbf653156fda",
+    "semantic_hash": "64d88349e02c0c8d0db4fbf653156fda"
+  },
+  "data/DATA_DICTIONARY.md": {
+    "mtime": 1794669192.61208,
+    "seen": 1794728049.2484145,
+    "ast_hash": "3cceb20a5595e0adef83c3067ec32e8c",
+    "semantic_hash": "3cceb20a5595e0adef83c3067ec32e8c"
+  },
+  "data/NEXT_STEPS.md": {
+    "mtime": 1794667261.150911,
+    "seen": 1794728049.2484171,
+    "ast_hash": "def0c2915f417ad429615100d4fe950e",
+    "semantic_hash": "def0c2915f417ad429615100d4fe950e"
+  },
+  "data/README.md": {
+    "mtime": 1794669121.5798583,
+    "seen": 1794728049.248419,
+    "ast_hash": "753140727b64319700502c896342c92b",
+    "semantic_hash": "753140727b64319700502c896342c92b"
+  },
+  "data/VISUALIZATIONS.md": {
+    "mtime": 1794667332.085895,
+    "seen": 1794728049.2484212,
+    "ast_hash": "84ebcba11810b47ad26ab259fbf35d08",
+    "semantic_hash": "84ebcba11810b47ad26ab259fbf35d08"
+  },
+  "data/context.md": {
+    "mtime": 1794667311.5764983,
+    "seen": 1794728049.248424,
+    "ast_hash": "995ba06a3304d779b3702650e3583852",
+    "semantic_hash": "995ba06a3304d779b3702650e3583852"
+  },
+  "data/requirements.txt": {
+    "mtime": 1794669207.8097553,
+    "seen": 1794728049.2484264,
+    "ast_hash": "bba8af0ce62fb4d002a887a91068b2dd",
+    "semantic_hash": "bba8af0ce62fb4d002a887a91068b2dd"
+  },
+  "data/resources.txt": {
+    "mtime": 1794669201.0543635,
+    "seen": 1794728049.2484286,
+    "ast_hash": "2906387ca85def71db5391e5f013997f",
+    "semantic_hash": "2906387ca85def71db5391e5f013997f"
+  },
+  "index.html": {
+    "mtime": 1794664327.435467,
+    "seen": 1794728049.2484305,
+    "ast_hash": "a67b19d98077f48918dbc2c64a8954f7",
+    "semantic_hash": "a67b19d98077f48918dbc2c64a8954f7"
+  },
+  "skill/README.md": {
+    "mtime": 1794718077.9232488,
+    "seen": 1794728049.2484329,
+    "ast_hash": "c9877ecca4739e1f6e9dd1eb4b7e6d63",
+    "semantic_hash": "c9877ecca4739e1f6e9dd1eb4b7e6d63"
+  },
+  "skill/sowcast-advisor/SKILL.md": {
+    "mtime": 1794717987.5441632,
+    "seen": 1794728049.2484353,
+    "ast_hash": "0f783e044dcc9eb5e032539779b8cf25",
+    "semantic_hash": "0f783e044dcc9eb5e032539779b8cf25"
+  },
+  "skill/sowcast-advisor/references/data-model.md": {
+    "mtime": 1794718004.4335852,
+    "seen": 1794728049.2484374,
+    "ast_hash": "6ec502a74e08aaf5253942697ff99278",
+    "semantic_hash": "6ec502a74e08aaf5253942697ff99278"
+  }
+}

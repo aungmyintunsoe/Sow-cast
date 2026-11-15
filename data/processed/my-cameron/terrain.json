@@ -1,0 +1,12 @@
+{
+  "site": "my-cameron",
+  "lat": 4.47,
+  "lon": 101.38,
+  "source": "NASA SRTM GL1 30 m via OpenTopoData",
+  "elevation_m": 1437,
+  "slope_pct_field": 9.23,
+  "slope_pct_landscape_mean": 8,
+  "relief_m_within_1500m": 365,
+  "erosion_risk_from_slope": "high",
+  "caveat": "SRTM is a surface model (includes trees/buildings) with ~±5 m vertical error; slopes under ~1% are within noise."
+}

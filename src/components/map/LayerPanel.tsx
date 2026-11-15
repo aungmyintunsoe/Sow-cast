@@ -20,7 +20,7 @@ export function LayerPanel({ layer, onLayerChange, showPlaceNames, onShowPlaceNa
         id="map-layer"
         value={layer.id}
         onChange={(e) => onLayerChange(e.target.value)}
-        className="mt-1 w-full bg-white border border-stone-300 rounded-lg px-2 py-1.5 text-sm font-semibold text-stone-900"
+        className="mt-1 min-h-10 w-full bg-white border border-stone-300 rounded-lg px-2 text-sm font-semibold text-stone-900 hover:border-stone-400"
       >
         {MAP_LAYERS.map((l) => (
           <option key={l.id} value={l.id}>{l.label}</option>
@@ -28,10 +28,10 @@ export function LayerPanel({ layer, onLayerChange, showPlaceNames, onShowPlaceNa
       </select>
       <p className="text-stone-600 mt-1.5 leading-snug">{layer.description}</p>
       {layer.legendUrl && (
-        <img src={layer.legendUrl} alt={`Legend for ${layer.label}`} className="mt-1.5 w-full h-auto bg-white rounded" loading="lazy" />
+        <img src={layer.legendUrl} alt={`Legend for ${layer.label}`} width={302} height={68} className="mt-1.5 w-full h-auto bg-white rounded" />
       )}
       {layer.placeNames && (
-        <label className="mt-2 flex items-center gap-2 text-stone-700 font-medium cursor-pointer">
+        <label className="mt-2 flex min-h-10 items-center gap-2 text-stone-700 font-medium cursor-pointer">
           <input type="checkbox" checked={showPlaceNames} onChange={(e) => onShowPlaceNamesChange(e.target.checked)} className="accent-brand-600" />
           Show place names and borders
         </label>

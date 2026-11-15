@@ -6,6 +6,7 @@
     "weather": "ok",
     "rain_source": "CHIRPS (ClimateSERV)",
     "temp_source": "ERA5 (Open-Meteo)",
+    "temp_elevation_adjust_c": null,
     "ndvi_source": "NASA GIBS VIIRS NDVI (cropland pixels)",
     "power_check": {
       "broken": true,

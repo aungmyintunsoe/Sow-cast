@@ -1,88 +1,84 @@
-import { Fragment, type ReactNode } from 'react';
-import { AlertOctagon, BookmarkCheck, CheckCircle2, HelpCircle, Satellite, Sprout } from 'lucide-react';
-import type { Crop, RotationOption } from '../../types';
-import { MONTHS_INITIAL } from '../../lib/format';
+import { Fragment, forwardRef } from 'react';
+import { CropIcon } from '../../lib/cropIcons';
+import { motion } from 'framer-motion';
+import { AlertOctagon, ArrowRight, CheckCircle2, Download } from 'lucide-react';
+import type { RotationPlan } from '../../types';
+import { cn } from '../../lib/format';
+import { FADE, SPRING } from '../../lib/motion';
+import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
-import { Pill } from '../ui/Pill';
+import { CropPeek } from '../crops/CropPeek';
+import { CropCalendar } from './CropCalendar';
 
-const SCORE_LABELS: { key: keyof RotationOption['scores']; label: string }[] = [
+export const SCORE_ROWS: { key: keyof NonNullable<RotationPlan['scores']>; label: string }[] = [
   { key: 'soil', label: 'Soil health' },
-  { key: 'water', label: 'Water use' },
-  { key: 'erosion', label: 'Erosion control' },
-  { key: 'income', label: 'Farm income' },
-  { key: 'pest_break', label: 'Pest break' },
+  { key: 'water', label: 'Water fit' },
+  { key: 'resilience', label: 'Weather resilience' },
+  { key: 'market', label: 'Market value' },
+  { key: 'low_cost', label: 'Low cost & labour' },
+  { key: 'suitability', label: 'Crop match' },
 ];
 
-/** Display name for one sequence step. Steps can combine crops ("perennial_tree+cover_legume"). */
-const stepName = (step: string, cropsMap: Record<string, Crop>) =>
-  step
-    .split('+')
-    .map((id) => (id === 'fallow' ? 'Fallow (bare)' : id === 'perennial_tree' ? 'Tree crops' : cropsMap[id]?.name ?? id))
-    .join(' + ');
-
-const scoreColor = (score: number) => (score >= 4 ? 'bg-brand-500' : score === 3 ? 'bg-amber-500' : 'bg-red-400');
-
-function BulletList({ icon, title, items, tone }: { icon: ReactNode; title: string; items: string[]; tone: string }) {
+/** One step of a sequence ("perennial_tree+cover_legume" → "Tree crops + Legume cover"), each crop hoverable. */
+export function StepLabel({ step }: { step: string }) {
+  const parts = step.split('+');
   return (
-    <div className="space-y-1">
-      <div className={`flex items-center gap-1.5 text-xs font-bold ${tone}`}>
-        {icon}
-        <span>{title}</span>
-      </div>
-      <ul className="space-y-1 pl-5 list-disc text-xs">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+    <span className="inline-flex items-center gap-1 rounded-lg border border-stone-200 bg-stone-50 px-2.5 py-1 text-sm font-semibold text-stone-900">
+      {parts.map((id, i) => (
+        <Fragment key={id}>
+          {i > 0 && <span className="text-stone-400">+</span>}
+          <CropIcon id={id} className="h-4 w-4 text-brand-700" />
+          <CropPeek id={id} />
+        </Fragment>
+      ))}
+    </span>
+  );
+}
+
+export function Sequence({ steps }: { steps: string[] }) {
+  return (
+    <div className="flex flex-wrap items-center gap-1.5">
+      {steps.map((step, idx) => (
+        <Fragment key={`${step}-${idx}`}>
+          <StepLabel step={step} />
+          {idx < steps.length - 1 && <ArrowRight className="h-4 w-4 text-stone-400" aria-label="then" />}
+        </Fragment>
+      ))}
     </div>
   );
 }
 
-function GroundCoverStrip({ cover }: { cover: number[] | null }) {
+/** 0-100 bars; the thin dark tick marks what farmers do today, so the gain or loss is visible at a glance. */
+function ScoreBars({ scores, baseline }: { scores: NonNullable<RotationPlan['scores']>; baseline: RotationPlan['scores'] | null }) {
   return (
-    <div>
-      <div className="flex flex-wrap justify-between gap-x-3 text-[11px] font-semibold text-stone-600 mb-1">
-        <span>Ground cover by month</span>
-        <span className="inline-flex items-center gap-2.5 text-stone-500">
-          <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-brand-500" />Living roots</span>
-          <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-soil-300" />Bare soil</span>
-        </span>
-      </div>
-      {cover ? (
-        <div className="grid grid-cols-12 gap-1">
-          {cover.map((covered, month) => (
-            <div key={month} className="flex flex-col items-center gap-0.5">
-              <div
-                className={`w-full h-3.5 rounded ${covered === 1 ? 'bg-brand-500' : 'bg-soil-300'}`}
-                title={`${MONTHS_INITIAL[month]}: ${covered === 1 ? 'Living plant cover' : 'Bare soil'}`}
-              />
-              <span className="text-[10px] font-bold text-stone-500">{MONTHS_INITIAL[month]}</span>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <p className="text-xs text-stone-500 bg-stone-50 border border-dashed border-stone-300 rounded-lg px-3 py-2">
-          Shown once sowing and harvest months are collected for this region.
-        </p>
-      )}
-    </div>
-  );
-}
-
-function ScoreBars({ scores }: { scores: RotationOption['scores'] }) {
-  return (
-    <div className="space-y-2 bg-stone-50 rounded-xl p-3 border border-stone-200/70">
-      {SCORE_LABELS.map(({ key, label }) => {
-        const score = scores[key];
+    <div className="space-y-2">
+      {SCORE_ROWS.map(({ key, label }) => {
+        const v = scores[key];
+        const b = baseline?.[key];
+        const delta = b === undefined || b === null ? null : v - b;
         return (
-          <div key={key} className="flex items-center justify-between gap-2 text-xs">
-            <span className="font-semibold text-stone-700 w-24 shrink-0">{label}</span>
-            <div className="flex-1 flex gap-1">
-              {[1, 2, 3, 4, 5].map((dot) => (
-                <div key={dot} className={`h-2 flex-1 rounded-full ${dot <= score ? scoreColor(score) : 'bg-stone-200'}`} />
-              ))}
-            </div>
-            <span className="font-bold text-stone-800 w-6 text-right">{score}/5</span>
+          <div key={key} className="grid grid-cols-[7.5rem_1fr_3.25rem] items-center gap-2 text-sm">
+            <span className="text-stone-700">{label}</span>
+            <span className="relative h-2.5 rounded-full bg-stone-200">
+              <motion.span
+                className={cn('absolute inset-y-0 left-0 rounded-full', v >= 70 ? 'bg-brand-600' : v >= 45 ? 'bg-amber-500' : 'bg-red-400')}
+                initial={false}
+                animate={{ width: `${v}%` }}
+                transition={SPRING}
+              />
+              {b !== undefined && b !== null && (
+                <span className="absolute -inset-y-1 w-0.5 rounded bg-stone-900" style={{ left: `calc(${b}% - 1px)` }} title={`Today: ${b}`} />
+              )}
+            </span>
+            <span className="text-right tabular-nums">
+              <span className="font-bold text-stone-900">{v}</span>
+              {delta !== null && delta !== 0 && (
+                <span className={cn('ml-1 text-xs font-semibold', delta > 0 ? 'text-brand-700' : 'text-red-700')}>
+                  {delta > 0 ? '+' : '−'}
+                  {Math.abs(delta)}
+                </span>
+              )}
+            </span>
           </div>
         );
       })}
@@ -91,91 +87,89 @@ function ScoreBars({ scores }: { scores: RotationOption['scores'] }) {
 }
 
 interface RotationCardProps {
-  rotation: RotationOption;
-  cropsMap: Record<string, Crop>;
-  chosen: boolean;
-  onChoose: () => void;
+  plan: RotationPlan;
+  baseline: RotationPlan | null;
+  goalLabel?: string;
+  wetStart: number | null;
+  wetEnd: number | null;
+  /** Opens the plan document and the browser's Save as PDF dialog. */
+  onDownload: () => void;
 }
 
-/** One rotation option: its crops, 1–5 scores, evidence, benefits, unknowns and local risks. */
-export function RotationCard({ rotation: rot, cropsMap, chosen, onChoose }: RotationCardProps) {
-  const isCurrent = rot.id === 'current';
+/** One rotation: crops in order, month calendar, scores against today's practice, reasons and cautions. */
+export const RotationCard = forwardRef<HTMLDivElement, RotationCardProps>(function RotationCard(
+  { plan, baseline, goalLabel, wetStart, wetEnd, onDownload },
+  ref,
+) {
+  const isCurrent = plan.kind === 'current';
   return (
-    <Card
-      className={`p-5 flex flex-col justify-between transition-all ${
-        chosen ? 'border-2 border-brand-600 bg-brand-50/30 ring-2 ring-brand-500/20' : isCurrent ? 'bg-stone-50/70' : ''
-      }`}
-    >
-      <div className="space-y-4">
-        <div>
-          <div className="flex items-center justify-between gap-2 mb-1.5">
-            <Pill tone={isCurrent ? 'neutral' : 'brand'} className={`rounded-full px-2.5 py-1 text-xs font-bold ${isCurrent ? 'bg-stone-200 text-stone-800' : ''}`}>
-              {rot.label}
-            </Pill>
-            <span className="text-xs font-semibold text-stone-500">Evidence: {rot.confidence}</span>
-          </div>
-          <h3 className="text-lg font-extrabold text-stone-900 leading-snug">{rot.name}</h3>
-          {rot.tagline && <p className="text-xs font-medium text-stone-600 mt-0.5">{rot.tagline}</p>}
-        </div>
-
-        <div className="flex flex-wrap items-center gap-1.5">
-          {rot.sequence.map((step, idx) => {
-            const fallow = step === 'fallow';
-            return (
-              <Fragment key={`${step}-${idx}`}>
-                <span
-                  className={`inline-flex items-center gap-1 text-xs font-semibold border px-2.5 py-1 rounded-lg ${
-                    fallow ? 'bg-soil-50 border-soil-200 text-soil-800' : 'bg-stone-100 border-stone-200 text-stone-800'
-                  }`}
-                >
-                  <Sprout className={`w-3.5 h-3.5 ${fallow ? 'text-soil-500' : 'text-brand-600'}`} />
-                  {stepName(step, cropsMap)}
+    <motion.div ref={ref} layout="position" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: 0.98 }} transition={{ layout: SPRING, ...FADE }}>
+      <Card className={cn('flex h-full flex-col p-5', isCurrent && 'bg-stone-50')}>
+        <div className="flex-1 space-y-4">
+          <div>
+            <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+              <span className={cn('rounded-full px-2.5 py-1 text-xs font-bold', isCurrent ? 'bg-stone-200 text-stone-800' : 'bg-brand-100 text-brand-900')}>
+                {isCurrent ? 'What farmers do now' : `${plan.rank === 1 ? 'Top pick' : `Option ${plan.rank}`}${goalLabel ? `: ${goalLabel.toLowerCase()}` : ''}`}
+              </span>
+              {plan.goal_match !== null && (
+                <span className="text-xs font-semibold text-stone-600">
+                  Goal match <span className="text-base font-extrabold tabular-nums text-stone-900">{plan.goal_match}</span>/100
                 </span>
-                {idx < rot.sequence.length - 1 && <span className="text-stone-400 font-bold text-xs">→</span>}
-              </Fragment>
-            );
-          })}
+              )}
+            </div>
+            <h3 className="text-lg font-bold leading-snug text-stone-900">{plan.name}</h3>
+            <p className="mt-0.5 text-sm text-stone-600">{plan.tagline ?? plan.plan_type}</p>
+          </div>
+
+          <Sequence steps={plan.sequence} />
+
+          {plan.calendar && <CropCalendar rows={plan.calendar.rows} wetStart={wetStart} wetEnd={wetEnd} />}
+
+          {plan.scores ? (
+            <div>
+              <ScoreBars scores={plan.scores} baseline={isCurrent ? null : baseline?.scores ?? null} />
+              {!isCurrent && baseline?.scores && <p className="mt-2 text-xs text-stone-500">Dark tick: what farmers do now. Scores out of 100.</p>}
+            </div>
+          ) : (
+            <p className="rounded-xl border border-dashed border-stone-300 px-3 py-2 text-sm text-stone-600">Not scored: tree crops are outside the rotation model.</p>
+          )}
+
+          {plan.why.length > 0 && (
+            <div>
+              <div className="mb-1 flex items-center gap-1.5 text-sm font-bold text-brand-800">
+                <CheckCircle2 className="h-4 w-4" aria-hidden="true" />
+                {isCurrent ? 'Where this comes from' : 'Why it works'}
+              </div>
+              <ul className="list-disc space-y-1 pl-5 text-sm text-stone-800">
+                {plan.why.slice(0, 3).map((w) => (
+                  <li key={w}>{w}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {plan.cautions.length > 0 && (
+            <div className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-amber-950">
+              <div className="mb-1 flex items-center gap-1.5 text-sm font-bold text-amber-900">
+                <AlertOctagon className="h-4 w-4 text-amber-600" aria-hidden="true" />
+                Check before you start
+              </div>
+              <ul className="list-disc space-y-1 pl-5 text-sm">
+                {plan.cautions.slice(0, 3).map((c) => (
+                  <li key={c}>{c}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
-        <GroundCoverStrip cover={rot.cover_by_month} />
-        <ScoreBars scores={rot.scores} />
-
-        <div>
-          <div className="text-xs font-bold text-stone-700 mb-1">Why it works</div>
-          <p className="text-sm text-stone-800 leading-relaxed">{rot.why}</p>
+        <div className="mt-5 border-t border-stone-200 pt-4">
+          <Button variant={isCurrent ? 'secondary' : 'primary'} size="sm" onClick={onDownload} className="w-full">
+            <Download className="h-4 w-4" />
+            <span>Download PDF plan</span>
+          </Button>
         </div>
-
-        <div className="flex flex-wrap items-center gap-1.5">
-          <Satellite className="w-3.5 h-3.5 text-nasa-blue shrink-0" />
-          {rot.evidence.map((ev) => (
-            <Pill key={ev} tone="info" className="border border-blue-200">{ev}</Pill>
-          ))}
-        </div>
-
-        <div className="text-stone-700">
-          <BulletList icon={<CheckCircle2 className="w-4 h-4 text-brand-600" />} title="Benefits" items={rot.benefits} tone="text-brand-800" />
-        </div>
-        <div className="text-stone-600">
-          <BulletList icon={<HelpCircle className="w-4 h-4 text-stone-500" />} title="What satellites can't see" items={rot.gaps} tone="text-stone-700" />
-        </div>
-        <div className="bg-amber-50/70 border border-amber-200 rounded-xl p-2.5 text-amber-950">
-          <BulletList icon={<AlertOctagon className="w-4 h-4 text-amber-600" />} title="Risks to check locally" items={rot.risks} tone="text-amber-900" />
-        </div>
-      </div>
-
-      <div className="mt-5 pt-3 border-t border-stone-200">
-        <button
-          type="button"
-          onClick={onChoose}
-          aria-pressed={chosen}
-          className={`w-full py-2.5 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition ${
-            !chosen && isCurrent ? 'bg-stone-200 hover:bg-stone-300 text-stone-800' : 'bg-brand-600 hover:bg-brand-700 text-white'
-          }`}
-        >
-          <BookmarkCheck className="w-4 h-4" />
-          <span>{chosen ? 'Chosen for your field' : 'Choose this plan'}</span>
-        </button>
-      </div>
-    </Card>
+      </Card>
+    </motion.div>
   );
-}
+});

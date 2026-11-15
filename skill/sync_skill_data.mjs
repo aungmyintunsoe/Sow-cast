@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '..');
-const skill = path.join(here, 'sowcast-advisor');
+const skill = path.join(here, 'skills', 'sowcast-advisor');
 const dataOut = path.join(skill, 'data');
 
 fs.rmSync(dataOut, { recursive: true, force: true });
@@ -15,6 +15,33 @@ fs.copyFileSync(path.join(root, 'public', 'data', 'crops.json'), path.join(dataO
 const regionFiles = fs.readdirSync(path.join(root, 'public', 'data', 'regions')).filter((f) => f.endsWith('.json'));
 for (const f of regionFiles) fs.copyFileSync(path.join(root, 'public', 'data', 'regions', f), path.join(dataOut, 'regions', f));
 fs.copyFileSync(path.join(root, 'data', 'inputs', 'make_data.py'), path.join(skill, 'scripts', 'make_data.py'));
+
+// Crop trait table for the skill (references/crop-table.md), generated so it always matches the data.
+{
+  const crops = JSON.parse(fs.readFileSync(path.join(dataOut, 'crops.json'), 'utf8'));
+  const name = (id) => crops.find((c) => c.id === id)?.name.replace(/ \(.*\)$/, '') ?? id;
+  const rows = crops.map((c) => [
+    c.name, c.family, c.season, c.season_days, `${c.temp_min_c}–${c.temp_max_c}`, c.seasonal_rain_need_mm,
+    `${c.drought_tolerance}/${c.flood_tolerance}/${c.salinity_tolerance}`, c.nitrogen_fixing ? (c.n_fixed ?? 'yes') : '–',
+    c.yield_low !== null ? `${c.yield_low}–${c.yield_high} ${c.yield_unit}` : '–',
+    `${c.needs.fertiliser ?? '?'}/${c.needs.labour ?? '?'}/${c.needs.pest_difficulty ?? '?'}`, c.relative_income ?? '?',
+    c.good_after.map(name).join(', ') || '–', c.avoid_after.map(name).join(', ') || '–', `${c.farmer_tip} Pests: ${c.pest_notes}`,
+  ].map((v) => String(v).replace(/\|/g, '/')).join(' | '));
+  const md = [
+    '# Crop table (generated from data/crops.json; do not edit by hand)',
+    '',
+    'Columns: season days; mean temperature range °C; seasonal water need mm; drought/flood/salt tolerance 1-5;',
+    'nitrogen fixed; rough yield; fertiliser/labour/pest difficulty 1-5; relative income 1-5; good after; avoid after; tip and pests.',
+    'id column omitted: ids are the lowercase names with underscores (e.g. green_gram, pigeon_pea, salt_rice, sunn_hemp, cover_legume).',
+    '',
+    '| Crop | Family | Season | Days | Temp °C | Water mm | Dr/Fl/Salt | N fixed | Yield | Fert/Lab/Pest | Income | Good after | Avoid after | Tip and pests |',
+    '|---|---|---|---|---|---|---|---|---|---|---|---|---|---|',
+    ...rows.map((r) => `| ${r} |`),
+    '',
+  ].join('
+');
+  fs.writeFileSync(path.join(skill, 'references', 'crop-table.md'), md);
+}
 
 // What the snapshot contains, so the skill can tell which fields are still missing.
 const index = JSON.parse(fs.readFileSync(path.join(dataOut, 'regions', 'index.json'), 'utf8'));

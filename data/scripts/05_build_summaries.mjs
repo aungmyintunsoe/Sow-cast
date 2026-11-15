@@ -17,7 +17,7 @@
 // And across sites: data/processed/all_sites_annual.csv, all_sites_monthly_climatology.csv
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadConfig, selectedSites, readCSV, writeCSV, writeJSON, PROCESSED_DIR, round, mean, sum, slope, mannKendall, deriveDaily, stepCheck } from './lib.mjs';
+import { loadConfig, selectedSites, readCSV, writeCSV, writeJSON, PROCESSED_DIR, RAW_DIR, round, mean, sum, slope, mannKendall, deriveDaily, stepCheck } from './lib.mjs';
 
 const BARE_NDVI = 0.3; // NDVI below this ≈ bare / sparse cover
 const DAYS = [31, 28.25, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -52,14 +52,29 @@ for (const site of selectedSites(cfg)) {
   // ---------- 2) merge sources ----------
   const tempSource = powerCheck.broken && era5 ? 'ERA5 (Open-Meteo)' : 'NASA POWER';
   const rainSource = chirps ? 'CHIRPS (ClimateSERV)' : powerCheck.broken && era5 ? 'ERA5 (Open-Meteo)' : 'NASA POWER';
+  // Elevation correction for POWER temperature. POWER's ~50 km cell has one average elevation, so a hill town
+  // (Cameron Highlands, 1,437 m in a 593 m cell) or a valley town reads too warm or too cold. Shift by the
+  // standard lapse rate, 6.5 °C per 1,000 m, from the cell elevation to the town's SRTM elevation.
+  // ERA5 via Open-Meteo is already corrected to the point's elevation, so it is left as is.
+  const LAPSE = -0.0065;
+  const terrainInfo = opt(path.join(dir, 'terrain.json'));
+  const powerRaw = fs.existsSync(path.join(RAW_DIR, 'power'))
+    ? fs.readdirSync(path.join(RAW_DIR, 'power')).find((f) => f.startsWith(`${site.id}_`) && f.endsWith('.json'))
+    : null;
+  const powerElev = powerRaw ? JSON.parse(fs.readFileSync(path.join(RAW_DIR, 'power', powerRaw), 'utf8')).geometry?.coordinates?.[2] ?? null : null;
+  const siteElev = terrainInfo?.elevation_m ?? null;
+  const tAdjust = tempSource === 'NASA POWER' && powerElev !== null && siteElev !== null && Math.abs(siteElev - powerElev) >= 100
+    ? round(LAPSE * (siteElev - powerElev), 2) : 0;
+  if (tAdjust) console.log(`  · ${site.id}: POWER temperature shifted ${tAdjust > 0 ? '+' : ''}${tAdjust} °C (town ${siteElev} m vs POWER cell ${Math.round(powerElev)} m)`);
   const era5By = new Map((era5 ?? []).map((r) => [r.date, r]));
   const chirpsBy = new Map((chirps ?? []).map((r) => [r.date, r.precip_mm]));
   const daily = power.map((r) => {
     const e = era5By.get(r.date);
     const useEra5T = tempSource.startsWith('ERA5');
-    const tmax = useEra5T ? e?.tmax_c ?? null : r.tmax_c;
-    const tmin = useEra5T ? e?.tmin_c ?? null : r.tmin_c;
-    const tmean = useEra5T ? e?.tmean_c ?? null : r.tmean_c;
+    const adj = (v) => (v === null || v === undefined ? null : round(v + tAdjust, 2));
+    const tmax = useEra5T ? e?.tmax_c ?? null : adj(r.tmax_c);
+    const tmin = useEra5T ? e?.tmin_c ?? null : adj(r.tmin_c);
+    const tmean = useEra5T ? e?.tmean_c ?? null : adj(r.tmean_c);
     const precip = rainSource.startsWith('CHIRPS') ? chirpsBy.get(r.date) ?? null : rainSource.startsWith('ERA5') ? e?.precip_mm ?? null : r.precip_mm;
     return { ...r, tmax_c: tmax, tmin_c: tmin, tmean_c: tmean, precip_mm: precip, ...deriveDaily({ date: r.date, tmax, tmin, precip }, site.location.lat) };
   });
@@ -177,6 +192,7 @@ for (const site of selectedSites(cfg)) {
     weather: finalCheck.broken ? 'suspect' : 'ok',
     rain_source: rainSource,
     temp_source: tempSource,
+    temp_elevation_adjust_c: tAdjust || null,
     ndvi_source: gibsNdvi ? 'NASA GIBS VIIRS NDVI (cropland pixels)' : ndvi ? 'MODIS MOD13Q1 (ORNL)' : null,
     power_check: { ...powerCheck, verdict: powerCheck.broken ? 'POWER has a 2008 step change here; replaced where possible' : 'POWER passes' },
     final_check: finalCheck,

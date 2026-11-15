@@ -19,7 +19,7 @@ const dot = (size: number, color: string) =>
     popupAnchor: [0, -size / 2],
   });
 const REGION_ICON = dot(14, '#2c8742'); // brand-600
-const SELECTED_ICON = dot(22, '#0B3D91'); // nasa-blue
+const SELECTED_ICON = dot(22, '#1d4628'); // brand-900, so selection is green everywhere
 
 function FlyTo({ lat, lon, zoom }: { lat: number; lon: number; zoom: number }) {
   const map = useMap();
@@ -46,10 +46,11 @@ interface FieldMapProps {
   selectedRegionId: string;
   onSelectRegion: (id: string) => void;
   onContinue: () => void;
+  onOpenSearch: () => void;
 }
 
 /** Step 1: pick a region from the country list or by tapping the map (the nearest region is used). */
-export function FieldMap({ regions, selectedRegionId, onSelectRegion, onContinue }: FieldMapProps) {
+export function FieldMap({ regions, selectedRegionId, onSelectRegion, onContinue, onOpenSearch }: FieldMapProps) {
   const selected = regions.find((r) => r.id === selectedRegionId) ?? regions[0];
   const [customPin, setCustomPin] = useState<CustomPin | null>(null);
   const [layerId, setLayerId] = useState(MAP_LAYERS[0].id);
@@ -78,7 +79,7 @@ export function FieldMap({ regions, selectedRegionId, onSelectRegion, onContinue
   const focus = customPin ?? selected ?? { lat: 15, lon: 102 };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <PageHeader
         title="1. Pick your area"
         description="Choose a farming region, or tap the map and we will use the nearest one."
@@ -97,6 +98,7 @@ export function FieldMap({ regions, selectedRegionId, onSelectRegion, onContinue
           openCountry={openCountry}
           onToggleCountry={(country) => setOpenCountry((cur) => (cur === country ? null : country))}
           onPick={pick}
+          onOpenSearch={onOpenSearch}
         />
 
         <Card className="relative overflow-hidden h-[420px] lg:h-[560px] bg-stone-200">
@@ -104,13 +106,13 @@ export function FieldMap({ regions, selectedRegionId, onSelectRegion, onContinue
 
           {customPin && (
             <div className="absolute bottom-3 left-3 z-[400] bg-white/95 border border-stone-300 rounded-xl px-3.5 py-2.5 shadow-sm max-w-xs">
-              <div className="flex items-center gap-2 text-xs font-bold text-nasa-blue">
+              <div className="flex items-center gap-2 text-sm font-bold text-brand-800">
                 <Compass className="w-4 h-4" />
                 <span>
                   Your pin ({customPin.lat.toFixed(2)}°, {customPin.lon.toFixed(2)}°)
                 </span>
               </div>
-              <p className="text-xs text-stone-700 mt-0.5">
+              <p className="text-sm text-stone-700 mt-0.5">
                 Using the nearest region, <strong>{customPin.nearest.name}</strong> ({Math.round(customPin.km)} km away).
               </p>
             </div>

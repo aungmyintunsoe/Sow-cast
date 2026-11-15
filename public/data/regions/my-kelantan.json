@@ -1,0 +1,4443 @@
+{
+  "region": {
+    "id": "my-kelantan",
+    "name": "Kelantan Plain",
+    "place": "Kota Bharu",
+    "country": "Malaysia",
+    "lat": 6.13,
+    "lon": 102.24
+  },
+  "monthly": [
+    {
+      "month": 1,
+      "tmax_c": 27.6,
+      "tmin_c": 24.5,
+      "precip_mm": 170.3,
+      "et0_mm": 74.7,
+      "soil_moisture": 0.923,
+      "ndvi": 0.495,
+      "heat_days": 0,
+      "heavy_rain_days": 2.8,
+      "typically_bare": false
+    },
+    {
+      "month": 2,
+      "tmax_c": 28.1,
+      "tmin_c": 24.5,
+      "precip_mm": 58.4,
+      "et0_mm": 79.2,
+      "soil_moisture": 0.846,
+      "ndvi": 0.522,
+      "heat_days": 0,
+      "heavy_rain_days": 1,
+      "typically_bare": false
+    },
+    {
+      "month": 3,
+      "tmax_c": 29.2,
+      "tmin_c": 25.3,
+      "precip_mm": 126.9,
+      "et0_mm": 95.9,
+      "soil_moisture": 0.783,
+      "ndvi": 0.537,
+      "heat_days": 0,
+      "heavy_rain_days": 2.1,
+      "typically_bare": false
+    },
+    {
+      "month": 4,
+      "tmax_c": 30.5,
+      "tmin_c": 26.4,
+      "precip_mm": 101.8,
+      "et0_mm": 97.7,
+      "soil_moisture": 0.757,
+      "ndvi": 0.537,
+      "heat_days": 0,
+      "heavy_rain_days": 1.5,
+      "typically_bare": false
+    },
+    {
+      "month": 5,
+      "tmax_c": 31,
+      "tmin_c": 27,
+      "precip_mm": 120.6,
+      "et0_mm": 97.6,
+      "soil_moisture": 0.799,
+      "ndvi": 0.546,
+      "heat_days": 0,
+      "heavy_rain_days": 0.3,
+      "typically_bare": false
+    },
+    {
+      "month": 6,
+      "tmax_c": 30.7,
+      "tmin_c": 26.7,
+      "precip_mm": 130.3,
+      "et0_mm": 92.8,
+      "soil_moisture": 0.834,
+      "ndvi": 0.546,
+      "heat_days": 0,
+      "heavy_rain_days": 0.6,
+      "typically_bare": false
+    },
+    {
+      "month": 7,
+      "tmax_c": 30.5,
+      "tmin_c": 26.4,
+      "precip_mm": 175.9,
+      "et0_mm": 97.6,
+      "soil_moisture": 0.848,
+      "ndvi": 0.543,
+      "heat_days": 0,
+      "heavy_rain_days": 1,
+      "typically_bare": false
+    },
+    {
+      "month": 8,
+      "tmax_c": 30.4,
+      "tmin_c": 26.3,
+      "precip_mm": 190.1,
+      "et0_mm": 100.1,
+      "soil_moisture": 0.863,
+      "ndvi": 0.556,
+      "heat_days": 0,
+      "heavy_rain_days": 1.8,
+      "typically_bare": false
+    },
+    {
+      "month": 9,
+      "tmax_c": 30.2,
+      "tmin_c": 26.1,
+      "precip_mm": 218.5,
+      "et0_mm": 96.9,
+      "soil_moisture": 0.882,
+      "ndvi": 0.582,
+      "heat_days": 0,
+      "heavy_rain_days": 2.5,
+      "typically_bare": false
+    },
+    {
+      "month": 10,
+      "tmax_c": 29.5,
+      "tmin_c": 26,
+      "precip_mm": 260.3,
+      "et0_mm": 88.9,
+      "soil_moisture": 0.904,
+      "ndvi": 0.595,
+      "heat_days": 0,
+      "heavy_rain_days": 3.3,
+      "typically_bare": false
+    },
+    {
+      "month": 11,
+      "tmax_c": 28.5,
+      "tmin_c": 25.9,
+      "precip_mm": 777.9,
+      "et0_mm": 69.5,
+      "soil_moisture": 0.956,
+      "ndvi": 0.576,
+      "heat_days": 0,
+      "heavy_rain_days": 12.9,
+      "typically_bare": false
+    },
+    {
+      "month": 12,
+      "tmax_c": 27.8,
+      "tmin_c": 25.3,
+      "precip_mm": 705.4,
+      "et0_mm": 66.5,
+      "soil_moisture": 0.968,
+      "ndvi": 0.517,
+      "heat_days": 0,
+      "heavy_rain_days": 11.3,
+      "typically_bare": false
+    }
+  ],
+  "annual": [
+    {
+      "year": 2001,
+      "heat_days": 0,
+      "precip_mm": 2459,
+      "heavy_rain_days": 31,
+      "max_dry_spell_days": 19,
+      "water_balance_mm": 1448
+    },
+    {
+      "year": 2002,
+      "heat_days": 0,
+      "precip_mm": 2336,
+      "heavy_rain_days": 34,
+      "max_dry_spell_days": 34,
+      "water_balance_mm": 1282
+    },
+    {
+      "year": 2003,
+      "heat_days": 0,
+      "precip_mm": 2998,
+      "heavy_rain_days": 42,
+      "max_dry_spell_days": 28,
+      "water_balance_mm": 1982
+    },
+    {
+      "year": 2004,
+      "heat_days": 0,
+      "precip_mm": 2271,
+      "heavy_rain_days": 27,
+      "max_dry_spell_days": 18,
+      "water_balance_mm": 1225
+    },
+    {
+      "year": 2005,
+      "heat_days": 0,
+      "precip_mm": 3067,
+      "heavy_rain_days": 47,
+      "max_dry_spell_days": 36,
+      "water_balance_mm": 2015
+    },
+    {
+      "year": 2006,
+      "heat_days": 0,
+      "precip_mm": 2520,
+      "heavy_rain_days": 31,
+      "max_dry_spell_days": 31,
+      "water_balance_mm": 1502
+    },
+    {
+      "year": 2007,
+      "heat_days": 0,
+      "precip_mm": 2524,
+      "heavy_rain_days": 36,
+      "max_dry_spell_days": 34,
+      "water_balance_mm": 1484
+    },
+    {
+      "year": 2008,
+      "heat_days": 0,
+      "precip_mm": 3645,
+      "heavy_rain_days": 48,
+      "max_dry_spell_days": 23,
+      "water_balance_mm": 2612
+    },
+    {
+      "year": 2009,
+      "heat_days": 0,
+      "precip_mm": 3526,
+      "heavy_rain_days": 46,
+      "max_dry_spell_days": 14,
+      "water_balance_mm": 2487
+    },
+    {
+      "year": 2010,
+      "heat_days": 0,
+      "precip_mm": 3156,
+      "heavy_rain_days": 50,
+      "max_dry_spell_days": 31,
+      "water_balance_mm": 2079
+    },
+    {
+      "year": 2011,
+      "heat_days": 0,
+      "precip_mm": 3875,
+      "heavy_rain_days": 50,
+      "max_dry_spell_days": 18,
+      "water_balance_mm": 2855
+    },
+    {
+      "year": 2012,
+      "heat_days": 0,
+      "precip_mm": 3174,
+      "heavy_rain_days": 44,
+      "max_dry_spell_days": 15,
+      "water_balance_mm": 2119
+    },
+    {
+      "year": 2013,
+      "heat_days": 0,
+      "precip_mm": 2978,
+      "heavy_rain_days": 40,
+      "max_dry_spell_days": 16,
+      "water_balance_mm": 1925
+    },
+    {
+      "year": 2014,
+      "heat_days": 0,
+      "precip_mm": 3202,
+      "heavy_rain_days": 49,
+      "max_dry_spell_days": 25,
+      "water_balance_mm": 2108
+    },
+    {
+      "year": 2015,
+      "heat_days": 0,
+      "precip_mm": 2219,
+      "heavy_rain_days": 35,
+      "max_dry_spell_days": 23,
+      "water_balance_mm": 1117
+    },
+    {
+      "year": 2016,
+      "heat_days": 0,
+      "precip_mm": 3067,
+      "heavy_rain_days": 44,
+      "max_dry_spell_days": 41,
+      "water_balance_mm": 1951
+    },
+    {
+      "year": 2017,
+      "heat_days": 0,
+      "precip_mm": 3666,
+      "heavy_rain_days": 55,
+      "max_dry_spell_days": 51,
+      "water_balance_mm": 2616
+    },
+    {
+      "year": 2018,
+      "heat_days": 0,
+      "precip_mm": 3321,
+      "heavy_rain_days": 45,
+      "max_dry_spell_days": 23,
+      "water_balance_mm": 2270
+    },
+    {
+      "year": 2019,
+      "heat_days": 0,
+      "precip_mm": 2282,
+      "heavy_rain_days": 21,
+      "max_dry_spell_days": 30,
+      "water_balance_mm": 1168
+    },
+    {
+      "year": 2020,
+      "heat_days": 0,
+      "precip_mm": 3364,
+      "heavy_rain_days": 42,
+      "max_dry_spell_days": 32,
+      "water_balance_mm": 2288
+    },
+    {
+      "year": 2021,
+      "heat_days": 0,
+      "precip_mm": 2759,
+      "heavy_rain_days": 32,
+      "max_dry_spell_days": 29,
+      "water_balance_mm": 1699
+    },
+    {
+      "year": 2022,
+      "heat_days": 0,
+      "precip_mm": 3685,
+      "heavy_rain_days": 45,
+      "max_dry_spell_days": 36,
+      "water_balance_mm": 2640
+    },
+    {
+      "year": 2023,
+      "heat_days": 0,
+      "precip_mm": 3534,
+      "heavy_rain_days": 51,
+      "max_dry_spell_days": 43,
+      "water_balance_mm": 2470
+    },
+    {
+      "year": 2024,
+      "heat_days": 1,
+      "precip_mm": 3248,
+      "heavy_rain_days": 40,
+      "max_dry_spell_days": 27,
+      "water_balance_mm": 2158
+    }
+  ],
+  "trends": {
+    "period": "2001-2024",
+    "heat_days": {
+      "per_decade": 0.1,
+      "first_10y_mean": 0,
+      "last_10y_mean": 0.1,
+      "p": 0.5853
+    },
+    "precip_mm": {
+      "per_decade": 281.991,
+      "first_10y_mean": 2850.2,
+      "last_10y_mean": 3114.5,
+      "p": 0.0372
+    },
+    "heavy_rain_days": {
+      "per_decade": 2.465,
+      "first_10y_mean": 39.2,
+      "last_10y_mean": 41,
+      "p": 0.2862
+    },
+    "max_dry_spell_days": {
+      "per_decade": 4.091,
+      "first_10y_mean": 26.8,
+      "last_10y_mean": 33.5,
+      "p": 0.2338
+    },
+    "mean_water_balance_mm": 1979
+  },
+  "data_quality": {
+    "weather": "ok",
+    "sources": {
+      "rain": "CHIRPS (ClimateSERV)",
+      "temperature": "NASA POWER",
+      "greenness": "NASA GIBS VIIRS NDVI (cropland pixels)",
+      "power_replaced": false
+    },
+    "note": null
+  },
+  "soil": {
+    "texture": "sand",
+    "organic_matter": "very low",
+    "drainage": "well",
+    "water_holding": "low",
+    "slope_pct": 0.4,
+    "erosion_risk": "low",
+    "sampled_km_from_town": 0,
+    "source": "ISRIC SoilGrids + NASA SRTM"
+  },
+  "priors": {
+    "rain_mm": 2500,
+    "mean_temp_c": 27,
+    "dry_months": 3,
+    "soil_texture": "sandy_loam",
+    "drainage": "moderate",
+    "slope_pct": 1,
+    "flood_risk": 3,
+    "salinity_risk": 1,
+    "irrigation_access": 2,
+    "tree_crop_dominated": false,
+    "soil_degraded": true,
+    "common_crops": [
+      "rice",
+      "vegetables"
+    ],
+    "evidence": "General agronomy knowledge only - not yet verified; check FAO GIEWS, USDA FAS crop calendars, national statistics",
+    "confidence": "low"
+  },
+  "scoring_inputs": [
+    {
+      "input": "rain_mm_approx",
+      "draft": 2500,
+      "measured": 3036,
+      "used": "measured",
+      "source": "CHIRPS (ClimateSERV)"
+    },
+    {
+      "input": "mean_temp_c_approx",
+      "draft": 27,
+      "measured": 27.4,
+      "used": "measured",
+      "source": "NASA POWER"
+    },
+    {
+      "input": "dry_months_approx",
+      "draft": 3,
+      "measured": 0,
+      "used": "measured",
+      "source": "CHIRPS (ClimateSERV) rain vs crop water demand"
+    },
+    {
+      "input": "soil_texture",
+      "draft": "sandy_loam",
+      "measured": "sandy",
+      "used": "measured",
+      "source": "ISRIC SoilGrids 0-30 cm"
+    },
+    {
+      "input": "slope_pct_approx",
+      "draft": 1,
+      "measured": 0.3,
+      "used": "measured",
+      "source": "NASA SRTM, mean within ~1.5 km"
+    },
+    {
+      "input": "drainage",
+      "draft": "moderate",
+      "measured": null,
+      "used": "draft",
+      "source": "no measured data yet"
+    },
+    {
+      "input": "flood_risk_0_3",
+      "draft": 3,
+      "measured": null,
+      "used": "draft",
+      "source": "no measured data yet"
+    },
+    {
+      "input": "salinity_risk_0_3",
+      "draft": 1,
+      "measured": null,
+      "used": "draft",
+      "source": "no measured data yet"
+    },
+    {
+      "input": "irrigation_access_0_3",
+      "draft": 2,
+      "measured": null,
+      "used": "draft",
+      "source": "no measured data yet"
+    }
+  ],
+  "insights": [
+    {
+      "title": "Rainfall has increased",
+      "body": "Yearly rain went from about 2850 mm to 3115 mm.",
+      "source": "CHIRPS, 2001–2024",
+      "confidence": "high",
+      "badgeType": "neutral"
+    },
+    {
+      "title": "Rain is more than crops can use",
+      "body": "Rain exceeds crop water demand by about 1979 mm a year. Waterlogging and runoff are bigger risks than drought.",
+      "source": "CHIRPS rain, NASA POWER temperature, 2001–2024",
+      "confidence": "medium",
+      "badgeType": "neutral"
+    },
+    {
+      "title": "Best-matched crops for this area",
+      "body": "Groundnut, Rice and Soybean score highest on climate, water and soil fit.",
+      "source": "Sowcast crop-fit score using measured climate and soil",
+      "confidence": "medium",
+      "badgeType": "opportunity"
+    }
+  ],
+  "calendar": {
+    "wet_start": 10,
+    "wet_end": 1,
+    "confidence": "low - rough monsoon pattern, check local calendar"
+  },
+  "rotation_relevance": "normal",
+  "plans": {
+    "current": {
+      "id": "current:rice|fallow",
+      "kind": "current",
+      "goal": null,
+      "rank": null,
+      "name": "Rice then fallow",
+      "tagline": null,
+      "plan_type": "What most farmers here do now",
+      "sequence": [
+        "rice",
+        "fallow"
+      ],
+      "goal_match": null,
+      "change_vs_current": null,
+      "scores": {
+        "soil": 4,
+        "market": 74,
+        "water": 60,
+        "resilience": 72,
+        "low_cost": 25,
+        "suitability": 74
+      },
+      "why": [
+        "The usual pattern in Kelantan Plain, based on general knowledge."
+      ],
+      "cautions": [
+        "Rice: sandy, low-water-holding soil"
+      ],
+      "evidence": [
+        "Not yet verified"
+      ],
+      "calendar": {
+        "rows": [
+          {
+            "label": "Every year",
+            "cells": [
+              "rice",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              "rice",
+              "rice",
+              "rice"
+            ]
+          }
+        ],
+        "approximate": true
+      },
+      "confidence": "low",
+      "basis": "Team rotation table (sowcast_rotations.csv)"
+    },
+    "by_goal": {
+      "balanced": [
+        {
+          "id": "plan:black_gram|groundnut|rice",
+          "kind": "recommended",
+          "goal": "balanced",
+          "rank": 1,
+          "name": "Black gram then Groundnut then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "groundnut",
+            "rice"
+          ],
+          "goal_match": 78,
+          "change_vs_current": 21.6,
+          "scores": {
+            "soil": 86,
+            "market": 67,
+            "water": 73,
+            "resilience": 72,
+            "low_cost": 45,
+            "suitability": 74
+          },
+          "why": [
+            "Black gram and Groundnut fix nitrogen (~30-60 kg N/ha (rough))",
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "Average income score 3.3/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Hard to store (Groundnut): arrange a buyer before planting"
+          ],
+          "cautions": [
+            "Black gram: flood risk",
+            "Groundnut: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:groundnut|soybean|rice",
+          "kind": "recommended",
+          "goal": "balanced",
+          "rank": 2,
+          "name": "Groundnut then Soybean then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "groundnut",
+            "soybean",
+            "rice"
+          ],
+          "goal_match": 75,
+          "change_vs_current": 20.1,
+          "scores": {
+            "soil": 86,
+            "market": 67,
+            "water": 71,
+            "resilience": 72,
+            "low_cost": 40,
+            "suitability": 74
+          },
+          "why": [
+            "Groundnut and Soybean fix nitrogen (~40-100 kg N/ha (rough))",
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "Average income score 3.3/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Hard to store (Groundnut): arrange a buyer before planting"
+          ],
+          "cautions": [
+            "Groundnut: flood risk",
+            "Soybean: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "soybean",
+                  "soybean",
+                  "soybean"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:groundnut|rice",
+          "kind": "recommended",
+          "goal": "balanced",
+          "rank": 3,
+          "name": "Groundnut then Rice",
+          "tagline": null,
+          "plan_type": "2-year rotation (wet-season crops in different years)",
+          "sequence": [
+            "groundnut",
+            "rice"
+          ],
+          "goal_match": 74,
+          "change_vs_current": 16.9,
+          "scores": {
+            "soil": 79,
+            "market": 70,
+            "water": 68,
+            "resilience": 67,
+            "low_cost": 36,
+            "suitability": 76
+          },
+          "why": [
+            "Groundnut fix nitrogen (~40-100 kg N/ha (rough))",
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "Average income score 3.5/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Hard to store (Groundnut): arrange a buyer before planting"
+          ],
+          "cautions": [
+            "Groundnut: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        }
+      ],
+      "soil_health": [
+        {
+          "id": "plan:black_gram|groundnut|rice",
+          "kind": "recommended",
+          "goal": "soil_health",
+          "rank": 1,
+          "name": "Black gram then Groundnut then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "groundnut",
+            "rice"
+          ],
+          "goal_match": 87,
+          "change_vs_current": 81.7,
+          "scores": {
+            "soil": 86,
+            "market": 67,
+            "water": 73,
+            "resilience": 72,
+            "low_cost": 45,
+            "suitability": 74
+          },
+          "why": [
+            "Black gram and Groundnut fix nitrogen (~30-60 kg N/ha (rough))",
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "No crop repeats back-to-back on the same plot"
+          ],
+          "cautions": [
+            "Black gram: flood risk",
+            "Groundnut: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:groundnut|soybean|rice",
+          "kind": "recommended",
+          "goal": "soil_health",
+          "rank": 2,
+          "name": "Groundnut then Soybean then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "groundnut",
+            "soybean",
+            "rice"
+          ],
+          "goal_match": 85,
+          "change_vs_current": 81.7,
+          "scores": {
+            "soil": 86,
+            "market": 67,
+            "water": 71,
+            "resilience": 72,
+            "low_cost": 40,
+            "suitability": 74
+          },
+          "why": [
+            "Groundnut and Soybean fix nitrogen (~40-100 kg N/ha (rough))",
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "No crop repeats back-to-back on the same plot"
+          ],
+          "cautions": [
+            "Groundnut: flood risk",
+            "Soybean: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "soybean",
+                  "soybean",
+                  "soybean"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:cowpea|groundnut|rice",
+          "kind": "recommended",
+          "goal": "soil_health",
+          "rank": 3,
+          "name": "Cowpea then Groundnut then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "cowpea",
+            "groundnut",
+            "rice"
+          ],
+          "goal_match": 85,
+          "change_vs_current": 83,
+          "scores": {
+            "soil": 87,
+            "market": 62,
+            "water": 72,
+            "resilience": 69,
+            "low_cost": 45,
+            "suitability": 73
+          },
+          "why": [
+            "Cowpea and Groundnut fix nitrogen (~40-80 kg N/ha (rough))",
+            "Alternating legume and cereal breaks disease cycles and cuts fertiliser need",
+            "No crop repeats back-to-back on the same plot"
+          ],
+          "cautions": [
+            "Cowpea: flood risk",
+            "Groundnut: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "cowpea",
+                  "cowpea",
+                  "cowpea"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        }
+      ],
+      "market_income": [
+        {
+          "id": "plan:groundnut|rice",
+          "kind": "recommended",
+          "goal": "market_income",
+          "rank": 1,
+          "name": "Groundnut then Rice",
+          "tagline": null,
+          "plan_type": "2-year rotation (wet-season crops in different years)",
+          "sequence": [
+            "groundnut",
+            "rice"
+          ],
+          "goal_match": 81,
+          "change_vs_current": -4,
+          "scores": {
+            "soil": 79,
+            "market": 70,
+            "water": 68,
+            "resilience": 67,
+            "low_cost": 36,
+            "suitability": 76
+          },
+          "why": [
+            "Average income score 3.5/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Hard to store (Groundnut): arrange a buyer before planting",
+            "Includes crops already grown locally (existing know-how and buyers)"
+          ],
+          "cautions": [
+            "Groundnut: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:black_gram|groundnut|rice",
+          "kind": "recommended",
+          "goal": "market_income",
+          "rank": 2,
+          "name": "Black gram then Groundnut then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "groundnut",
+            "rice"
+          ],
+          "goal_match": 77,
+          "change_vs_current": -6.3,
+          "scores": {
+            "soil": 86,
+            "market": 67,
+            "water": 73,
+            "resilience": 72,
+            "low_cost": 45,
+            "suitability": 74
+          },
+          "why": [
+            "Average income score 3.3/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Hard to store (Groundnut): arrange a buyer before planting",
+            "Includes crops already grown locally (existing know-how and buyers)"
+          ],
+          "cautions": [
+            "Black gram: flood risk",
+            "Groundnut: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:groundnut|soybean|rice",
+          "kind": "recommended",
+          "goal": "market_income",
+          "rank": 3,
+          "name": "Groundnut then Soybean then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "groundnut",
+            "soybean",
+            "rice"
+          ],
+          "goal_match": 76,
+          "change_vs_current": -6.3,
+          "scores": {
+            "soil": 86,
+            "market": 67,
+            "water": 71,
+            "resilience": 72,
+            "low_cost": 40,
+            "suitability": 74
+          },
+          "why": [
+            "Average income score 3.3/5 (rough)",
+            "Sold as pulse / oilseed, staple",
+            "Hard to store (Groundnut): arrange a buyer before planting",
+            "Includes crops already grown locally (existing know-how and buyers)"
+          ],
+          "cautions": [
+            "Groundnut: flood risk",
+            "Soybean: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "soybean",
+                  "soybean",
+                  "soybean"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        }
+      ],
+      "water_saving": [
+        {
+          "id": "plan:black_gram|sweet_potato",
+          "kind": "recommended",
+          "goal": "water_saving",
+          "rank": 1,
+          "name": "Black gram then Sweet potato",
+          "tagline": null,
+          "plan_type": "1-year double crop (wet season, then dry season)",
+          "sequence": [
+            "black_gram",
+            "sweet_potato"
+          ],
+          "goal_match": 66,
+          "change_vs_current": 21.9,
+          "scores": {
+            "soil": 64,
+            "market": 58,
+            "water": 82,
+            "resilience": 53,
+            "low_cost": 56,
+            "suitability": 66
+          },
+          "why": [
+            "Average water need 2.0/5 (lower is better)",
+            "Season rain ~2581 mm",
+            "Water source: partial irrigation"
+          ],
+          "cautions": [
+            "Black gram: flood risk",
+            "Sweet potato: flood risk"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Every year",
+                "cells": [
+                  "sweet_potato",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:black_gram|groundnut|rice",
+          "kind": "recommended",
+          "goal": "water_saving",
+          "rank": 2,
+          "name": "Black gram then Groundnut then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "groundnut",
+            "rice"
+          ],
+          "goal_match": 65,
+          "change_vs_current": 13.3,
+          "scores": {
+            "soil": 86,
+            "market": 67,
+            "water": 73,
+            "resilience": 72,
+            "low_cost": 45,
+            "suitability": 74
+          },
+          "why": [
+            "Average water need 3.3/5 (lower is better)",
+            "Season rain ~2581 mm",
+            "Water source: partial irrigation"
+          ],
+          "cautions": [
+            "Black gram: flood risk",
+            "Groundnut: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:black_gram|cowpea|rice",
+          "kind": "recommended",
+          "goal": "water_saving",
+          "rank": 3,
+          "name": "Black gram then Cowpea then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "cowpea",
+            "rice"
+          ],
+          "goal_match": 61,
+          "change_vs_current": 14.6,
+          "scores": {
+            "soil": 87,
+            "market": 61,
+            "water": 75,
+            "resilience": 69,
+            "low_cost": 52,
+            "suitability": 70
+          },
+          "why": [
+            "Average water need 3.0/5 (lower is better)",
+            "Season rain ~2581 mm",
+            "Water source: partial irrigation"
+          ],
+          "cautions": [
+            "Black gram: flood risk",
+            "Cowpea: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "cowpea",
+                  "cowpea",
+                  "cowpea"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        }
+      ],
+      "low_risk": [
+        {
+          "id": "plan:black_gram|groundnut|rice",
+          "kind": "recommended",
+          "goal": "low_risk",
+          "rank": 1,
+          "name": "Black gram then Groundnut then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "groundnut",
+            "rice"
+          ],
+          "goal_match": 82,
+          "change_vs_current": -0.7,
+          "scores": {
+            "soil": 86,
+            "market": 67,
+            "water": 73,
+            "resilience": 72,
+            "low_cost": 45,
+            "suitability": 74
+          },
+          "why": [
+            "Tolerates flooding common here",
+            "3 different crop(s) spread the risk"
+          ],
+          "cautions": [
+            "Black gram: flood risk",
+            "Groundnut: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:groundnut|soybean|rice",
+          "kind": "recommended",
+          "goal": "low_risk",
+          "rank": 2,
+          "name": "Groundnut then Soybean then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "groundnut",
+            "soybean",
+            "rice"
+          ],
+          "goal_match": 79,
+          "change_vs_current": -0.7,
+          "scores": {
+            "soil": 86,
+            "market": 67,
+            "water": 71,
+            "resilience": 72,
+            "low_cost": 40,
+            "suitability": 74
+          },
+          "why": [
+            "Tolerates flooding common here",
+            "3 different crop(s) spread the risk"
+          ],
+          "cautions": [
+            "Groundnut: flood risk",
+            "Soybean: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "soybean",
+                  "soybean",
+                  "soybean"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:black_gram|groundnut|salt_rice",
+          "kind": "recommended",
+          "goal": "low_risk",
+          "rank": 3,
+          "name": "Black gram then Groundnut then Salt-tolerant rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "groundnut",
+            "salt_rice"
+          ],
+          "goal_match": 78,
+          "change_vs_current": 1,
+          "scores": {
+            "soil": 86,
+            "market": 64,
+            "water": 73,
+            "resilience": 73,
+            "low_cost": 46,
+            "suitability": 70
+          },
+          "why": [
+            "Tolerates flooding common here",
+            "3 different crop(s) spread the risk"
+          ],
+          "cautions": [
+            "Black gram: flood risk",
+            "Groundnut: flood risk",
+            "Salt-tolerant rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "salt_rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "salt_rice",
+                  "salt_rice",
+                  "salt_rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        }
+      ],
+      "low_cost_labour": [
+        {
+          "id": "plan:black_gram|groundnut|rice",
+          "kind": "recommended",
+          "goal": "low_cost_labour",
+          "rank": 1,
+          "name": "Black gram then Groundnut then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "groundnut",
+            "rice"
+          ],
+          "goal_match": 77,
+          "change_vs_current": 20,
+          "scores": {
+            "soil": 86,
+            "market": 67,
+            "water": 73,
+            "resilience": 72,
+            "low_cost": 45,
+            "suitability": 74
+          },
+          "why": [
+            "Mean labour need 4.0/5, fertiliser need 2.3/5 (legumes reduce fertiliser need)"
+          ],
+          "cautions": [
+            "Black gram: flood risk",
+            "Groundnut: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "groundnut",
+                  "groundnut",
+                  "groundnut"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:black_gram|pigeon_pea|rice",
+          "kind": "recommended",
+          "goal": "low_cost_labour",
+          "rank": 2,
+          "name": "Black gram then Pigeon pea then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "pigeon_pea",
+            "rice"
+          ],
+          "goal_match": 77,
+          "change_vs_current": 27,
+          "scores": {
+            "soil": 88,
+            "market": 66,
+            "water": 74,
+            "resilience": 69,
+            "low_cost": 52,
+            "suitability": 69
+          },
+          "why": [
+            "Mean labour need 3.7/5, fertiliser need 2.0/5 (legumes reduce fertiliser need)"
+          ],
+          "cautions": [
+            "Black gram: flood risk",
+            "Pigeon pea: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "pigeon_pea",
+                  "pigeon_pea",
+                  "pigeon_pea"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        },
+        {
+          "id": "plan:black_gram|cowpea|rice",
+          "kind": "recommended",
+          "goal": "low_cost_labour",
+          "rank": 3,
+          "name": "Black gram then Cowpea then Rice",
+          "tagline": null,
+          "plan_type": "3-year rotation",
+          "sequence": [
+            "black_gram",
+            "cowpea",
+            "rice"
+          ],
+          "goal_match": 76,
+          "change_vs_current": 27,
+          "scores": {
+            "soil": 87,
+            "market": 61,
+            "water": 75,
+            "resilience": 69,
+            "low_cost": 52,
+            "suitability": 70
+          },
+          "why": [
+            "Mean labour need 3.7/5, fertiliser need 2.0/5 (legumes reduce fertiliser need)"
+          ],
+          "cautions": [
+            "Black gram: flood risk",
+            "Cowpea: flood risk",
+            "Rice: sandy, low-water-holding soil"
+          ],
+          "evidence": [],
+          "calendar": {
+            "rows": [
+              {
+                "label": "Year 1",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "black_gram",
+                  "black_gram",
+                  "black_gram"
+                ]
+              },
+              {
+                "label": "Year 2",
+                "cells": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "cowpea",
+                  "cowpea",
+                  "cowpea"
+                ]
+              },
+              {
+                "label": "Year 3",
+                "cells": [
+                  "rice",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  "rice",
+                  "rice",
+                  "rice"
+                ]
+              }
+            ],
+            "approximate": true
+          },
+          "confidence": "low",
+          "basis": "Team recommender (rec.py) on measured data"
+        }
+      ]
+    }
+  },
+  "outlook": {
+    "method": "Theil-Sen trend + Mann-Kendall test on 2001-2024 yearly data, extended to 2035 with an 80% prediction range. Where there is no clear trend, the 2001-2024 average is projected. Statistical extrapolation, not a climate-model forecast.",
+    "base_period": "2001-2024",
+    "horizon": 2035,
+    "interval": 0.8,
+    "series": {
+      "precip_mm": {
+        "per_decade": 263.722,
+        "p": 0.0371,
+        "significance": "likely",
+        "model": "theil_sen",
+        "baseline": 3036,
+        "recent_5y": 3318,
+        "fitted_last_year": 3468,
+        "at_horizon": {
+          "year": 2035,
+          "mid": 3758,
+          "lo": 2960,
+          "hi": 4556
+        },
+        "projection": [
+          {
+            "year": 2024,
+            "mid": 3468,
+            "lo": 2763,
+            "hi": 4172
+          },
+          {
+            "year": 2025,
+            "mid": 3494,
+            "lo": 2783,
+            "hi": 4205
+          },
+          {
+            "year": 2026,
+            "mid": 3520,
+            "lo": 2802,
+            "hi": 4238
+          },
+          {
+            "year": 2027,
+            "mid": 3547,
+            "lo": 2821,
+            "hi": 4272
+          },
+          {
+            "year": 2028,
+            "mid": 3573,
+            "lo": 2840,
+            "hi": 4306
+          },
+          {
+            "year": 2029,
+            "mid": 3599,
+            "lo": 2858,
+            "hi": 4340
+          },
+          {
+            "year": 2030,
+            "mid": 3626,
+            "lo": 2876,
+            "hi": 4375
+          },
+          {
+            "year": 2031,
+            "mid": 3652,
+            "lo": 2894,
+            "hi": 4411
+          },
+          {
+            "year": 2032,
+            "mid": 3679,
+            "lo": 2911,
+            "hi": 4446
+          },
+          {
+            "year": 2033,
+            "mid": 3705,
+            "lo": 2928,
+            "hi": 4482
+          },
+          {
+            "year": 2034,
+            "mid": 3731,
+            "lo": 2944,
+            "hi": 4519
+          },
+          {
+            "year": 2035,
+            "mid": 3758,
+            "lo": 2960,
+            "hi": 4556
+          }
+        ],
+        "label": "Yearly rain",
+        "unit": "mm",
+        "bad_edge": "low",
+        "history": [
+          {
+            "year": 2001,
+            "value": 2459
+          },
+          {
+            "year": 2002,
+            "value": 2336
+          },
+          {
+            "year": 2003,
+            "value": 2998
+          },
+          {
+            "year": 2004,
+            "value": 2271
+          },
+          {
+            "year": 2005,
+            "value": 3067
+          },
+          {
+            "year": 2006,
+            "value": 2520
+          },
+          {
+            "year": 2007,
+            "value": 2524
+          },
+          {
+            "year": 2008,
+            "value": 3645
+          },
+          {
+            "year": 2009,
+            "value": 3526
+          },
+          {
+            "year": 2010,
+            "value": 3156
+          },
+          {
+            "year": 2011,
+            "value": 3875
+          },
+          {
+            "year": 2012,
+            "value": 3174
+          },
+          {
+            "year": 2013,
+            "value": 2978
+          },
+          {
+            "year": 2014,
+            "value": 3202
+          },
+          {
+            "year": 2015,
+            "value": 2219
+          },
+          {
+            "year": 2016,
+            "value": 3067
+          },
+          {
+            "year": 2017,
+            "value": 3666
+          },
+          {
+            "year": 2018,
+            "value": 3321
+          },
+          {
+            "year": 2019,
+            "value": 2282
+          },
+          {
+            "year": 2020,
+            "value": 3364
+          },
+          {
+            "year": 2021,
+            "value": 2759
+          },
+          {
+            "year": 2022,
+            "value": 3685
+          },
+          {
+            "year": 2023,
+            "value": 3534
+          },
+          {
+            "year": 2024,
+            "value": 3248
+          }
+        ]
+      },
+      "tmean_c": {
+        "per_decade": 0.3,
+        "p": 0,
+        "significance": "likely",
+        "model": "theil_sen",
+        "baseline": 27.4,
+        "recent_5y": 27.7,
+        "fitted_last_year": 27.8,
+        "at_horizon": {
+          "year": 2035,
+          "mid": 28.1,
+          "lo": 27.8,
+          "hi": 28.4
+        },
+        "projection": [
+          {
+            "year": 2024,
+            "mid": 27.8,
+            "lo": 27.5,
+            "hi": 28
+          },
+          {
+            "year": 2025,
+            "mid": 27.8,
+            "lo": 27.5,
+            "hi": 28
+          },
+          {
+            "year": 2026,
+            "mid": 27.8,
+            "lo": 27.5,
+            "hi": 28.1
+          },
+          {
+            "year": 2027,
+            "mid": 27.8,
+            "lo": 27.6,
+            "hi": 28.1
+          },
+          {
+            "year": 2028,
+            "mid": 27.9,
+            "lo": 27.6,
+            "hi": 28.1
+          },
+          {
+            "year": 2029,
+            "mid": 27.9,
+            "lo": 27.6,
+            "hi": 28.2
+          },
+          {
+            "year": 2030,
+            "mid": 27.9,
+            "lo": 27.7,
+            "hi": 28.2
+          },
+          {
+            "year": 2031,
+            "mid": 28,
+            "lo": 27.7,
+            "hi": 28.2
+          },
+          {
+            "year": 2032,
+            "mid": 28,
+            "lo": 27.7,
+            "hi": 28.3
+          },
+          {
+            "year": 2033,
+            "mid": 28,
+            "lo": 27.7,
+            "hi": 28.3
+          },
+          {
+            "year": 2034,
+            "mid": 28,
+            "lo": 27.8,
+            "hi": 28.3
+          },
+          {
+            "year": 2035,
+            "mid": 28.1,
+            "lo": 27.8,
+            "hi": 28.4
+          }
+        ],
+        "label": "Average temperature",
+        "unit": "°C",
+        "bad_edge": "high",
+        "history": [
+          {
+            "year": 2001,
+            "value": 27.1
+          },
+          {
+            "year": 2002,
+            "value": 27.2
+          },
+          {
+            "year": 2003,
+            "value": 27.1
+          },
+          {
+            "year": 2004,
+            "value": 27.1
+          },
+          {
+            "year": 2005,
+            "value": 27.2
+          },
+          {
+            "year": 2006,
+            "value": 27.2
+          },
+          {
+            "year": 2007,
+            "value": 27.1
+          },
+          {
+            "year": 2008,
+            "value": 27.1
+          },
+          {
+            "year": 2009,
+            "value": 27.3
+          },
+          {
+            "year": 2010,
+            "value": 27.6
+          },
+          {
+            "year": 2011,
+            "value": 27.1
+          },
+          {
+            "year": 2012,
+            "value": 27.4
+          },
+          {
+            "year": 2013,
+            "value": 27.4
+          },
+          {
+            "year": 2014,
+            "value": 27.4
+          },
+          {
+            "year": 2015,
+            "value": 27.4
+          },
+          {
+            "year": 2016,
+            "value": 27.8
+          },
+          {
+            "year": 2017,
+            "value": 27.6
+          },
+          {
+            "year": 2018,
+            "value": 27.5
+          },
+          {
+            "year": 2019,
+            "value": 27.8
+          },
+          {
+            "year": 2020,
+            "value": 27.6
+          },
+          {
+            "year": 2021,
+            "value": 27.4
+          },
+          {
+            "year": 2022,
+            "value": 27.5
+          },
+          {
+            "year": 2023,
+            "value": 27.9
+          },
+          {
+            "year": 2024,
+            "value": 28.3
+          }
+        ]
+      },
+      "heat_days": {
+        "per_decade": 0,
+        "p": 0.112,
+        "significance": "possible",
+        "model": "theil_sen",
+        "baseline": 0,
+        "recent_5y": 0,
+        "fitted_last_year": 0,
+        "at_horizon": {
+          "year": 2035,
+          "mid": 0,
+          "lo": 0,
+          "hi": 0
+        },
+        "projection": [
+          {
+            "year": 2024,
+            "mid": 0,
+            "lo": 0,
+            "hi": 0
+          },
+          {
+            "year": 2025,
+            "mid": 0,
+            "lo": 0,
+            "hi": 0
+          },
+          {
+            "year": 2026,
+            "mid": 0,
+            "lo": 0,
+            "hi": 0
+          },
+          {
+            "year": 2027,
+            "mid": 0,
+            "lo": 0,
+            "hi": 0
+          },
+          {
+            "year": 2028,
+            "mid": 0,
+            "lo": 0,
+            "hi": 0
+          },
+          {
+            "year": 2029,
+            "mid": 0,
+            "lo": 0,
+            "hi": 0
+          },
+          {
+            "year": 2030,
+            "mid": 0,
+            "lo": 0,
+            "hi": 0
+          },
+          {
+            "year": 2031,
+            "mid": 0,
+            "lo": 0,
+            "hi": 0
+          },
+          {
+            "year": 2032,
+            "mid": 0,
+            "lo": 0,
+            "hi": 0
+          },
+          {
+            "year": 2033,
+            "mid": 0,
+            "lo": 0,
+            "hi": 0
+          },
+          {
+            "year": 2034,
+            "mid": 0,
+            "lo": 0,
+            "hi": 0
+          },
+          {
+            "year": 2035,
+            "mid": 0,
+            "lo": 0,
+            "hi": 0
+          }
+        ],
+        "label": "Days at 35 °C or hotter",
+        "unit": "days",
+        "bad_edge": "high",
+        "history": [
+          {
+            "year": 2001,
+            "value": 0
+          },
+          {
+            "year": 2002,
+            "value": 0
+          },
+          {
+            "year": 2003,
+            "value": 0
+          },
+          {
+            "year": 2004,
+            "value": 0
+          },
+          {
+            "year": 2005,
+            "value": 0
+          },
+          {
+            "year": 2006,
+            "value": 0
+          },
+          {
+            "year": 2007,
+            "value": 0
+          },
+          {
+            "year": 2008,
+            "value": 0
+          },
+          {
+            "year": 2009,
+            "value": 0
+          },
+          {
+            "year": 2010,
+            "value": 0
+          },
+          {
+            "year": 2011,
+            "value": 0
+          },
+          {
+            "year": 2012,
+            "value": 0
+          },
+          {
+            "year": 2013,
+            "value": 0
+          },
+          {
+            "year": 2014,
+            "value": 0
+          },
+          {
+            "year": 2015,
+            "value": 0
+          },
+          {
+            "year": 2016,
+            "value": 0
+          },
+          {
+            "year": 2017,
+            "value": 0
+          },
+          {
+            "year": 2018,
+            "value": 0
+          },
+          {
+            "year": 2019,
+            "value": 0
+          },
+          {
+            "year": 2020,
+            "value": 0
+          },
+          {
+            "year": 2021,
+            "value": 0
+          },
+          {
+            "year": 2022,
+            "value": 0
+          },
+          {
+            "year": 2023,
+            "value": 0
+          },
+          {
+            "year": 2024,
+            "value": 1
+          }
+        ]
+      },
+      "heavy_rain_days": {
+        "per_decade": 2.792,
+        "p": 0.2853,
+        "significance": "none",
+        "model": "average",
+        "baseline": 41,
+        "recent_5y": 42,
+        "fitted_last_year": 41,
+        "at_horizon": {
+          "year": 2035,
+          "mid": 41,
+          "lo": 30,
+          "hi": 53
+        },
+        "projection": [
+          {
+            "year": 2024,
+            "mid": 41,
+            "lo": 30,
+            "hi": 53
+          },
+          {
+            "year": 2025,
+            "mid": 41,
+            "lo": 30,
+            "hi": 53
+          },
+          {
+            "year": 2026,
+            "mid": 41,
+            "lo": 30,
+            "hi": 53
+          },
+          {
+            "year": 2027,
+            "mid": 41,
+            "lo": 30,
+            "hi": 53
+          },
+          {
+            "year": 2028,
+            "mid": 41,
+            "lo": 30,
+            "hi": 53
+          },
+          {
+            "year": 2029,
+            "mid": 41,
+            "lo": 30,
+            "hi": 53
+          },
+          {
+            "year": 2030,
+            "mid": 41,
+            "lo": 30,
+            "hi": 53
+          },
+          {
+            "year": 2031,
+            "mid": 41,
+            "lo": 30,
+            "hi": 53
+          },
+          {
+            "year": 2032,
+            "mid": 41,
+            "lo": 30,
+            "hi": 53
+          },
+          {
+            "year": 2033,
+            "mid": 41,
+            "lo": 30,
+            "hi": 53
+          },
+          {
+            "year": 2034,
+            "mid": 41,
+            "lo": 30,
+            "hi": 53
+          },
+          {
+            "year": 2035,
+            "mid": 41,
+            "lo": 30,
+            "hi": 53
+          }
+        ],
+        "label": "Downpour days (20 mm or more)",
+        "unit": "days",
+        "bad_edge": "high",
+        "history": [
+          {
+            "year": 2001,
+            "value": 31
+          },
+          {
+            "year": 2002,
+            "value": 34
+          },
+          {
+            "year": 2003,
+            "value": 42
+          },
+          {
+            "year": 2004,
+            "value": 27
+          },
+          {
+            "year": 2005,
+            "value": 47
+          },
+          {
+            "year": 2006,
+            "value": 31
+          },
+          {
+            "year": 2007,
+            "value": 36
+          },
+          {
+            "year": 2008,
+            "value": 48
+          },
+          {
+            "year": 2009,
+            "value": 46
+          },
+          {
+            "year": 2010,
+            "value": 50
+          },
+          {
+            "year": 2011,
+            "value": 50
+          },
+          {
+            "year": 2012,
+            "value": 44
+          },
+          {
+            "year": 2013,
+            "value": 40
+          },
+          {
+            "year": 2014,
+            "value": 49
+          },
+          {
+            "year": 2015,
+            "value": 35
+          },
+          {
+            "year": 2016,
+            "value": 44
+          },
+          {
+            "year": 2017,
+            "value": 55
+          },
+          {
+            "year": 2018,
+            "value": 45
+          },
+          {
+            "year": 2019,
+            "value": 21
+          },
+          {
+            "year": 2020,
+            "value": 42
+          },
+          {
+            "year": 2021,
+            "value": 32
+          },
+          {
+            "year": 2022,
+            "value": 45
+          },
+          {
+            "year": 2023,
+            "value": 51
+          },
+          {
+            "year": 2024,
+            "value": 40
+          }
+        ]
+      },
+      "max_dry_spell_days": {
+        "per_decade": 4.286,
+        "p": 0.2327,
+        "significance": "none",
+        "model": "average",
+        "baseline": 28,
+        "recent_5y": 33,
+        "fitted_last_year": 28,
+        "at_horizon": {
+          "year": 2035,
+          "mid": 28,
+          "lo": 16,
+          "hi": 41
+        },
+        "projection": [
+          {
+            "year": 2024,
+            "mid": 28,
+            "lo": 16,
+            "hi": 41
+          },
+          {
+            "year": 2025,
+            "mid": 28,
+            "lo": 16,
+            "hi": 41
+          },
+          {
+            "year": 2026,
+            "mid": 28,
+            "lo": 16,
+            "hi": 41
+          },
+          {
+            "year": 2027,
+            "mid": 28,
+            "lo": 16,
+            "hi": 41
+          },
+          {
+            "year": 2028,
+            "mid": 28,
+            "lo": 16,
+            "hi": 41
+          },
+          {
+            "year": 2029,
+            "mid": 28,
+            "lo": 16,
+            "hi": 41
+          },
+          {
+            "year": 2030,
+            "mid": 28,
+            "lo": 16,
+            "hi": 41
+          },
+          {
+            "year": 2031,
+            "mid": 28,
+            "lo": 16,
+            "hi": 41
+          },
+          {
+            "year": 2032,
+            "mid": 28,
+            "lo": 16,
+            "hi": 41
+          },
+          {
+            "year": 2033,
+            "mid": 28,
+            "lo": 16,
+            "hi": 41
+          },
+          {
+            "year": 2034,
+            "mid": 28,
+            "lo": 16,
+            "hi": 41
+          },
+          {
+            "year": 2035,
+            "mid": 28,
+            "lo": 16,
+            "hi": 41
+          }
+        ],
+        "label": "Longest dry spell",
+        "unit": "days",
+        "bad_edge": "high",
+        "history": [
+          {
+            "year": 2001,
+            "value": 19
+          },
+          {
+            "year": 2002,
+            "value": 34
+          },
+          {
+            "year": 2003,
+            "value": 28
+          },
+          {
+            "year": 2004,
+            "value": 18
+          },
+          {
+            "year": 2005,
+            "value": 36
+          },
+          {
+            "year": 2006,
+            "value": 31
+          },
+          {
+            "year": 2007,
+            "value": 34
+          },
+          {
+            "year": 2008,
+            "value": 23
+          },
+          {
+            "year": 2009,
+            "value": 14
+          },
+          {
+            "year": 2010,
+            "value": 31
+          },
+          {
+            "year": 2011,
+            "value": 18
+          },
+          {
+            "year": 2012,
+            "value": 15
+          },
+          {
+            "year": 2013,
+            "value": 16
+          },
+          {
+            "year": 2014,
+            "value": 25
+          },
+          {
+            "year": 2015,
+            "value": 23
+          },
+          {
+            "year": 2016,
+            "value": 41
+          },
+          {
+            "year": 2017,
+            "value": 51
+          },
+          {
+            "year": 2018,
+            "value": 23
+          },
+          {
+            "year": 2019,
+            "value": 30
+          },
+          {
+            "year": 2020,
+            "value": 32
+          },
+          {
+            "year": 2021,
+            "value": 29
+          },
+          {
+            "year": 2022,
+            "value": 36
+          },
+          {
+            "year": 2023,
+            "value": 43
+          },
+          {
+            "year": 2024,
+            "value": 27
+          }
+        ]
+      },
+      "water_balance_mm": {
+        "per_decade": 247.833,
+        "p": 0.0702,
+        "significance": "possible",
+        "model": "theil_sen",
+        "baseline": 1979,
+        "recent_5y": 2251,
+        "fitted_last_year": 2371,
+        "at_horizon": {
+          "year": 2035,
+          "mid": 2644,
+          "lo": 1834,
+          "hi": 3454
+        },
+        "projection": [
+          {
+            "year": 2024,
+            "mid": 2371,
+            "lo": 1656,
+            "hi": 3087
+          },
+          {
+            "year": 2025,
+            "mid": 2396,
+            "lo": 1675,
+            "hi": 3118
+          },
+          {
+            "year": 2026,
+            "mid": 2421,
+            "lo": 1692,
+            "hi": 3150
+          },
+          {
+            "year": 2027,
+            "mid": 2446,
+            "lo": 1710,
+            "hi": 3182
+          },
+          {
+            "year": 2028,
+            "mid": 2471,
+            "lo": 1727,
+            "hi": 3214
+          },
+          {
+            "year": 2029,
+            "mid": 2495,
+            "lo": 1743,
+            "hi": 3247
+          },
+          {
+            "year": 2030,
+            "mid": 2520,
+            "lo": 1760,
+            "hi": 3281
+          },
+          {
+            "year": 2031,
+            "mid": 2545,
+            "lo": 1775,
+            "hi": 3315
+          },
+          {
+            "year": 2032,
+            "mid": 2570,
+            "lo": 1791,
+            "hi": 3349
+          },
+          {
+            "year": 2033,
+            "mid": 2595,
+            "lo": 1806,
+            "hi": 3383
+          },
+          {
+            "year": 2034,
+            "mid": 2619,
+            "lo": 1820,
+            "hi": 3418
+          },
+          {
+            "year": 2035,
+            "mid": 2644,
+            "lo": 1834,
+            "hi": 3454
+          }
+        ],
+        "label": "Rain minus crop water demand",
+        "unit": "mm",
+        "bad_edge": "low",
+        "history": [
+          {
+            "year": 2001,
+            "value": 1448
+          },
+          {
+            "year": 2002,
+            "value": 1282
+          },
+          {
+            "year": 2003,
+            "value": 1982
+          },
+          {
+            "year": 2004,
+            "value": 1225
+          },
+          {
+            "year": 2005,
+            "value": 2015
+          },
+          {
+            "year": 2006,
+            "value": 1502
+          },
+          {
+            "year": 2007,
+            "value": 1484
+          },
+          {
+            "year": 2008,
+            "value": 2612
+          },
+          {
+            "year": 2009,
+            "value": 2487
+          },
+          {
+            "year": 2010,
+            "value": 2079
+          },
+          {
+            "year": 2011,
+            "value": 2855
+          },
+          {
+            "year": 2012,
+            "value": 2119
+          },
+          {
+            "year": 2013,
+            "value": 1925
+          },
+          {
+            "year": 2014,
+            "value": 2108
+          },
+          {
+            "year": 2015,
+            "value": 1117
+          },
+          {
+            "year": 2016,
+            "value": 1951
+          },
+          {
+            "year": 2017,
+            "value": 2616
+          },
+          {
+            "year": 2018,
+            "value": 2270
+          },
+          {
+            "year": 2019,
+            "value": 1168
+          },
+          {
+            "year": 2020,
+            "value": 2288
+          },
+          {
+            "year": 2021,
+            "value": 1699
+          },
+          {
+            "year": 2022,
+            "value": 2640
+          },
+          {
+            "year": 2023,
+            "value": 2470
+          },
+          {
+            "year": 2024,
+            "value": 2158
+          }
+        ]
+      },
+      "dry_months": {
+        "per_decade": 0,
+        "p": 0.2984,
+        "significance": "none",
+        "model": "average",
+        "baseline": 1.4,
+        "recent_5y": 1.6,
+        "fitted_last_year": 1.4,
+        "at_horizon": {
+          "year": 2035,
+          "mid": 1.4,
+          "lo": 0,
+          "hi": 2.7
+        },
+        "projection": [
+          {
+            "year": 2024,
+            "mid": 1.4,
+            "lo": 0,
+            "hi": 2.7
+          },
+          {
+            "year": 2025,
+            "mid": 1.4,
+            "lo": 0,
+            "hi": 2.7
+          },
+          {
+            "year": 2026,
+            "mid": 1.4,
+            "lo": 0,
+            "hi": 2.7
+          },
+          {
+            "year": 2027,
+            "mid": 1.4,
+            "lo": 0,
+            "hi": 2.7
+          },
+          {
+            "year": 2028,
+            "mid": 1.4,
+            "lo": 0,
+            "hi": 2.7
+          },
+          {
+            "year": 2029,
+            "mid": 1.4,
+            "lo": 0,
+            "hi": 2.7
+          },
+          {
+            "year": 2030,
+            "mid": 1.4,
+            "lo": 0,
+            "hi": 2.7
+          },
+          {
+            "year": 2031,
+            "mid": 1.4,
+            "lo": 0,
+            "hi": 2.7
+          },
+          {
+            "year": 2032,
+            "mid": 1.4,
+            "lo": 0,
+            "hi": 2.7
+          },
+          {
+            "year": 2033,
+            "mid": 1.4,
+            "lo": 0,
+            "hi": 2.7
+          },
+          {
+            "year": 2034,
+            "mid": 1.4,
+            "lo": 0,
+            "hi": 2.7
+          },
+          {
+            "year": 2035,
+            "mid": 1.4,
+            "lo": 0,
+            "hi": 2.7
+          }
+        ],
+        "label": "Dry months",
+        "unit": "months",
+        "bad_edge": "high",
+        "history": [
+          {
+            "year": 2001,
+            "value": 0
+          },
+          {
+            "year": 2002,
+            "value": 2
+          },
+          {
+            "year": 2003,
+            "value": 1
+          },
+          {
+            "year": 2004,
+            "value": 3
+          },
+          {
+            "year": 2005,
+            "value": 2
+          },
+          {
+            "year": 2006,
+            "value": 0
+          },
+          {
+            "year": 2007,
+            "value": 1
+          },
+          {
+            "year": 2008,
+            "value": 0
+          },
+          {
+            "year": 2009,
+            "value": 0
+          },
+          {
+            "year": 2010,
+            "value": 1
+          },
+          {
+            "year": 2011,
+            "value": 2
+          },
+          {
+            "year": 2012,
+            "value": 1
+          },
+          {
+            "year": 2013,
+            "value": 1
+          },
+          {
+            "year": 2014,
+            "value": 3
+          },
+          {
+            "year": 2015,
+            "value": 2
+          },
+          {
+            "year": 2016,
+            "value": 2
+          },
+          {
+            "year": 2017,
+            "value": 0
+          },
+          {
+            "year": 2018,
+            "value": 1
+          },
+          {
+            "year": 2019,
+            "value": 3
+          },
+          {
+            "year": 2020,
+            "value": 2
+          },
+          {
+            "year": 2021,
+            "value": 1
+          },
+          {
+            "year": 2022,
+            "value": 1
+          },
+          {
+            "year": 2023,
+            "value": 1
+          },
+          {
+            "year": 2024,
+            "value": 3
+          }
+        ]
+      }
+    },
+    "crop_outlook": [
+      {
+        "crop": "groundnut",
+        "fit_now": 74,
+        "fit_trend_2035": 74,
+        "fit_bad_year_2035": 74,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "rice",
+        "fit_now": 71,
+        "fit_trend_2035": 71,
+        "fit_bad_year_2035": 71,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "soybean",
+        "fit_now": 65,
+        "fit_trend_2035": 65,
+        "fit_bad_year_2035": 65,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "black_gram",
+        "fit_now": 65,
+        "fit_trend_2035": 65,
+        "fit_bad_year_2035": 65,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "cowpea",
+        "fit_now": 65,
+        "fit_trend_2035": 61,
+        "fit_bad_year_2035": 65,
+        "water_now": 0.93,
+        "water_bad_year": 0.94
+      },
+      {
+        "crop": "green_gram",
+        "fit_now": 61,
+        "fit_trend_2035": 57,
+        "fit_bad_year_2035": 62,
+        "water_now": 0.93,
+        "water_bad_year": 0.94
+      },
+      {
+        "crop": "pigeon_pea",
+        "fit_now": 61,
+        "fit_trend_2035": 54,
+        "fit_bad_year_2035": 62,
+        "water_now": 0.89,
+        "water_bad_year": 0.91
+      },
+      {
+        "crop": "salt_rice",
+        "fit_now": 61,
+        "fit_trend_2035": 61,
+        "fit_bad_year_2035": 61,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "sweet_potato",
+        "fit_now": 61,
+        "fit_trend_2035": 57,
+        "fit_bad_year_2035": 61,
+        "water_now": 0.93,
+        "water_bad_year": 0.94
+      },
+      {
+        "crop": "vegetables",
+        "fit_now": 56,
+        "fit_trend_2035": 56,
+        "fit_bad_year_2035": 56,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "chickpea",
+        "fit_now": 56,
+        "fit_trend_2035": 52,
+        "fit_bad_year_2035": 57,
+        "water_now": 0.93,
+        "water_bad_year": 0.94
+      },
+      {
+        "crop": "sorghum",
+        "fit_now": 53,
+        "fit_trend_2035": 47,
+        "fit_bad_year_2035": 53,
+        "water_now": 0.89,
+        "water_bad_year": 0.91
+      },
+      {
+        "crop": "watermelon",
+        "fit_now": 52,
+        "fit_trend_2035": 52,
+        "fit_bad_year_2035": 52,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "sesame",
+        "fit_now": 50,
+        "fit_trend_2035": 46,
+        "fit_bad_year_2035": 50,
+        "water_now": 0.93,
+        "water_bad_year": 0.94
+      },
+      {
+        "crop": "pineapple",
+        "fit_now": 49,
+        "fit_trend_2035": 46,
+        "fit_bad_year_2035": 50,
+        "water_now": 0.93,
+        "water_bad_year": 0.94
+      },
+      {
+        "crop": "cassava",
+        "fit_now": 47,
+        "fit_trend_2035": 44,
+        "fit_bad_year_2035": 48,
+        "water_now": 0.93,
+        "water_bad_year": 0.94
+      },
+      {
+        "crop": "sunflower",
+        "fit_now": 47,
+        "fit_trend_2035": 43,
+        "fit_bad_year_2035": 47,
+        "water_now": 0.93,
+        "water_bad_year": 0.94
+      },
+      {
+        "crop": "sugarcane",
+        "fit_now": 45,
+        "fit_trend_2035": 45,
+        "fit_bad_year_2035": 45,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "maize",
+        "fit_now": 43,
+        "fit_trend_2035": 43,
+        "fit_bad_year_2035": 43,
+        "water_now": 1,
+        "water_bad_year": 1
+      },
+      {
+        "crop": "sunn_hemp",
+        "fit_now": 40,
+        "fit_trend_2035": 36,
+        "fit_bad_year_2035": 40,
+        "water_now": 0.93,
+        "water_bad_year": 0.94
+      },
+      {
+        "crop": "potato",
+        "fit_now": 17,
+        "fit_trend_2035": 8,
+        "fit_bad_year_2035": 4,
+        "water_now": 1,
+        "water_bad_year": 1
+      }
+    ],
+    "consequences": [
+      {
+        "kind": "crop_shift",
+        "severity": "medium",
+        "metric": null,
+        "headline": "Pigeon pea fits 7 points worse by 2035",
+        "detail": "If today's trends continue: Pigeon pea 61 → 54; Cowpea 65 → 61; Green gram 61 → 57 (crop match out of 100).",
+        "action": "Build the rotation around crops whose match holds up.",
+        "crops": [
+          "pigeon_pea",
+          "cowpea",
+          "green_gram"
+        ],
+        "significance": "projection"
+      },
+      {
+        "kind": "warming",
+        "severity": "low",
+        "metric": "tmean_c",
+        "headline": "+0.7 °C warmer on average by 2035",
+        "detail": "The yearly average moves from 27.4 °C to about 28.1 °C. Most recommended crops stay inside their temperature range.",
+        "action": "Watch heat stress in cool-climate crops; earlier sowing helps.",
+        "crops": [],
+        "significance": "likely"
+      },
+      {
+        "kind": "wetting",
+        "severity": "low",
+        "metric": "precip_mm",
+        "headline": "About 24% more rain by 2035",
+        "detail": "Yearly rain trends from about 3,036 mm to 3,758 mm. More water, but also more waterlogging on heavy soil.",
+        "action": "Keep drains open; raised beds help crops that hate wet feet.",
+        "crops": [],
+        "significance": "likely"
+      }
+    ]
+  },
+  "crop_fit": [
+    {
+      "crop": "groundnut",
+      "rank": 1,
+      "fit": 74,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range",
+        "fixes nitrogen on low-fertility soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.52,
+        "benefit": 0.75
+      },
+      "label": "Possible fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Jan (rough)",
+      "sow_month": 10,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+    },
+    {
+      "crop": "rice",
+      "rank": 2,
+      "fit": 71,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [
+        "sandy, low-water-holding soil"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range",
+        "tolerates standing water and flooding"
+      ],
+      "common_locally": true,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.64,
+        "risk": 0.92,
+        "benefit": 0.33
+      },
+      "label": "Possible fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Feb (rough)",
+      "sow_month": 10,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "soybean",
+      "rank": 3,
+      "fit": 65,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range",
+        "fixes nitrogen on low-fertility soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.76,
+        "risk": 0.52,
+        "benefit": 0.75
+      },
+      "label": "Possible fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Jan (rough)",
+      "sow_month": 10,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+    },
+    {
+      "crop": "black_gram",
+      "rank": 4,
+      "fit": 65,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range",
+        "fixes nitrogen on low-fertility soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.76,
+        "risk": 0.52,
+        "benefit": 0.75
+      },
+      "label": "Possible fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Jan (rough)",
+      "sow_month": 10,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+    },
+    {
+      "crop": "cowpea",
+      "rank": 5,
+      "fit": 65,
+      "fit_band": "medium",
+      "trend": "declining",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range",
+        "fixes nitrogen on low-fertility soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.93,
+        "soil": 1,
+        "risk": 0.4,
+        "benefit": 0.73
+      },
+      "label": "Possible fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Dec (rough)",
+      "sow_month": 10,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+    },
+    {
+      "crop": "green_gram",
+      "rank": 6,
+      "fit": 61,
+      "fit_band": "medium",
+      "trend": "declining",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range",
+        "fixes nitrogen on low-fertility soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.93,
+        "soil": 0.88,
+        "risk": 0.4,
+        "benefit": 0.75
+      },
+      "label": "Possible fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Dec (rough)",
+      "sow_month": 10,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+    },
+    {
+      "crop": "pigeon_pea",
+      "rank": 7,
+      "fit": 61,
+      "fit_band": "medium",
+      "trend": "declining",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "temperature (~27 C) is in its range",
+        "fixes nitrogen on low-fertility soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.89,
+        "soil": 0.88,
+        "risk": 0.4,
+        "benefit": 0.81
+      },
+      "label": "Possible fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Apr (rough)",
+      "sow_month": 10,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+    },
+    {
+      "crop": "salt_rice",
+      "rank": 8,
+      "fit": 61,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [
+        "sandy, low-water-holding soil"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range",
+        "tolerates standing water and flooding"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.64,
+        "risk": 0.97,
+        "benefit": 0.29
+      },
+      "label": "Possible fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Feb (rough)",
+      "sow_month": 10,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "sweet_potato",
+      "rank": 9,
+      "fit": 61,
+      "fit_band": "medium",
+      "trend": "declining",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range",
+        "copes with sandy soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.93,
+        "soil": 1,
+        "risk": 0.55,
+        "benefit": 0.34
+      },
+      "label": "Possible fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Feb (rough)",
+      "sow_month": 10,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "vegetables",
+      "rank": 10,
+      "fit": 56,
+      "fit_band": "medium",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "temperature (~27 C) is in its range",
+        "already grown locally (farmer know-how, market)"
+      ],
+      "common_locally": true,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.76,
+        "risk": 0.4,
+        "benefit": 0.29
+      },
+      "label": "Possible fit",
+      "planting_window": "year-round; avoid the heaviest rain weeks",
+      "harvest": "~Dec (rough)",
+      "sow_month": 10,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "chickpea",
+      "rank": 11,
+      "fit": 56,
+      "fit_band": "medium",
+      "trend": "declining",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "temperature (~27 C) is in its range",
+        "fixes nitrogen on low-fertility soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.93,
+        "soil": 0.76,
+        "risk": 0.4,
+        "benefit": 0.72
+      },
+      "label": "Possible fit",
+      "planting_window": "Jan-Feb (after monsoon, on residual moisture)",
+      "harvest": "~Apr (rough)",
+      "sow_month": 1,
+      "yield_outlook": "middle of range",
+      "rotation_tip": "Good before cereals, maize or cassava because it leaves nitrogen in the soil. Especially useful on this area's low-fertility soil."
+    },
+    {
+      "crop": "sorghum",
+      "rank": 12,
+      "fit": 53,
+      "fit_band": "low",
+      "trend": "declining",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "temperature (~27 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.89,
+        "soil": 0.88,
+        "risk": 0.55,
+        "benefit": 0.28
+      },
+      "label": "Poor fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Feb (rough)",
+      "sow_month": 10,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "watermelon",
+      "rank": 13,
+      "fit": 53,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "temperature (~27 C) is in its range",
+        "copes with sandy soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 1,
+        "risk": 0.42,
+        "benefit": 0.23
+      },
+      "label": "Poor fit",
+      "planting_window": "year-round; avoid the heaviest rain weeks",
+      "harvest": "~Jan (rough)",
+      "sow_month": 10,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "sesame",
+      "rank": 14,
+      "fit": 50,
+      "fit_band": "low",
+      "trend": "declining",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.93,
+        "soil": 0.88,
+        "risk": 0.4,
+        "benefit": 0.33
+      },
+      "label": "Poor fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Jan (rough)",
+      "sow_month": 10,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "pineapple",
+      "rank": 15,
+      "fit": 49,
+      "fit_band": "low",
+      "trend": "declining",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.93,
+        "soil": 0.88,
+        "risk": 0.4,
+        "benefit": 0.32
+      },
+      "label": "Poor fit",
+      "planting_window": "Oct-Nov (start of wet season)",
+      "harvest": "~Feb (rough)",
+      "sow_month": 11,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "cassava",
+      "rank": 16,
+      "fit": 47,
+      "fit_band": "low",
+      "trend": "declining",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range",
+        "copes with sandy soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.93,
+        "soil": 1,
+        "risk": 0.52,
+        "benefit": 0.34
+      },
+      "label": "Poor fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Aug (rough)",
+      "sow_month": 10,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "sunflower",
+      "rank": 17,
+      "fit": 47,
+      "fit_band": "low",
+      "trend": "declining",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.93,
+        "soil": 0.76,
+        "risk": 0.42,
+        "benefit": 0.32
+      },
+      "label": "Poor fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Jan (rough)",
+      "sow_month": 10,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    },
+    {
+      "crop": "sugarcane",
+      "rank": 18,
+      "fit": 45,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.76,
+        "risk": 0.55,
+        "benefit": 0.38
+      },
+      "label": "Poor fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Sep (rough)",
+      "sow_month": 10,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "maize",
+      "rank": 19,
+      "fit": 43,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.76,
+        "risk": 0.52,
+        "benefit": 0.36
+      },
+      "label": "Poor fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Feb (rough)",
+      "sow_month": 10,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Plant after a legume to cut fertiliser need and break disease cycles."
+    },
+    {
+      "crop": "sunn_hemp",
+      "rank": 20,
+      "fit": 40,
+      "fit_band": "low",
+      "trend": "declining",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range",
+        "fixes nitrogen on low-fertility soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.93,
+        "soil": 1,
+        "risk": 0.4,
+        "benefit": 0.69
+      },
+      "label": "Poor fit",
+      "planting_window": "Oct-Nov",
+      "harvest": "~Dec (rough)",
+      "sow_month": 10,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Soil-building crop with no direct income; plough in or use as ground cover."
+    },
+    {
+      "crop": "oil_palm",
+      "rank": 21,
+      "fit": 24,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.76,
+        "risk": 0.67,
+        "benefit": 0.46
+      },
+      "label": "Poor fit",
+      "planting_window": "Oct-Nov (start of wet season)",
+      "harvest": "multi-year",
+      "sow_month": 11,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Perennial tree crop, not a rotation crop; use a legume cover between young rows."
+    },
+    {
+      "crop": "rubber",
+      "rank": 22,
+      "fit": 18,
+      "fit_band": "low",
+      "trend": "flat",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 1,
+        "soil": 0.76,
+        "risk": 0.52,
+        "benefit": 0.38
+      },
+      "label": "Poor fit",
+      "planting_window": "Oct-Nov (start of wet season)",
+      "harvest": "multi-year",
+      "sow_month": 11,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Perennial tree crop, not a rotation crop; use a legume cover between young rows."
+    },
+    {
+      "crop": "cover_legume",
+      "rank": 23,
+      "fit": 18,
+      "fit_band": "low",
+      "trend": "declining",
+      "limits": [],
+      "why": [
+        "rainfall (~2581 mm in season) covers its water need",
+        "temperature (~27 C) is in its range",
+        "fixes nitrogen on low-fertility soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.93,
+        "soil": 0.88,
+        "risk": 0.65,
+        "benefit": 0.72
+      },
+      "label": "Poor fit",
+      "planting_window": "Oct-Nov (start of wet season)",
+      "harvest": "multi-year",
+      "sow_month": 11,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Soil-building crop with no direct income; plough in or use as ground cover."
+    },
+    {
+      "crop": "cashew",
+      "rank": 24,
+      "fit": 18,
+      "fit_band": "low",
+      "trend": "declining",
+      "limits": [
+        "flood risk"
+      ],
+      "why": [
+        "temperature (~27 C) is in its range",
+        "copes with sandy soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 1,
+        "water": 0.89,
+        "soil": 1,
+        "risk": 0.42,
+        "benefit": 0.38
+      },
+      "label": "Poor fit",
+      "planting_window": "Oct-Nov (start of wet season)",
+      "harvest": "multi-year",
+      "sow_month": 11,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Perennial tree crop, not a rotation crop; use a legume cover between young rows."
+    },
+    {
+      "crop": "potato",
+      "rank": 25,
+      "fit": 17,
+      "fit_band": "low",
+      "trend": "declining",
+      "limits": [
+        "temperature (area ~27 C, crop prefers 12-24 C)",
+        "flood risk"
+      ],
+      "why": [
+        "moderate match on climate, water and soil"
+      ],
+      "common_locally": false,
+      "parts": {
+        "climate": 0.43,
+        "water": 1,
+        "soil": 0.76,
+        "risk": 0.4,
+        "benefit": 0.29
+      },
+      "label": "Poor fit",
+      "planting_window": "year-round; avoid the heaviest rain weeks",
+      "harvest": "~Jan (rough)",
+      "sow_month": 10,
+      "yield_outlook": "lower end or at risk",
+      "rotation_tip": "Rotate with a legume or cereal; avoid repeating it on the same plot."
+    }
+  ],
+  "sources": [
+    "rain from CHIRPS",
+    "temperature from NASA POWER",
+    "greenness from NASA VIIRS",
+    "ISRIC SoilGrids",
+    "NASA SRTM elevation",
+    "crop scores from the team rules applied to measured data"
+  ]
+}

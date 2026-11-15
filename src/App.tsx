@@ -1,76 +1,150 @@
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
-import { AlertTriangle, Loader2 } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 import { useSowcastData } from './hooks/useSowcastData';
-import { AppHeader, STEPS, type StepId } from './components/layout/AppHeader';
+import { AppHeader } from './components/layout/AppHeader';
+import { CommandMenu } from './components/layout/CommandMenu';
+import { Button } from './components/ui/Button';
+import { PageSkeleton } from './components/ui/Skeleton';
+import { FADE } from './lib/motion';
+import { PAGE_IDS, stepLoaders, type PageId } from './lib/stepLoaders';
+import { CropProvider } from './components/crops/CropContext';
+import type { PlanGoal } from './types';
 
-// Each step loads on demand, so the map library (Leaflet) and the chart library (Recharts) are only
-// downloaded when their step is opened.
-const FieldMap = lazy(() => import('./components/map/FieldMap').then((m) => ({ default: m.FieldMap })));
-const FieldBrief = lazy(() => import('./components/brief/FieldBrief').then((m) => ({ default: m.FieldBrief })));
-const RotationCompare = lazy(() => import('./components/rotations/RotationCompare').then((m) => ({ default: m.RotationCompare })));
-const CropFitList = lazy(() => import('./components/crops/CropFitList').then((m) => ({ default: m.CropFitList })));
+const FieldMap = lazy(() => stepLoaders.map().then((m) => ({ default: m.FieldMap })));
+const FieldBrief = lazy(() => stepLoaders.brief().then((m) => ({ default: m.FieldBrief })));
+const RotationCompare = lazy(() => stepLoaders.rotations().then((m) => ({ default: m.RotationCompare })));
+const CropFitList = lazy(() => stepLoaders.crops().then((m) => ({ default: m.CropFitList })));
+const RotationBuilder = lazy(() => stepLoaders.build().then((m) => ({ default: m.RotationBuilder })));
+const MethodsPage = lazy(() => stepLoaders.methods().then((m) => ({ default: m.MethodsPage })));
+const PlanDocument = lazy(() => import('./components/plan/PlanDocument').then((m) => ({ default: m.PlanDocument })));
 
-/** ?step=brief|rotations|crops opens a page directly (handy for demos and testing). */
-function initialStep(): StepId {
+const pageFromUrl = (): PageId => {
   const s = new URLSearchParams(window.location.search).get('step');
-  return STEPS.some((x) => x.id === s) ? (s as StepId) : 'map';
+  return PAGE_IDS.includes(s as PageId) ? (s as PageId) : 'map';
+};
+
+// Earlier versions kept a "chosen plan" in this browser. Nothing is stored any more, so clear it.
+try {
+  localStorage.removeItem('sowcast:chosen-plans');
+} catch {
+  /* storage unavailable: nothing to clear */
 }
 
-function Loading({ text }: { text: string }) {
-  return (
-    <div className="py-20 flex flex-col items-center justify-center gap-3 text-stone-500">
-      <Loader2 className="w-8 h-8 animate-spin text-brand-600" />
-      <p className="text-sm font-semibold">{text}</p>
-    </div>
-  );
-}
-
+/** The printable plan opens as its own page (?view=plan&region=…&plan=…), so browser translation works on it. */
 export default function App() {
-  const [step, setStep] = useState<StepId>(initialStep);
-  const { regions, cropsMap, selectedRegionId, setSelectedRegionId, regionDetail, loadingInit, loadingRegion, error } = useSowcastData();
+  const q = new URLSearchParams(window.location.search);
+  if (q.get('view') === 'plan' && q.get('region') && q.get('plan')) {
+    return (
+      <Suspense fallback={<p className="p-8 text-stone-600">Preparing your plan…</p>}>
+        <PlanDocument regionId={q.get('region')!} planId={q.get('plan')!} goal={(q.get('goal') as PlanGoal | null) ?? null} autoPrint={q.get('print') === '1'} />
+      </Suspense>
+    );
+  }
+  return <MainApp />;
+}
+
+function MainApp() {
+  const [step, setStep] = useState<PageId>(pageFromUrl);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [planGoal, setPlanGoal] = useState<PlanGoal>('balanced');
+  const { regions, cropsMap, selectedRegionId, setSelectedRegionId, regionDetail, loadingInit, loadingRegion, error, retry } = useSowcastData();
+
+  // Pages live in the browser history, so the Back button / back gesture returns to the previous page.
+  const stepRef = useRef(step);
+  stepRef.current = step;
+  const goTo = useCallback((next: PageId) => {
+    if (stepRef.current !== next) window.history.pushState({ step: next }, '', `?step=${next}`);
+    setStep(next);
+    window.scrollTo({ top: 0 });
+  }, []);
+  useEffect(() => {
+    window.history.replaceState({ step: pageFromUrl() }, '', window.location.search || '?step=map');
+    const onPop = () => setStep(pageFromUrl());
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+
+  // "Download PDF": the plan document opens in a new tab and brings up the print dialog (Save as PDF).
+  const downloadPlan = (planId: string) => {
+    const url = `?view=plan&region=${encodeURIComponent(selectedRegionId)}&plan=${encodeURIComponent(planId)}&goal=${planGoal}&print=1`;
+    window.open(url, '_blank', 'noopener');
+  };
+
   const regionLabel = regionDetail ? `${regionDetail.region.name}, ${regionDetail.region.country}` : null;
   const detail = !loadingRegion ? regionDetail : null;
+  const skeleton = <PageSkeleton variant={step === 'build' ? 'rotations' : step === 'methods' ? 'crops' : step} />;
 
   return (
-    <div className="min-h-screen flex flex-col bg-stone-50 text-stone-900">
-      <AppHeader step={step} onStepChange={setStep} regionLabel={regionLabel} />
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-dvh flex flex-col bg-stone-50 text-stone-900">
+        <AppHeader step={step} onStepChange={goTo} regionLabel={regionLabel} onOpenMenu={() => setMenuOpen(true)} />
 
-      <main className="flex-1 max-w-6xl w-full mx-auto px-4 py-5 sm:py-7">
-        {error && (
-          <div className="mb-5 bg-red-50 border border-red-200 text-red-900 rounded-2xl p-4 flex items-center gap-3">
-            <AlertTriangle className="w-5 h-5 text-red-600 shrink-0" />
-            <div className="text-sm font-medium">{error}</div>
-          </div>
-        )}
+        <CropProvider cropsMap={cropsMap} cropFit={detail?.crop_fit ?? null} place={detail?.region.place ?? null}>
+          <main className="flex-1 max-w-6xl w-full mx-auto px-[max(1rem,env(safe-area-inset-left))] py-6 sm:py-8">
+            {error && (
+              <div role="alert" className="mb-6 bg-red-50 border border-red-200 text-red-900 rounded-2xl p-4 flex flex-wrap items-center gap-3">
+                <AlertTriangle className="w-5 h-5 text-red-600 shrink-0" />
+                <p className="text-sm font-medium flex-1 min-w-[16rem]">{error}</p>
+                <Button variant="secondary" size="sm" onClick={retry}>
+                  Try again
+                </Button>
+              </div>
+            )}
 
-        {loadingInit ? (
-          <Loading text="Loading field profiles & crop library…" />
-        ) : (
-          <MotionConfig reducedMotion="user">
-            <AnimatePresence mode="wait">
-              {/* Keyed by step only: regions change on the map step, and re-keying there would rebuild the map. */}
-              <motion.div key={step} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.18 }}>
-                <Suspense fallback={<Loading text="Loading…" />}>
-                {step === 'map' && (
-                  <FieldMap regions={regions} selectedRegionId={selectedRegionId} onSelectRegion={setSelectedRegionId} onContinue={() => setStep('brief')} />
-                )}
-                {step !== 'map' && loadingRegion && <Loading text="Loading satellite summary…" />}
-                {step === 'brief' && detail && <FieldBrief data={detail} cropsMap={cropsMap} onContinue={() => setStep('rotations')} />}
-                {step === 'rotations' && detail && regionLabel && (
-                  <RotationCompare regionName={regionLabel} rotations={detail.rotations} cropsMap={cropsMap} onContinue={() => setStep('crops')} />
-                )}
-                {step === 'crops' && detail && regionLabel && <CropFitList regionName={regionLabel} cropFit={detail.crop_fit} cropsMap={cropsMap} />}
-                </Suspense>
-              </motion.div>
-            </AnimatePresence>
-          </MotionConfig>
-        )}
-      </main>
+            {loadingInit ? (
+              skeleton
+            ) : (
+              <AnimatePresence mode="wait" initial={false}>
+                {/* Keyed by page only: regions change on the map step, and re-keying there would rebuild the map. */}
+                <motion.div key={step} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={FADE}>
+                  <Suspense fallback={skeleton}>
+                    {step === 'map' && (
+                      <FieldMap regions={regions} selectedRegionId={selectedRegionId} onSelectRegion={setSelectedRegionId} onContinue={() => goTo('brief')} onOpenSearch={() => setMenuOpen(true)} />
+                    )}
+                    {step !== 'map' && step !== 'methods' && loadingRegion && skeleton}
+                    {step === 'brief' && detail && (
+                      <FieldBrief data={detail} cropsMap={cropsMap} onContinue={() => goTo('rotations')} onOpenMethods={() => goTo('methods')} />
+                    )}
+                    {step === 'rotations' && detail && regionLabel && (
+                      <RotationCompare
+                        regionName={regionLabel}
+                        detail={detail}
+                        goal={planGoal}
+                        onGoalChange={setPlanGoal}
+                        onDownload={downloadPlan}
+                        onBuildOwn={() => goTo('build')}
+                        onContinue={() => goTo('crops')}
+                      />
+                    )}
+                    {step === 'crops' && detail && regionLabel && <CropFitList regionName={regionLabel} cropFit={detail.crop_fit} cropsMap={cropsMap} />}
+                    {step === 'build' && detail && regionLabel && <RotationBuilder regionName={regionLabel} detail={detail} onBack={() => goTo('rotations')} />}
+                    {step === 'methods' && <MethodsPage onBack={() => window.history.back()} />}
+                  </Suspense>
+                </motion.div>
+              </AnimatePresence>
+            )}
+          </main>
+        </CropProvider>
 
-      <footer className="border-t border-stone-200 bg-white py-4 px-4 text-center text-xs text-stone-600">
-        Sowcast suggests options from satellite patterns. It doesn't replace an agronomist, so check with a local agricultural expert before you change your rotation.
-      </footer>
-    </div>
+        <footer className="border-t border-stone-200 bg-white px-4 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] text-center text-sm text-stone-600">
+          <p className="mx-auto max-w-[70ch] text-pretty">
+            Sowcast suggests options from satellite patterns. It doesn't replace an agronomist, so check with a local agricultural expert before you change your rotation.
+          </p>
+          <button type="button" onClick={() => goTo('methods')} className="mt-2 inline-flex min-h-10 items-center rounded-lg px-2 font-semibold text-brand-800 underline underline-offset-4 hover:text-brand-950">
+            How the data was analysed: methods and sources
+          </button>
+        </footer>
+
+        <CommandMenu
+          open={menuOpen}
+          onOpenChange={setMenuOpen}
+          regions={regions}
+          currentRegionId={selectedRegionId}
+          onSelectRegion={setSelectedRegionId}
+          onSelectStep={goTo}
+        />
+      </div>
+    </MotionConfig>
   );
 }

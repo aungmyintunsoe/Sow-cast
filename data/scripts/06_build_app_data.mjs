@@ -24,6 +24,9 @@ const scored = fs.existsSync(path.join(SCORED, 'sowcast_region_crop_fit.csv'));
 const fitRows = readCSV(path.join(scored ? SCORED : IN, 'sowcast_region_crop_fit.csv'));
 const rotRows = readCSV(path.join(scored ? SCORED : IN, 'sowcast_rotations.csv'));
 const inputsUsed = scored && fs.existsSync(path.join(SCORED, 'region_inputs_used.csv')) ? readCSV(path.join(SCORED, 'region_inputs_used.csv')) : [];
+const recFile = [path.join(SCORED, 'sowcast_rotation_recommendations.json'), path.join(IN, 'sowcast_rotation_recommendations.json')].find((f) => fs.existsSync(f));
+const recs = recFile ? JSON.parse(fs.readFileSync(recFile, 'utf8')) : {};
+const recMeasured = recFile?.includes('scored') ?? false;
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 /** Short source names for sentences ("CHIRPS (ClimateSERV)" → "CHIRPS"). */
 const shortSrc = (s) => (s ? String(s).replace(/ \(.*\)$/, '') : 'NASA POWER');
@@ -48,6 +51,16 @@ const crops = cropRows.map((c) => ({
   seasonal_rain_need_mm: c.seasonal_rain_need_mm, needs_flat_land: bool(c.needs_flat_land), dry_season_crop: bool(c.dry_season_crop),
   erosion_cover: c.erosion_cover, organic_matter: c.organic_matter, market: c.market, forage_value: c.forage_value,
   pest_notes: c.pest_notes, plain_description: c.plain_description,
+  // Farming details (team's crop table; rough, regional averages)
+  yield_low: c.rough_yield_low ?? null, yield_high: c.rough_yield_high ?? null, yield_unit: c.yield_unit ?? null,
+  n_fixed: c.n_fixed_kg_ha_rough && c.n_fixed_kg_ha_rough !== 'none' ? String(c.n_fixed_kg_ha_rough) : null,
+  needs: {
+    fertiliser: c.fertiliser_need_1_5 ?? null, labour: c.labour_need_1_5 ?? null, seed_cost: c.seed_cost_1_5 ?? null,
+    pest_difficulty: c.pest_difficulty_1_5 ?? null, storage_difficulty: c.storage_difficulty_1_5 ?? null,
+  },
+  relative_income: c.relative_income_1_5 ?? null,
+  good_after: split(c.good_after, '|'), avoid_after: split(c.avoid_after, '|'),
+  farmer_tip: c.farmer_tip ?? '',
 }));
 const cropById = Object.fromEntries(crops.map((c) => [c.id, c]));
 const cropName = (id) => (id === 'fallow' ? 'fallow' : id === 'perennial_tree' ? 'tree crops' : (cropById[id]?.name ?? id).replace(/ \(.*\)$/, ''));
@@ -194,6 +207,90 @@ function buildRotations(r, rots, fits) {
   });
 }
 
+// ---------- crop calendars (team planting rules: sow_month from make_data.window(), length from season_days) ----------
+const PERENNIAL = new Set(['cashew', 'oil_palm', 'rubber', 'cover_legume', 'perennial_tree']);
+const nMonths = (days) => Math.max(1, Math.min(12, Math.round(days / 30)));
+function calendarFor(steps, planType, sowOf) {
+  const blank = () => Array(12).fill(null);
+  const place = (row, id, start, n) => { for (let i = 0; i < n; i++) row[(start - 1 + i) % 12] ??= id; };
+  const dur = (id) => Number(cropById[id]?.season_days) || 120;
+  const flat = steps.flatMap((x) => x.split('+'));
+  const tree = flat.find((x) => PERENNIAL.has(x) && x !== 'cover_legume');
+  // Tree crops with something between the rows: trees all year, the intercrop in its own months
+  if (tree) {
+    const under = blank();
+    for (const id of flat.filter((x) => x !== tree)) place(under, id, sowOf(id) ?? 5, id === 'cover_legume' ? 12 : nMonths(dur(id)));
+    const rows = [{ label: 'Trees', cells: Array(12).fill(tree) }];
+    if (under.some(Boolean)) rows.push({ label: 'Between rows', cells: under });
+    return { rows, approximate: true };
+  }
+  const ids = flat.filter((x) => x !== 'fallow');
+  if (!ids.length) return null;
+  if (/^1-year/.test(planType ?? '')) {
+    const row = blank();
+    for (const id of ids) place(row, id, sowOf(id) ?? 5, nMonths(dur(id)));
+    return { rows: [{ label: 'Every year', cells: row }], approximate: true };
+  }
+  if (planType) {
+    // Multi-year rotation: one crop per year
+    return {
+      rows: ids.map((id, k) => { const row = blank(); place(row, id, sowOf(id) ?? 5, nMonths(dur(id))); return { label: `Year ${k + 1}`, cells: row }; }),
+      approximate: true,
+    };
+  }
+  // Current practice: the same crop every year, or crops one after another within the year
+  if (new Set(ids).size === 1 && ids[0] !== 'rice') {
+    const row = blank(); place(row, ids[0], sowOf(ids[0]) ?? 5, nMonths(dur(ids[0])));
+    return { rows: [{ label: 'Every year', cells: row }], approximate: true };
+  }
+  const row = blank();
+  let t = sowOf(ids[0]) ?? 5;
+  for (const id of ids) { const n = nMonths(dur(id)); place(row, id, t, n); t = ((t - 1 + n) % 12) + 1; }
+  return { rows: [{ label: 'Every year', cells: row }], approximate: true };
+}
+
+const GOAL_IDS = ['balanced', 'soil_health', 'market_income', 'water_saving', 'low_risk', 'low_cost_labour'];
+const splitSemi = (s) => (s ? String(s).split('; ').map((x) => x.trim()).filter(Boolean) : []);
+const stepsOf = (seqText) => (String(seqText).startsWith('perennial_tree+') ? [String(seqText).replace(/\|/g, '+')] : String(seqText).split('|'));
+const capital = (x) => x.charAt(0).toUpperCase() + x.slice(1);
+
+/** Current practice + the team recommender's top 3 per goal, in one shape (RotationPlan in src/types). */
+function buildPlans(r, rots, fits) {
+  const sowOf = (id) => Number(fits.find((f) => f.crop_id === id)?.sow_month) || null;
+  const rec = recs[r.id];
+  const curRow = rots.find((x) => x.option === 'current');
+  const cur = curRow ? buildRotations(r, [curRow], fits)[0] : null;
+  const cs = rec?.current_rotation?.scores;
+  const current = cur ? {
+    id: `current:${curRow.sequence}`, kind: 'current', goal: null, rank: null,
+    name: cur.name, tagline: cur.tagline ?? null, plan_type: 'What most farmers here do now',
+    sequence: cur.sequence, goal_match: null, change_vs_current: null,
+    scores: cs ? { soil: cs.soil, market: cs.market, water: cs.water, resilience: cs.resil, low_cost: cs.cost, suitability: cs.suit } : null,
+    why: [cur.why], cautions: cur.risks, evidence: cur.evidence,
+    calendar: calendarFor(cur.sequence, null, sowOf),
+    confidence: cur.confidence, basis: 'Team rotation table (sowcast_rotations.csv)',
+  } : null;
+  const byGoal = {};
+  for (const g of GOAL_IDS) {
+    byGoal[g] = (rec?.goals?.[g] ?? []).map((p) => {
+      const steps = stepsOf(p.sequence);
+      return {
+        id: `plan:${p.sequence}`, kind: 'recommended', goal: g, rank: Number(p.rank),
+        name: p.sequence_names.replace(/ -> /g, ' then ').replace(/^Tree crop \+ /, 'Tree crops with '),
+        tagline: null, plan_type: capital(p.plan_type),
+        sequence: steps, goal_match: Math.round(p.goal_match_score),
+        change_vs_current: p.change_vs_current_key_score === null || p.change_vs_current_key_score === undefined || p.change_vs_current_key_score === '' ? null : Number(p.change_vs_current_key_score),
+        scores: { soil: p.soil_score, market: p.market_score, water: p.water_score, resilience: p.risk_resilience_score, low_cost: p.low_cost_score, suitability: p.crop_suitability_score },
+        why: splitSemi(p.why).map(capital), cautions: splitSemi(p.cautions), evidence: [],
+        calendar: calendarFor(steps, p.plan_type, sowOf),
+        confidence: p.confidence === 'medium' ? 'medium' : 'low',
+        basis: recMeasured ? 'Team recommender (rec.py) on measured data' : 'Team recommender (rec.py) on draft values',
+      };
+    });
+  }
+  return { current, by_goal: byGoal };
+}
+
 // ---------- write ----------
 fs.mkdirSync(path.join(OUT, 'regions'), { recursive: true });
 for (const f of fs.readdirSync(path.join(OUT, 'regions'))) if (f.endsWith('.json')) fs.unlinkSync(path.join(OUT, 'regions', f));
@@ -265,13 +362,19 @@ for (const r of regions) {
       input: u.input, draft: u.draft, measured: u.measured, used: u.used, source: u.source,
     })),
     insights: buildInsights(r, trends, annual, fits, monthlyRows ?? []),
-    rotations: buildRotations(r, rots, fits),
+    calendar: { wet_start: Number(r.wet_season_start_month_approx) || null, wet_end: Number(r.wet_season_end_month_approx) || null, confidence: r.calendar_confidence ?? null },
+    rotation_relevance: r.rotation_relevance ?? 'normal',
+    plans: buildPlans(r, rots, fits),
+    // 2001-2024 trends extended to 2035 and their consequences (05b + lib_projections.py; method in data/ANALYSIS.md)
+    outlook: weatherOk ? opt(`${r.id}/projections.json`) : null,
     crop_fit: fits.map((f) => ({
       crop: f.crop_id, rank: f.rank, fit: Math.round(f.fit), fit_band: f.fit_band,
       // year-by-year re-scoring + Mann-Kendall (05b_score_measured.py); 'unknown' where weather is not reliable
       trend: ['increasing', 'declining', 'flat'].includes(f.trend) ? f.trend : 'unknown',
       limits: split(f.limits), why: split(f.why), common_locally: bool(f.common_locally),
       parts: { climate: f.climate_part, water: f.water_part, soil: f.soil_part, risk: f.risk_part, benefit: f.benefit_part },
+      label: f.fit_label ?? null, planting_window: f.suggested_planting_window ?? null, harvest: f.approx_harvest_month ?? null,
+      sow_month: Number(f.sow_month) || null, yield_outlook: f.yield_outlook_here ?? null, rotation_tip: f.rotation_tip_here ?? null,
     })),
     sources: [
       ...(monthlyRows ? [`rain from ${shortSrc(trends?.quality?.rain_source)}`, `temperature from ${shortSrc(trends?.quality?.temp_source)}`] : []),

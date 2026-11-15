@@ -21,6 +21,9 @@ Outputs (data/processed/scored/):
     sowcast_region_crop_fit.csv   same columns as the draft, measured inputs, trend filled
     sowcast_rotations.csv         same columns as the draft
     region_inputs_used.csv        draft vs measured value for every input, and which one was used
+    regions_measured.csv          the region table with measured values swapped in (input to 05d)
+Also writes data/processed/<site>/projections.json: 2001-2024 trends extended to 2035 and what they mean
+for the crops (lib_projections.py; method in data/ANALYSIS.md).
 """
 from __future__ import annotations
 
@@ -38,6 +41,8 @@ OUT = PROCESSED / "scored"
 sys.argv = sys.argv[:1]  # make_data reads sys.argv at import
 sys.path.insert(0, str(DATA / "inputs"))
 import make_data as md  # noqa: E402  (the team's scoring rules)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from lib_projections import build_projections  # noqa: E402
 
 # SoilGrids USDA texture class → the soil classes make_data.py understands
 TEXTURE = {
@@ -72,7 +77,7 @@ def dry_months(monthly: list[dict]) -> int:
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     reg = md.reg.copy()
-    used_rows, yearly_inputs = [], {}
+    used_rows, yearly_inputs, annual_of, clim_of = [], {}, {}, {}
 
     for i, r in reg.iterrows():
         d = PROCESSED / r.id
@@ -94,6 +99,7 @@ def main() -> None:
                 reg.at[i, field] = measured
 
         if weather_ok and annual and clim:
+            annual_of[r.id], clim_of[r.id] = annual, clim
             rain = sum(num(a["precip_mm"]) for a in annual) / len(annual)
             temp = sum(num(a["tmean_c"]) for a in annual) / len(annual)
             use("rain_mm_approx", round(rain), q.get("rain_source", ""))
@@ -144,8 +150,27 @@ def main() -> None:
             change = res.slope * (len(vals) - 1)
             trend_of[(r.id, cid)] = ("increasing" if change > 0 else "declining") if res.p < TREND_P and abs(change) >= TREND_MIN else "flat"
     fit["trend"] = [trend_of.get((a, b), "tbd (weather data not reliable here)") for a, b in zip(fit.region_id, fit.crop_id)]
+    # Sowing month as a number (the team's window() rule, which the planting-window text also comes from)
+    fit["sow_month"] = [(int(md.window(a, b)[1]) - 1) % 12 + 1 for a, b in zip(fit.region_id, fit.crop_id)]
     fit["basis"] = "team scoring rules (make_data.py) applied to measured region data; see region_inputs_used.csv"
 
+    # ---- projections to 2035 and their consequences (only where the weather series is reliable) ----
+    names = {c.id: c["name"].split(" (")[0] for _, c in md.crops.iterrows()}
+    n_proj = 0
+    for i, r in reg.iterrows():
+        target = PROCESSED / r.id / "projections.json"
+        if r.id not in annual_of:
+            target.unlink(missing_ok=True)
+            continue
+        ranked = fit[fit.region_id == r.id].sort_values("rank").crop_id.tolist()
+        ranked = [c for c in ranked if c not in md.PERENN]
+        dry_by_year = {y["year"]: y["dry"] for y in yearly_inputs.get(r.id, [])}
+        proj = build_projections(r, annual_of[r.id], dry_by_year, md.crops, md.score, clim_of[r.id], names, ranked)
+        target.write_text(json.dumps(proj, indent=1, ensure_ascii=False), encoding="utf8")
+        n_proj += 1
+    print(f"✓ projections to 2035 for {n_proj} regions")
+
+    reg.to_csv(OUT / "regions_measured.csv", index=False)
     fit.to_csv(OUT / "sowcast_region_crop_fit.csv", index=False)
     rot.to_csv(OUT / "sowcast_rotations.csv", index=False)
     pd.DataFrame(used_rows).to_csv(OUT / "region_inputs_used.csv", index=False)

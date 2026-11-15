@@ -26,10 +26,12 @@ const steps = [
   ['01c_fetch_era5.mjs', 'ERA5 daily temperature (Open-Meteo; hourly rate limit — re-run if it stops)'],
   ['02b_fetch_ndvi_gibs.py', 'monthly cropland greenness from NASA GIBS tiles'],
   ...(withModis ? [['02_fetch_modis.mjs', 'MODIS NDVI, land cover, ET, LST (ORNL — slow, often down)']] : []),
+  ['03b_fetch_soil_wcs.py', 'ISRIC SoilGrids via WCS map service (fallback when the REST API is down)'],
   ['03_fetch_soil.mjs', 'ISRIC SoilGrids soil profile (≈5 requests/min limit)'],
   ['04_fetch_terrain.mjs', 'NASA SRTM elevation + slope'],
   ['05_build_summaries.mjs', 'merge sources → monthly / annual / trend tables + quality check'],
   ['05b_score_measured.py', 'crop and rotation scores from measured data (team rules)'],
+  ['05d_recommend_rotations.py', 'rotation plans for 6 goals (team recommender on measured data)'],
   ['06_build_app_data.mjs', 'public/data for the app'],
 ];
 
