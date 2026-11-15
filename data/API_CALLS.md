@@ -41,7 +41,7 @@ GET https://power.larc.nasa.gov/api/temporal/daily/point
     &start=YYYY0101&end=YYYY1231&format=JSON&time-standard=LST
 ```
 
-- **Calls:** 23 regions × 4 six-year chunks = **92 requests**, each ~0.5 s. This service is fast and reliable, but see the 2008 break in 8 regions (`trends.json → quality`).
+- **Calls:** 31 regions × 4 six-year chunks = **124 requests**, each ~0.5 s. This service is fast and reliable, but see the 2008 break in 8 regions (`trends.json → quality`).
 - **Under the hood:** MERRA-2 reanalysis for weather and soil wetness, and CERES SYN1deg for solar radiation. The grid is about 0.5° × 0.625° (~50 km).
 - **Fill value:** `-999` is converted to empty.
 - **Gotcha:** `EVPTRNS` is a *model* ET and runs far too low (Punjab ≈ 0.05 mm/day under irrigated wheat). It is kept as `et_model_mm` for reference only. **Use MODIS ET.**
@@ -61,7 +61,7 @@ GET /{product}/subset?latitude=&longitude=&band=&startDate=A2001001&endDate=A200
 | MOD16A2GF v061 | `ET_500m`, `PET_500m` | 500 m, 8-day | ×0.1 → mm per 8 days |
 | MOD11A2 v061 | `LST_Day_1km` | 1 km, 8-day | ×0.02 − 273.15 → °C |
 
-- **Calls:** ~56 per band per site for 16-day products and ~111 for 8-day products. That is about **440 requests per region (~10,000 for all 23)**, because the service returns at most 10 dates per call, so the pipeline skips it unless you pass `--with-modis`.
+- **Calls:** ~56 per band per site for 16-day products and ~111 for 8-day products. That is about **440 requests per region (~13,500 for all 31)**, because the service returns at most 10 dates per call, so the pipeline skips it unless you pass `--with-modis`.
 - **Gotcha:** the service is **unreliable**. On 2026-11-14 it was slow (15–60 s per call) and often returned `HTTP 502`/`503`. The script runs 3 requests at a time, retries with backoff, caches every page, and skips to the next site after 5 failures. **Just re-run it**; finished pages are never re-downloaded.
 - Fetch the most important layer first: `node data/scripts/02_fetch_modis.mjs --only=ndvi`.
 
@@ -75,7 +75,7 @@ GET https://rest.isric.org/soilgrids/v2.0/properties/query
      &value=mean&value=Q0.05&value=Q0.95
 ```
 
-- **Calls:** 1 per region, plus up to 16 more when the town point has no data (the script tries 8 points 3 km out, then 8 points 6 km out). Fair use is ~5 requests/minute, so the script waits 13 s between requests; all 23 regions take about an hour.
+- **Calls:** 1 per region, plus up to 16 more when the town point has no data (the script tries 8 points 3 km out, then 8 points 6 km out). Fair use is ~5 requests/minute, so the script waits 13 s between requests; all 31 regions take over an hour; `03b_fetch_soil_wcs.py` reads the same maps through ISRIC's WCS service when the API is down.
 - Values are returned as integers. Divide by `unit_measure.d_factor`, which the script does.
 - **Gotcha:** it returns `null` over towns. This was one reason to move the locations onto farmland.
 
@@ -99,7 +99,7 @@ GET /getDataFromRequest/?id=<job id>         → {"data":[{"date":"01/01/2001","
 ```
 
 - `datatype=0` = CHIRPS, `intervaltype=0` = daily, `operationtype=5` = average over the polygon.
-- **Calls:** 4 jobs (six-year chunks) × 23 regions = 92 jobs, ~3 min per region in total.
+- **Calls:** 4 jobs (six-year chunks) × 31 regions = 124 jobs, ~3 min per region in total.
 - **Why:** CHIRPS blends satellite rain with gauges at ~5 km. It has no 2008 break: the Ayeyarwady Delta gets a steady 2,500–3,400 mm a year, while POWER said 20–1,100 mm.
 
 ## 6. Open-Meteo historical archive (ERA5) — `archive-api.open-meteo.com/v1/archive`
@@ -121,4 +121,4 @@ GET ?latitude=&longitude=&start_date=2001-01-01&end_date=2024-12-31
 
 ## Out of scope for the demo
 
-Login-only NASA *data downloads* (SMAP, GPM IMERG, ECOSTRESS, GRACE-FO, Landsat/HLS) and USDA SSURGO are not used by the pipeline. SMAP and IMERG appear only as map images (above). `context.md` shows what replaces each one.
+Login-only NASA *data downloads* (SMAP, GPM IMERG, ECOSTRESS, GRACE-FO, Landsat/HLS) and USDA SSURGO are not used by the pipeline. SMAP and IMERG appear only as map images (above). `ANALYSIS.md` lists the open sources used instead.

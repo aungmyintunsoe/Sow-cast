@@ -59,7 +59,7 @@ for (const [n, site] of sites.entries()) {
       PROPS.map((p) => `&property=${p}`).join('') + DEPTHS.map((d) => `&depth=${d}`).join('') + VALUES.map((v) => `&value=${v}`).join('');
     const j = await fetchJSON(url, { cacheFile, retries: 6 });
     const clay0 = j.properties.layers.find((l) => l.name === 'clay')?.depths[0]?.values.mean;
-    if (clay0 !== null && clay0 !== undefined) {
+    if (clay0) { // null/undefined = no data; 0 is the WCS fallback's "no data" value
       json = j;
       sampledAt = { lat, lon, km_from_reference: i === 0 ? 0 : i <= 8 ? 3 : 6 };
       if (i > 0) console.log(`  · no data at the town point; using ${lat}, ${lon} (${sampledAt.km_from_reference} km away)`);

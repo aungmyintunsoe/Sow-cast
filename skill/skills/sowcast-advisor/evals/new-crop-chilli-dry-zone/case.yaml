@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: new-crop-chilli-dry-zone
+expected_outcome: |
+  Checks the groundnut then chilli sequence against the Dry Zone climate: notes chilli is not in the crop table and builds or looks up a profile for it, flags that October to February is dry so chilli depends on the well, mentions chilli's pests or family risks, and gives timing, water and market advice.

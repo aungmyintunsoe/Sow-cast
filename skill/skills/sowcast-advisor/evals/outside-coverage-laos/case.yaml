@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: outside-coverage-laos
+expected_outcome: |
+  Recognises Pakse is outside the bundled regions, fetches climate data for the actual coordinates (or explains why it could not and what it used instead), and gives a month-based planting window tied to the rainy-season months, a water check for maize, heat or dry-spell risks, and labelled sources.

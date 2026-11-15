@@ -3,8 +3,8 @@
 /** The four steps in the header nav. */
 export type StepId = 'map' | 'brief' | 'rotations' | 'crops';
 /** Every page: the steps plus pages reached from inside them (rotation builder, methods and sources). */
-export type PageId = StepId | 'build' | 'methods';
-export const PAGE_IDS: PageId[] = ['map', 'brief', 'rotations', 'crops', 'build', 'methods'];
+export type PageId = StepId | 'build' | 'methods' | 'home' | 'skill';
+export const PAGE_IDS: PageId[] = ['home', 'skill', 'map', 'brief', 'rotations', 'crops', 'build', 'methods'];
 
 export const stepLoaders = {
   map: () => import('../components/map/FieldMap'),
@@ -13,6 +13,8 @@ export const stepLoaders = {
   crops: () => import('../components/crops/CropFitList'),
   build: () => import('../components/rotations/RotationBuilder'),
   methods: () => import('../components/methods/MethodsPage'),
+  home: () => import('../components/landing/LandingPage'),
+  skill: () => import('../components/landing/SkillPage'),
 } satisfies Record<PageId, () => Promise<unknown>>;
 
 export const preloadStep = (step: PageId) => void stepLoaders[step]().catch(() => undefined);

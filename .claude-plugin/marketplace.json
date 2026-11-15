@@ -1,0 +1,12 @@
+{
+  "name": "sowcast",
+  "description": "Sowcast: satellite-backed crop rotation advice for farmers",
+  "owner": { "name": "Sowcast team (NASA Space Apps)" },
+  "plugins": [
+    {
+      "name": "sowcast",
+      "source": "./skill",
+      "description": "The sowcast-advisor skill: region conditions, rotation critique, recommendations and implementation help, with bundled data for 31 Southeast Asian regions and live lookups anywhere."
+    }
+  ]
+}

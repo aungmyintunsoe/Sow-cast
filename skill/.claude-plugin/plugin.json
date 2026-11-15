@@ -1,0 +1,8 @@
+{
+  "name": "sowcast",
+  "version": "1.0.0",
+  "description": "Crop rotation advisor for farmers: learn your area's climate and soil from satellite data, check your own rotation month by month, and get a plan you can put into practice.",
+  "author": { "name": "Sowcast team (NASA Space Apps)" },
+  "repository": "https://github.com/aungmyintunsoe/Sow-cast",
+  "keywords": ["agriculture", "crop-rotation", "farming", "climate", "southeast-asia", "satellite-data"]
+}

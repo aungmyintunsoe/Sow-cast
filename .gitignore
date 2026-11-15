@@ -147,3 +147,19 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# ---- Sowcast ----
+# Python caches
+__pycache__/
+*.pyc
+# Local tool output (graphify knowledge graph)
+graphify-out/
+# Large intermediate daily series; rebuilt by data/scripts (raw API caches live in data/raw, also ignored)
+data/processed/*/*_daily.csv
+data/fetch_log.txt
+data/rebuild_log.txt
+# Raw demo footage (kept locally for editing; too large for the repo)
+*.mp4
+*.mov
+# The packaged Claude skill is downloaded from GitHub, so keep it despite the dist rule above
+!skill/dist/

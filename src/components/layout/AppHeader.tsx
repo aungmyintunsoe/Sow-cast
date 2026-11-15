@@ -17,13 +17,15 @@ export const STEPS: { id: StepId; label: string; shortLabel: string; icon: React
 interface AppHeaderProps {
   step: PageId;
   onStepChange: (step: StepId) => void;
+  /** Logo: back to the landing page. */
+  onHome: () => void;
   /** "Region, Country" of the loaded region, shown as a shortcut back to the map. */
   regionLabel: string | null;
   onOpenMenu: () => void;
 }
 
 /** Sticky header: logo, current region, search (Ctrl/⌘ K) and the four-step navigation. */
-export function AppHeader({ step, onStepChange, regionLabel, onOpenMenu }: AppHeaderProps) {
+export function AppHeader({ step, onStepChange, onHome, regionLabel, onOpenMenu }: AppHeaderProps) {
   // Keys 1–4 jump between steps (ignored while typing in a field).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -40,10 +42,20 @@ export function AppHeader({ step, onStepChange, regionLabel, onOpenMenu }: AppHe
     <header className="sticky top-0 z-50 border-b border-stone-200 bg-white/95 pt-[env(safe-area-inset-top)] shadow-sm backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-[max(1rem,env(safe-area-inset-left))] py-3">
         <div className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white shadow-sm" aria-hidden="true">
-            <Sprout className="h-5 w-5" strokeWidth={2.25} />
-          </div>
-          <h1 className="font-display text-lg font-bold tracking-tight text-stone-900 sm:text-xl">Sowcast</h1>
+          <a
+            href="?step=home"
+            onClick={(e) => {
+              e.preventDefault();
+              onHome();
+            }}
+            className="group -m-1 flex items-center gap-2.5 rounded-xl p-1"
+            aria-label="Sowcast home"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white shadow-sm transition-transform group-hover:-rotate-6" aria-hidden="true">
+              <Sprout className="h-5 w-5" strokeWidth={2.25} />
+            </span>
+            <span className="font-display text-lg font-bold tracking-tight text-stone-900 sm:text-xl">Sowcast</span>
+          </a>
           <span className="hidden rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 text-xs font-semibold text-nasa-blue md:inline-block">
             NASA Space Apps
           </span>

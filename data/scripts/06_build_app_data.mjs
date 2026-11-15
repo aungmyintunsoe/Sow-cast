@@ -154,7 +154,7 @@ function buildRotations(r, rots, fits) {
     const nfix = bool(x.has_nitrogen_fixer);
     const distinct = new Set(ids.filter((id) => id !== 'fallow')).size;
 
-    // Transparent 1-5 scores from crop traits (draft rule — see NEXT_STEPS.md)
+    // Transparent 1-5 scores from crop traits (draft rule; only used for the current-practice card's reasons)
     const scores = {
       soil: clamp15((mean(traits.map((t) => t.organic_matter)) ?? 2) + (nfix ? 1 : 0) - (hasFallow ? 1 : 0)),
       water: clamp15(6 - (mean(traits.map((t) => t.water_need)) ?? 3)),

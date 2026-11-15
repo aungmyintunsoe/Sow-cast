@@ -21,7 +21,7 @@ fs.copyFileSync(path.join(root, 'data', 'inputs', 'make_data.py'), path.join(ski
   const crops = JSON.parse(fs.readFileSync(path.join(dataOut, 'crops.json'), 'utf8'));
   const name = (id) => crops.find((c) => c.id === id)?.name.replace(/ \(.*\)$/, '') ?? id;
   const rows = crops.map((c) => [
-    c.name, c.family, c.season, c.season_days, `${c.temp_min_c}–${c.temp_max_c}`, c.seasonal_rain_need_mm,
+    `${c.name} (\`${c.id}\`)`, c.family, c.season, c.season_days, `${c.temp_min_c}–${c.temp_max_c}`, c.seasonal_rain_need_mm,
     `${c.drought_tolerance}/${c.flood_tolerance}/${c.salinity_tolerance}`, c.nitrogen_fixing ? (c.n_fixed ?? 'yes') : '–',
     c.yield_low !== null ? `${c.yield_low}–${c.yield_high} ${c.yield_unit}` : '–',
     `${c.needs.fertiliser ?? '?'}/${c.needs.labour ?? '?'}/${c.needs.pest_difficulty ?? '?'}`, c.relative_income ?? '?',
@@ -32,14 +32,13 @@ fs.copyFileSync(path.join(root, 'data', 'inputs', 'make_data.py'), path.join(ski
     '',
     'Columns: season days; mean temperature range °C; seasonal water need mm; drought/flood/salt tolerance 1-5;',
     'nitrogen fixed; rough yield; fertiliser/labour/pest difficulty 1-5; relative income 1-5; good after; avoid after; tip and pests.',
-    'id column omitted: ids are the lowercase names with underscores (e.g. green_gram, pigeon_pea, salt_rice, sunn_hemp, cover_legume).',
+    'The id in backticks is what scripts accept (e.g. `green_gram`).',
     '',
     '| Crop | Family | Season | Days | Temp °C | Water mm | Dr/Fl/Salt | N fixed | Yield | Fert/Lab/Pest | Income | Good after | Avoid after | Tip and pests |',
     '|---|---|---|---|---|---|---|---|---|---|---|---|---|---|',
     ...rows.map((r) => `| ${r} |`),
     '',
-  ].join('
-');
+  ].join('\n');
   fs.writeFileSync(path.join(skill, 'references', 'crop-table.md'), md);
 }
 

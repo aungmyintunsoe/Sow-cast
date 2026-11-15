@@ -17,11 +17,14 @@ const RotationCompare = lazy(() => stepLoaders.rotations().then((m) => ({ defaul
 const CropFitList = lazy(() => stepLoaders.crops().then((m) => ({ default: m.CropFitList })));
 const RotationBuilder = lazy(() => stepLoaders.build().then((m) => ({ default: m.RotationBuilder })));
 const MethodsPage = lazy(() => stepLoaders.methods().then((m) => ({ default: m.MethodsPage })));
+const LandingPage = lazy(() => stepLoaders.home().then((m) => ({ default: m.LandingPage })));
+const SkillPage = lazy(() => stepLoaders.skill().then((m) => ({ default: m.SkillPage })));
 const PlanDocument = lazy(() => import('./components/plan/PlanDocument').then((m) => ({ default: m.PlanDocument })));
 
 const pageFromUrl = (): PageId => {
   const s = new URLSearchParams(window.location.search).get('step');
-  return PAGE_IDS.includes(s as PageId) ? (s as PageId) : 'map';
+  // No step in the URL: the landing page
+  return PAGE_IDS.includes(s as PageId) ? (s as PageId) : 'home';
 };
 
 // Earlier versions kept a "chosen plan" in this browser. Nothing is stored any more, so clear it.
@@ -59,7 +62,7 @@ function MainApp() {
     window.scrollTo({ top: 0 });
   }, []);
   useEffect(() => {
-    window.history.replaceState({ step: pageFromUrl() }, '', window.location.search || '?step=map');
+    window.history.replaceState({ step: pageFromUrl() }, '', window.location.search || '?step=home');
     const onPop = () => setStep(pageFromUrl());
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
@@ -72,13 +75,25 @@ function MainApp() {
   };
 
   const regionLabel = regionDetail ? `${regionDetail.region.name}, ${regionDetail.region.country}` : null;
+
+  // Landing and skill pages have their own full-width layout (no app header or footer)
+  if (step === 'home' || step === 'skill') {
+    const nav = { onHome: () => goTo('home'), onOpenApp: () => goTo('map') };
+    return (
+      <MotionConfig reducedMotion="user">
+        <Suspense fallback={<div className="min-h-dvh bg-stone-50" />}>
+          {step === 'home' ? <LandingPage {...nav} onSkill={() => goTo('skill')} /> : <SkillPage {...nav} />}
+        </Suspense>
+      </MotionConfig>
+    );
+  }
   const detail = !loadingRegion ? regionDetail : null;
   const skeleton = <PageSkeleton variant={step === 'build' ? 'rotations' : step === 'methods' ? 'crops' : step} />;
 
   return (
     <MotionConfig reducedMotion="user">
       <div className="min-h-dvh flex flex-col bg-stone-50 text-stone-900">
-        <AppHeader step={step} onStepChange={goTo} regionLabel={regionLabel} onOpenMenu={() => setMenuOpen(true)} />
+        <AppHeader step={step} onStepChange={goTo} onHome={() => goTo('home')} regionLabel={regionLabel} onOpenMenu={() => setMenuOpen(true)} />
 
         <CropProvider cropsMap={cropsMap} cropFit={detail?.crop_fit ?? null} place={detail?.region.place ?? null}>
           <main className="flex-1 max-w-6xl w-full mx-auto px-[max(1rem,env(safe-area-inset-left))] py-6 sm:py-8">

@@ -13,7 +13,7 @@ const cfg = {
   _comment:
     'GENERATED from data/inputs/sowcast_regions.csv by 00_sites_from_inputs.mjs — edit the CSV, not this file. ' +
     "'location' is the region's reference town (lat/lon from the CSV). Town centres are fine for POWER (≈50 km grid) " +
-    'but not for field-scale satellite data — see NEXT_STEPS.md (moving points onto cropland).',
+    'but not for field-scale satellite data (a known limit, see ANALYSIS.md).',
   period: old.period ?? { start_year: 2001, end_year: 2024 },
   sites: regions.map((r) => ({
     id: r.id,

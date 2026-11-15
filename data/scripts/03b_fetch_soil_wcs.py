@@ -89,7 +89,7 @@ def main() -> None:
         pts = candidates(lat, lon)
         for i, (plat, plon) in enumerate(pts):
             clay = sample(grids[("clay", "0-5cm")], lat, lon, plat, plon)
-            if clay is None:
+            if not clay:  # WCS stores "no data" (towns, water) as 0; no real soil has 0% clay
                 continue
             layers = []
             for p in PROPS:

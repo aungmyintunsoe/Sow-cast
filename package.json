@@ -8,7 +8,10 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "data:build": "node data/scripts/06_build_app_data.mjs",
-    "data:status": "node data/scripts/status.mjs"
+    "data:status": "node data/scripts/status.mjs",
+    "skill:sync": "node skill/sync_skill_data.mjs",
+    "skill:package": "python skill/package_skill.py",
+    "skill:install": "node skill/install_skill.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -33,5 +36,8 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3",
     "vite": "^6.1.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
